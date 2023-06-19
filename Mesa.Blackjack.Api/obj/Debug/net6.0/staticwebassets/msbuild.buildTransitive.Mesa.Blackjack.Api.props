@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Mesa.Blackjack.Api.props" />
+</Project>

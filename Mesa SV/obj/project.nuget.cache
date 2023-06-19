@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "rvjIsf2ydwGo6y7w0oHlKiGzTTYVq6QMs8Sl0mSgu6BrA81Q3UkJ90r5jAnT80IjuQFgZDMnrOYLnymip46S8g==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\elias\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1803",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://sitio2.bitworks.com.sv/BitworksNuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+    }
+  ]
+}

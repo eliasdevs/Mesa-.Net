@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa SV", "Mesa SV.csproj", "{E0062DEA-69CE-48C2-BF31-98C26F4E1F68}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlackJack", "BlackJack", "{E6A9E8F5-462C-4A10-A994-068193A35C5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack", "..\Mesa.Blackjack\Mesa.Blackjack.csproj", "{E87F68E2-2B25-405C-88A0-6D877A25E812}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack.Data", "..\Mesa.Blackjack.Data\Mesa.Blackjack.Data.csproj", "{931FBB82-1DCD-464B-93F8-F8CF097905F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack.Handlers", "..\Mesa.Blackjack.Handlers\Mesa.Blackjack.Handlers.csproj", "{32438E4A-7A16-464D-BBEE-15C9F2A60E42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack.Api", "..\Mesa.Blackjack.Api\Mesa.Blackjack.Api.csproj", "{AFA690CA-CAE8-4B9D-88CE-9025185EBC64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0062DEA-69CE-48C2-BF31-98C26F4E1F68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0062DEA-69CE-48C2-BF31-98C26F4E1F68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0062DEA-69CE-48C2-BF31-98C26F4E1F68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0062DEA-69CE-48C2-BF31-98C26F4E1F68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E87F68E2-2B25-405C-88A0-6D877A25E812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87F68E2-2B25-405C-88A0-6D877A25E812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87F68E2-2B25-405C-88A0-6D877A25E812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87F68E2-2B25-405C-88A0-6D877A25E812}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931FBB82-1DCD-464B-93F8-F8CF097905F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931FBB82-1DCD-464B-93F8-F8CF097905F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931FBB82-1DCD-464B-93F8-F8CF097905F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931FBB82-1DCD-464B-93F8-F8CF097905F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32438E4A-7A16-464D-BBEE-15C9F2A60E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32438E4A-7A16-464D-BBEE-15C9F2A60E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32438E4A-7A16-464D-BBEE-15C9F2A60E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32438E4A-7A16-464D-BBEE-15C9F2A60E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFA690CA-CAE8-4B9D-88CE-9025185EBC64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFA690CA-CAE8-4B9D-88CE-9025185EBC64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFA690CA-CAE8-4B9D-88CE-9025185EBC64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFA690CA-CAE8-4B9D-88CE-9025185EBC64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E87F68E2-2B25-405C-88A0-6D877A25E812} = {E6A9E8F5-462C-4A10-A994-068193A35C5C}
+		{931FBB82-1DCD-464B-93F8-F8CF097905F7} = {E6A9E8F5-462C-4A10-A994-068193A35C5C}
+		{32438E4A-7A16-464D-BBEE-15C9F2A60E42} = {E6A9E8F5-462C-4A10-A994-068193A35C5C}
+		{AFA690CA-CAE8-4B9D-88CE-9025185EBC64} = {E6A9E8F5-462C-4A10-A994-068193A35C5C}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32C6A027-0D05-4B74-89C6-45C004F6E3B9}
+	EndGlobalSection
+EndGlobal
