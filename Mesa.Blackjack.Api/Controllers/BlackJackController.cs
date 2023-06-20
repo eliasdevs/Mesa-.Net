@@ -87,7 +87,7 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <returns></returns>
         [HttpPost] // Asegúrate de tener el atributo HttpPost aquí
         [Route("create-request")]
-        public async Task<ActionResult<GameRequestBackJack>> CreateRequest(string playerId)
+        public async Task<ActionResult<GameRequestBackJack>> CreateRequest([FromQuery] string playerId)
         {
             //proceso para crear una solicitud
             CreateRequest cmd = new CreateRequest(playerId);

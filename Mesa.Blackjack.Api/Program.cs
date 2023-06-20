@@ -22,6 +22,17 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddDbContext<BlackJackContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+// habilita las cors
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("http://localhost:3000")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
+});
+
 //MEDIATR
 builder.Services.AddMediatR(cf =>
 {
@@ -48,8 +59,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
- 
+
+
 app.UseHttpsRedirection();
+app.UseCors();
 
 app.UseAuthorization();
 
