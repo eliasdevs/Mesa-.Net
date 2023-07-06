@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 
 namespace Mesa.Blackjack.Commands
@@ -24,5 +25,14 @@ namespace Mesa.Blackjack.Commands
     /// </summary>
     /// <param name="UserId"></param>
     /// <param name="RequestId"></param>
-    public record AceptedRequest(string UserId, string RequestId): IRequest<GameRequestBackJack>; 
+    public record AcceptedRequest(string UserId, string RequestId): IRequest<GameRequestBackJack>;
+    
+    /// <summary>
+    /// este se dara cuando el user le de click al boton "Pararse o en  todo caso se llame de otra forma como Plantarse"
+    /// Lo que hara el comando es actualizar el mazo es decir eliminar las cartas del mazo actual y pasarlas a history
+    /// </summary>
+    /// <param name="UserId"></param>
+    /// <param name="CardsIds"></param>
+    public record UpdateMazoBackJack(string UserId, List<int> CardsIds, string BackJackId) :IRequest;
+
 }

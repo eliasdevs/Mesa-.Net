@@ -9,9 +9,9 @@ using System.Threading.Tasks;
 
 namespace Mesa.Blackjack.Data.Mapping
 {
-    internal class BackjackMap : IEntityTypeConfiguration<Backjack>
+    internal class BackjackMap : IEntityTypeConfiguration<Blackjack>
     {
-        public void Configure(EntityTypeBuilder<Backjack> builder)
+        public void Configure(EntityTypeBuilder<Blackjack> builder)
         {
             builder.HasKey(x => x.Id);            
 

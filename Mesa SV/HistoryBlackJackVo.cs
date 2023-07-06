@@ -31,7 +31,7 @@ namespace Mesa_SV
         /// </summary>
         public List<Card>? PlayerOneHand { get; set; }
 
-        //Representa la Mano de Jugador 2
+        //Representa la Mano de Jugador 2 una va nula cuando la otra esta vacia
         public List<Card>? PlayerTwoHand { get; set; }
         
         /// <summary>

@@ -38,12 +38,14 @@ namespace Mesa.Blackjack.Handlers.Commands
                     nameof(request.RequestId), GetType(), $"Error este valor no es valido: {request.RequestId}");
 
             //llama al metodo de crear blackjack del repo
-            Backjack backjack = new Backjack();
+            Blackjack backjack = new Blackjack();
             backjack.IdRequest = foranea;
+
+            //TODO: consultar el user a la sdk del identity
             backjack.UserIdRetador = new JugadorVo(Guid.NewGuid(),"user1");
             backjack.UserIdEmpareja= new JugadorVo(Guid.NewGuid(), "retador");
             
-            //mandar sin Id
+            //el amzo se manda sin id de carta xq lo asigna ef al persistir la DB
             backjack.Mazo = listaCartas;
 
             List<HistoryBlackJackVo> listHistory= new List<HistoryBlackJackVo>() 
@@ -61,6 +63,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             //todo modificar que retorne las dos manos de los dos jugadores
             return _mapper.Map<List<OutputDtoCard>>(backjack.Mazo);
         }
+
         private List<Card> getCardRamdom(DeckOfCards baraja)
         {
             List<Card> nuevaLista= new List<Card>();
@@ -79,6 +82,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             //crea una lista sin Id para asignarlo a mazo de backajack
             foreach(var lista in baraja.Cards)
             {
+                //el id lo asigna ef al momento de gaurdarlo en la Db
                 nuevaLista.Add(new Card(lista.OriginalValue, lista.SubValue, lista.Representation, lista.TypeOfCardId));
             }
             

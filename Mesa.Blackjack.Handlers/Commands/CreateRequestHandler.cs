@@ -19,7 +19,7 @@ namespace Mesa.Blackjack.Handlers.Commands
         }
         public async Task<GameRequestBackJack> Handle(CreateRequest request, CancellationToken cancellationToken)
         {
-            // todo validar que  el id exista en la BD
+            // todo validar que  el UserId exista en la BD
 
             //setea el id de la request
             GameRequestBackJack solicitud = new GameRequestBackJack();

@@ -20,7 +20,7 @@ namespace Mesa.Blackjack.Data
         /// </summary>
         /// <param name="backjack"></param>
         /// <returns></returns>
-        Task CreateBlackJackAsync(Backjack backjack);
+        Task CreateBlackJackAsync(Blackjack backjack);
 
         /// <summary>
         /// actualiza los cambios en la BD

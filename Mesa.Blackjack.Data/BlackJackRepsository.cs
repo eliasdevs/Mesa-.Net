@@ -18,7 +18,7 @@ namespace Mesa.Blackjack.Data
             _context=context;
         }
 
-        public async Task CreateBlackJackAsync(Backjack backjack)
+        public async Task CreateBlackJackAsync(Blackjack backjack)
         {
             await _context.Blackjacks.AddAsync(backjack);            
         }

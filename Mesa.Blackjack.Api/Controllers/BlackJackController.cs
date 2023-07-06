@@ -1,13 +1,11 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Mesa.Blackjack.Commands;
+using Mesa.Blackjack.Queries;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using System.Net.WebSockets;
-using System.Text;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -18,16 +16,21 @@ namespace Mesa.Blackjack.Api.Controllers
     public class BlackJackController : ControllerBase
     {
         private readonly IMediator _mediator;
-        
-        private static readonly Dictionary<string, WebSocket> _clientSockets = new Dictionary<string, WebSocket>();
-        public BlackJackController(IMediator mediator)
+
+        private readonly IMapper _mapper;
+
+        public BlackJackController(IMediator mediator, IMapper mapper)
         {
             _mediator = mediator;
-        
+            _mapper = mapper;
+
         }
 
-        // GET: api/<BlackJackController>
-        [HttpGet]
+        /// <summary>
+        /// extrae todas las cartas de una baraja global
+        /// </summary>
+        /// <returns>aaaa</returns>
+        [HttpGet("global_cards")]
         public async Task<ActionResult<List<OutputDtoCard>>> Get()
         {
             Mesa.Blackjack.Queries.GetCards query = new Queries.GetCards();
@@ -39,6 +42,7 @@ namespace Mesa.Blackjack.Api.Controllers
 
         /// <summary>
         /// se encarga de extraer los valores de un enum en un SelectListItem
+        /// sirve para el valor que van a tener las fichas en el juego
         /// </summary>
         /// <returns></returns>
         private IEnumerable<SelectListItem> GetSelectListItem()
@@ -54,25 +58,25 @@ namespace Mesa.Blackjack.Api.Controllers
         }
 
         /// <summary>
-        /// extrae y muestra los datos de una moneda valida en el juego
+        /// extrae y muestra los datos de una moneda válida en el juego
         /// </summary>
         /// <returns></returns>
         [HttpGet("Coin")]
         public IEnumerable<SelectListItem> GetCoin()
         {
             return GetSelectListItem();
-            
         }
 
-        // POST api/<BlackJackController>
+
         /// <summary>
         /// este metodo sirve para iniciar el blackJack
+        /// recibe el id de la request
         /// </summary>
-        /// <param name="value"></param>
-        [HttpPost("StartGame")]
-        public async Task<ActionResult<List<OutputDtoCard>>>  Post(string id)
+        /// <param name="requestId">representa el id de la solicitud</param>
+        [HttpPost("startGame/{requestId}")]
+        public async Task<ActionResult<List<OutputDtoCard>>> Post(string requestId)
         {
-            Mesa.Blackjack.Commands.StartGame cmd = new Commands.StartGame(id);
+            Mesa.Blackjack.Commands.StartGame cmd = new Commands.StartGame(requestId);
 
             var response = await _mediator.Send(cmd);
 
@@ -83,10 +87,10 @@ namespace Mesa.Blackjack.Api.Controllers
         /// crea el una solicitud de blackJack
         /// recibe el id del usuario que hace la solicitud
         /// </summary>
-        /// <param name="playerId"></param>
+        /// <param name="playerId">representa el id del jugador que crea la solicitud</param>
         /// <returns></returns>
-        [HttpPost] // Asegúrate de tener el atributo HttpPost aquí
-        [Route("create-request")]
+        [HttpPost]
+        [Route("users/{playerId}/request")]
         public async Task<ActionResult<GameRequestBackJack>> CreateRequest([FromQuery] string playerId)
         {
             //proceso para crear una solicitud
@@ -103,70 +107,37 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <param name="requestId"></param>
         /// <param name="playerId"></param>
         /// <returns></returns>
-        [HttpPut("accept-request")]
-        public async Task<ActionResult<GameRequestBackJack>> AcceptRequest(string requestId, string playerId)
+        [HttpPut("users/{playerId}/request/{requestId}/accept")]
+        public async Task<ActionResult<GameRequestBackJack>> AcceptRequest([FromRoute] string playerId, [FromRoute] string requestId)
         {
             //proceso para aceptar una solicitud
-            AceptedRequest cmd = new AceptedRequest(playerId,requestId);
-            
+            AcceptedRequest cmd = new AcceptedRequest(playerId, requestId);
+
             var response = await _mediator.Send(cmd);
 
             return response;
         }
 
-        // PUT api/<BlackJackController>/5
-        [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        /// <summary>
+        /// permite extraer una carta por id la extrae de la db
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="backjackId"></param>
+        /// <returns></returns>
+        [HttpGet("users/{playerId}/{backjackId}/draw_card")]
+        public async Task<ActionResult<OutputDtoCard>> GetCardById([FromRoute] string playerId, [FromRoute] string backjackId)
         {
+            GetCardById query = new GetCardById(playerId, backjackId);
+
+            var response = await _mediator.Send(query);
+
+            return _mapper.Map<OutputDtoCard>(response);
         }
 
-        // DELETE api/<BlackJackController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
-        }
-    //    [HttpGet("/chat")]
-    //    public async Task Chat()
-    //    {
-    //        if (HttpContext.WebSockets.IsWebSocketRequest)
-    //        {
-    //            WebSocket webSocket = await HttpContext.WebSockets.AcceptWebSocketAsync();
-    //            string clientId = "";// Obtiene el identificador del cliente
-    //            _clientSockets[clientId] = webSocket;
+        //todo crear endpoint que permita actualizar el mazo cuando ha disminuido las cartas es decir actualizar el blackjack completo y agregarlos al history
+        //todo crear un metodo en el repo que extraiga el user del backjack
+        
 
-    //            await ReceiveMessages(clientId, webSocket);
-    //        }
-    //        else
-    //        {
-    //            HttpContext.Response.StatusCode = 400;
-    //        }
-    //    }
 
-    //    private async Task ReceiveMessages(string clientId, WebSocket webSocket)
-    //    {
-    //        while (webSocket.State == WebSocketState.Open)
-    //        {
-    //            var buffer = new ArraySegment<byte>(new byte[4096]);
-    //            var result = await webSocket.ReceiveAsync(buffer, CancellationToken.None);
-
-    //            if (result.MessageType == WebSocketMessageType.Text)
-    //            {
-    //                string message = Encoding.UTF8.GetString(buffer.Array, 0, result.Count);
-
-    //                // Procesar el mensaje y actualizar la base de datos
-
-    //                // Obtener la conexión WebSocket del cliente B
-    //                string clientIdB = "";// Obtener el identificador del cliente B
-    //        if (_clientSockets.TryGetValue(clientIdB, out WebSocket webSocketB))
-    //                {
-    //                    // Enviar el mensaje actualizado a B
-    //                    await webSocketB.SendAsync(buffer, result.MessageType, result.EndOfMessage, CancellationToken.None);
-    //                }
-    //            }
-    //        }
-
-    //        // Cuando se cierra la conexión WebSocket, eliminarla del diccionario
-    //        _clientSockets.Remove(clientId);
-    //    }
     }
 }

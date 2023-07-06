@@ -13,7 +13,7 @@ namespace Mesa.Blackjack.Data
 
         }
         public DbSet<DeckOfCards> DeckOfCards{ get; set; }
-        public DbSet<Backjack> Blackjacks{ get; set; }
+        public DbSet<Blackjack> Blackjacks{ get; set; }
 
         public DbSet<GameRequestBackJack> GameRequests { get; set; }
 

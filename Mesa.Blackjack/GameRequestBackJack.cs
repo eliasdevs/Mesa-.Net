@@ -12,6 +12,6 @@ namespace Mesa.Blackjack
         /// <summary>
         /// este sera el backjack que va pertenecer a la solicitud, permite null, hasta que se acepte la solicitud se setea backjack
         /// </summary>
-        public Backjack? backjack { get; set; }
+        public Blackjack? backjack { get; set; }
     }
 }

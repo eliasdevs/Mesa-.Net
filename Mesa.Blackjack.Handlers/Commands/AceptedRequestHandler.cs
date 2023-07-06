@@ -12,16 +12,16 @@ using System.Threading.Tasks;
 
 namespace Mesa.Blackjack.Handlers.Commands
 {
-    public class AceptedRequestHandler : IRequestHandler<AceptedRequest, GameRequestBackJack>
+    public class AceptedRequestHandler : IRequestHandler<AcceptedRequest, GameRequestBackJack>
     {
         private readonly IGameRequestBackJackRepository _repository;
         public AceptedRequestHandler(IGameRequestBackJackRepository repository)
         {
             _repository = repository;
         }
-        public async Task<GameRequestBackJack> Handle(AceptedRequest request, CancellationToken cancellationToken)
+        public async Task<GameRequestBackJack> Handle(AcceptedRequest request, CancellationToken cancellationToken)
         {
-            // todo validar que  el id exista en la BD
+            // todo validar que  el id de la solicitud exista la BD
             
             //
             Guid idRequest = Guid.Empty;

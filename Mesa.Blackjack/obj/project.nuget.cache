@@ -1,15 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "qjidiw7BRBck1cwbbNCywoaXcCbaPW7wmC9BS9T3n0m3z1Bn36XKh1bFfIrEcWS703Hh5JheEM76flkhtKIbtw==",
+  "dgSpecHash": "t6iBgYYaiZbF4u5PxFrj9/9aA5xj1GT0jTHKK0J/0oVluGchYR8hh5O8DQuzAeF4HTNnNTL7otZeXay7w+nPhQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",
-    "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
-    "C:\\Users\\elias\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.16\\microsoft.windowsdesktop.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\elias\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.16\\microsoft.netcore.app.ref.6.0.16.nupkg.sha512",
-    "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.16\\microsoft.aspnetcore.app.ref.6.0.16.nupkg.sha512"
+    "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
   ],
   "logs": [
     {

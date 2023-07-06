@@ -3,9 +3,9 @@ using Mesa_SV;
 
 namespace Mesa.Blackjack
 {
-    public class Backjack
+    public class Blackjack
     {
-        public Backjack()
+        public Blackjack()
         {
             
         }

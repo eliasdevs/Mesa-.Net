@@ -23,7 +23,7 @@ namespace Mesa.Blackjack.Data.Mapping
 
             builder.HasOne(d => d.backjack)
                 .WithOne()
-                .HasForeignKey<Backjack>(d => d.IdRequest) // Utiliza la expresión lambda para referenciar la propiedad IdRequest
+                .HasForeignKey<Blackjack>(d => d.IdRequest) // Utiliza la expresión lambda para referenciar la propiedad IdRequest
                 .OnDelete(DeleteBehavior.Restrict);
         }
     }

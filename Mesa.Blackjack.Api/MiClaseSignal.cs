@@ -19,6 +19,12 @@ namespace Mesa.Blackjack.Api
         }
         private Dictionary<int, List<string>> _gruposMensajes = new Dictionary<int, List<string>>();
         string user1 = "admin1", user2 = "admin2";
+        /// <summary>
+        /// establece la coneccion
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="IdMensaje"></param>
+        /// <returns></returns>
         public async Task IniciarConversacion(string user, int IdMensaje)
         {
             var mensaje = await _context.Mensajes.FirstOrDefaultAsync(x => x.Id == IdMensaje);
@@ -39,6 +45,12 @@ namespace Mesa.Blackjack.Api
             //await Clients.Users(user1, user2).SendAsync("ConversacionIniciada");
         }
 
+        /// <summary>
+        /// se usa para mandar el mensaje a alguien en especifico
+        /// </summary>
+        /// <param name="user"></param>
+        /// <param name="IdMensaje"></param>
+        /// <returns></returns>
         public async Task EnviarMensaje2(string user, int IdMensaje)
         {
             var mensaje = await _context.Mensajes.FirstOrDefaultAsync(x => x.Id == IdMensaje);
