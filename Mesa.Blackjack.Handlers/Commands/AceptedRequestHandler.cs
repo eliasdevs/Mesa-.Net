@@ -3,6 +3,7 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa_SV;
 using Mesa_SV.Exceptions;
+using Pisto.Exceptions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -34,7 +35,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             GameRequestBackJack? solicitud = await _repository.GetGameRequestBackJackAsync(idRequest);
             
             if (solicitud == null)
-                throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
+                throw NotFoundException.CreateException(NotFoundExceptionType.Request,
                     nameof(solicitud), GetType(), $"Error!!!, la solicitud no existe.");
 
             //validar tambien que l id del retador no sea el del que acepta

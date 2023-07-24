@@ -31,6 +31,12 @@ namespace Mesa.Blackjack
         //este representa el mazo que se les carga a los users
         public List<Card> Mazo { get; set; }
 
+        /// <summary>
+        /// este se actualiza cada que se crea un nuevo mazo
+        /// es un contador 
+        /// </summary>
+        public int ContadorMazo { get; set; } 
+
         //agrega a la BD todo el historial del juego
         public List<HistoryBlackJackVo>? History { get; set; }
     }

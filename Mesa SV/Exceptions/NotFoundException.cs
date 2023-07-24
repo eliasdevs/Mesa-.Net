@@ -35,6 +35,7 @@ namespace Pisto.Exceptions
     public enum NotFoundExceptionType
     {
         BlackJack = 1,
-        Card = 2
+        Card = 2,
+        Request = 3
     }
 }

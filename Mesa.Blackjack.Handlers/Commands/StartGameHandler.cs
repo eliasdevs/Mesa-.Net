@@ -39,7 +39,8 @@ namespace Mesa.Blackjack.Handlers.Commands
             //llama al metodo de crear blackjack del repo
             Blackjack backjack = new Blackjack();
             backjack.IdRequest = foranea;
-                        
+            backjack.ContadorMazo = 1;
+
             backjack.IdUserRetador = "idretador";
             backjack.IdUserEmparejado = "idaceptareto";
             
@@ -57,8 +58,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             //crea el registro en la BD
             await _repoBlackJack.CreateBlackJackAsync(backjack);
             await _repoBlackJack.SaveChangesAsync();
-
-            //todo modificar que retorne las dos manos de los dos jugadores
+                         
             return _mapper.Map<List<CardOutput>>(backjack.Mazo);
         }
 

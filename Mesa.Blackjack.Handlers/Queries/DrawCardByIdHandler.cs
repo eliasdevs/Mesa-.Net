@@ -45,7 +45,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             //agrega la carta al historial de blackjack
             blackjack?.History?.Add(
                 new HistoryBlackJackVo(
-                    new List<Card>() {carta}, request.UserId, 0,
+                    new List<Card>() {carta}, request.UserId, blackjack.ContadorMazo,
                     $"Se entrego la carta de Id {blackjack.Mazo[0].Id} con valor {blackjack.Mazo[0].OriginalValue} y sub value {blackjack.Mazo[0].SubValue} al jugador {request.UserId}"));
             
             //guardo los cambios 
