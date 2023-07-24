@@ -30,20 +30,22 @@
             </summary>
             <param name="requestId">representa el id de la solicitud</param>
         </member>
-        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.CreateRequest(System.String)">
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.CreateRequest(System.String,System.String)">
             <summary>
             crea el una solicitud de blackJack
             recibe el id del usuario que hace la solicitud
             </summary>
             <param name="playerId">representa el id del jugador que crea la solicitud</param>
+            <param name="contextId"></param>
             <returns></returns>
         </member>
-        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.AcceptRequest(System.String,System.String)">
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.AcceptRequest(System.String,System.String,System.String)">
             <summary>
             recibe el id de la solicitud y el id del user que acepta la partida
             </summary>
             <param name="requestId"></param>
             <param name="playerId"></param>
+            <param name="contextId"></param>
             <returns></returns>
         </member>
         <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.GetCardById(System.String,System.String)">
