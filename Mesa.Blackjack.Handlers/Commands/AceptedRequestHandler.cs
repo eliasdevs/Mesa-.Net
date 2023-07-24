@@ -49,6 +49,13 @@ namespace Mesa.Blackjack.Handlers.Commands
             //id del jugador que acepta la solicitud
             solicitud.AcceptedPlayerId = request.UserId;
 
+            //agrega la info del jugador que acepta la solicitud
+            solicitud.PlayerInfo = new List<InfoJugador>()
+            {
+                new InfoJugador
+                { IdContextWS = request.ContextId, IdUser = request.UserId }
+            };
+
             //modifica la solicitud
             await _repository.SaveChangesAsync();
 

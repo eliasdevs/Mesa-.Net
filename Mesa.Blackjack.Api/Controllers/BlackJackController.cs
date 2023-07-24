@@ -6,6 +6,7 @@ using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -89,13 +90,14 @@ namespace Mesa.Blackjack.Api.Controllers
         /// recibe el id del usuario que hace la solicitud
         /// </summary>
         /// <param name="playerId">representa el id del jugador que crea la solicitud</param>
+        /// <param name="contextId"></param>
         /// <returns></returns>
         [HttpPost]
         [Route("users/{playerId}/request")]
-        public async Task<ActionResult<GameRequestBackJack>> CreateRequest([FromQuery] string playerId)
+        public async Task<ActionResult<GameRequestBackJack>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId)
         {
             //proceso para crear una solicitud
-            CreateRequest cmd = new CreateRequest(playerId);
+            CreateRequest cmd = new CreateRequest(playerId, contextId);
 
             var response = await _mediator.Send(cmd);
 
@@ -107,12 +109,13 @@ namespace Mesa.Blackjack.Api.Controllers
         /// </summary>
         /// <param name="requestId"></param>
         /// <param name="playerId"></param>
+        /// <param name="contextId"></param>
         /// <returns></returns>
         [HttpPut("users/{playerId}/request/{requestId}/accept")]
-        public async Task<ActionResult<GameRequestBackJack>> AcceptRequest([FromRoute] string playerId, [FromRoute] string requestId)
+        public async Task<ActionResult<GameRequestBackJack>> AcceptRequest([FromRoute] string playerId, [FromRoute] string requestId, [FromQuery] string contextId)
         {
             //proceso para aceptar una solicitud
-            AcceptedRequest cmd = new AcceptedRequest(playerId, requestId);
+            AcceptedRequest cmd = new AcceptedRequest(playerId, requestId, contextId);
 
             var response = await _mediator.Send(cmd);
 

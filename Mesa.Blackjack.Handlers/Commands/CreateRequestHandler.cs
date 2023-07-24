@@ -19,8 +19,6 @@ namespace Mesa.Blackjack.Handlers.Commands
         }
         public async Task<GameRequestBackJack> Handle(CreateRequest request, CancellationToken cancellationToken)
         {
-            // todo validar que  el UserId exista en la BD
-
             //setea el id de la request
             GameRequestBackJack solicitud = new GameRequestBackJack();
             
@@ -30,7 +28,14 @@ namespace Mesa.Blackjack.Handlers.Commands
             //id del jugador que hace la solicitud
             solicitud.PlayerId = request.UserId;
 
-            //crea la solicitud del jeugo
+            //agrega la info del retador
+            solicitud.PlayerInfo = new List<InfoJugador>()
+            {
+                new InfoJugador
+                { IdContextWS = request.ContextId, IdUser = request.UserId }
+            };
+
+            //crea la solicitud del juego
             await _repository.CreateRequestAsync(solicitud);
             await _repository.SaveChangesAsync();
 

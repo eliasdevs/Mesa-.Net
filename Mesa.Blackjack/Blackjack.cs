@@ -44,5 +44,6 @@ namespace Mesa.Blackjack
         /// indican el estado del juego
         /// </summary>
         public GameStatus Status { get; set; }
+
     }
 }

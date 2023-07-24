@@ -17,7 +17,7 @@ namespace Mesa.Blackjack.Commands
     /// puntos  a agregar :
     /// <item>notifica a todos los jugadores disponibles que hay una solicitud para ese request</item>
     /// </summary>
-    public record CreateRequest(string UserId) : IRequest<GameRequestBackJack>;
+    public record CreateRequest(string UserId, string ContextId) : IRequest<GameRequestBackJack>;
 
     /// <summary>
     /// recibe el id del jugador que acepta el request y  y el id de la solicitud
@@ -25,7 +25,7 @@ namespace Mesa.Blackjack.Commands
     /// </summary>
     /// <param name="UserId"></param>
     /// <param name="RequestId"></param>
-    public record AcceptedRequest(string UserId, string RequestId): IRequest<GameRequestBackJack>;
+    public record AcceptedRequest(string UserId, string RequestId, string ContextId) : IRequest<GameRequestBackJack>;
     
     /// <summary>
     /// este se dara cuando el user le de click al boton "Pararse o en  todo caso se llame de otra forma como Plantarse"

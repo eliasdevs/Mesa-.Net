@@ -21,6 +21,12 @@ namespace Mesa.Blackjack.Data.Mapping
 
             builder.Property(p => p.PlayerId);
 
+            builder.OwnsMany(x => x.PlayerInfo, i =>
+            {
+                i.Property(p => p.IdUser).IsRequired();
+                i.Property(p => p.IdContextWS).IsRequired();
+            });
+
             builder.HasOne(d => d.backjack)
                 .WithOne()
                 .HasForeignKey<Blackjack>(d => d.IdRequest) // Utiliza la expresión lambda para referenciar la propiedad IdRequest
