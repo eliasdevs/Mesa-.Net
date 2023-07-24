@@ -42,8 +42,8 @@ namespace Mesa.Blackjack.Handlers.Commands
             backjack.IdRequest = foranea;
 
             //TODO: consultar el user a la sdk del identity
-            backjack.UserIdRetador = new JugadorVo(Guid.NewGuid(),"user1");
-            backjack.UserIdEmpareja= new JugadorVo(Guid.NewGuid(), "retador");
+            backjack.IdUserRetador = "idretador";
+            backjack.IdUserEmparejado = "idaceptareto";
             
             //el amzo se manda sin id de carta xq lo asigna ef al persistir la DB
             backjack.Mazo = listaCartas;

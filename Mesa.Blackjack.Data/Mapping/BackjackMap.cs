@@ -15,16 +15,9 @@ namespace Mesa.Blackjack.Data.Mapping
         {
             builder.HasKey(x => x.Id);            
 
-            builder.OwnsOne(x => x.UserIdRetador, u =>
-            {
-                u.ToTable("PlayerOneHand");
+            builder.Property(x => x.IdUserRetador);
 
-            });
-
-            builder.OwnsOne(x => x.UserIdEmpareja, u => {
-
-                u.ToTable("PlayerTwoHand");                
-            }); 
+            builder.Property(x => x.IdUserEmparejado);            
 
             builder.OwnsMany(x => x.Mazo, m =>
             {
