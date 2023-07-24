@@ -52,8 +52,17 @@ namespace Mesa_SV
     /// </summary>
     public enum GameRequestStatus
     {
-        Pending,
-        Accepted,
-        Rejected
+        Pending = 1,
+        Accepted = 2,
+        Rejected = 3
+    }
+
+    /// <summary>
+    /// los estados del blackjack
+    /// </summary>
+    public enum GameStatus
+    {
+        Started = 1,
+        finalized = 2,
     }
 }

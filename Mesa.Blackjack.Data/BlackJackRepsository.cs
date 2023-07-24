@@ -23,7 +23,12 @@ namespace Mesa.Blackjack.Data
             await _context.Blackjacks.AddAsync(backjack);            
         }
 
-        public async Task<Blackjack?> GetBlackjackById(string userId, Guid blackjackId)
+        public async Task<Blackjack?> GetBlackjackById(Guid blackjackId)
+        {
+            return await _context.Blackjacks.Include(x => x.Mazo).FirstOrDefaultAsync(x => x.Id == blackjackId);
+        }
+
+        public async Task<Blackjack?> GetBlackjackByUserId(string userId, Guid blackjackId)
         {
             return await _context.Blackjacks.Include(x=> x.Mazo).FirstOrDefaultAsync(x=> (x.IdUserRetador== userId || x.IdUserEmparejado == userId) && x.Id == blackjackId);
         }

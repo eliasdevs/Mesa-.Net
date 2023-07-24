@@ -27,7 +27,7 @@ namespace Mesa.Blackjack.Handlers.Queries
                 throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
                     nameof(request.BackJackId), GetType(), $"Error este valor no es valido: {request.BackJackId}");
 
-            Blackjack? blackjack = await _repository.GetBlackjackById(request.UserId, idBlackJack);
+            Blackjack? blackjack = await _repository.GetBlackjackByUserId(request.UserId, idBlackJack);
 
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(),"No se encontro la partida solicitada");

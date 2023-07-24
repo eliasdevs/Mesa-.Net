@@ -2,6 +2,7 @@
 using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
+using Mesa.Blackjack.Handlers.Helper;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
@@ -25,7 +26,7 @@ namespace Mesa.Blackjack.Handlers.Commands
         {
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
             Guid foranea = Guid.Empty;
-            var listaCartas = getCardRamdom(baraja);
+            var listaCartas = CardHelper.BarajearCartas(baraja);
 
             //TODO: validar que el id de la request que viene exista y que la request este en estado aceptado y que el player que acepta sea diferente de null
             
@@ -40,7 +41,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             Blackjack backjack = new Blackjack();
             backjack.IdRequest = foranea;
             backjack.ContadorMazo = 1;
-
+            backjack.Status = GameStatus.Started;
             backjack.IdUserRetador = "idretador";
             backjack.IdUserEmparejado = "idaceptareto";
             
@@ -49,7 +50,7 @@ namespace Mesa.Blackjack.Handlers.Commands
 
             List<HistoryBlackJackVo> listHistory= new List<HistoryBlackJackVo>() 
             {
-                new HistoryBlackJackVo(null, null, 1, "Iniciando el Juego")
+                new HistoryBlackJackVo(null, null, backjack.ContadorMazo, "Iniciando el Juego")
             };
 
             //setea el objeto  history de backjack
@@ -60,39 +61,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             await _repoBlackJack.SaveChangesAsync();
                          
             return _mapper.Map<List<CardOutput>>(backjack.Mazo);
-        }
-
-        /// <summary>
-        /// este metodo se encarga de llenar el nuevo mazo de la request y las toma de la global
-        /// </summary>
-        /// <param name="baraja"></param>
-        /// <returns></returns>
-        private List<Card> getCardRamdom(DeckOfCards baraja)
-        {
-            List<Card> nuevaLista= new List<Card>();
-
-            //Desordena las barajas de la BD para asignarlas a un mazo
-            Random random = new Random();
-            int n = baraja.Cards.Count;
-            while (n > 1)
-            {   n--;
-                int k = random.Next(n + 1);
-                Card carta = baraja.Cards[k];
-                baraja.Cards[k] = baraja.Cards[n];
-                baraja.Cards[n] = carta;                
-            }
-
-            //crea una lista sin Id para asignarlo a mazo de backajack
-            foreach(var lista in baraja.Cards)
-            {
-                //el id lo asigna ef al momento de gaurdarlo en la Db
-                nuevaLista.Add(new Card(lista.OriginalValue, lista.SubValue, lista.Representation, lista.TypeOfCardId));
-            }
-            
-            //retorna la nueva lista
-            return nuevaLista;
-
-        }
+        }        
     }
 
 }

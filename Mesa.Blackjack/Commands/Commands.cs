@@ -35,4 +35,9 @@ namespace Mesa.Blackjack.Commands
     /// <param name="CardsIds"></param>
     public record UpdateMazoBackJack(string UserId, List<int> CardsIds, string BackJackId) :IRequest;
 
+    /// <summary>
+    /// este comndo se va encargar de reemplazar el mazo cuando se ttermino el anterior
+    /// </summary>
+    /// <param name="BlackJackId"></param>
+    public record ShuffleDeck(string BlackJackId): IRequest<HttpResponseMessage>;
 }

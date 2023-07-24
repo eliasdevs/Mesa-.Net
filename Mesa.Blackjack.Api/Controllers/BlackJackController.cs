@@ -135,10 +135,20 @@ namespace Mesa.Blackjack.Api.Controllers
             return _mapper.Map<CardOutput>(response);
         }
 
-        //todo crear endpoint que permita actualizar el mazo cuando ha disminuido las cartas es decir actualizar el blackjack completo y agregarlos al history
-        //todo crear un metodo en el repo que extraiga el user del backjack
-        
+        /// <summary>
+        /// este metodo permite barajear las cartas del juego
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <returns></returns>
+        [HttpGet("{backjackId}/users/{playerId}/")]
+        public async Task<ActionResult<HttpResponseMessage>> BarajearCartas([FromRoute] string playerId)
+        {
+            ShuffleDeck cmd = new ShuffleDeck(playerId);
 
+            var response =await _mediator.Send(cmd);
+
+            return response;
+        }
 
     }
 }

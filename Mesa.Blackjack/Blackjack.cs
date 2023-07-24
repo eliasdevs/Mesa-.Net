@@ -39,5 +39,10 @@ namespace Mesa.Blackjack
 
         //agrega a la BD todo el historial del juego
         public List<HistoryBlackJackVo>? History { get; set; }
+
+        /// <summary>
+        /// indican el estado del juego
+        /// </summary>
+        public GameStatus Status { get; set; }
     }
 }

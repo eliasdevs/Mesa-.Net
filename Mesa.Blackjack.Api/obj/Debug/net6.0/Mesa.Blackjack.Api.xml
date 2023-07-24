@@ -54,6 +54,13 @@
             <param name="backjackId"></param>
             <returns></returns>
         </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.BarajearCartas(System.String)">
+            <summary>
+            este metodo permite barajear las cartas del juego
+            </summary>
+            <param name="playerId"></param>
+            <returns></returns>
+        </member>
         <member name="M:Mesa.Blackjack.Api.MiClaseSignalR.IniciarConversacion(System.String,System.Int32)">
             <summary>
             establece la coneccion
