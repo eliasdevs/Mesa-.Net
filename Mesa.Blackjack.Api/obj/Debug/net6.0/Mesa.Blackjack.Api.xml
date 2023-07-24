@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Mesa.Blackjack.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.Get">
+            <summary>
+            extrae todas las cartas de la baraja global
+            </summary>
+            <returns>aaaa</returns>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.GetSelectListItem">
+            <summary>
+            se encarga de extraer los valores de un enum en un SelectListItem
+            sirve para el valor que van a tener las fichas en el juego
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.GetCoin">
+            <summary>
+            extrae y muestra los datos de una moneda válida en el juego
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.Post(System.String)">
+            <summary>
+            este metodo sirve para iniciar el blackJack
+            recibe el id de la request
+            </summary>
+            <param name="requestId">representa el id de la solicitud</param>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.CreateRequest(System.String)">
+            <summary>
+            crea el una solicitud de blackJack
+            recibe el id del usuario que hace la solicitud
+            </summary>
+            <param name="playerId">representa el id del jugador que crea la solicitud</param>
+            <returns></returns>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.AcceptRequest(System.String,System.String)">
+            <summary>
+            recibe el id de la solicitud y el id del user que acepta la partida
+            </summary>
+            <param name="requestId"></param>
+            <param name="playerId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.GetCardById(System.String,System.String)">
+            <summary>
+            permite extraer una carta por id la extrae de la db
+            </summary>
+            <param name="playerId"></param>
+            <param name="backjackId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.MiClaseSignalR.IniciarConversacion(System.String,System.Int32)">
+            <summary>
+            establece la coneccion
+            </summary>
+            <param name="user"></param>
+            <param name="IdMensaje"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Mesa.Blackjack.Api.MiClaseSignalR.EnviarMensaje2(System.String,System.Int32)">
+            <summary>
+            se usa para mandar el mensaje a alguien en especifico
+            </summary>
+            <param name="user"></param>
+            <param name="IdMensaje"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

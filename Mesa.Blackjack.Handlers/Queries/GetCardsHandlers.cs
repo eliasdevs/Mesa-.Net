@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Mesa.Blackjack.Handlers.Queries
 {
-    public class GetCardsHandlers : IRequestHandler<GetCards, List<OutputDtoCard>>
+    public class GetCardsHandlers : IRequestHandler<GetCards, List<CardOutput>>
     {
         private readonly IMapper _mapper;
         private readonly IBlackJackRepository _repoBlackJack;
@@ -21,7 +21,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             _repoBlackJack = repoBlackJack;
             _mapper = mapper;
         }
-        public async Task<List<OutputDtoCard>> Handle(GetCards request, CancellationToken cancellationToken)
+        public async Task<List<CardOutput>> Handle(GetCards request, CancellationToken cancellationToken)
         {
             DeckOfCards baraja= await _repoBlackJack.GetDeckOfCardsAsync();
 
@@ -38,7 +38,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             }
 
             //remite las cartas de la baraja desordenadas            
-            return _mapper.Map<List<OutputDtoCard>>(baraja.Cards);
+            return _mapper.Map<List<CardOutput>>(baraja.Cards);
         }
     }
 }

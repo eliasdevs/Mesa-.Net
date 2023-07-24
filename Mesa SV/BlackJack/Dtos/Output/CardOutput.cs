@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mesa_SV.BlackJack.Dtos.Output
 {
-    public class OutputDtoCard
+    public class CardOutput
     {
-        public OutputDtoCard(int originalValue, int subValue, string representation, TypeCard typeOfCardId)
+        public CardOutput(int originalValue, int subValue, string representation, TypeCard typeOfCardId)
         {
             OriginalValue = originalValue;
             SubValue = subValue;

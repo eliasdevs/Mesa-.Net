@@ -27,11 +27,12 @@ namespace Mesa.Blackjack.Api.Controllers
         }
 
         /// <summary>
-        /// extrae todas las cartas de una baraja global
+        /// extrae todas las cartas de la baraja global
         /// </summary>
         /// <returns>aaaa</returns>
         [HttpGet("global_cards")]
-        public async Task<ActionResult<List<OutputDtoCard>>> Get()
+        [ProducesResponseType(typeof(List<CardOutput>), 200)]
+        public async Task<ActionResult<List<CardOutput>>> Get()
         {
             Mesa.Blackjack.Queries.GetCards query = new Queries.GetCards();
 
@@ -74,7 +75,7 @@ namespace Mesa.Blackjack.Api.Controllers
         /// </summary>
         /// <param name="requestId">representa el id de la solicitud</param>
         [HttpPost("startGame/{requestId}")]
-        public async Task<ActionResult<List<OutputDtoCard>>> Post(string requestId)
+        public async Task<ActionResult<List<CardOutput>>> Post(string requestId)
         {
             Mesa.Blackjack.Commands.StartGame cmd = new Commands.StartGame(requestId);
 
@@ -124,14 +125,14 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <param name="playerId"></param>
         /// <param name="backjackId"></param>
         /// <returns></returns>
-        [HttpGet("users/{playerId}/{backjackId}/draw_card")]
-        public async Task<ActionResult<OutputDtoCard>> GetCardById([FromRoute] string playerId, [FromRoute] string backjackId)
+        [HttpGet("{backjackId}/users/{playerId}/draw_card")]
+        public async Task<ActionResult<CardOutput>> GetCardById([FromRoute] string playerId, [FromRoute] string backjackId)
         {
-            GetCardById query = new GetCardById(playerId, backjackId);
+            DrawCardById query = new DrawCardById(playerId, backjackId);
 
             var response = await _mediator.Send(query);
 
-            return _mapper.Map<OutputDtoCard>(response);
+            return _mapper.Map<CardOutput>(response);
         }
 
         //todo crear endpoint que permita actualizar el mazo cuando ha disminuido las cartas es decir actualizar el blackjack completo y agregarlos al history

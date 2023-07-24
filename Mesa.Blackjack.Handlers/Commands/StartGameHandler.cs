@@ -11,7 +11,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Mesa.Blackjack.Handlers.Commands
 {
-    public class StartGameHandler : IRequestHandler<StartGame, List<OutputDtoCard>>
+    public class StartGameHandler : IRequestHandler<StartGame, List<CardOutput>>
     {
         private readonly IMapper _mapper;
         private readonly IBlackJackRepository _repoBlackJack;
@@ -21,15 +21,14 @@ namespace Mesa.Blackjack.Handlers.Commands
             _repoBlackJack = repoBlackJack;
         }
 
-        public async Task<List<OutputDtoCard>> Handle(StartGame request, CancellationToken cancellationToken)
+        public async Task<List<CardOutput>> Handle(StartGame request, CancellationToken cancellationToken)
         {
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
             Guid foranea = Guid.Empty;
             var listaCartas = getCardRamdom(baraja);
 
             //TODO: validar que el id de la request que viene exista y que la request este en estado aceptado y que el player que acepta sea diferente de null
-            //TODO: pedir ambos id y compararlos con los de la request
-
+            
             //verifica si es un Gui Valido
             if (Guid.TryParse(request.RequestId, out Guid guid))
                 foranea = guid;
@@ -40,8 +39,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             //llama al metodo de crear blackjack del repo
             Blackjack backjack = new Blackjack();
             backjack.IdRequest = foranea;
-
-            //TODO: consultar el user a la sdk del identity
+                        
             backjack.IdUserRetador = "idretador";
             backjack.IdUserEmparejado = "idaceptareto";
             
@@ -61,9 +59,14 @@ namespace Mesa.Blackjack.Handlers.Commands
             await _repoBlackJack.SaveChangesAsync();
 
             //todo modificar que retorne las dos manos de los dos jugadores
-            return _mapper.Map<List<OutputDtoCard>>(backjack.Mazo);
+            return _mapper.Map<List<CardOutput>>(backjack.Mazo);
         }
 
+        /// <summary>
+        /// este metodo se encarga de llenar el nuevo mazo de la request y las toma de la global
+        /// </summary>
+        /// <param name="baraja"></param>
+        /// <returns></returns>
         private List<Card> getCardRamdom(DeckOfCards baraja)
         {
             List<Card> nuevaLista= new List<Card>();

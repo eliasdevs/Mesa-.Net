@@ -14,9 +14,9 @@ namespace Mesa.Blackjack.Handlers.MappingProfile
     {
         public CardProfile()
         {
-            CreateMap<Card, OutputDtoCard>().ConstructUsing((card, automapper) =>
+            CreateMap<Card, CardOutput>().ConstructUsing((card, automapper) =>
             {
-                return new OutputDtoCard(
+                return new CardOutput(
                     card.OriginalValue,
                     card.SubValue,
                     card.Representation,

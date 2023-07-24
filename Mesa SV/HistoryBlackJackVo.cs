@@ -8,13 +8,13 @@ namespace Mesa_SV
 {
     public record HistoryBlackJackVo
     {
-        public HistoryBlackJackVo(List<Card>? playerOneHand, List<Card>? playerTwoHand, int idMazo, string logger)
+        public HistoryBlackJackVo(List<Card>? playerHand, string iduser, int idMazo, string logger)
         {
             Id = Guid.NewGuid();
-            PlayerOneHand = playerOneHand;
-            PlayerTwoHand = playerTwoHand;
+            PlayerHand = playerHand;
             IdMazo = idMazo;
             Logger = logger;
+            IdJugador = iduser;
         }
         public HistoryBlackJackVo()
         {
@@ -27,12 +27,14 @@ namespace Mesa_SV
 
         public Guid Id { get; set; }
         /// <summary>
-        /// Representa la mano del Jugador 1
+        /// Representa la mano del Jugador 
         /// </summary>
-        public List<Card>? PlayerOneHand { get; set; }
+        public List<Card>? PlayerHand { get; set; }
 
-        //Representa la Mano de Jugador 2 una va nula cuando la otra esta vacia
-        public List<Card>? PlayerTwoHand { get; set; }
+        /// <summary>
+        /// el Id del jugador
+        /// </summary>
+        public string IdJugador { get; set; }
         
         /// <summary>
         /// representa el numero de mazo al que pertenecen ambas manos

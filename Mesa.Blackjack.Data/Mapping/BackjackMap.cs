@@ -30,19 +30,14 @@ namespace Mesa.Blackjack.Data.Mapping
                 
                 h.HasKey(p=>p.Id);
                
-                h.OwnsMany(c => c.PlayerOneHand, p =>
+                h.OwnsMany(c => c.PlayerHand, p =>
                 {                    
                     p.ToTable("BlackJack_History_PlayerOneHand");
                     p.WithOwner().HasForeignKey("HistoryBlackJackVoId");                    
 
                 });
 
-                h.OwnsMany(c => c.PlayerTwoHand, p =>
-                {
-                    p.ToTable("BlackJack_History_PlayerTwoHand");
-                    p.WithOwner().HasForeignKey("HistoryBlackJackVoId");
-                    
-                });
+                h.Property(p => p.IdJugador).IsRequired();
 
                 h.Property(p => p.IdMazo)
                 .HasMaxLength(10).IsRequired();

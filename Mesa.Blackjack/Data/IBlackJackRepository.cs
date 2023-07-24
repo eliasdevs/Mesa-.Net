@@ -28,5 +28,13 @@ namespace Mesa.Blackjack.Data
         /// <returns></returns>
         Task SaveChangesAsync();
 
+        /// <summary>
+        /// extrae una partida de backjack
+        /// </summary>
+        /// <param name="userId"></param>
+        /// <param name="blackjackId"></param>
+        /// <returns></returns>
+        Task<Blackjack?> GetBlackjackById(string userId, Guid blackjackId);
+
     }
 }

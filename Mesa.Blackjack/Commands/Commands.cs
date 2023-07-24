@@ -9,7 +9,7 @@ namespace Mesa.Blackjack.Commands
     /// recibe dos parametros e inicia el juego
     /// recibe el id del request para crear el backJack
     /// </summary>
-    public record StartGame(string RequestId) : IRequest<List<OutputDtoCard>>;
+    public record StartGame(string RequestId) : IRequest<List<CardOutput>>;
 
     /// <summary>
     /// crea una solicitud de juego blackJack

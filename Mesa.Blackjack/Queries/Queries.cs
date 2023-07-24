@@ -8,7 +8,7 @@ namespace Mesa.Blackjack.Queries
     /// extrae las cartas de la base de datos de manera desordenada (barajeada)
     /// estas se van asignar al mazo de blackJack
     /// </summary>
-   public record GetCards(): IRequest<List<OutputDtoCard>>;
+   public record GetCards(): IRequest<List<CardOutput>>;
 
     /// <summary>
     /// extrae una carta por medio del id del jugador y el id de la partida
@@ -16,5 +16,5 @@ namespace Mesa.Blackjack.Queries
     /// </summary>
     /// <param name="UserId"></param>
     /// <param name="RequestId"></param>
-    public record GetCardById(string UserId, string BackJackId) : IRequest<Card>;
+    public record DrawCardById(string UserId, string BackJackId) : IRequest<Card>;
 }

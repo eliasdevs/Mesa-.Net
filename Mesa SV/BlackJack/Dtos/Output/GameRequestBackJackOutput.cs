@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Mesa_SV.BlackJack.Dtos.Output
 {
-    internal class OutputGameRequestBackJack
+    internal class GameRequestBackJackOutput
     {
-        public OutputGameRequestBackJack(Guid id, string playerId, string? acceptedPlayerId, GameRequestStatus status)
+        public GameRequestBackJackOutput(Guid id, string playerId, string? acceptedPlayerId, GameRequestStatus status)
         {
             Id = id;
             PlayerId = playerId;

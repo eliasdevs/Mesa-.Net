@@ -21,9 +21,6 @@ namespace Mesa.Blackjack.Handlers.Commands
         }
         public async Task<GameRequestBackJack> Handle(AcceptedRequest request, CancellationToken cancellationToken)
         {
-            // todo validar que  el id de la solicitud exista la BD
-            
-            //
             Guid idRequest = Guid.Empty;
 
             //verifica si es un Gui Valido
@@ -33,7 +30,7 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
                     nameof(request.RequestId), GetType(), $"Error este valor no es valido: {request.RequestId}");
 
-            //setea el id de la request
+            //extrae la request 
             GameRequestBackJack? solicitud = await _repository.GetGameRequestBackJackAsync(idRequest);
             
             if (solicitud == null)
@@ -41,11 +38,11 @@ namespace Mesa.Blackjack.Handlers.Commands
                     nameof(solicitud), GetType(), $"Error!!!, la solicitud no existe.");
 
             //validar tambien que l id del retador no sea el del que acepta
-            if (solicitud.PlayerId==request.UserId)
+            if (solicitud.PlayerId == request.UserId)
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
                     nameof(solicitud.PlayerId), GetType(), $"No es posible procesar la solicitud. Valor repetido {solicitud.PlayerId}");
 
-            //pone en pendiente el estado
+            //pone en aceptado el estado de la request
             solicitud.Status = GameRequestStatus.Accepted;
 
             //id del jugador que acepta la solicitud
