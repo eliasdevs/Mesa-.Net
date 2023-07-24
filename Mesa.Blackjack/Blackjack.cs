@@ -23,10 +23,10 @@ namespace Mesa.Blackjack
         /// <summary>
         /// contiene el id del usuario retador
         /// </summary>
-        public JugadorVo UserIdRetador{ get; set; }
+        public string IdUserRetador{ get; set; }
 
         //acepta el reto
-        public JugadorVo UserIdEmpareja { get; set; }
+        public string IdUserEmparejado{ get; set; }
 
         //este representa el mazo que se les carga a los users
         public List<Card> Mazo { get; set; }

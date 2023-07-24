@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "t6iBgYYaiZbF4u5PxFrj9/9aA5xj1GT0jTHKK0J/0oVluGchYR8hh5O8DQuzAeF4HTNnNTL7otZeXay7w+nPhQ==",
+  "dgSpecHash": "jtW3F2iHBzYXrfI1s95FyQpZrv1RCtSZ1uffOjYJqPewcS3QWrzPwNdByYr57qxEP5QITpR98+bczj9YuaxHoA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
+  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

@@ -32,3 +32,20 @@ C:\Users\elias\Documents\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.
 C:\Users\elias\Documents\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\refint\Mesa.Blackjack.Handlers.dll
 C:\Users\elias\Documents\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.pdb
 C:\Users\elias\Documents\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\ref\Mesa.Blackjack.Handlers.dll
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Blackjack.Handlers.deps.json
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Blackjack.Handlers.dll
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Blackjack.Handlers.pdb
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa SV.dll
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Blackjack.dll
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Blackjack.pdb
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa SV.pdb
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.csproj.CopyComplete
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.dll
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\refint\Mesa.Blackjack.Handlers.dll
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blackjack.Handlers.pdb
+D:\local\c# ASP.NET\Mesa\Mesa.Blackjack.Handlers\obj\Debug\net6.0\ref\Mesa.Blackjack.Handlers.dll

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj": {}
+    "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj": {}
   },
   "projects": {
-    "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj": {
+    "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj",
+        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj",
         "projectName": "Mesa SV",
-        "projectPath": "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj",
+        "projectPath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\elias\\Documents\\c# ASP.NET\\Mesa\\Mesa SV\\obj\\",
+        "outputPath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

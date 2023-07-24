@@ -1,13 +1,7 @@
+using Mesa.Blackjack.Api;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers;
 using Microsoft.EntityFrameworkCore;
-using System.Reflection;
-using System.Reflection;
-using System.Text.Json.Serialization;
-using MediatR;
-using Microsoft.AspNetCore.WebSockets;
-using Microsoft.AspNetCore.Builder;
-using Mesa.Blackjack.Api;
 
 var builder = WebApplication.CreateBuilder(args);
 
