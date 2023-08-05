@@ -1,7 +1,7 @@
 {
   "format": 1,
   "restore": {
-    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {}
+    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.BlackJack.csproj": {}
   },
   "projects": {
     "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj": {
@@ -65,12 +65,12 @@
         }
       }
     },
-    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {
+    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.BlackJack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
-        "projectName": "Mesa.Blackjack",
-        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
+        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.BlackJack.csproj",
+        "projectName": "Mesa.BlackJack",
+        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.BlackJack.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
         "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\obj\\",
         "projectStyle": "PackageReference",

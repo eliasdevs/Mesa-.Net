@@ -1488,7 +1488,7 @@
           "bin/placeholder/Mesa SV.dll": {}
         }
       },
-      "Mesa.Juegos/1.0.0": {
+      "Mesa.BlackJack/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1496,41 +1496,41 @@
           "Mesa SV": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Mesa.Juegos.dll": {}
+          "bin/placeholder/Mesa.BlackJack.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Mesa.Juegos.dll": {}
+          "bin/placeholder/Mesa.BlackJack.dll": {}
         }
       },
-      "Mesa.Juegos.Data/1.0.0": {
+      "Mesa.BlackJack.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Mesa SV": "1.0.0",
-          "Mesa.Juegos": "1.0.0",
+          "Mesa.BlackJack": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/Mesa.Juegos.Data.dll": {}
+          "bin/placeholder/Mesa.BlackJack.Data.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Mesa.Juegos.Data.dll": {}
+          "bin/placeholder/Mesa.BlackJack.Data.dll": {}
         }
       },
-      "Mesa.Juegos.Handlers/1.0.0": {
+      "Mesa.BlackJack.Handlers/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "AutoMapper": "12.0.1",
           "MediatR": "12.0.1",
-          "Mesa.Juegos": "1.0.0"
+          "Mesa.BlackJack": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Mesa.Juegos.Handlers.dll": {}
+          "bin/placeholder/Mesa.BlackJack.Handlers.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Mesa.Juegos.Handlers.dll": {}
+          "bin/placeholder/Mesa.BlackJack.Handlers.dll": {}
         }
       }
     }
@@ -4292,20 +4292,20 @@
       "path": "../Mesa SV/Mesa SV.csproj",
       "msbuildProject": "../Mesa SV/Mesa SV.csproj"
     },
-    "Mesa.Juegos/1.0.0": {
+    "Mesa.BlackJack/1.0.0": {
       "type": "project",
-      "path": "../Mesa.Blackjack/Mesa.Juegos.csproj",
-      "msbuildProject": "../Mesa.Blackjack/Mesa.Juegos.csproj"
+      "path": "../Mesa.Blackjack/Mesa.BlackJack.csproj",
+      "msbuildProject": "../Mesa.Blackjack/Mesa.BlackJack.csproj"
     },
-    "Mesa.Juegos.Data/1.0.0": {
+    "Mesa.BlackJack.Data/1.0.0": {
       "type": "project",
-      "path": "../Mesa.Blackjack.Data/Mesa.Juegos.Data.csproj",
-      "msbuildProject": "../Mesa.Blackjack.Data/Mesa.Juegos.Data.csproj"
+      "path": "../Mesa.Blackjack.Data/Mesa.BlackJack.Data.csproj",
+      "msbuildProject": "../Mesa.Blackjack.Data/Mesa.BlackJack.Data.csproj"
     },
-    "Mesa.Juegos.Handlers/1.0.0": {
+    "Mesa.BlackJack.Handlers/1.0.0": {
       "type": "project",
-      "path": "../Mesa.Blackjack.Handlers/Mesa.Juegos.Handlers.csproj",
-      "msbuildProject": "../Mesa.Blackjack.Handlers/Mesa.Juegos.Handlers.csproj"
+      "path": "../Mesa.Blackjack.Handlers/Mesa.BlackJack.Handlers.csproj",
+      "msbuildProject": "../Mesa.Blackjack.Handlers/Mesa.BlackJack.Handlers.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -4313,8 +4313,8 @@
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 12.0.1",
       "Fleck >= 1.2.0",
       "MediatR >= 12.0.1",
-      "Mesa.Juegos.Data >= 1.0.0",
-      "Mesa.Juegos.Handlers >= 1.0.0",
+      "Mesa.BlackJack.Data >= 1.0.0",
+      "Mesa.BlackJack.Handlers >= 1.0.0",
       "Microsoft.AspNetCore.SignalR.Core >= 1.1.0",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
@@ -4328,9 +4328,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.Juegos.Api.csproj",
-      "projectName": "Mesa.Juegos.Api",
-      "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.Juegos.Api.csproj",
+      "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.BlackJack.Api.csproj",
+      "projectName": "Mesa.BlackJack.Api",
+      "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.BlackJack.Api.csproj",
       "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
       "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\obj\\",
       "projectStyle": "PackageReference",
@@ -4355,11 +4355,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Juegos.Data.csproj": {
-              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Juegos.Data.csproj"
+            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.BlackJack.Data.csproj": {
+              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.BlackJack.Data.csproj"
             },
-            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Handlers\\Mesa.Juegos.Handlers.csproj": {
-              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Handlers\\Mesa.Juegos.Handlers.csproj"
+            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Handlers\\Mesa.BlackJack.Handlers.csproj": {
+              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Handlers\\Mesa.BlackJack.Handlers.csproj"
             }
           }
         }

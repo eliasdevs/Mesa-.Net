@@ -6,20 +6,20 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Mesa.Blackjack.Api/1.0.0": {
+      "Mesa.BlackJack.Api/1.0.0": {
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "12.0.1",
           "Fleck": "1.2.0",
           "MediatR": "12.0.1",
-          "Mesa.Blackjack.Data": "1.0.0",
-          "Mesa.Blackjack.Handlers": "1.0.0",
+          "Mesa.BlackJack.Data": "1.0.0",
+          "Mesa.BlackJack.Handlers": "1.0.0",
           "Microsoft.AspNetCore.SignalR.Core": "1.1.0",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
         "runtime": {
-          "Mesa.Blackjack.Api.dll": {}
+          "Mesa.BlackJack.Api.dll": {}
         }
       },
       "AutoMapper/12.0.1": {
@@ -871,40 +871,40 @@
           "Mesa SV.dll": {}
         }
       },
-      "Mesa.Blackjack/1.0.0": {
+      "Mesa.BlackJack/1.0.0": {
         "dependencies": {
           "MediatR": "12.0.1",
           "Mesa SV": "1.0.0"
         },
         "runtime": {
-          "Mesa.Blackjack.dll": {}
+          "Mesa.BlackJack.dll": {}
         }
       },
-      "Mesa.Blackjack.Data/1.0.0": {
+      "Mesa.BlackJack.Data/1.0.0": {
         "dependencies": {
           "Mesa SV": "1.0.0",
-          "Mesa.Blackjack": "1.0.0",
+          "Mesa.BlackJack": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0"
         },
         "runtime": {
-          "Mesa.Blackjack.Data.dll": {}
+          "Mesa.BlackJack.Data.dll": {}
         }
       },
-      "Mesa.Blackjack.Handlers/1.0.0": {
+      "Mesa.BlackJack.Handlers/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "MediatR": "12.0.1",
-          "Mesa.Blackjack": "1.0.0"
+          "Mesa.BlackJack": "1.0.0"
         },
         "runtime": {
-          "Mesa.Blackjack.Handlers.dll": {}
+          "Mesa.BlackJack.Handlers.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Mesa.Blackjack.Api/1.0.0": {
+    "Mesa.BlackJack.Api/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1537,17 +1537,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Mesa.Blackjack/1.0.0": {
+    "Mesa.BlackJack/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Mesa.Blackjack.Data/1.0.0": {
+    "Mesa.BlackJack.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Mesa.Blackjack.Handlers/1.0.0": {
+    "Mesa.BlackJack.Handlers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

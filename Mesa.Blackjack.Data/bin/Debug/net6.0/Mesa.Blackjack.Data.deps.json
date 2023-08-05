@@ -6,16 +6,16 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Mesa.Blackjack.Data/1.0.0": {
+      "Mesa.BlackJack.Data/1.0.0": {
         "dependencies": {
-          "Mesa.Blackjack": "1.0.0",
+          "Mesa.BlackJack": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.5",
           "Microsoft.EntityFrameworkCore.Design": "7.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.0",
           "Microsoft.EntityFrameworkCore.Tools": "7.0.0"
         },
         "runtime": {
-          "Mesa.Blackjack.Data.dll": {}
+          "Mesa.BlackJack.Data.dll": {}
         }
       },
       "Azure.Core/1.24.0": {
@@ -726,19 +726,19 @@
           "Mesa SV.dll": {}
         }
       },
-      "Mesa.Blackjack/1.0.0": {
+      "Mesa.BlackJack/1.0.0": {
         "dependencies": {
           "MediatR": "12.0.1",
           "Mesa SV": "1.0.0"
         },
         "runtime": {
-          "Mesa.Blackjack.dll": {}
+          "Mesa.BlackJack.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Mesa.Blackjack.Data/1.0.0": {
+    "Mesa.BlackJack.Data/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -1238,7 +1238,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Mesa.Blackjack/1.0.0": {
+    "Mesa.BlackJack/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

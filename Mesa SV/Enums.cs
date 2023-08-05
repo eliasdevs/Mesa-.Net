@@ -20,17 +20,22 @@ namespace Mesa_SV
     /// <summary>
     /// representa el typo de backjack amistoso o recompensada
     /// </summary>
-    public enum TypeBlackJack
+    public enum TypeGame
     {
         /// <summary>
-        /// partida amistosa
+        /// partida amistosa, solo dejara 5 amistosas entre jugadores y 5 amistosa con el crupier por día
         /// </summary>
         FRIENDLY=1,
 
         /// <summary>
+        /// CONTRA EL SISTEMA
+        /// </summary>
+        CRUPIER = 2,
+
+        /// <summary>
         /// partida recompensada
         /// </summary>
-        REWARDED=2
+        REWARDED= 3
     }
 
     /// <summary>
@@ -69,7 +74,7 @@ namespace Mesa_SV
     /// <summary>
     /// va ser el enum de todos los juegos disponibles en la plataforma
     /// </summary>
-    public enum TipoJuego
+    public enum EnumGame
     {
         BlackJack = 1
     }

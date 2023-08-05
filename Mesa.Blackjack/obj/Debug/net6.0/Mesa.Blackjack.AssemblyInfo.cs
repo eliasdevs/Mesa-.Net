@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Mesa.Blackjack")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Mesa.BlackJack")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("Mesa.Blackjack")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Mesa.Blackjack")]
+[assembly: System.Reflection.AssemblyProductAttribute("Mesa.BlackJack")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Mesa.BlackJack")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.

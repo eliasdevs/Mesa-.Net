@@ -1,8 +1,8 @@
 {
   "Version": 1,
-  "Hash": "uwFI3bzp+X9go9U7UH+BYFGxmIIh5qZ3TDzHCtr8NhI=",
-  "Source": "Mesa.Juegos.Api",
-  "BasePath": "_content/Mesa.Juegos.Api",
+  "Hash": "IfCXU9V62EGSz+hyVAYJ7t3bhiCXBGrD+fFEhH9eJoU=",
+  "Source": "Mesa.BlackJack.Api",
+  "BasePath": "_content/Mesa.BlackJack.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],

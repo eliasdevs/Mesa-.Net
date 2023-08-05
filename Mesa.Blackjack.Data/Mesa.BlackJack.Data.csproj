@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Mesa SV\Mesa SV.csproj" />
-    <ProjectReference Include="..\Mesa.Blackjack\Mesa.Juegos.csproj" />
+    <ProjectReference Include="..\Mesa.Blackjack\Mesa.BlackJack.csproj" />
   </ItemGroup>
 
 </Project>

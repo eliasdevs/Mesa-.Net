@@ -6,12 +6,12 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Mesa.Blackjack/1.0.0": {
+      "Mesa.BlackJack/1.0.0": {
         "dependencies": {
           "MediatR": "12.0.1"
         },
         "runtime": {
-          "Mesa.Blackjack.dll": {}
+          "Mesa.BlackJack.dll": {}
         }
       },
       "MediatR/12.0.1": {
@@ -50,7 +50,7 @@
     }
   },
   "libraries": {
-    "Mesa.Blackjack/1.0.0": {
+    "Mesa.BlackJack/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

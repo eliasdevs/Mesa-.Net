@@ -6,14 +6,14 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
-      "Mesa.Blackjack.Handlers/1.0.0": {
+      "Mesa.BlackJack.Handlers/1.0.0": {
         "dependencies": {
           "AutoMapper": "12.0.1",
           "MediatR": "12.0.1",
-          "Mesa.Blackjack": "1.0.0"
+          "Mesa.BlackJack": "1.0.0"
         },
         "runtime": {
-          "Mesa.Blackjack.Handlers.dll": {}
+          "Mesa.BlackJack.Handlers.dll": {}
         }
       },
       "AutoMapper/12.0.1": {
@@ -61,19 +61,19 @@
           "Mesa SV.dll": {}
         }
       },
-      "Mesa.Blackjack/1.0.0": {
+      "Mesa.BlackJack/1.0.0": {
         "dependencies": {
           "MediatR": "12.0.1",
           "Mesa SV": "1.0.0"
         },
         "runtime": {
-          "Mesa.Blackjack.dll": {}
+          "Mesa.BlackJack.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "Mesa.Blackjack.Handlers/1.0.0": {
+    "Mesa.BlackJack.Handlers/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -118,7 +118,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Mesa.Blackjack/1.0.0": {
+    "Mesa.BlackJack/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
