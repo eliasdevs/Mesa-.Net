@@ -19,6 +19,8 @@ namespace Mesa.Blackjack.Handlers.Commands
         }
         public async Task<GameRequestBackJack> Handle(CreateRequest request, CancellationToken cancellationToken)
         {
+            //TODO: cuando se tenga definida la forma de manejo de los users consultar que el user no tenga una request abierta antes de dejarlo pasar a hacer otra
+
             //setea el id de la request
             GameRequestBackJack solicitud = new GameRequestBackJack();
             
@@ -27,6 +29,8 @@ namespace Mesa.Blackjack.Handlers.Commands
 
             //id del jugador que hace la solicitud
             solicitud.PlayerId = request.UserId;
+
+            solicitud.TipoJuego = request.tipoJuego; 
 
             //agrega la info del retador
             solicitud.PlayerInfo = new List<InfoJugador>()

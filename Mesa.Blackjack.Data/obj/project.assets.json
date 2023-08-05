@@ -1196,7 +1196,7 @@
           "bin/placeholder/Mesa SV.dll": {}
         }
       },
-      "Mesa.Blackjack/1.0.0": {
+      "Mesa.Juegos/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1204,10 +1204,10 @@
           "Mesa SV": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Mesa.Blackjack.dll": {}
+          "bin/placeholder/Mesa.Juegos.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Mesa.Blackjack.dll": {}
+          "bin/placeholder/Mesa.Juegos.dll": {}
         }
       }
     }
@@ -3590,16 +3590,16 @@
       "path": "../Mesa SV/Mesa SV.csproj",
       "msbuildProject": "../Mesa SV/Mesa SV.csproj"
     },
-    "Mesa.Blackjack/1.0.0": {
+    "Mesa.Juegos/1.0.0": {
       "type": "project",
-      "path": "../Mesa.Blackjack/Mesa.Blackjack.csproj",
-      "msbuildProject": "../Mesa.Blackjack/Mesa.Blackjack.csproj"
+      "path": "../Mesa.Blackjack/Mesa.Juegos.csproj",
+      "msbuildProject": "../Mesa.Blackjack/Mesa.Juegos.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Mesa SV >= 1.0.0",
-      "Mesa.Blackjack >= 1.0.0",
+      "Mesa.Juegos >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.0",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.0",
@@ -3613,9 +3613,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Blackjack.Data.csproj",
-      "projectName": "Mesa.Blackjack.Data",
-      "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Blackjack.Data.csproj",
+      "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Juegos.Data.csproj",
+      "projectName": "Mesa.Juegos.Data",
+      "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Juegos.Data.csproj",
       "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
       "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\obj\\",
       "projectStyle": "PackageReference",
@@ -3643,8 +3643,8 @@
             "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj": {
               "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj"
             },
-            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {
-              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj"
+            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Juegos.csproj": {
+              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Juegos.csproj"
             }
           }
         }

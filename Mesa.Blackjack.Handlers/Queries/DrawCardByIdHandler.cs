@@ -2,8 +2,8 @@
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
-using Mesa_SV;
 using Mesa_SV.Exceptions;
+using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
 using System;
 using System.Collections.Generic;

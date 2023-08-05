@@ -15,11 +15,12 @@ namespace Mesa_SV
             Id=Guid.NewGuid();
         }
 
-        public GameRequestBase(string playerId, string? acceptedPlayerId, GameRequestStatus status)
+        public GameRequestBase(string playerId, TipoJuego tipoJuego, string? acceptedPlayerId, GameRequestStatus status)
         {            
             PlayerId = playerId;
             AcceptedPlayerId = acceptedPlayerId;
             Status = status;
+            TipoJuego = tipoJuego;
         }
 
         /// <summary>
@@ -43,5 +44,10 @@ namespace Mesa_SV
         /// el estado de la solicitud 
         /// </summary>
         public GameRequestStatus Status { get; set; }
+
+        /// <summary>
+        /// El tipo de juego a jugar
+        /// </summary>
+        public TipoJuego TipoJuego { get; set; }
     }
 }

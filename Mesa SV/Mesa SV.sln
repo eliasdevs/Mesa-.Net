@@ -7,13 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa SV", "Mesa SV.csproj",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BlackJack", "BlackJack", "{E6A9E8F5-462C-4A10-A994-068193A35C5C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack", "..\Mesa.Blackjack\Mesa.Blackjack.csproj", "{E87F68E2-2B25-405C-88A0-6D877A25E812}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Juegos", "..\Mesa.Blackjack\Mesa.Juegos.csproj", "{E87F68E2-2B25-405C-88A0-6D877A25E812}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack.Data", "..\Mesa.Blackjack.Data\Mesa.Blackjack.Data.csproj", "{931FBB82-1DCD-464B-93F8-F8CF097905F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Juegos.Data", "..\Mesa.Blackjack.Data\Mesa.Juegos.Data.csproj", "{931FBB82-1DCD-464B-93F8-F8CF097905F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack.Handlers", "..\Mesa.Blackjack.Handlers\Mesa.Blackjack.Handlers.csproj", "{32438E4A-7A16-464D-BBEE-15C9F2A60E42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Juegos.Handlers", "..\Mesa.Blackjack.Handlers\Mesa.Juegos.Handlers.csproj", "{32438E4A-7A16-464D-BBEE-15C9F2A60E42}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Blackjack.Api", "..\Mesa.Blackjack.Api\Mesa.Blackjack.Api.csproj", "{AFA690CA-CAE8-4B9D-88CE-9025185EBC64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Juegos.Api", "..\Mesa.Blackjack.Api\Mesa.Juegos.Api.csproj", "{AFA690CA-CAE8-4B9D-88CE-9025185EBC64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

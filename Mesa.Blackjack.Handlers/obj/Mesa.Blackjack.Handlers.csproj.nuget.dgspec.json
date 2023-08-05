@@ -95,8 +95,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {
-                "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj"
+              "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Juegos.csproj": {
+                "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Juegos.csproj"
               }
             }
           }
@@ -140,12 +140,12 @@
         }
       }
     },
-    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {
+    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Juegos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
-        "projectName": "Mesa.Blackjack",
-        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
+        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Juegos.csproj",
+        "projectName": "Mesa.Juegos",
+        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Juegos.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
         "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\obj\\",
         "projectStyle": "PackageReference",

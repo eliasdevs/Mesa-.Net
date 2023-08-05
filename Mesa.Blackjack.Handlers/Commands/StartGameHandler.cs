@@ -6,6 +6,7 @@ using Mesa.Blackjack.Handlers.Helper;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
+using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
 using System.Reflection.Metadata.Ecma335;
 using System.Security.Cryptography.X509Certificates;

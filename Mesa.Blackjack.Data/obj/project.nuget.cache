@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "B0wWoADdQi/TWJ6NLj9TsNBbPx8B1pqSJF2X3rwZTai9JYcOUhz9mNGuY59IgsUaBEqUFK4EXKHVjNYHVpdsfg==",
+  "dgSpecHash": "VNiaSXkv6GePpmMmVtJlhu8XiNomnDdmN3q88sHLyBAIKNlCKrfs2nXs3jhJ2elmebG1Fo8HnaAqZTudTAy9sQ==",
   "success": true,
-  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Blackjack.Data.csproj",
+  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Data\\Mesa.Juegos.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",

@@ -1,0 +1,19 @@
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.Juegos.Data.deps.json
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.Juegos.Data.runtimeconfig.json
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.Juegos.Data.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.Juegos.Data.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa SV.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.Juegos.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa SV.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.Juegos.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.csproj.CopyComplete
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\refint\Mesa.Juegos.Data.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.Juegos.Data.genruntimeconfig.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\ref\Mesa.Juegos.Data.dll

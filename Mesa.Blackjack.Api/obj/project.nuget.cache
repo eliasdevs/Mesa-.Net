@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "RolJ0JsEOvo3btaM1Cd8ZwvT2AYkz+vyxyiLGByjuZ/BjhIrho65dQt/Skm/X1jhPNqfwkHaRarxpfZnoG8yMQ==",
+  "dgSpecHash": "332e0uxTK3NBpGm5exYS1u21In+AdM5qaaBamtnYlaX51CuQm5oEfS/pQVT0aWZUdf9Pu1Uu/AwlrYJyd7Q+LA==",
   "success": true,
-  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.Blackjack.Api.csproj",
+  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.Juegos.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

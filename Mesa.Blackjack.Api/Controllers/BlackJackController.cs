@@ -91,13 +91,14 @@ namespace Mesa.Blackjack.Api.Controllers
         /// </summary>
         /// <param name="playerId">representa el id del jugador que crea la solicitud</param>
         /// <param name="contextId"></param>
+        /// <param name="tipoJuego"></param>
         /// <returns></returns>
         [HttpPost]
         [Route("users/{playerId}/request")]
-        public async Task<ActionResult<GameRequestBackJack>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId)
+        public async Task<ActionResult<GameRequestBackJack>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, TipoJuego tipoJuego)
         {
             //proceso para crear una solicitud
-            CreateRequest cmd = new CreateRequest(playerId, contextId);
+            CreateRequest cmd = new CreateRequest(playerId, contextId, tipoJuego);
 
             var response = await _mediator.Send(cmd);
 

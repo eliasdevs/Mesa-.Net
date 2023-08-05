@@ -1,5 +1,6 @@
 ﻿
 using Mesa_SV;
+using Mesa_SV.VoDeJuegos;
 
 namespace Mesa.Blackjack
 {

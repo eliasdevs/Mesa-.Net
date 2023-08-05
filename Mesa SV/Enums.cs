@@ -65,4 +65,12 @@ namespace Mesa_SV
         Started = 1,
         finalized = 2,
     }
+
+    /// <summary>
+    /// va ser el enum de todos los juegos disponibles en la plataforma
+    /// </summary>
+    public enum TipoJuego
+    {
+        BlackJack = 1
+    }
 }

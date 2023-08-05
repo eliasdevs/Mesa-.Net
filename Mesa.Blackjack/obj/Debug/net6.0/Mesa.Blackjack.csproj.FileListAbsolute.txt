@@ -43,3 +43,18 @@ D:\local\c# ASP.NET\Mesa\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.dll
 D:\local\c# ASP.NET\Mesa\Mesa.Blackjack\obj\Debug\net6.0\refint\Mesa.Blackjack.dll
 D:\local\c# ASP.NET\Mesa\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.pdb
 D:\local\c# ASP.NET\Mesa\Mesa.Blackjack\obj\Debug\net6.0\ref\Mesa.Blackjack.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa.Blackjack.deps.json
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa.Blackjack.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa.Blackjack.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa SV.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa SV.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.csproj.CopyComplete
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\refint\Mesa.Blackjack.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.Blackjack.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\ref\Mesa.Blackjack.dll

@@ -1,0 +1,17 @@
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Juegos.Handlers.deps.json
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Juegos.Handlers.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Juegos.Handlers.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa SV.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Juegos.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.Juegos.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa SV.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.csproj.CopyComplete
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\refint\Mesa.Juegos.Handlers.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Juegos.Handlers.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\ref\Mesa.Juegos.Handlers.dll
