@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\local\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {}
+    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {}
   },
   "projects": {
-    "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj": {
+    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj",
+        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj",
         "projectName": "Mesa SV",
-        "projectPath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj",
+        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\obj\\",
+        "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -65,14 +65,14 @@
         }
       }
     },
-    "D:\\local\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {
+    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
+        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
         "projectName": "Mesa.Blackjack",
-        "projectPath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
+        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\Mesa.Blackjack.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa.Blackjack\\obj\\",
+        "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -95,8 +95,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj": {
-                "projectPath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa SV\\Mesa SV.csproj"
+              "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj": {
+                "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj"
               }
             }
           }

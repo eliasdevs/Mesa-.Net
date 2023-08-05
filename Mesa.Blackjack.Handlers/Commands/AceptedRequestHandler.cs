@@ -43,6 +43,7 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
                     nameof(solicitud.PlayerId), GetType(), $"No es posible procesar la solicitud. Valor repetido {solicitud.PlayerId}");
 
+            
             //pone en aceptado el estado de la request
             solicitud.Status = GameRequestStatus.Accepted;
 

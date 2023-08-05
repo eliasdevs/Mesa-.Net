@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y4+Qnlyoq8Cm7Uv1rC0F6tJOD03wQUhcZPHULUEoiuxpAJgByrJXyh30rWihJSmmxJIynOTNUnKSDU6lMxgFXQ==",
+  "dgSpecHash": "Fo6voOsbEudVDzqtqHs7x0xOz+7X3HxpJ3OCl3f0WgADbsyKHTXV/H6oUKSYqRP2e35ju3h2fgKekGluqNvskQ==",
   "success": true,
-  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa\\Mesa.Blackjack.Handlers\\Mesa.Blackjack.Handlers.csproj",
+  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Handlers\\Mesa.Blackjack.Handlers.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\mediatr\\12.0.1\\mediatr.12.0.1.nupkg.sha512",
