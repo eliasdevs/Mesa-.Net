@@ -32,7 +32,10 @@ namespace Mesa.Blackjack.Api.Controllers
         /// </summary>
         /// <returns>aaaa</returns>
         [HttpGet("global_cards")]
-        [ProducesResponseType(typeof(List<CardOutput>), 200)]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         public async Task<ActionResult<List<CardOutput>>> Get()
         {
             Mesa.Blackjack.Queries.GetCards query = new Queries.GetCards();
@@ -76,6 +79,10 @@ namespace Mesa.Blackjack.Api.Controllers
         /// </summary>
         /// <param name="requestId">representa el id de la solicitud</param>
         [HttpPost("startGame/{requestId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         public async Task<ActionResult<List<CardOutput>>> Post(string requestId)
         {
             Mesa.Blackjack.Commands.StartGame cmd = new Commands.StartGame(requestId);
@@ -95,6 +102,10 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("users/{playerId}/request")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         public async Task<ActionResult<GameRequestBackJackOutput>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, TypeGame tipoJuego)
         {
             //proceso para crear una solicitud
@@ -115,6 +126,8 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <returns></returns>
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [HttpPut("users/{playerId}/request/{requestId}/accept")]
         public async Task<ActionResult<GameRequestBackJackOutput>> AcceptRequest([FromRoute] string playerId, [FromRoute] string requestId, [FromQuery] string contextId)
         {
@@ -133,6 +146,9 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <param name="backjackId"></param>
         /// <returns></returns>
         [HttpGet("{backjackId}/users/{playerId}/draw_card")]
+        [ProducesResponseType(StatusCodes.Status200OK)]        
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         public async Task<ActionResult<CardOutput>> GetCardById([FromRoute] string playerId, [FromRoute] string backjackId)
         {
             DrawCardById query = new DrawCardById(playerId, backjackId);
@@ -148,6 +164,9 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <param name="playerId"></param>
         /// <returns></returns>
         [HttpGet("{backjackId}/users/{playerId}/")]
+        [ProducesResponseType(StatusCodes.Status200OK)]        
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         public async Task<ActionResult<HttpResponseMessage>> BarajearCartas([FromRoute] string playerId)
         {
             ShuffleDeck cmd = new ShuffleDeck(playerId);
