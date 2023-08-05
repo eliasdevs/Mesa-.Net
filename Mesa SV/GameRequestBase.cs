@@ -15,7 +15,7 @@ namespace Mesa_SV
             Id=Guid.NewGuid();
         }
 
-        public GameRequestBase(string playerId, EnumGame tipoJuego, string? acceptedPlayerId, GameRequestStatus status)
+        public GameRequestBase(string playerId, TypeGame tipoJuego, string? acceptedPlayerId, GameRequestStatus status)
         {            
             PlayerId = playerId;
             AcceptedPlayerId = acceptedPlayerId;
@@ -48,6 +48,6 @@ namespace Mesa_SV
         /// <summary>
         /// El tipo de juego a jugar
         /// </summary>
-        public EnumGame TipoJuego { get; set; }
+        public TypeGame TipoJuego { get; set; }
     }
 }

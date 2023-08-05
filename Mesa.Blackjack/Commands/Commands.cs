@@ -17,7 +17,7 @@ namespace Mesa.Blackjack.Commands
     /// puntos  a agregar :
     /// <item>notifica a todos los jugadores disponibles que hay una solicitud para ese request</item>
     /// </summary>
-    public record CreateRequest(string UserId, string ContextId, EnumGame tipoJuego) : IRequest<GameRequestBackJack>;
+    public record CreateRequest(string UserId, string ContextId, TypeGame tipoJuego) : IRequest<GameRequestBackJack>;
 
     /// <summary>
     /// recibe el id del jugador que acepta el request y  y el id de la solicitud
