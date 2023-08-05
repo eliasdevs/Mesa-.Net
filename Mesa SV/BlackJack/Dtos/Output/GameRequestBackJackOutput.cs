@@ -6,16 +6,8 @@ using System.Threading.Tasks;
 
 namespace Mesa_SV.BlackJack.Dtos.Output
 {
-    internal class GameRequestBackJackOutput
+    public class GameRequestBackJackOutput
     {
-        public GameRequestBackJackOutput(Guid id, string playerId, string? acceptedPlayerId, GameRequestStatus status)
-        {
-            Id = id;
-            PlayerId = playerId;
-            AcceptedPlayerId = acceptedPlayerId;
-            Status = status;
-        }
-
         /// <summary>
         /// el id de la solicitud
         /// </summary>
@@ -35,6 +27,10 @@ namespace Mesa_SV.BlackJack.Dtos.Output
         /// el estado de la solicitud 
         /// </summary>
         public GameRequestStatus Status { get; set; }
-        
+
+        /// <summary>
+        /// informacion de los jugadores involucrados en el juego
+        /// </summary>
+        public List<InfoJugador> PlayerInfo { get; set; }
     }
 }

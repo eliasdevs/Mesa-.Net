@@ -95,14 +95,15 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("users/{playerId}/request")]
-        public async Task<ActionResult<GameRequestBackJack>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, TypeGame tipoJuego)
+        public async Task<ActionResult<GameRequestBackJackOutput>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, TypeGame tipoJuego)
         {
             //proceso para crear una solicitud
             CreateRequest cmd = new CreateRequest(playerId, contextId, tipoJuego);
 
             var response = await _mediator.Send(cmd);
 
-            return response;
+            return _mapper.Map<GameRequestBackJackOutput>(response);
+
         }
 
         /// <summary>
@@ -113,18 +114,18 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <param name="contextId"></param>
         /// <returns></returns>
         [HttpPut("users/{playerId}/request/{requestId}/accept")]
-        public async Task<ActionResult<GameRequestBackJack>> AcceptRequest([FromRoute] string playerId, [FromRoute] string requestId, [FromQuery] string contextId)
+        public async Task<ActionResult<GameRequestBackJackOutput>> AcceptRequest([FromRoute] string playerId, [FromRoute] string requestId, [FromQuery] string contextId)
         {
             //proceso para aceptar una solicitud
             AcceptedRequest cmd = new AcceptedRequest(playerId, requestId, contextId);
 
             var response = await _mediator.Send(cmd);
 
-            return response;
+            return _mapper.Map<GameRequestBackJackOutput>(response);
         }
 
         /// <summary>
-        /// permite extraer una carta por id la extrae de la db
+        /// permite extraer una carta por id la extrae de la db  - pedir carta
         /// </summary>
         /// <param name="playerId"></param>
         /// <param name="backjackId"></param>
@@ -140,7 +141,7 @@ namespace Mesa.Blackjack.Api.Controllers
         }
 
         /// <summary>
-        /// este metodo permite barajear las cartas del juego
+        /// este metodo permite barajear las cartas del juego - solo cuando se acaban las cartas de la baraja anterior
         /// </summary>
         /// <param name="playerId"></param>
         /// <returns></returns>
@@ -153,6 +154,7 @@ namespace Mesa.Blackjack.Api.Controllers
 
             return response;
         }
+        //TODO: Plantarse falta
 
     }
 }

@@ -37,6 +37,10 @@ namespace Mesa.Blackjack.Handlers.Commands
             if (solicitud == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.Request,
                     nameof(solicitud), GetType(), $"Error!!!, la solicitud no existe.");
+            
+            if(solicitud.Status == GameRequestStatus.Accepted)
+                throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
+                    nameof(solicitud.PlayerId), GetType(), $"Esta solicitud ya fue aceptada antes {solicitud.PlayerId}");
 
             //validar tambien que l id del retador no sea el del que acepta
             if (solicitud.PlayerId == request.UserId)
@@ -51,11 +55,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             solicitud.AcceptedPlayerId = request.UserId;
 
             //agrega la info del jugador que acepta la solicitud
-            solicitud.PlayerInfo = new List<InfoJugador>()
-            {
-                new InfoJugador
-                { IdContextWS = request.ContextId, IdUser = request.UserId }
-            };
+            solicitud.PlayerInfo.Add(new InfoJugador { IdContextWS = request.ContextId, IdUser = request.UserId });
 
             //modifica la solicitud
             await _repository.SaveChangesAsync();

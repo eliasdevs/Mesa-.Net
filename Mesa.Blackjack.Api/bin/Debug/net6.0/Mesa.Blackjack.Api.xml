@@ -51,7 +51,7 @@
         </member>
         <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.GetCardById(System.String,System.String)">
             <summary>
-            permite extraer una carta por id la extrae de la db
+            permite extraer una carta por id la extrae de la db  - pedir carta
             </summary>
             <param name="playerId"></param>
             <param name="backjackId"></param>
@@ -59,7 +59,7 @@
         </member>
         <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.BarajearCartas(System.String)">
             <summary>
-            este metodo permite barajear las cartas del juego
+            este metodo permite barajear las cartas del juego - solo cuando se acaban las cartas de la baraja anterior
             </summary>
             <param name="playerId"></param>
             <returns></returns>
