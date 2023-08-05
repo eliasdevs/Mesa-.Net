@@ -113,6 +113,8 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <param name="playerId"></param>
         /// <param name="contextId"></param>
         /// <returns></returns>
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [HttpPut("users/{playerId}/request/{requestId}/accept")]
         public async Task<ActionResult<GameRequestBackJackOutput>> AcceptRequest([FromRoute] string playerId, [FromRoute] string requestId, [FromQuery] string contextId)
         {

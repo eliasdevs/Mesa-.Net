@@ -40,7 +40,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             
             if(solicitud.Status == GameRequestStatus.Accepted)
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
-                    nameof(solicitud.PlayerId), GetType(), $"Esta solicitud ya fue aceptada antes {solicitud.PlayerId}");
+                    nameof(solicitud.PlayerId), GetType(), $"Esta solicitud ya fue aceptada antes Id: {solicitud.Id}");
 
             //validar tambien que l id del retador no sea el del que acepta
             if (solicitud.PlayerId == request.UserId)

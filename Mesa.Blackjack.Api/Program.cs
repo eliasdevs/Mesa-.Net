@@ -1,6 +1,7 @@
 using Mesa.Blackjack.Api;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers;
+using Mesa_SV.Filter;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -34,6 +35,16 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
+
+
+//FILSTROS DE ERRORES
+builder.Services.AddControllers(o =>
+{
+    o.Filters.Add(typeof(ExceptionFilter));
+    ///o.Filters.Add(new RefitApiExceptionFilter());
+})
+.AddXmlSerializerFormatters()
+.AddXmlDataContractSerializerFormatters();
 
 //MEDIATR
 builder.Services.AddMediatR(cf =>
