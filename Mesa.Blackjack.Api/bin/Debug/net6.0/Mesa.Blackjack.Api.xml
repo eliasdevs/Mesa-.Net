@@ -23,7 +23,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.Post(System.String)">
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.StartBlackJack(System.String)">
             <summary>
             este metodo sirve para iniciar el blackJack
             recibe el id de la request

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "EHMWpFEYbZlff790SYGV8tokP4X8Dve+9E64Y2LIj8Fe1bxHWMJ/EhBitWLXeH0sgVCFHPRZhBNUHhFXke0UQQ==",
+  "dgSpecHash": "cuwIYOS7eDXVq7vxQ3ebJPzsPoMDvBjB8ks8ezt/R/ktCkqc+OqD0oF4Lbqa0oLkhqj+1kRrxlY87CXlQ9v6fg==",
   "success": true,
   "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.BlackJack.Api.csproj",
   "expectedPackageFiles": [
@@ -73,6 +73,7 @@
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\refit\\7.0.0\\refit.7.0.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
@@ -89,6 +90,7 @@
     "C:\\Users\\elias\\.nuget\\packages\\system.io.pipelines\\4.5.2\\system.io.pipelines.4.5.2.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.memory.data\\1.0.2\\system.memory.data.1.0.2.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\system.net.http.json\\7.0.1\\system.net.http.json.7.0.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.reflection.emit\\4.3.0\\system.reflection.emit.4.3.0.nupkg.sha512",
@@ -106,7 +108,7 @@
     "C:\\Users\\elias\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.text.encodings.web\\7.0.0\\system.text.encodings.web.7.0.0.nupkg.sha512",
-    "C:\\Users\\elias\\.nuget\\packages\\system.text.json\\7.0.0\\system.text.json.7.0.0.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\system.text.json\\7.0.3\\system.text.json.7.0.3.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.threading.channels\\4.5.0\\system.threading.channels.4.5.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",

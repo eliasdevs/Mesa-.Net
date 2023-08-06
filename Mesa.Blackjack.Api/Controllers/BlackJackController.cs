@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Mesa.Blackjack.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/blackjack")]
     [ApiController]
     public class BlackJackController : ControllerBase
     {
@@ -84,7 +84,7 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<GameRequestBackJackOutput>> Post(string requestId)
+        public async Task<ActionResult<GameRequestBackJackOutput>> StartBlackJack(string requestId)
         {
             Mesa.Blackjack.Commands.StartGame cmd = new Commands.StartGame(requestId);
 
@@ -184,7 +184,7 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <param name="blackjackId"></param>
         /// <param name="playerId"></param>
         /// <returns></returns>
-        [HttpGet("{blackjackId}/users/{playerId}/stand")]
+        [HttpPost("{blackjackId}/users/{playerId}/stand")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
