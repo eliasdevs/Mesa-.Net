@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Mesa.RealTime.Project.props" />
+</Project>

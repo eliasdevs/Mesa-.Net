@@ -17,13 +17,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.BlackJack.Api", "..\Me
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Users", "Users", "{A1DB6313-B8E3-4422-819E-EB391BAA390B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesa.Users", "..\Mesa.Users\Mesa.Users.csproj", "{5BB63FF9-DC49-4A03-97A2-2CC36FF11924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Users", "..\Mesa.Users\Mesa.Users.csproj", "{5BB63FF9-DC49-4A03-97A2-2CC36FF11924}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesa.Users.Data", "..\Mesa.Users.Data\Mesa.Users.Data.csproj", "{F2550632-46F4-4C5D-938D-D0EB7B67AF91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Users.Data", "..\Mesa.Users.Data\Mesa.Users.Data.csproj", "{F2550632-46F4-4C5D-938D-D0EB7B67AF91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesa.Users.Handlers", "..\Mesa.Users.Handlers\Mesa.Users.Handlers.csproj", "{AC8FFF0B-A3E8-40FD-A4FB-7E4E0A03620A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Users.Handlers", "..\Mesa.Users.Handlers\Mesa.Users.Handlers.csproj", "{AC8FFF0B-A3E8-40FD-A4FB-7E4E0A03620A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesa.Users.Api", "..\Mesa.Users.Api\Mesa.Users.Api.csproj", "{4101EF29-29AA-45D2-BBF6-0B61B09944BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Users.Api", "..\Mesa.Users.Api\Mesa.Users.Api.csproj", "{4101EF29-29AA-45D2-BBF6-0B61B09944BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RealTime", "RealTime", "{69A262C0-C9CB-41A5-A26B-9AE7E613B058}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesa.RealTime.Project", "..\Mesa.RealTime.Project\Mesa.RealTime.Project.csproj", "{42A37782-204F-4C58-95F2-98441628C6ED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +71,10 @@ Global
 		{4101EF29-29AA-45D2-BBF6-0B61B09944BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4101EF29-29AA-45D2-BBF6-0B61B09944BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4101EF29-29AA-45D2-BBF6-0B61B09944BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{42A37782-204F-4C58-95F2-98441628C6ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42A37782-204F-4C58-95F2-98441628C6ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42A37782-204F-4C58-95F2-98441628C6ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42A37782-204F-4C58-95F2-98441628C6ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +88,7 @@ Global
 		{F2550632-46F4-4C5D-938D-D0EB7B67AF91} = {A1DB6313-B8E3-4422-819E-EB391BAA390B}
 		{AC8FFF0B-A3E8-40FD-A4FB-7E4E0A03620A} = {A1DB6313-B8E3-4422-819E-EB391BAA390B}
 		{4101EF29-29AA-45D2-BBF6-0B61B09944BE} = {A1DB6313-B8E3-4422-819E-EB391BAA390B}
+		{42A37782-204F-4C58-95F2-98441628C6ED} = {69A262C0-C9CB-41A5-A26B-9AE7E613B058}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {32C6A027-0D05-4B74-89C6-45C004F6E3B9}
