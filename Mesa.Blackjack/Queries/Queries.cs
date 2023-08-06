@@ -23,5 +23,5 @@ namespace Mesa.Blackjack.Queries
     /// </summary>
     /// <param name="UserId"></param>
     /// <param name="BackJackId"></param>
-    public record GetHandActive(string UserId, string BackJackId) : IRequest<List<Card>>;
+    public record GetHandActive(string UserId, string BackJackId) : IRequest<ManoJugadorVo>;
 }

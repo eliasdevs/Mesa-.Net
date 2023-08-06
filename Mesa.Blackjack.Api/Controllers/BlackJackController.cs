@@ -4,6 +4,7 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Queries;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
+using Mesa_SV.VoDeJuegos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -187,13 +188,14 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<List<CardOutput>>> PlantarBlackJack([FromRoute] string blackjackId , [FromRoute] string playerId)
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        public async Task<ActionResult<ManoJugadorVo>> PlantarBlackJack([FromRoute] string blackjackId , [FromRoute] string playerId)
         {
             StandHand query = new StandHand(blackjackId,playerId);
 
-            await _mediator.Send(query);
+           var response = await _mediator.Send(query);
 
-            return NoContent();
+            return response;
         }
 
         /// <summary>
@@ -206,13 +208,13 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<List<CardOutput>>> GetActiveHand([FromRoute] string blackjackId, [FromRoute] string playerId)
+        public async Task<ActionResult<ManoJugadorVo>> GetActiveHand([FromRoute] string blackjackId, [FromRoute] string playerId)
         {
             GetHandActive query = new GetHandActive(playerId, blackjackId);
 
             var response = await _mediator.Send(query);
 
-            return _mapper.Map<List<CardOutput>>(response);
+            return response;
         }
     }
 }
