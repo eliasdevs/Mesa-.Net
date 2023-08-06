@@ -21,7 +21,7 @@ namespace Mesa.Blackjack.Data
             await _context.GameRequests.AddAsync(request);
         }
 
-        public async Task<GameRequestBackJack?> GetGameRequestBackJackAsync(Guid id)
+        public async Task<GameRequestBackJack?> GetGameRequestBackJackAsync(string id)
         {
             return await _context.GameRequests.FindAsync(id);
         }

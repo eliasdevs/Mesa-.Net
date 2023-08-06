@@ -10,7 +10,7 @@ namespace Mesa_SV.VoDeJuegos
     {
         public HistoryBlackJackVo(List<Card>? playerHand, string iduser, int idMazo, string logger)
         {
-            Id = Guid.NewGuid();
+            Id = Guid.NewGuid().ToString();
             PlayerHand = playerHand;
             contadorMazo = idMazo;
             Logger = logger;
@@ -19,13 +19,13 @@ namespace Mesa_SV.VoDeJuegos
         public HistoryBlackJackVo()
         {
             // Constructor sin parámetros requerido por Entity Framework Core
-            Id = Guid.NewGuid();
+            Id = Guid.NewGuid().ToString();
         }
 
 
         //como es unVo va tomar id de la Gameplay o de Cualquiera que lo use
 
-        public Guid Id { get; set; }
+        public string Id { get; set; }
         /// <summary>
         /// Representa la mano del Jugador 
         /// </summary>

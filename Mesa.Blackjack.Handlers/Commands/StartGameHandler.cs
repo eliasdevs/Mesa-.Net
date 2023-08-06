@@ -27,21 +27,12 @@ namespace Mesa.Blackjack.Handlers.Commands
 
         public async Task<GameRequestBackJack> Handle(StartGame request, CancellationToken cancellationToken)
         {
-
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
-            Guid foranea = Guid.Empty;
-
+            
             var listaCartas = CardHelper.BarajearCartas(baraja);
 
-            //verifica si es un Gui Valido
-            if (Guid.TryParse(request.RequestId, out Guid guid))
-                foranea = guid;
-            else
-                throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
-                    nameof(request.RequestId), GetType(), $"Error este valor no es valido: {request.RequestId}");
-
             //extrae la request 
-            GameRequestBackJack? solicitud = await _repositoryRequest.GetGameRequestBackJackAsync(guid);
+            GameRequestBackJack? solicitud = await _repositoryRequest.GetGameRequestBackJackAsync(request.RequestId);
 
             if (solicitud == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.Request,
@@ -59,7 +50,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             };
 
             //seteo constructor
-            Blackjack backjack = new Blackjack(null,foranea, new List<ManoJugadorVo>()
+            Blackjack backjack = new Blackjack(null, request.RequestId, new List<ManoJugadorVo>()
                 {
                     new ManoJugadorVo(solicitud.AcceptedPlayerId, new List<Card>())
                 },  

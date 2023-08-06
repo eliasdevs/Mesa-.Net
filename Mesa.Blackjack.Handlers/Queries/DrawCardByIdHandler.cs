@@ -22,12 +22,7 @@ namespace Mesa.Blackjack.Handlers.Queries
         }
         public async Task<Card> Handle(DrawCardById request, CancellationToken cancellationToken)
         {
-            //verifica si es un Gui Valido
-            if (!Guid.TryParse(request.BackJackId, out Guid idBlackJack))
-                throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
-                    nameof(request.BackJackId), GetType(), $"Error este valor no es valido: {request.BackJackId}");
-
-            Blackjack? blackjack = await _repository.GetBlackjackByUserId(request.UserId, idBlackJack);
+            Blackjack? blackjack = await _repository.GetBlackjackByUserId(request.UserId, request.BackJackId);
 
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(),"No se encontro la partida solicitada");

@@ -22,17 +22,8 @@ namespace Mesa.Blackjack.Handlers.Commands
         }
         public async Task<GameRequestBackJack> Handle(AcceptedRequest request, CancellationToken cancellationToken)
         {
-            Guid idRequest = Guid.Empty;
-
-            //verifica si es un Gui Valido
-            if (Guid.TryParse(request.RequestId, out Guid guid))
-                idRequest = guid;
-            else
-                throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
-                    nameof(request.RequestId), GetType(), $"Error este valor no es valido: {request.RequestId}");
-
             //extrae la request 
-            GameRequestBackJack? solicitud = await _repository.GetGameRequestBackJackAsync(idRequest);
+            GameRequestBackJack? solicitud = await _repository.GetGameRequestBackJackAsync(request.RequestId);
             
             if (solicitud == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.Request,

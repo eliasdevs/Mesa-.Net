@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mesa_SV
+﻿namespace Mesa_SV
 {
     /// <summary>
     /// object Value representa una solicitud de Juego
     /// </summary>
     public abstract class GameRequestBase
     {
-        public GameRequestBase() { 
-            Id=Guid.NewGuid();
+        public GameRequestBase()
+        {
+            Id = Guid.NewGuid().ToString();
         }
 
         public GameRequestBase(string playerId, TypeGame tipoJuego, string? acceptedPlayerId, GameRequestStatus status)
-        {            
+        {
             PlayerId = playerId;
             AcceptedPlayerId = acceptedPlayerId;
             Status = status;
@@ -26,7 +21,7 @@ namespace Mesa_SV
         /// <summary>
         /// el id de la solicitud
         /// </summary>
-        public Guid Id { get; private set; }
+        public string Id { get; private set; }
 
         /// <summary>
         /// el id del usuario que hace la solicitud 

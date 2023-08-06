@@ -11,9 +11,9 @@ namespace Mesa.Blackjack
             
         }
 
-        public Blackjack(Guid? id, Guid idRequest, List<ManoJugadorVo> manoJugadores, List<Card> mazo, List<HistoryBlackJackVo>? history, GameStatus status)
+        public Blackjack(string? id, string idRequest, List<ManoJugadorVo> manoJugadores, List<Card> mazo, List<HistoryBlackJackVo>? history, GameStatus status)
         {
-            Id = id ?? Guid.NewGuid();
+            Id = id ?? Guid.NewGuid().ToString();
             IdRequest = idRequest;
             ManoJugadores = manoJugadores;
             Mazo = mazo;
@@ -26,12 +26,12 @@ namespace Mesa.Blackjack
         /// <summary>
         /// id de la partida blackjack
         /// </summary>
-        public Guid Id { get; set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// foranea de request
         /// </summary>
-        public Guid IdRequest { get; set; }
+        public string IdRequest { get; set; }
 
         /// <summary>
         /// id del user acepta el reto y la mano

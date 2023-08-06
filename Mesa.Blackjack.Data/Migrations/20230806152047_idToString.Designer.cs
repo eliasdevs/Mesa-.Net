@@ -4,6 +4,7 @@ using Mesa.Blackjack.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mesa.Blackjack.Data.Migrations
 {
     [DbContext(typeof(BlackJackContext))]
-    partial class BlackJackContextModelSnapshot : ModelSnapshot
+    [Migration("20230806152047_idToString")]
+    partial class idToString
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -25,8 +28,7 @@ namespace Mesa.Blackjack.Data.Migrations
             modelBuilder.Entity("Mesa.Blackjack.Blackjack", b =>
                 {
                     b.Property<string>("Id")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<int>("ContadorMazo")
                         .HasColumnType("int");
@@ -130,7 +132,7 @@ namespace Mesa.Blackjack.Data.Migrations
                     b.OwnsMany("Mesa_SV.VoDeJuegos.Card", "Mazo", b1 =>
                         {
                             b1.Property<string>("BlackjackId")
-                                .HasColumnType("nvarchar(50)");
+                                .HasColumnType("nvarchar(450)");
 
                             b1.Property<int>("Id")
                                 .ValueGeneratedOnAdd()
@@ -161,13 +163,13 @@ namespace Mesa.Blackjack.Data.Migrations
 
                     b.OwnsMany("Mesa_SV.VoDeJuegos.HistoryBlackJackVo", "History", b1 =>
                         {
-                            b1.Property<string>("Id")
-                                .HasMaxLength(50)
-                                .HasColumnType("nvarchar(50)");
+                            b1.Property<Guid>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("uniqueidentifier");
 
                             b1.Property<string>("BlackjackId")
                                 .IsRequired()
-                                .HasColumnType("nvarchar(50)");
+                                .HasColumnType("nvarchar(450)");
 
                             b1.Property<string>("IdJugador")
                                 .IsRequired()
@@ -193,8 +195,8 @@ namespace Mesa.Blackjack.Data.Migrations
 
                             b1.OwnsMany("Mesa_SV.VoDeJuegos.Card", "PlayerHand", b2 =>
                                 {
-                                    b2.Property<string>("HistoryBlackJackVoId")
-                                        .HasColumnType("nvarchar(50)");
+                                    b2.Property<Guid>("HistoryBlackJackVoId")
+                                        .HasColumnType("uniqueidentifier");
 
                                     b2.Property<int>("Id")
                                         .ValueGeneratedOnAdd()
@@ -229,7 +231,7 @@ namespace Mesa.Blackjack.Data.Migrations
                     b.OwnsMany("Mesa_SV.VoDeJuegos.ManoJugadorVo", "ManoJugadores", b1 =>
                         {
                             b1.Property<string>("BlackjackId")
-                                .HasColumnType("nvarchar(50)");
+                                .HasColumnType("nvarchar(450)");
 
                             b1.Property<int>("Id")
                                 .ValueGeneratedOnAdd()
@@ -252,7 +254,7 @@ namespace Mesa.Blackjack.Data.Migrations
                             b1.OwnsMany("Mesa_SV.VoDeJuegos.Card", "Mano", b2 =>
                                 {
                                     b2.Property<string>("ManoJugadorVoBlackjackId")
-                                        .HasColumnType("nvarchar(50)");
+                                        .HasColumnType("nvarchar(450)");
 
                                     b2.Property<int>("ManoJugadorVoId")
                                         .HasColumnType("int");

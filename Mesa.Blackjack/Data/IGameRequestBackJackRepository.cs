@@ -15,7 +15,7 @@ namespace Mesa.Blackjack.Data
         /// <summary>
         /// metodo para extraer una solicitud por su Id
         /// </summary>
-        Task<GameRequestBackJack?> GetGameRequestBackJackAsync(Guid id);
+        Task<GameRequestBackJack?> GetGameRequestBackJackAsync(string id);
 
         /// <summary>
         /// metodo para extraer todas las solicitudes

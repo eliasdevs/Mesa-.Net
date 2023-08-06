@@ -8,6 +8,7 @@ namespace Mesa.Blackjack.Data.Mapping
         public void Configure(EntityTypeBuilder<Blackjack> builder)
         {
             builder.HasKey(x => x.Id);
+            builder.Property(x => x.Id).HasMaxLength(50);
 
             builder.OwnsMany(x => x.ManoJugadores, u =>
             {
@@ -29,6 +30,7 @@ namespace Mesa.Blackjack.Data.Mapping
                 h.ToTable("BlackJack_History");
 
                 h.HasKey(p => p.Id);
+                h.Property(p => p.Id).HasMaxLength(50);
 
                 h.OwnsMany(c => c.PlayerHand, p =>
                 {

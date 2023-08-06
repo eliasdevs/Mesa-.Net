@@ -20,12 +20,7 @@ namespace Mesa.Blackjack.Handlers.Commands
         }
         public async Task<HttpResponseMessage> Handle(ShuffleDeck request, CancellationToken cancellationToken)
         {
-            //verifica si es un Gui Valido
-            if (!Guid.TryParse(request.BlackJackId, out Guid idBlackJack))
-                throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
-                    nameof(request.BlackJackId), GetType(), $"Error este valor no es valido: {request.BlackJackId}");
-
-            Blackjack? blackjack = await _repoBlackJack.GetBlackjackById(idBlackJack);
+            Blackjack? blackjack = await _repoBlackJack.GetBlackjackById(request.BlackJackId);
 
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
