@@ -13,6 +13,9 @@ using System.Threading.Tasks;
 
 namespace Mesa.Blackjack.Handlers.Queries
 {
+    /// <summary>
+    /// este no tiene relacion con las de blackjack solamente sirve las cartas al iniciar el juego
+    /// </summary>
     public class GetCardsHandlers : IRequestHandler<GetCards, List<CardOutput>>
     {
         private readonly IMapper _mapper;

@@ -177,6 +177,12 @@ namespace Mesa.Blackjack.Api.Controllers
         }        
 
       
+        /// <summary>
+        /// este metodo permite plantarse
+        /// </summary>
+        /// <param name="blackjackId"></param>
+        /// <param name="playerId"></param>
+        /// <returns></returns>
         [HttpGet("{blackjackId}/users/{playerId}/stand")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
