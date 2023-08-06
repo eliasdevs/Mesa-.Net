@@ -54,14 +54,14 @@
             permite extraer una carta por id la extrae de la db  - pedir carta
             </summary>
             <param name="playerId"></param>
-            <param name="backjackId"></param>
+            <param name="blackjackId"></param>
             <returns></returns>
         </member>
         <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.BarajearCartas(System.String)">
             <summary>
             este metodo permite barajear las cartas del juego - solo cuando se acaban las cartas de la baraja anterior
             </summary>
-            <param name="backjackId"></param>
+            <param name="blackjackId"></param>
             <returns></returns>
         </member>
         <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.PlantarBlackJack(System.String,System.String)">

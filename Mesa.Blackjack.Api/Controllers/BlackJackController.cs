@@ -144,15 +144,15 @@ namespace Mesa.Blackjack.Api.Controllers
         /// permite extraer una carta por id la extrae de la db  - pedir carta
         /// </summary>
         /// <param name="playerId"></param>
-        /// <param name="backjackId"></param>
+        /// <param name="blackjackId"></param>
         /// <returns></returns>
-        [HttpGet("{backjackId}/users/{playerId}/draw_card")]
+        [HttpGet("{blackjackId}/users/{playerId}/draw_card")]
         [ProducesResponseType(StatusCodes.Status200OK)]        
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<CardOutput>> GetCardById([FromRoute] string playerId, [FromRoute] string backjackId)
+        public async Task<ActionResult<CardOutput>> GetCardById([FromRoute] string playerId, [FromRoute] string blackjackId)
         {
-            DrawCardById query = new DrawCardById(playerId, backjackId);
+            DrawCardById query = new DrawCardById(playerId, blackjackId);
 
             var response = await _mediator.Send(query);
 
@@ -162,15 +162,15 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <summary>
         /// este metodo permite barajear las cartas del juego - solo cuando se acaban las cartas de la baraja anterior
         /// </summary>
-        /// <param name="backjackId"></param>
+        /// <param name="blackjackId"></param>
         /// <returns></returns>
-        [HttpPost("{backjackId}/shuffle/")]
+        [HttpPost("{blackjackId}/shuffle/")]
         [ProducesResponseType(StatusCodes.Status200OK)]        
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<HttpResponseMessage>> BarajearCartas([FromRoute] string backjackId)
+        public async Task<ActionResult<HttpResponseMessage>> BarajearCartas([FromRoute] string blackjackId)
         {
-            ShuffleDeck cmd = new ShuffleDeck(backjackId);
+            ShuffleDeck cmd = new ShuffleDeck(blackjackId);
 
             var response =await _mediator.Send(cmd);
 
