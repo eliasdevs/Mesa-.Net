@@ -9,15 +9,15 @@ using System.Threading.Tasks;
 
 namespace Mesa.Blackjack.Data.Mapping
 {
-    internal class BackjackMap : IEntityTypeConfiguration<Blackjack>
+    internal class BlackjackMap : IEntityTypeConfiguration<Blackjack>
     {
         public void Configure(EntityTypeBuilder<Blackjack> builder)
         {
             builder.HasKey(x => x.Id);            
 
-            builder.Property(x => x.IdUserRetador);
+            builder.OwnsOne(x => x.IdUserRetador);
 
-            builder.Property(x => x.IdUserEmparejado);            
+            builder.OwnsOne(x => x.IdUserEmparejado);            
 
             builder.OwnsMany(x => x.Mazo, m =>
             {

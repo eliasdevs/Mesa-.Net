@@ -13,7 +13,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Mesa.Blackjack.Handlers.Commands
 {
-    public class StartGameHandler : IRequestHandler<StartGame, List<CardOutput>>
+    public class StartGameHandler : IRequestHandler<StartGame, GameRequestBackJack>
     {
         private readonly IMapper _mapper;
         private readonly IBlackJackRepository _repoBlackJack;
@@ -25,7 +25,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             _repositoryRequest = repositoryRequest;
         }
 
-        public async Task<List<CardOutput>> Handle(StartGame request, CancellationToken cancellationToken)
+        public async Task<GameRequestBackJack> Handle(StartGame request, CancellationToken cancellationToken)
         {
 
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
@@ -51,30 +51,24 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
                     nameof(request.RequestId), GetType(), $"No se puede Iniciar la Partida, Algo salio Mal: {request.RequestId}");
 
-            //llama al metodo de crear blackjack del repo
-            Blackjack backjack = new Blackjack();
-            backjack.IdRequest = foranea;
-            backjack.ContadorMazo = 1;
-            backjack.Status = GameStatus.Started;
-            backjack.IdUserRetador = solicitud.PlayerId;
-            backjack.IdUserEmparejado = solicitud.AcceptedPlayerId;
-            
-            //el amzo se manda sin id de carta xq lo asigna ef al persistir la DB
-            backjack.Mazo = listaCartas;
-
-            List<HistoryBlackJackVo> listHistory= new List<HistoryBlackJackVo>() 
+            //primer history blackjack
+            List<HistoryBlackJackVo> listHistory = new List<HistoryBlackJackVo>()
             {
-                new HistoryBlackJackVo(null, null, backjack.ContadorMazo, "Iniciando el Juego")
+                //mazo numero 1
+                new HistoryBlackJackVo(null, null, 1, "Iniciando el Juego")
             };
 
-            //setea el objeto  history de backjack
-            backjack.History = listHistory;
+            //seteo constructor
+            Blackjack backjack = new Blackjack(null,foranea,
+                new ManoJugadorVo(solicitud.PlayerId, new List<Card>()), 
+                new ManoJugadorVo(solicitud.AcceptedPlayerId, new List<Card>()), 
+                listaCartas, listHistory, GameStatus.Started);
 
             //crea el registro en la BD
             await _repoBlackJack.CreateBlackJackAsync(backjack);
             await _repoBlackJack.SaveChangesAsync();
                          
-            return _mapper.Map<List<CardOutput>>(backjack.Mazo);
+            return solicitud;
         }        
     }
 

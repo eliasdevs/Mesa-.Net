@@ -83,15 +83,15 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<List<CardOutput>>> Post(string requestId)
+        public async Task<ActionResult<GameRequestBackJackOutput>> Post(string requestId)
         {
             Mesa.Blackjack.Commands.StartGame cmd = new Commands.StartGame(requestId);
 
             var response = await _mediator.Send(cmd);
 
-            return response;
-
+            return _mapper.Map<GameRequestBackJackOutput>(response);
         }
+
         /// <summary>
         /// crea el una solicitud de blackJack
         /// recibe el id del usuario que hace la solicitud

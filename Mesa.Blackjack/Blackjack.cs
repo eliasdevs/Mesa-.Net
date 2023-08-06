@@ -10,7 +10,20 @@ namespace Mesa.Blackjack
         {
             
         }
-      
+
+        public Blackjack(Guid? id, Guid idRequest, ManoJugadorVo idUserRetador, ManoJugadorVo idUserEmparejado, List<Card> mazo, List<HistoryBlackJackVo>? history, GameStatus status)
+        {
+            Id = id ?? Guid.NewGuid();
+            IdRequest = idRequest;
+            IdUserRetador = idUserRetador;
+            IdUserEmparejado = idUserEmparejado;
+            Mazo = mazo;
+            ContadorMazo = 1;
+            History = history;
+            Status = status;
+        }
+
+
         /// <summary>
         /// id de la partida blackjack
         /// </summary>
@@ -22,14 +35,18 @@ namespace Mesa.Blackjack
         public Guid IdRequest { get; set; }
 
         /// <summary>
-        /// contiene el id del usuario retador
+        /// contiene el id del usuario retador y la mano
         /// </summary>
-        public string IdUserRetador{ get; set; }
+        public ManoJugadorVo IdUserRetador { get; set; }
 
-        //acepta el reto
-        public string IdUserEmparejado{ get; set; }
+        /// <summary>
+        /// id del user acepta el reto y la mano
+        /// </summary>
+        public ManoJugadorVo IdUserEmparejado { get; set; }
 
-        //este representa el mazo que se les carga a los users
+        /// <summary>
+        /// este representa el mazo que se les carga a los users en todo el juego
+        /// </summary>
         public List<Card> Mazo { get; set; }
 
         /// <summary>
