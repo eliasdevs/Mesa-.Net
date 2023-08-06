@@ -12,7 +12,7 @@ namespace Mesa_SV.VoDeJuegos
         {
             Id = Guid.NewGuid();
             PlayerHand = playerHand;
-            IdMazo = idMazo;
+            contadorMazo = idMazo;
             Logger = logger;
             IdJugador = iduser;
         }
@@ -41,7 +41,7 @@ namespace Mesa_SV.VoDeJuegos
         /// este se da cuando se acaban las cartas se reparte otro mazo ya cuenta como mazo 2
         /// y asi sucesivamente
         /// </summary>
-        public int IdMazo { get; set; }
+        public int contadorMazo { get; set; }
 
         /// <summary>
         /// aqui se registra la actividad del juego
