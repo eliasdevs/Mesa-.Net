@@ -45,19 +45,24 @@ namespace Mesa.Blackjack.Handlers.Queries
 
             //elimina la carta seleccionada
             blackjack.Mazo.Remove(carta);
-            blackjack.ManoJugadores.Remove(datosJugador);
 
-            List<Card> cards = datosJugador.Mano ?? new List<Card>();
-            cards.Add(carta);
+            
+
+            List<Card> cards = new List<Card> { new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId) };
+
+            if (datosJugador.Mano.Count > 0)
+                cards.AddRange(datosJugador.Mano);
 
             //acualizar el vo de mano             
-            blackjack.ManoJugadores.Add(new ManoJugadorVo(request.UserId, cards, StatusHand.ACTIVE)); 
+            blackjack.ManoJugadores[blackjack.ManoJugadores.FindIndex(x => x.IdJugador == request.UserId)] = new ManoJugadorVo(request.UserId, cards, StatusHand.ACTIVE );
+
             
+
             //agrega la carta al historial de blackjack
-            blackjack?.History?.Add(
-                new HistoryBlackJackVo(
-                    new List<Card>() {carta}, request.UserId, blackjack.ContadorMazo,
-                    $"Se entrego la carta de Id {blackjack.Mazo[0].Id} con valor {blackjack.Mazo[0].OriginalValue} y sub value {blackjack.Mazo[0].SubValue} al jugador {request.UserId}"));
+            //blackjack?.History?.Add(
+            //    new HistoryBlackJackVo(
+            //        new List<Card>() {carta}, request.UserId, blackjack.ContadorMazo,
+            //        $"Se entrego la carta de Id {blackjack.Mazo[0].Id} con valor {blackjack.Mazo[0].OriginalValue} y sub value {blackjack.Mazo[0].SubValue} al jugador {request.UserId}"));
             
             //guardo los cambios 
             await _repository.SaveChangesAsync();

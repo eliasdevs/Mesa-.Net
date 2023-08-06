@@ -8,7 +8,7 @@ namespace Mesa_SV.VoDeJuegos
 {
     public record HistoryBlackJackVo
     {
-        public HistoryBlackJackVo(List<Card>? playerHand, string iduser, int idMazo, string logger)
+        public HistoryBlackJackVo(List<Card>? playerHand, string? iduser, int idMazo, string logger)
         {
             Id = Guid.NewGuid().ToString();
             PlayerHand = playerHand;
@@ -34,7 +34,7 @@ namespace Mesa_SV.VoDeJuegos
         /// <summary>
         /// el Id del jugador
         /// </summary>
-        public string IdJugador { get; set; }
+        public string? IdJugador { get; set; }
 
         /// <summary>
         /// representa el numero de mazo al que pertenecen ambas manos

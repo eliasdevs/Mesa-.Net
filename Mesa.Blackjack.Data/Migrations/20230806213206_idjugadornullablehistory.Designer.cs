@@ -4,6 +4,7 @@ using Mesa.Blackjack.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mesa.BlackJack.Data.Migrations
 {
     [DbContext(typeof(BlackJackContext))]
-    partial class BlackJackContextModelSnapshot : ModelSnapshot
+    [Migration("20230806213206_idjugadornullablehistory")]
+    partial class idjugadornullablehistory
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -43,7 +46,7 @@ namespace Mesa.BlackJack.Data.Migrations
                     b.HasIndex("IdRequest")
                         .IsUnique();
 
-                    b.ToTable("Blackjacks", (string)null);
+                    b.ToTable("Blackjacks");
                 });
 
             modelBuilder.Entity("Mesa.Blackjack.GameRequestBackJack", b =>
@@ -128,7 +131,39 @@ namespace Mesa.BlackJack.Data.Migrations
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
-                    b.OwnsMany("Mesa.Blackjack.Blackjack.History#Mesa_SV.VoDeJuegos.HistoryBlackJackVo", "History", b1 =>
+                    b.OwnsMany("Mesa_SV.VoDeJuegos.Card", "Mazo", b1 =>
+                        {
+                            b1.Property<string>("BlackjackId")
+                                .HasColumnType("nvarchar(50)");
+
+                            b1.Property<int>("Id")
+                                .ValueGeneratedOnAdd()
+                                .HasColumnType("int");
+
+                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
+
+                            b1.Property<int>("OriginalValue")
+                                .HasColumnType("int");
+
+                            b1.Property<string>("Representation")
+                                .IsRequired()
+                                .HasColumnType("nvarchar(max)");
+
+                            b1.Property<int>("SubValue")
+                                .HasColumnType("int");
+
+                            b1.Property<int>("TypeOfCardId")
+                                .HasColumnType("int");
+
+                            b1.HasKey("BlackjackId", "Id");
+
+                            b1.ToTable("BlackJack_Mazo", (string)null);
+
+                            b1.WithOwner()
+                                .HasForeignKey("BlackjackId");
+                        });
+
+                    b.OwnsMany("Mesa_SV.VoDeJuegos.HistoryBlackJackVo", "History", b1 =>
                         {
                             b1.Property<string>("Id")
                                 .HasMaxLength(50)
@@ -159,7 +194,7 @@ namespace Mesa.BlackJack.Data.Migrations
                             b1.WithOwner()
                                 .HasForeignKey("BlackjackId");
 
-                            b1.OwnsMany("Mesa.Blackjack.Blackjack.History#Mesa_SV.VoDeJuegos.HistoryBlackJackVo.PlayerHand#Mesa_SV.VoDeJuegos.Card", "PlayerHand", b2 =>
+                            b1.OwnsMany("Mesa_SV.VoDeJuegos.Card", "PlayerHand", b2 =>
                                 {
                                     b2.Property<string>("HistoryBlackJackVoId")
                                         .HasColumnType("nvarchar(50)");
@@ -194,7 +229,7 @@ namespace Mesa.BlackJack.Data.Migrations
                             b1.Navigation("PlayerHand");
                         });
 
-                    b.OwnsMany("Mesa.Blackjack.Blackjack.ManoJugadores#Mesa_SV.VoDeJuegos.ManoJugadorVo", "ManoJugadores", b1 =>
+                    b.OwnsMany("Mesa_SV.VoDeJuegos.ManoJugadorVo", "ManoJugadores", b1 =>
                         {
                             b1.Property<string>("BlackjackId")
                                 .HasColumnType("nvarchar(50)");
@@ -215,12 +250,12 @@ namespace Mesa.BlackJack.Data.Migrations
 
                             b1.HasKey("BlackjackId", "Id");
 
-                            b1.ToTable("ManoJugadorVo", (string)null);
+                            b1.ToTable("ManoJugadorVo");
 
                             b1.WithOwner()
                                 .HasForeignKey("BlackjackId");
 
-                            b1.OwnsMany("Mesa.Blackjack.Blackjack.ManoJugadores#Mesa_SV.VoDeJuegos.ManoJugadorVo.Mano#Mesa_SV.VoDeJuegos.Card", "Mano", b2 =>
+                            b1.OwnsMany("Mesa_SV.VoDeJuegos.Card", "Mano", b2 =>
                                 {
                                     b2.Property<string>("ManoJugadorVoBlackjackId")
                                         .HasColumnType("nvarchar(50)");
@@ -258,38 +293,6 @@ namespace Mesa.BlackJack.Data.Migrations
                             b1.Navigation("Mano");
                         });
 
-                    b.OwnsMany("Mesa.Blackjack.Blackjack.Mazo#Mesa_SV.VoDeJuegos.Card", "Mazo", b1 =>
-                        {
-                            b1.Property<string>("BlackjackId")
-                                .HasColumnType("nvarchar(50)");
-
-                            b1.Property<int>("Id")
-                                .ValueGeneratedOnAdd()
-                                .HasColumnType("int");
-
-                            SqlServerPropertyBuilderExtensions.UseIdentityColumn(b1.Property<int>("Id"));
-
-                            b1.Property<int>("OriginalValue")
-                                .HasColumnType("int");
-
-                            b1.Property<string>("Representation")
-                                .IsRequired()
-                                .HasColumnType("nvarchar(max)");
-
-                            b1.Property<int>("SubValue")
-                                .HasColumnType("int");
-
-                            b1.Property<int>("TypeOfCardId")
-                                .HasColumnType("int");
-
-                            b1.HasKey("BlackjackId", "Id");
-
-                            b1.ToTable("BlackJack_Mazo", (string)null);
-
-                            b1.WithOwner()
-                                .HasForeignKey("BlackjackId");
-                        });
-
                     b.Navigation("History");
 
                     b.Navigation("ManoJugadores");
@@ -299,7 +302,7 @@ namespace Mesa.BlackJack.Data.Migrations
 
             modelBuilder.Entity("Mesa.Blackjack.GameRequestBackJack", b =>
                 {
-                    b.OwnsMany("Mesa.Blackjack.GameRequestBackJack.PlayerInfo#Mesa_SV.InfoJugador", "PlayerInfo", b1 =>
+                    b.OwnsMany("Mesa_SV.InfoJugador", "PlayerInfo", b1 =>
                         {
                             b1.Property<string>("GameRequestBackJackId")
                                 .HasColumnType("nvarchar(50)");
@@ -320,7 +323,7 @@ namespace Mesa.BlackJack.Data.Migrations
 
                             b1.HasKey("GameRequestBackJackId", "Id");
 
-                            b1.ToTable("InfoJugador", (string)null);
+                            b1.ToTable("InfoJugador");
 
                             b1.WithOwner()
                                 .HasForeignKey("GameRequestBackJackId");
@@ -331,7 +334,7 @@ namespace Mesa.BlackJack.Data.Migrations
 
             modelBuilder.Entity("Mesa_SV.DeckOfCards", b =>
                 {
-                    b.OwnsMany("Mesa_SV.DeckOfCards.Cards#Mesa_SV.VoDeJuegos.Card", "Cards", b1 =>
+                    b.OwnsMany("Mesa_SV.VoDeJuegos.Card", "Cards", b1 =>
                         {
                             b1.Property<int>("DeckOfCardsId")
                                 .HasColumnType("int");

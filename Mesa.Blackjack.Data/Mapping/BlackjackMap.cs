@@ -13,9 +13,10 @@ namespace Mesa.Blackjack.Data.Mapping
             builder.OwnsMany(x => x.ManoJugadores, u =>
             {
                 u.Property(y => y.IdJugador).HasMaxLength(50);
+                
                 u.OwnsMany(y => y.Mano, p =>
-                {
-                    p.ToTable("BlackJack_Active_Hand");                    
+                {   
+                    p.ToTable("BlackJack_Active_Hand");
                 });
             });
 
@@ -39,7 +40,7 @@ namespace Mesa.Blackjack.Data.Mapping
 
                 });
 
-                h.Property(p => p.IdJugador).IsRequired();
+                h.Property(p => p.IdJugador);
 
                 h.Property(p => p.contadorMazo)
                 .HasMaxLength(10).IsRequired();
