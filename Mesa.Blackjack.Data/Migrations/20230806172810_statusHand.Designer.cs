@@ -4,6 +4,7 @@ using Mesa.Blackjack.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mesa.BlackJack.Data.Migrations
 {
     [DbContext(typeof(BlackJackContext))]
-    partial class BlackJackContextModelSnapshot : ModelSnapshot
+    [Migration("20230806172810_statusHand")]
+    partial class statusHand
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
