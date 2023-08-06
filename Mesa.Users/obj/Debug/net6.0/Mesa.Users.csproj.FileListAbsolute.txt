@@ -1,0 +1,12 @@
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\bin\Debug\net6.0\Mesa.Users.deps.json
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\bin\Debug\net6.0\Mesa.Users.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\bin\Debug\net6.0\Mesa.Users.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\Mesa.Users.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\Mesa.Users.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\Mesa.Users.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\Mesa.Users.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\Mesa.Users.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\Mesa.Users.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\refint\Mesa.Users.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\Mesa.Users.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users\obj\Debug\net6.0\ref\Mesa.Users.dll
