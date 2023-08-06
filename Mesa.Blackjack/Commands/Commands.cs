@@ -40,4 +40,11 @@ namespace Mesa.Blackjack.Commands
     /// </summary>
     /// <param name="BlackJackId"></param>
     public record ShuffleDeck(string BlackJackId): IRequest<HttpResponseMessage>;
+
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="BlackJackId"></param>
+    /// <param name="PlayerId"></param>
+    public record StandHand(string BlackJackId, string PlayerId) : IRequest;
 }

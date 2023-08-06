@@ -161,21 +161,52 @@ namespace Mesa.Blackjack.Api.Controllers
         /// <summary>
         /// este metodo permite barajear las cartas del juego - solo cuando se acaban las cartas de la baraja anterior
         /// </summary>
-        /// <param name="playerId"></param>
+        /// <param name="backjackId"></param>
         /// <returns></returns>
-        [HttpGet("{backjackId}/users/{playerId}/")]
+        [HttpPost("{backjackId}/shuffle/")]
         [ProducesResponseType(StatusCodes.Status200OK)]        
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<HttpResponseMessage>> BarajearCartas([FromRoute] string playerId)
+        public async Task<ActionResult<HttpResponseMessage>> BarajearCartas([FromRoute] string backjackId)
         {
-            ShuffleDeck cmd = new ShuffleDeck(playerId);
+            ShuffleDeck cmd = new ShuffleDeck(backjackId);
 
             var response =await _mediator.Send(cmd);
 
             return response;
-        }
-        //TODO: Plantarse falta
+        }        
 
+      
+        [HttpGet("{blackjackId}/users/{playerId}/stand")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        public async Task<ActionResult<List<CardOutput>>> PlantarBlackJack([FromRoute] string blackjackId , [FromRoute] string playerId)
+        {
+            StandHand query = new StandHand(blackjackId,playerId);
+
+            await _mediator.Send(query);
+
+            return NoContent();
+        }
+
+        /// <summary>
+        /// este permite extraer la mano de un jugador 
+        /// </summary>
+        /// <param name="blackjackId"></param>
+        /// <param name="playerId"></param>
+        /// <returns></returns>
+        [HttpGet("{blackjackId}/users/{playerId}/Hand")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        public async Task<ActionResult<List<CardOutput>>> GetActiveHand([FromRoute] string blackjackId, [FromRoute] string playerId)
+        {
+            GetHandActive query = new GetHandActive(playerId, blackjackId);
+
+            var response = await _mediator.Send(query);
+
+            return _mapper.Map<List<CardOutput>>(response);
+        }
     }
 }

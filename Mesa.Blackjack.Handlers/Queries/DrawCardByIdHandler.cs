@@ -37,6 +37,9 @@ namespace Mesa.Blackjack.Handlers.Queries
             //elimina la carta seleccionada
             blackjack.Mazo.RemoveAt(0);
 
+            //la carta eliminada se agrega a la mano del jugador para no perdeerloa por si se actualiza algo
+            blackjack.ManoJugadores.FirstOrDefault(x => x.IdJugador == request.UserId)?.Mano?.Add(carta);            
+
             //agrega la carta al historial de blackjack
             blackjack?.History?.Add(
                 new HistoryBlackJackVo(
