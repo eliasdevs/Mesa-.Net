@@ -30,9 +30,12 @@ namespace Mesa.Blackjack.Data
 
         public async Task<Blackjack?> GetBlackjackByUserId(string userId, Guid blackjackId)
         {
-            return await _context.Blackjacks.Include(x=> x.Mazo)
-                .FirstOrDefaultAsync(x=> (x.UserRetador.IdJugador == userId || x.UserEmparejado.IdJugador  == userId) && x.Id == blackjackId);
+            return await _context.Blackjacks
+                .Include(x => x.Mazo)
+                .Include(x => x.ManoJugadores)
+                .FirstOrDefaultAsync(x => x.ManoJugadores.Any(y => y.IdJugador == userId) && x.Id == blackjackId);
         }
+
 
         public async Task<DeckOfCards> GetDeckOfCardsAsync()
         {

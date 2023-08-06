@@ -59,10 +59,13 @@ namespace Mesa.Blackjack.Handlers.Commands
             };
 
             //seteo constructor
-            Blackjack backjack = new Blackjack(null,foranea,
-                new ManoJugadorVo(solicitud.PlayerId, new List<Card>()), 
-                new ManoJugadorVo(solicitud.AcceptedPlayerId, new List<Card>()), 
-                listaCartas, listHistory, GameStatus.Started);
+            Blackjack backjack = new Blackjack(null,foranea, new List<ManoJugadorVo>()
+                {
+                    new ManoJugadorVo(solicitud.AcceptedPlayerId, new List<Card>())
+                },  
+                listaCartas, 
+                listHistory, 
+                GameStatus.Started);
 
             //crea el registro en la BD
             await _repoBlackJack.CreateBlackJackAsync(backjack);

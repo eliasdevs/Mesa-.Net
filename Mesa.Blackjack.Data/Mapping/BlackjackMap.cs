@@ -9,24 +9,15 @@ namespace Mesa.Blackjack.Data.Mapping
         {
             builder.HasKey(x => x.Id);
 
-            builder.OwnsOne(x => x.UserRetador, u =>
+            builder.OwnsMany(x => x.ManoJugadores, u =>
             {
                 u.Property(y => y.IdJugador).HasMaxLength(50);
                 u.OwnsMany(y => y.Mano, p =>
                 {
-                    p.ToTable("BlackJack_Ret_hand");                    
+                    p.ToTable("BlackJack_Active_Hand");                    
                 });
             });
 
-            builder.OwnsOne(x => x.UserEmparejado, u =>
-            {
-                u.Property(y => y.IdJugador).HasMaxLength(50);
-                u.OwnsMany(y => y.Mano, p =>
-                {
-                    p.ToTable("BlackJack_Emp_hand");
-                });
-
-            });
 
             builder.OwnsMany(x => x.Mazo, m =>
             {
