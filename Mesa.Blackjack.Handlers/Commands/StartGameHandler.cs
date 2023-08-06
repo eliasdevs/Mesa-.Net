@@ -52,7 +52,8 @@ namespace Mesa.Blackjack.Handlers.Commands
             //seteo constructor
             Blackjack backjack = new Blackjack(null, request.RequestId, new List<ManoJugadorVo>()
                 {
-                    new ManoJugadorVo(solicitud.AcceptedPlayerId, new List<Card>())
+                    new ManoJugadorVo(solicitud.PlayerId, new List<Card>(), StatusHand.INIT),
+                    new ManoJugadorVo(solicitud.AcceptedPlayerId, new List<Card>(), StatusHand.INIT)
                 },  
                 listaCartas, 
                 listHistory, 

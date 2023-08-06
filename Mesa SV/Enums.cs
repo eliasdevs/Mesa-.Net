@@ -71,11 +71,21 @@ namespace Mesa_SV
         finalized = 2,
     }
 
-    /// <summary>
-    /// va ser el enum de todos los juegos disponibles en la plataforma
-    /// </summary>
-    public enum EnumGame
+    public enum StatusHand
     {
-        BlackJack = 1
+        /// <summary>
+        /// Este es cuando se ha iniciado el juego crea la lista vacia
+        /// </summary>
+        INIT = 0,
+
+        /// <summary>
+        /// CUANDO presiona plantarse esta es activa
+        /// </summary>
+        HAND = 1,
+
+        /// <summary>
+        /// cuando esta llenando la lista
+        /// </summary>
+        ACTIVE = 2        
     }
 }

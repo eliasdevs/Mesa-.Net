@@ -64,6 +64,14 @@
             <param name="backjackId"></param>
             <returns></returns>
         </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.PlantarBlackJack(System.String,System.String)">
+            <summary>
+            este metodo permite plantarse
+            </summary>
+            <param name="blackjackId"></param>
+            <param name="playerId"></param>
+            <returns></returns>
+        </member>
         <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.GetActiveHand(System.String,System.String)">
             <summary>
             este permite extraer la mano de un jugador 

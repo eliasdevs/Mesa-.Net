@@ -2,6 +2,7 @@
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
+using Mesa_SV;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
@@ -13,6 +14,9 @@ using System.Threading.Tasks;
 
 namespace Mesa.Blackjack.Handlers.Queries
 {
+    /// <summary>
+    /// pedir carta
+    /// </summary>
     public class DrawCardByIdHandler : IRequestHandler<DrawCardById, Card>
     {
         private readonly IBlackJackRepository _repository;
@@ -34,12 +38,21 @@ namespace Mesa.Blackjack.Handlers.Queries
             //se saca la primera carta ya que estan desordenadas
             Card carta = blackjack.Mazo[0];
 
+            ManoJugadorVo? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
+
+            if(datosJugador == null || blackjack.ManoJugadores == null)
+                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
+
             //elimina la carta seleccionada
-            blackjack.Mazo.RemoveAt(0);
+            blackjack.Mazo.Remove(carta);
+            blackjack.ManoJugadores.Remove(datosJugador);
 
-            //la carta eliminada se agrega a la mano del jugador para no perdeerloa por si se actualiza algo
-            blackjack.ManoJugadores.FirstOrDefault(x => x.IdJugador == request.UserId)?.Mano?.Add(carta);            
+            List<Card> cards = datosJugador.Mano ?? new List<Card>();
+            cards.Add(carta);
 
+            //acualizar el vo de mano             
+            blackjack.ManoJugadores.Add(new ManoJugadorVo(request.UserId, cards, StatusHand.ACTIVE)); 
+            
             //agrega la carta al historial de blackjack
             blackjack?.History?.Add(
                 new HistoryBlackJackVo(
