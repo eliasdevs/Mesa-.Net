@@ -14,8 +14,7 @@ namespace Mesa.Blackjack.Data.Mapping
                 u.Property(y => y.IdJugador).HasMaxLength(50);
                 u.OwnsMany(y => y.Mano, p =>
                 {
-                    p.ToTable("BlackJack_Ret_hand");
-                    p.WithOwner().HasForeignKey("UserEmparejadoId");
+                    p.ToTable("BlackJack_Ret_hand");                    
                 });
             });
 
@@ -25,7 +24,6 @@ namespace Mesa.Blackjack.Data.Mapping
                 u.OwnsMany(y => y.Mano, p =>
                 {
                     p.ToTable("BlackJack_Emp_hand");
-                    p.WithOwner().HasForeignKey("UserEmparejadoId");
                 });
 
             });
