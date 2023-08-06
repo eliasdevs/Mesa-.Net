@@ -9,11 +9,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace Mesa.Blackjack.Data.Migrations
+namespace Mesa.BlackJack.Data.Migrations
 {
     [DbContext(typeof(BlackJackContext))]
-    [Migration("20230806152342_ajustesMapping")]
-    partial class ajustesMapping
+    [Migration("20230806153736_Init")]
+    partial class Init
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -36,7 +36,7 @@ namespace Mesa.Blackjack.Data.Migrations
 
                     b.Property<string>("IdRequest")
                         .IsRequired()
-                        .HasColumnType("nvarchar(450)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -52,7 +52,8 @@ namespace Mesa.Blackjack.Data.Migrations
             modelBuilder.Entity("Mesa.Blackjack.GameRequestBackJack", b =>
                 {
                     b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
+                        .HasMaxLength(50)
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("AcceptedPlayerId")
                         .HasColumnType("nvarchar(max)");
@@ -302,7 +303,7 @@ namespace Mesa.Blackjack.Data.Migrations
                     b.OwnsMany("Mesa_SV.InfoJugador", "PlayerInfo", b1 =>
                         {
                             b1.Property<string>("GameRequestBackJackId")
-                                .HasColumnType("nvarchar(450)");
+                                .HasColumnType("nvarchar(50)");
 
                             b1.Property<int>("Id")
                                 .ValueGeneratedOnAdd()

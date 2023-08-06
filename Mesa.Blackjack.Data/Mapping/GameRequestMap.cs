@@ -15,7 +15,9 @@ namespace Mesa.Blackjack.Data.Mapping
         {
             builder.ToTable("GameRequest");
 
-            builder.HasKey(x => x.Id);                        
+            builder.HasKey(x => x.Id);
+
+            builder.Property(x => x.Id).HasMaxLength(50);
 
             builder.Property(p => p.AcceptedPlayerId);
 

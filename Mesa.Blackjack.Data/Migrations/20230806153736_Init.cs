@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Mesa.Blackjack.Data.Migrations
+namespace Mesa.BlackJack.Data.Migrations
 {
     /// <inheritdoc />
     public partial class Init : Migration
@@ -28,10 +28,11 @@ namespace Mesa.Blackjack.Data.Migrations
                 name: "GameRequest",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     PlayerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AcceptedPlayerId = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    Status = table.Column<int>(type: "int", nullable: false)
+                    Status = table.Column<int>(type: "int", nullable: false),
+                    TipoJuego = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -81,8 +82,10 @@ namespace Mesa.Blackjack.Data.Migrations
                 name: "Blackjacks",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdRequest = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    Id = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    IdRequest = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    ContadorMazo = table.Column<int>(type: "int", nullable: false),
+                    Status = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -96,20 +99,42 @@ namespace Mesa.Blackjack.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "InfoJugador",
+                columns: table => new
+                {
+                    GameRequestBackJackId = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdUser = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    IdContextWS = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_InfoJugador", x => new { x.GameRequestBackJackId, x.Id });
+                    table.ForeignKey(
+                        name: "FK_InfoJugador_GameRequest_GameRequestBackJackId",
+                        column: x => x.GameRequestBackJackId,
+                        principalTable: "GameRequest",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "BlackJack_History",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdMazo = table.Column<int>(type: "int", maxLength: 10, nullable: false),
+                    Id = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
+                    IdJugador = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    contadorMazo = table.Column<int>(type: "int", maxLength: 10, nullable: false),
                     Logger = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false),
-                    BackjackId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
+                    BlackjackId = table.Column<string>(type: "nvarchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_BlackJack_History", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BlackJack_History_Blackjacks_BackjackId",
-                        column: x => x.BackjackId,
+                        name: "FK_BlackJack_History_Blackjacks_BlackjackId",
+                        column: x => x.BlackjackId,
                         principalTable: "Blackjacks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -121,7 +146,7 @@ namespace Mesa.Blackjack.Data.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    BackjackId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BlackjackId = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     OriginalValue = table.Column<int>(type: "int", nullable: false),
                     SubValue = table.Column<int>(type: "int", nullable: false),
                     Representation = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -129,60 +154,42 @@ namespace Mesa.Blackjack.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BlackJack_Mazo", x => new { x.BackjackId, x.Id });
+                    table.PrimaryKey("PK_BlackJack_Mazo", x => new { x.BlackjackId, x.Id });
                     table.ForeignKey(
-                        name: "FK_BlackJack_Mazo_Blackjacks_BackjackId",
-                        column: x => x.BackjackId,
+                        name: "FK_BlackJack_Mazo_Blackjacks_BlackjackId",
+                        column: x => x.BlackjackId,
                         principalTable: "Blackjacks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "PlayerOneHand",
+                name: "ManoJugadorVo",
                 columns: table => new
                 {
-                    BackjackId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    BlackjackId = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    IdJugador = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_PlayerOneHand", x => x.BackjackId);
+                    table.PrimaryKey("PK_ManoJugadorVo", x => new { x.BlackjackId, x.Id });
                     table.ForeignKey(
-                        name: "FK_PlayerOneHand_Blackjacks_BackjackId",
-                        column: x => x.BackjackId,
+                        name: "FK_ManoJugadorVo_Blackjacks_BlackjackId",
+                        column: x => x.BlackjackId,
                         principalTable: "Blackjacks",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "PlayerTwoHand",
-                columns: table => new
-                {
-                    BackjackId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    IdUser = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_PlayerTwoHand", x => x.BackjackId);
-                    table.ForeignKey(
-                        name: "FK_PlayerTwoHand_Blackjacks_BackjackId",
-                        column: x => x.BackjackId,
-                        principalTable: "Blackjacks",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "BlackJack_History_PlayerOneHand",
+                name: "BlackJack_History_Player",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    HistoryBlackJackVoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    HistoryBlackJackVoId = table.Column<string>(type: "nvarchar(50)", nullable: false),
                     OriginalValue = table.Column<int>(type: "int", nullable: false),
                     SubValue = table.Column<int>(type: "int", nullable: false),
                     Representation = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -190,9 +197,9 @@ namespace Mesa.Blackjack.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BlackJack_History_PlayerOneHand", x => new { x.HistoryBlackJackVoId, x.Id });
+                    table.PrimaryKey("PK_BlackJack_History_Player", x => new { x.HistoryBlackJackVoId, x.Id });
                     table.ForeignKey(
-                        name: "FK_BlackJack_History_PlayerOneHand_BlackJack_History_HistoryBlackJackVoId",
+                        name: "FK_BlackJack_History_Player_BlackJack_History_HistoryBlackJackVoId",
                         column: x => x.HistoryBlackJackVoId,
                         principalTable: "BlackJack_History",
                         principalColumn: "Id",
@@ -200,12 +207,13 @@ namespace Mesa.Blackjack.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BlackJack_History_PlayerTwoHand",
+                name: "BlackJack_Active_Hand",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    HistoryBlackJackVoId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    ManoJugadorVoBlackjackId = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    ManoJugadorVoId = table.Column<int>(type: "int", nullable: false),
                     OriginalValue = table.Column<int>(type: "int", nullable: false),
                     SubValue = table.Column<int>(type: "int", nullable: false),
                     Representation = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -213,19 +221,19 @@ namespace Mesa.Blackjack.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BlackJack_History_PlayerTwoHand", x => new { x.HistoryBlackJackVoId, x.Id });
+                    table.PrimaryKey("PK_BlackJack_Active_Hand", x => new { x.ManoJugadorVoBlackjackId, x.ManoJugadorVoId, x.Id });
                     table.ForeignKey(
-                        name: "FK_BlackJack_History_PlayerTwoHand_BlackJack_History_HistoryBlackJackVoId",
-                        column: x => x.HistoryBlackJackVoId,
-                        principalTable: "BlackJack_History",
-                        principalColumn: "Id",
+                        name: "FK_BlackJack_Active_Hand_ManoJugadorVo_ManoJugadorVoBlackjackId_ManoJugadorVoId",
+                        columns: x => new { x.ManoJugadorVoBlackjackId, x.ManoJugadorVoId },
+                        principalTable: "ManoJugadorVo",
+                        principalColumns: new[] { "BlackjackId", "Id" },
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_BlackJack_History_BackjackId",
+                name: "IX_BlackJack_History_BlackjackId",
                 table: "BlackJack_History",
-                column: "BackjackId");
+                column: "BlackjackId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Blackjacks_IdRequest",
@@ -238,10 +246,10 @@ namespace Mesa.Blackjack.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "BlackJack_History_PlayerOneHand");
+                name: "BlackJack_Active_Hand");
 
             migrationBuilder.DropTable(
-                name: "BlackJack_History_PlayerTwoHand");
+                name: "BlackJack_History_Player");
 
             migrationBuilder.DropTable(
                 name: "BlackJack_Mazo");
@@ -250,13 +258,13 @@ namespace Mesa.Blackjack.Data.Migrations
                 name: "DeckOfCard_Cards");
 
             migrationBuilder.DropTable(
+                name: "InfoJugador");
+
+            migrationBuilder.DropTable(
                 name: "Mensajes");
 
             migrationBuilder.DropTable(
-                name: "PlayerOneHand");
-
-            migrationBuilder.DropTable(
-                name: "PlayerTwoHand");
+                name: "ManoJugadorVo");
 
             migrationBuilder.DropTable(
                 name: "BlackJack_History");
