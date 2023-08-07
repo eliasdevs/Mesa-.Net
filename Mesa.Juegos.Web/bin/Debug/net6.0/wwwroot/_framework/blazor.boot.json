@@ -7,6 +7,8 @@
   "linkerEnabled": false,
   "resources": {
     "assembly": {
+      "Fluxor.dll": "sha256-27dE058vXXZ22vR0ZbTGGZfqPOI\/694MP777sjlLO08=",
+      "Fluxor.Blazor.Web.dll": "sha256-9s1CwDhCqXwvv5wThoRPC33BPmNzZXNFfZDZmAPGGzg=",
       "Microsoft.AspNetCore.Authorization.dll": "sha256-aDNthpcgReHLCzS5ZT\/PJDirLd6siorRIngHWOCUfd4=",
       "Microsoft.AspNetCore.Components.dll": "sha256-QuQEF2UMucn5Vmy5DaA1xMY5DutdB0QhPYbnza2JJJ0=",
       "Microsoft.AspNetCore.Components.Forms.dll": "sha256-PCqolrqn+eWfQ\/KIakpqOwLmo9t9cThQzzpZ7dr+SjA=",
@@ -29,7 +31,9 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-jOmoWSfsdQexH\/6QCA56gR1RMEqeix2iDDUBWbpAOQI=",
       "Microsoft.JSInterop.dll": "sha256-ALn8NC3hrTKXR7eHxOPax8hsoVRUDr+2fn6cTY635kE=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-JENkxS9516I3yudzXFewx4Jbc3E42bTb8zXN9kXis9M=",
+      "Radzen.Blazor.dll": "sha256-S+sBxTsMBt0GgytgsrGqRZs3ZwbddlVlGjha0DtdBpw=",
       "System.IO.Pipelines.dll": "sha256-6+E55JXedimdw1c1bDtVg4K7XuWjVWVTifH8QpfzXSY=",
+      "System.Linq.Dynamic.Core.dll": "sha256-FdGinC2F9gJYE7tbVl93B0jYWTB+CCpGiFHbABqlHFE=",
       "Microsoft.CSharp.dll": "sha256-AbDB3xoT3KVWhDyogoZiFdRbRk92KtmWnECUk\/6K6QI=",
       "Microsoft.VisualBasic.Core.dll": "sha256-GpHake9dRTeu5tywuWSDKBDD3JaBjv7OH1AFlDB9xdg=",
       "Microsoft.VisualBasic.dll": "sha256-O1TUZ6UgrOPJ23cpZQl73vYj41STdv9NyMHZ7+cEhgM=",
@@ -196,13 +200,19 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "Mesa.Juegos.Web.dll": "sha256-3SdFGi3TG2TpFanRUlW08+pBDtNwEOICm2+rBaOcRG8="
+      "Mesa.Juegos.Modules.dll": "sha256-VwBT0SAJazVFV23J1EsaCBiXgst\/QAEZ9QjJWPgaxtc=",
+      "Mesa.Juegos.State.Actions.dll": "sha256-KbIfZe53wHB6dFPsdRHtS8qBiQ5b9j5uegLgJutXQA8=",
+      "Mesa.Juegos.State.dll": "sha256-pcIT3bdMsSriGC9grAbMnvDG0mTRrS\/jplXWGWFTYo4=",
+      "Mesa.Juegos.Web.dll": "sha256-m32Ueopv5yWXTIKbDinlTy9xvZvXDYvcma5O2\/QCabE="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Mesa.Juegos.Web.pdb": "sha256-pjSUDh3tyCGT5HfD99l7sZT9s9wlCFCfDVy28s2\/jDY="
+      "Mesa.Juegos.Modules.pdb": "sha256-66SAL5LKuiP8t4C6j99KQLqpax9p9qTAfE+B1FI\/dYc=",
+      "Mesa.Juegos.State.pdb": "sha256-TRTYrNj9Z9BKMirRJgq1Snl52vLd543UuteMfDCrbc4=",
+      "Mesa.Juegos.State.Actions.pdb": "sha256-cBmmD2NKrEVRC5hupohGZw7onTO8ZavJ3hieprEUPxk=",
+      "Mesa.Juegos.Web.pdb": "sha256-l\/21z4yQAthwNIYrGyD1VQaey2EXoWGNsI4Muw8xh2Y="
     },
     "runtime": {
       "dotnet.6.0.16.2tx21s0ptg.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",

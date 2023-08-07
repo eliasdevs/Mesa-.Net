@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "A7DJqhDeKK3MUh6S6GaZRWdPHGECFl961drIS0itZT7p/ygcKf0zN0KrQRGtxF22g1h+P2bjrq3RXDnQB+FGsw==",
+  "dgSpecHash": "yVuxQFmeIqFRnxPk5Kye1caTnO/Rvc75fcWPD10z97tGfsdRXAnjF9gzw4VC7gPTjzM8GLoGIUnPFX6I3tniVQ==",
   "success": true,
   "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\Mesa.Juegos.Modules.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\elias\\.nuget\\packages\\fluxor\\5.9.0\\fluxor.5.9.0.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\fluxor.blazor.web\\5.9.0\\fluxor.blazor.web.5.9.0.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\libsassbuilder\\2.0.1\\libsassbuilder.2.0.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.16\\microsoft.aspnetcore.authorization.6.0.16.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.components\\6.0.16\\microsoft.aspnetcore.components.6.0.16.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\6.0.16\\microsoft.aspnetcore.components.analyzers.6.0.16.nupkg.sha512",
@@ -16,7 +19,9 @@
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\microsoft.jsinterop\\6.0.16\\microsoft.jsinterop.6.0.16.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\radzen.blazor\\4.14.4\\radzen.blazor.4.14.4.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.io.pipelines\\6.0.3\\system.io.pipelines.6.0.3.nupkg.sha512",
+    "C:\\Users\\elias\\.nuget\\packages\\system.linq.dynamic.core\\1.3.0\\system.linq.dynamic.core.1.3.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
   ],
   "logs": [

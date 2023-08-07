@@ -2,6 +2,37 @@
   "version": 3,
   "targets": {
     "net6.0": {
+      "Fluxor/5.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Fluxor.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Fluxor.dll": {}
+        }
+      },
+      "Fluxor.Blazor.Web/5.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Fluxor": "5.9.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Fluxor.Blazor.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Fluxor.Blazor.Web.dll": {}
+        }
+      },
+      "LibSassBuilder/2.0.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.16": {
         "type": "package",
         "dependencies": {
@@ -403,6 +434,31 @@
           }
         }
       },
+      "Radzen.Blazor/4.14.4": {
+        "type": "package",
+        "dependencies": {
+          "LibSassBuilder": "2.0.1",
+          "Microsoft.AspNetCore.Components": "6.0.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.0",
+          "System.Linq.Dynamic.Core": "1.3.0"
+        },
+        "compile": {
+          "lib/net6.0/Radzen.Blazor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Radzen.Blazor.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Radzen.Blazor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Radzen.Blazor.props": {}
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -436,6 +492,19 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Linq.Dynamic.Core/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Linq.Dynamic.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Linq.Dynamic.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -498,9 +567,79 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Mesa.Juegos.Modules/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Mesa.Juegos.State": "1.0.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.16",
+          "Radzen.Blazor": "4.14.4"
+        },
+        "compile": {
+          "bin/placeholder/Mesa.Juegos.Modules.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mesa.Juegos.Modules.dll": {}
+        }
+      },
+      "Mesa.Juegos.State/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Fluxor.Blazor.Web": "5.9.0",
+          "Mesa.Juegos.State.Actions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mesa.Juegos.State.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mesa.Juegos.State.dll": {}
+        }
+      },
+      "Mesa.Juegos.State.Actions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
+        }
       }
     },
     "net6.0/browser-wasm": {
+      "Fluxor/5.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Fluxor.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Fluxor.dll": {}
+        }
+      },
+      "Fluxor.Blazor.Web/5.9.0": {
+        "type": "package",
+        "dependencies": {
+          "Fluxor": "5.9.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.0"
+        },
+        "compile": {
+          "lib/net6.0/Fluxor.Blazor.Web.dll": {}
+        },
+        "runtime": {
+          "lib/net6.0/Fluxor.Blazor.Web.dll": {}
+        }
+      },
+      "LibSassBuilder/2.0.1": {
+        "type": "package",
+        "build": {
+          "build/_._": {}
+        }
+      },
       "Microsoft.AspNetCore.Authorization/6.0.16": {
         "type": "package",
         "dependencies": {
@@ -902,6 +1041,31 @@
           }
         }
       },
+      "Radzen.Blazor/4.14.4": {
+        "type": "package",
+        "dependencies": {
+          "LibSassBuilder": "2.0.1",
+          "Microsoft.AspNetCore.Components": "6.0.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.0",
+          "System.Linq.Dynamic.Core": "1.3.0"
+        },
+        "compile": {
+          "lib/net6.0/Radzen.Blazor.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Radzen.Blazor.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/Radzen.Blazor.props": {}
+        },
+        "buildMultiTargeting": {
+          "buildMultiTargeting/Radzen.Blazor.props": {}
+        }
+      },
       "System.Diagnostics.DiagnosticSource/6.0.0": {
         "type": "package",
         "dependencies": {
@@ -935,6 +1099,19 @@
         },
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
+        }
+      },
+      "System.Linq.Dynamic.Core/1.3.0": {
+        "type": "package",
+        "compile": {
+          "lib/net6.0/System.Linq.Dynamic.Core.dll": {
+            "related": ".pdb;.xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/System.Linq.Dynamic.Core.dll": {
+            "related": ".pdb;.xml"
+          }
         }
       },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -991,10 +1168,115 @@
         "build": {
           "buildTransitive/netcoreapp3.1/_._": {}
         }
+      },
+      "Mesa.Juegos.Modules/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Mesa.Juegos.State": "1.0.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.16",
+          "Radzen.Blazor": "4.14.4"
+        },
+        "compile": {
+          "bin/placeholder/Mesa.Juegos.Modules.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mesa.Juegos.Modules.dll": {}
+        }
+      },
+      "Mesa.Juegos.State/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Fluxor.Blazor.Web": "5.9.0",
+          "Mesa.Juegos.State.Actions": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Mesa.Juegos.State.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mesa.Juegos.State.dll": {}
+        }
+      },
+      "Mesa.Juegos.State.Actions/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
+        }
       }
     }
   },
   "libraries": {
+    "Fluxor/5.9.0": {
+      "sha512": "9SMrk6QdzFMWPI4pevzkGPcKDQWfv6pLhBIJmyuejrPLhus1B0CEUhotarV4h7HcnolqcSXqLMTk0GF4ISAFsg==",
+      "type": "package",
+      "path": "fluxor/5.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluxor-small-logo.png",
+        "fluxor.5.9.0.nupkg.sha512",
+        "fluxor.nuspec",
+        "lib/net5.0/Fluxor.dll",
+        "lib/net6.0/Fluxor.dll",
+        "lib/net7.0/Fluxor.dll",
+        "lib/netcoreapp3.1/Fluxor.dll",
+        "lib/netstandard2.0/Fluxor.dll",
+        "lib/netstandard2.1/Fluxor.dll"
+      ]
+    },
+    "Fluxor.Blazor.Web/5.9.0": {
+      "sha512": "SVoU41icMgIkTGuzTgcqIp9J/M6CAwTAhs8J3g2aE66cqFD2cN4YzEQn3X5qi9z4HAKEMT8qCxq4iXCeWEuNcg==",
+      "type": "package",
+      "path": "fluxor.blazor.web/5.9.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluxor-blazor-logo-small.png",
+        "fluxor.blazor.web.5.9.0.nupkg.sha512",
+        "fluxor.blazor.web.nuspec",
+        "lib/net5.0/Fluxor.Blazor.Web.dll",
+        "lib/net6.0/Fluxor.Blazor.Web.dll",
+        "lib/net7.0/Fluxor.Blazor.Web.dll",
+        "lib/netcoreapp3.1/Fluxor.Blazor.Web.dll",
+        "lib/netstandard2.0/Fluxor.Blazor.Web.dll",
+        "lib/netstandard2.1/Fluxor.Blazor.Web.dll"
+      ]
+    },
+    "LibSassBuilder/2.0.1": {
+      "sha512": "f+7TWQtCirW94VdzKL9SaAfeSF96TeEqdtDztmTGbndrcUlZZlL6uJLZKQCXQgj1BB3OqX0584OCvqFHrkAusA==",
+      "type": "package",
+      "path": "libsassbuilder/2.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LibSassBuilder.csproj",
+        "build/DesignTime/LibSassBuilder.DesignTime.targets",
+        "build/DesignTime/Rules/ProjectItemsSchema.xaml",
+        "build/DesignTime/Rules/SassFileType.xaml",
+        "build/LibSassBuilder.props",
+        "build/LibSassBuilder.targets",
+        "libsassbuilder.2.0.1.nupkg.sha512",
+        "libsassbuilder.nuspec",
+        "sass.png",
+        "tool/AdvancedStringBuilder.dll",
+        "tool/CommandLine.dll",
+        "tool/LibSassBuilder.deps.json",
+        "tool/LibSassBuilder.dll",
+        "tool/LibSassBuilder.exe",
+        "tool/LibSassBuilder.pdb",
+        "tool/LibSassBuilder.runtimeconfig.json",
+        "tool/LibSassHost.dll",
+        "tool/runtimes/linux-x64/native/libsass.so",
+        "tool/runtimes/osx-x64/native/libsass.dylib",
+        "tool/runtimes/win-x64/native/libsass.dll",
+        "tool/x64/libsass.dll"
+      ]
+    },
     "Microsoft.AspNetCore.Authorization/6.0.16": {
       "sha512": "cH4jU2xuNptO6HXl2gyF/+lWvIOLXj53x8YPPLQ9vcvSDJwZmdI5+l8MXm/Yk31EI626KwWJr4hxbfZiPw3WhQ==",
       "type": "package",
@@ -1598,6 +1880,65 @@
         "microsoft.jsinterop.webassembly.nuspec"
       ]
     },
+    "Radzen.Blazor/4.14.4": {
+      "sha512": "ci7eVBWPnBqPmpvY0uA+dFnd9AASfU+m6iuAyou8oH2zjgHWw9ZZZ8gqPwRGDQw2mh6hyK6BVmLkjyuGJoLbng==",
+      "type": "package",
+      "path": "radzen.blazor/4.14.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "README.md",
+        "build/Microsoft.AspNetCore.StaticWebAssets.props",
+        "build/Radzen.Blazor.props",
+        "buildMultiTargeting/Radzen.Blazor.props",
+        "buildTransitive/Radzen.Blazor.props",
+        "icon.png",
+        "lib/net5.0/Radzen.Blazor.dll",
+        "lib/net5.0/Radzen.Blazor.xml",
+        "lib/net6.0/Radzen.Blazor.dll",
+        "lib/net6.0/Radzen.Blazor.xml",
+        "lib/net7.0/Radzen.Blazor.dll",
+        "lib/net7.0/Radzen.Blazor.xml",
+        "lib/netstandard2.1/Radzen.Blazor.dll",
+        "lib/netstandard2.1/Radzen.Blazor.xml",
+        "radzen.blazor.4.14.4.nupkg.sha512",
+        "radzen.blazor.nuspec",
+        "staticwebassets/Radzen.Blazor.js",
+        "staticwebassets/css/dark-base.css",
+        "staticwebassets/css/dark.css",
+        "staticwebassets/css/default-base.css",
+        "staticwebassets/css/default.css",
+        "staticwebassets/css/humanistic-base.css",
+        "staticwebassets/css/humanistic.css",
+        "staticwebassets/css/material-base.css",
+        "staticwebassets/css/material.css",
+        "staticwebassets/css/software-base.css",
+        "staticwebassets/css/software.css",
+        "staticwebassets/css/standard-base.css",
+        "staticwebassets/css/standard.css",
+        "staticwebassets/fonts/MaterialIcons-Regular.woff",
+        "staticwebassets/fonts/SourceSansPro-Black.woff",
+        "staticwebassets/fonts/SourceSansPro-BlackIt.woff",
+        "staticwebassets/fonts/SourceSansPro-Bold.woff",
+        "staticwebassets/fonts/SourceSansPro-BoldIt.woff",
+        "staticwebassets/fonts/SourceSansPro-ExtraLight.woff",
+        "staticwebassets/fonts/SourceSansPro-ExtraLightIt.woff",
+        "staticwebassets/fonts/SourceSansPro-It.woff",
+        "staticwebassets/fonts/SourceSansPro-Light.woff",
+        "staticwebassets/fonts/SourceSansPro-LightIt.woff",
+        "staticwebassets/fonts/SourceSansPro-Regular.woff",
+        "staticwebassets/fonts/SourceSansPro-Semibold.woff",
+        "staticwebassets/fonts/SourceSansPro-SemiboldIt.woff",
+        "staticwebassets/fonts/roboto-v15-latin-300.woff",
+        "staticwebassets/fonts/roboto-v15-latin-700.woff",
+        "staticwebassets/fonts/roboto-v15-latin-regular.woff",
+        "staticwebassets/fonts/roboto-v30-latin-300.woff",
+        "staticwebassets/fonts/roboto-v30-latin-500.woff",
+        "staticwebassets/fonts/roboto-v30-latin-700.woff",
+        "staticwebassets/fonts/roboto-v30-latin-regular.woff"
+      ]
+    },
     "System.Diagnostics.DiagnosticSource/6.0.0": {
       "sha512": "frQDfv0rl209cKm1lnwTgFPzNigy2EKk1BS3uAvHvlBVKe5cymGyHO+Sj+NLv5VF/AhHsqPIUUwya5oV4CHMUw==",
       "type": "package",
@@ -1646,6 +1987,61 @@
         "system.io.pipelines.6.0.3.nupkg.sha512",
         "system.io.pipelines.nuspec",
         "useSharedDesignerContext.txt"
+      ]
+    },
+    "System.Linq.Dynamic.Core/1.3.0": {
+      "sha512": "WocaU/koGKDu/kiHGJCT6ocqqygQmD5B+9nCyA3nWbMywvPVRhtre1rTHCUNdoi6ZBnPOMvkqqx8oVkP1VCy3Q==",
+      "type": "package",
+      "path": "system.linq.dynamic.core/1.3.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net35/System.Linq.Dynamic.Core.dll",
+        "lib/net35/System.Linq.Dynamic.Core.pdb",
+        "lib/net35/System.Linq.Dynamic.Core.xml",
+        "lib/net40/System.Linq.Dynamic.Core.dll",
+        "lib/net40/System.Linq.Dynamic.Core.pdb",
+        "lib/net40/System.Linq.Dynamic.Core.xml",
+        "lib/net45/System.Linq.Dynamic.Core.dll",
+        "lib/net45/System.Linq.Dynamic.Core.pdb",
+        "lib/net45/System.Linq.Dynamic.Core.xml",
+        "lib/net452/System.Linq.Dynamic.Core.dll",
+        "lib/net452/System.Linq.Dynamic.Core.pdb",
+        "lib/net452/System.Linq.Dynamic.Core.xml",
+        "lib/net46/System.Linq.Dynamic.Core.dll",
+        "lib/net46/System.Linq.Dynamic.Core.pdb",
+        "lib/net46/System.Linq.Dynamic.Core.xml",
+        "lib/net5.0/System.Linq.Dynamic.Core.dll",
+        "lib/net5.0/System.Linq.Dynamic.Core.pdb",
+        "lib/net5.0/System.Linq.Dynamic.Core.xml",
+        "lib/net6.0/System.Linq.Dynamic.Core.dll",
+        "lib/net6.0/System.Linq.Dynamic.Core.pdb",
+        "lib/net6.0/System.Linq.Dynamic.Core.xml",
+        "lib/net7.0/System.Linq.Dynamic.Core.dll",
+        "lib/net7.0/System.Linq.Dynamic.Core.pdb",
+        "lib/net7.0/System.Linq.Dynamic.Core.xml",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.dll",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.pdb",
+        "lib/netcoreapp2.1/System.Linq.Dynamic.Core.xml",
+        "lib/netcoreapp3.1/System.Linq.Dynamic.Core.dll",
+        "lib/netcoreapp3.1/System.Linq.Dynamic.Core.pdb",
+        "lib/netcoreapp3.1/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard1.3/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard2.0/System.Linq.Dynamic.Core.xml",
+        "lib/netstandard2.1/System.Linq.Dynamic.Core.dll",
+        "lib/netstandard2.1/System.Linq.Dynamic.Core.pdb",
+        "lib/netstandard2.1/System.Linq.Dynamic.Core.xml",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.dll",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.pdb",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.pri",
+        "lib/uap10.0.10240/System.Linq.Dynamic.Core.xml",
+        "logo.png",
+        "system.linq.dynamic.core.1.3.0.nupkg.sha512",
+        "system.linq.dynamic.core.nuspec"
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
@@ -1753,10 +2149,26 @@
         "system.text.json.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "Mesa.Juegos.Modules/1.0.0": {
+      "type": "project",
+      "path": "../Mesa.Juegos.Modules/Mesa.Juegos.Modules.csproj",
+      "msbuildProject": "../Mesa.Juegos.Modules/Mesa.Juegos.Modules.csproj"
+    },
+    "Mesa.Juegos.State/1.0.0": {
+      "type": "project",
+      "path": "../Mesa.Juegos.State/Mesa.Juegos.State.csproj",
+      "msbuildProject": "../Mesa.Juegos.State/Mesa.Juegos.State.csproj"
+    },
+    "Mesa.Juegos.State.Actions/1.0.0": {
+      "type": "project",
+      "path": "../Mesa.Juegos.State.Actions/Mesa.Juegos.State.Actions.csproj",
+      "msbuildProject": "../Mesa.Juegos.State.Actions/Mesa.Juegos.State.Actions.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "Mesa.Juegos.Modules >= 1.0.0",
       "Microsoft.AspNetCore.Components.WebAssembly >= 6.0.16",
       "Microsoft.AspNetCore.Components.WebAssembly.DevServer >= 6.0.16"
     ]
@@ -1794,7 +2206,11 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\Mesa.Juegos.Modules.csproj": {
+              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\Mesa.Juegos.Modules.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

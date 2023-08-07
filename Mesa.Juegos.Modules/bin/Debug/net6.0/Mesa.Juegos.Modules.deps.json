@@ -8,12 +8,38 @@
     ".NETCoreApp,Version=v6.0": {
       "Mesa.Juegos.Modules/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Components.Web": "6.0.16"
+          "Mesa.Juegos.State": "1.0.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.16",
+          "Radzen.Blazor": "4.14.4"
         },
         "runtime": {
           "Mesa.Juegos.Modules.dll": {}
         }
       },
+      "Fluxor/5.9.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/Fluxor.dll": {
+            "assemblyVersion": "5.9.0.0",
+            "fileVersion": "5.9.0.0"
+          }
+        }
+      },
+      "Fluxor.Blazor.Web/5.9.0": {
+        "dependencies": {
+          "Fluxor": "5.9.0",
+          "Microsoft.AspNetCore.Components.Web": "6.0.16"
+        },
+        "runtime": {
+          "lib/net6.0/Fluxor.Blazor.Web.dll": {
+            "assemblyVersion": "5.9.0.0",
+            "fileVersion": "5.9.0.0"
+          }
+        }
+      },
+      "LibSassBuilder/2.0.1": {},
       "Microsoft.AspNetCore.Authorization/6.0.16": {
         "dependencies": {
           "Microsoft.AspNetCore.Metadata": "6.0.16",
@@ -133,6 +159,20 @@
           }
         }
       },
+      "Radzen.Blazor/4.14.4": {
+        "dependencies": {
+          "LibSassBuilder": "2.0.1",
+          "Microsoft.AspNetCore.Components": "6.0.16",
+          "Microsoft.AspNetCore.Components.Web": "6.0.16",
+          "System.Linq.Dynamic.Core": "1.3.0"
+        },
+        "runtime": {
+          "lib/net6.0/Radzen.Blazor.dll": {
+            "assemblyVersion": "4.14.4.0",
+            "fileVersion": "4.14.4.0"
+          }
+        }
+      },
       "System.IO.Pipelines/6.0.3": {
         "runtime": {
           "lib/net6.0/System.IO.Pipelines.dll": {
@@ -141,7 +181,29 @@
           }
         }
       },
-      "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
+      "System.Linq.Dynamic.Core/1.3.0": {
+        "runtime": {
+          "lib/net6.0/System.Linq.Dynamic.Core.dll": {
+            "assemblyVersion": "1.3.0.0",
+            "fileVersion": "1.3.0.0"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/6.0.0": {},
+      "Mesa.Juegos.State/1.0.0": {
+        "dependencies": {
+          "Fluxor.Blazor.Web": "5.9.0",
+          "Mesa.Juegos.State.Actions": "1.0.0"
+        },
+        "runtime": {
+          "Mesa.Juegos.State.dll": {}
+        }
+      },
+      "Mesa.Juegos.State.Actions/1.0.0": {
+        "runtime": {
+          "Mesa.Juegos.State.Actions.dll": {}
+        }
+      }
     }
   },
   "libraries": {
@@ -149,6 +211,27 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Fluxor/5.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9SMrk6QdzFMWPI4pevzkGPcKDQWfv6pLhBIJmyuejrPLhus1B0CEUhotarV4h7HcnolqcSXqLMTk0GF4ISAFsg==",
+      "path": "fluxor/5.9.0",
+      "hashPath": "fluxor.5.9.0.nupkg.sha512"
+    },
+    "Fluxor.Blazor.Web/5.9.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SVoU41icMgIkTGuzTgcqIp9J/M6CAwTAhs8J3g2aE66cqFD2cN4YzEQn3X5qi9z4HAKEMT8qCxq4iXCeWEuNcg==",
+      "path": "fluxor.blazor.web/5.9.0",
+      "hashPath": "fluxor.blazor.web.5.9.0.nupkg.sha512"
+    },
+    "LibSassBuilder/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-f+7TWQtCirW94VdzKL9SaAfeSF96TeEqdtDztmTGbndrcUlZZlL6uJLZKQCXQgj1BB3OqX0584OCvqFHrkAusA==",
+      "path": "libsassbuilder/2.0.1",
+      "hashPath": "libsassbuilder.2.0.1.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Authorization/6.0.16": {
       "type": "package",
@@ -234,6 +317,13 @@
       "path": "microsoft.jsinterop/6.0.16",
       "hashPath": "microsoft.jsinterop.6.0.16.nupkg.sha512"
     },
+    "Radzen.Blazor/4.14.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ci7eVBWPnBqPmpvY0uA+dFnd9AASfU+m6iuAyou8oH2zjgHWw9ZZZ8gqPwRGDQw2mh6hyK6BVmLkjyuGJoLbng==",
+      "path": "radzen.blazor/4.14.4",
+      "hashPath": "radzen.blazor.4.14.4.nupkg.sha512"
+    },
     "System.IO.Pipelines/6.0.3": {
       "type": "package",
       "serviceable": true,
@@ -241,12 +331,29 @@
       "path": "system.io.pipelines/6.0.3",
       "hashPath": "system.io.pipelines.6.0.3.nupkg.sha512"
     },
+    "System.Linq.Dynamic.Core/1.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-WocaU/koGKDu/kiHGJCT6ocqqygQmD5B+9nCyA3nWbMywvPVRhtre1rTHCUNdoi6ZBnPOMvkqqx8oVkP1VCy3Q==",
+      "path": "system.linq.dynamic.core/1.3.0",
+      "hashPath": "system.linq.dynamic.core.1.3.0.nupkg.sha512"
+    },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-/iUeP3tq1S0XdNNoMz5C9twLSrM/TH+qElHkXWaPvuNOt+99G75NrV0OS2EqHx5wMN7popYjpc8oTjC1y16DLg==",
       "path": "system.runtime.compilerservices.unsafe/6.0.0",
       "hashPath": "system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+    },
+    "Mesa.Juegos.State/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mesa.Juegos.State.Actions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }
