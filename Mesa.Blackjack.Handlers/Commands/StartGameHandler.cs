@@ -14,7 +14,7 @@ using System.Security.Cryptography.X509Certificates;
 
 namespace Mesa.Blackjack.Handlers.Commands
 {
-    public class StartGameHandler : IRequestHandler<StartGame, GameRequestBackJack>
+    public class StartGameHandler : IRequestHandler<StartGame, Blackjack>
     {
         private readonly IMapper _mapper;
         private readonly IBlackJackRepository _repoBlackJack;
@@ -26,7 +26,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             _repositoryRequest = repositoryRequest;
         }
 
-        public async Task<GameRequestBackJack> Handle(StartGame request, CancellationToken cancellationToken)
+        public async Task<Blackjack> Handle(StartGame request, CancellationToken cancellationToken)
         {
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
             
@@ -63,8 +63,8 @@ namespace Mesa.Blackjack.Handlers.Commands
             //crea el registro en la BD
             await _repoBlackJack.CreateBlackJackAsync(backjack);
             await _repoBlackJack.SaveChangesAsync();
-                         
-            return solicitud;
+
+            return backjack;
         }        
     }
 

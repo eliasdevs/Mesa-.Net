@@ -3,6 +3,7 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
 using Mesa.BlackJack;
+using Mesa.BlackJack.Handlers.Helper;
 using Mesa_SV;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
@@ -45,7 +46,7 @@ namespace Mesa.Blackjack.Handlers.Queries
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
 
             //si ya estuvo plantado reinnicia las cartas
-            if(datosJugador.estado == StatusHand.HAND)
+            if(datosJugador.estado == StatusHand.STAND_HAND)
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador), GetType(), $"Usted no puede pedri mas cartas porque esta plantado");
 
             //elimina la carta seleccionada
@@ -55,8 +56,12 @@ namespace Mesa.Blackjack.Handlers.Queries
             datosJugador.Mano.Add(new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId));
             datosJugador.estado= StatusHand.ACTIVE;
 
-            //TODO: aqui cada que se pida carta hacer la cuenta que no se pase de 21 si lo hace mandar el mismo vo y plantarlo
-            //para eso crear un helper en handler que haga la cudnta por si se usa en otra clase
+            //calcula la puntuacion de la mano
+            if (CalculateManoBlackJack.CalcularPuntuacion(datosJugador.Mano) > 21)
+            {
+                //si es mayor a 21 lo pongo plantado para que no pueda pedir mas cartas
+                datosJugador.estado = StatusHand.STAND_HAND;
+            }
 
             //agrega la carta al historial de blackjack
             blackjack?.History?.Add(

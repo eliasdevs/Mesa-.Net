@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+﻿    using AutoMapper;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.VoDeJuegos;
 using System;

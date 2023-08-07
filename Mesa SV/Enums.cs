@@ -81,7 +81,7 @@ namespace Mesa_SV
         /// <summary>
         /// CUANDO presiona plantarse esta es activa
         /// </summary>
-        HAND = 1,
+        STAND_HAND = 1,
 
         /// <summary>
         /// cuando esta llenando la lista

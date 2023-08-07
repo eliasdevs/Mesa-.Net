@@ -58,5 +58,21 @@ namespace Mesa.Blackjack
         /// </summary>
         public GameStatus Status { get; set; }
 
+
+        /// <summary>
+        /// este metodo se encarga de verificar si ya estan plantados los dos jugadores y de estarlo,
+        /// lo que hara es reiniciar la mano a vacia y poner el estado de la mano del jugador a active        
+        /// </summary>
+        public void ReiniciarManoJugadoresPlantados()
+        {
+            if (ManoJugadores.Count(x => x.estado == StatusHand.STAND_HAND) == 2)
+            {
+                foreach (var jugador in ManoJugadores)
+                {
+                    jugador.estado = StatusHand.ACTIVE;
+                    jugador.Mano = new List<Card>();
+                }
+            }
+        }
     }
 }

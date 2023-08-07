@@ -37,21 +37,14 @@ namespace Mesa.Blackjack.Handlers.Commands
             if (datosJugador.Mano == null || datosJugador.Mano.Count() == 0)
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador.Mano), GetType(), $"Accion no permitida");
 
-            //se pone en estao plantado
-            datosJugador.estado = StatusHand.HAND;
+            //se pone en estado plantado
+            datosJugador.estado = StatusHand.STAND_HAND;
 
-            //TODO: hacer esto en un metodo de la clase y mandar a llamarlo
-            if (blackjack.ManoJugadores.Where(x => x.estado == StatusHand.HAND).ToList().Count() == 2)
-            {
-                //se reinicia porque los dos estan plantados
-                blackjack.ManoJugadores[0].estado = StatusHand.ACTIVE;
-                blackjack.ManoJugadores[0].Mano = new List<Card>();
-                blackjack.ManoJugadores[1].estado = StatusHand.ACTIVE;
-                blackjack.ManoJugadores[1].Mano = new List<Card>();
-            }
+            //reinicio la mano de los jugadores porque los dos se plantaron
+            blackjack.ReiniciarManoJugadoresPlantados();
 
-            //actualiza los datos
-            await _repoBlackJack.SaveChangesAsync();
+             //actualiza los datos
+             await _repoBlackJack.SaveChangesAsync();
 
             return new(datosJugador.IdJugador, datosJugador.Mano, datosJugador.estado);
         }
