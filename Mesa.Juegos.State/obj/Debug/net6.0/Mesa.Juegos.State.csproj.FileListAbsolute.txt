@@ -1,0 +1,12 @@
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.deps.json
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\refint\Mesa.Juegos.State.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\ref\Mesa.Juegos.State.dll
