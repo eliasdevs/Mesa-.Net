@@ -2,6 +2,7 @@
 using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
+using Mesa.BlackJack;
 using Mesa_SV;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
@@ -13,11 +14,11 @@ namespace Mesa.Blackjack.Handlers.Commands
     {
         private readonly IMapper _mapper;
         private readonly IBlackJackRepository _repoBlackJack;
-        
+
         public StandHandHandler(IBlackJackRepository repoBlackJack, IMapper mapper)
         {
             _mapper = mapper;
-            _repoBlackJack = repoBlackJack;        
+            _repoBlackJack = repoBlackJack;
         }
 
         public async Task<ManoJugadorVo> Handle(StandHand request, CancellationToken cancellationToken)
@@ -28,7 +29,7 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack,
                     nameof(blackjack), GetType(), $"Error!!!, no se encontro registro de este juego.");
 
-            ManoJugadorVo? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.PlayerId);
+            ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.PlayerId);
 
             if (datosJugador == null || blackjack.ManoJugadores == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.PlayerId}");
@@ -36,15 +37,23 @@ namespace Mesa.Blackjack.Handlers.Commands
             if (datosJugador.Mano == null || datosJugador.Mano.Count() == 0)
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador.Mano), GetType(), $"Accion no permitida");
 
-            blackjack.ManoJugadores.Remove(datosJugador);
+            //se pone en estao plantado
+            datosJugador.estado = StatusHand.HAND;
 
-            //acualizar el vo de mano             
-            blackjack.ManoJugadores.Add(new ManoJugadorVo(request.PlayerId, datosJugador.Mano, StatusHand.ACTIVE));
+            //TODO: hacer esto en un metodo de la clase y mandar a llamarlo
+            if (blackjack.ManoJugadores.Where(x => x.estado == StatusHand.HAND).ToList().Count() == 2)
+            {
+                //se reinicia porque los dos estan plantados
+                blackjack.ManoJugadores[0].estado = StatusHand.ACTIVE;
+                blackjack.ManoJugadores[0].Mano = new List<Card>();
+                blackjack.ManoJugadores[1].estado = StatusHand.ACTIVE;
+                blackjack.ManoJugadores[1].Mano = new List<Card>();
+            }
 
             //actualiza los datos
             await _repoBlackJack.SaveChangesAsync();
 
-            return datosJugador;
+            return new(datosJugador.IdJugador, datosJugador.Mano, datosJugador.estado);
         }
     }
 

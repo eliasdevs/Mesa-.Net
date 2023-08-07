@@ -3,6 +3,7 @@ using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers.Helper;
+using Mesa.BlackJack;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
@@ -50,10 +51,10 @@ namespace Mesa.Blackjack.Handlers.Commands
             };
 
             //seteo constructor
-            Blackjack backjack = new Blackjack(null, request.RequestId, new List<ManoJugadorVo>()
+            Blackjack backjack = new Blackjack(null, request.RequestId, new List<ManoJugador>()
                 {
-                    new ManoJugadorVo(solicitud.PlayerId, new List<Card>(), StatusHand.INIT),
-                    new ManoJugadorVo(solicitud.AcceptedPlayerId, new List<Card>(), StatusHand.INIT)
+                    new ManoJugador(solicitud.PlayerId, new List<Card>(), StatusHand.INIT),
+                    new ManoJugador(solicitud.AcceptedPlayerId, new List<Card>(), StatusHand.INIT)
                 },  
                 listaCartas, 
                 listHistory, 

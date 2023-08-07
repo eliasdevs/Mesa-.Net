@@ -1,4 +1,5 @@
 ﻿
+using Mesa.BlackJack;
 using Mesa_SV;
 using Mesa_SV.VoDeJuegos;
 
@@ -11,7 +12,7 @@ namespace Mesa.Blackjack
             
         }
 
-        public Blackjack(string? id, string idRequest, List<ManoJugadorVo> manoJugadores, List<Card> mazo, List<HistoryBlackJackVo>? history, GameStatus status)
+        public Blackjack(string? id, string idRequest, List<ManoJugador> manoJugadores, List<Card> mazo, List<HistoryBlackJackVo>? history, GameStatus status)
         {
             Id = id ?? Guid.NewGuid().ToString();
             IdRequest = idRequest;
@@ -36,7 +37,7 @@ namespace Mesa.Blackjack
         /// <summary>
         /// id del user acepta el reto y la mano
         /// </summary>
-        public List<ManoJugadorVo> ManoJugadores { get; set; }
+        public List<ManoJugador> ManoJugadores { get; set; }
 
         /// <summary>
         /// este representa el mazo que se les carga a los users en todo el juego

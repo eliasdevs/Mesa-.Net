@@ -2,6 +2,7 @@
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
+using Mesa.BlackJack;
 using Mesa_SV;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
@@ -38,32 +39,31 @@ namespace Mesa.Blackjack.Handlers.Queries
             //se saca la primera carta ya que estan desordenadas
             Card carta = blackjack.Mazo[0];
 
-            ManoJugadorVo? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
+            ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
 
             if(datosJugador == null || blackjack.ManoJugadores == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
 
+            //si ya estuvo plantado reinnicia las cartas
+            if(datosJugador.estado == StatusHand.HAND)
+                throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador), GetType(), $"Usted no puede pedri mas cartas porque esta plantado");
+
             //elimina la carta seleccionada
             blackjack.Mazo.Remove(carta);
 
-            
-
-            List<Card> cards = new List<Card> { new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId) };
-
-            if (datosJugador.Mano.Count > 0)
-                cards.AddRange(datosJugador.Mano);
-
             //acualizar el vo de mano             
-            blackjack.ManoJugadores[blackjack.ManoJugadores.FindIndex(x => x.IdJugador == request.UserId)] = new ManoJugadorVo(request.UserId, cards, StatusHand.ACTIVE );
+            datosJugador.Mano.Add(new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId));
+            datosJugador.estado= StatusHand.ACTIVE;
 
-            
+            //TODO: aqui cada que se pida carta hacer la cuenta que no se pase de 21 si lo hace mandar el mismo vo y plantarlo
+            //para eso crear un helper en handler que haga la cudnta por si se usa en otra clase
 
             //agrega la carta al historial de blackjack
-            //blackjack?.History?.Add(
-            //    new HistoryBlackJackVo(
-            //        new List<Card>() {carta}, request.UserId, blackjack.ContadorMazo,
-            //        $"Se entrego la carta de Id {blackjack.Mazo[0].Id} con valor {blackjack.Mazo[0].OriginalValue} y sub value {blackjack.Mazo[0].SubValue} al jugador {request.UserId}"));
-            
+            blackjack?.History?.Add(
+                new HistoryBlackJackVo(
+                    new List<Card>() { new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId) }, request.UserId, blackjack.ContadorMazo,
+                    $"Se entrego la carta de Id {carta.Id} con valor {carta.OriginalValue}, sub value {carta.SubValue} y de tipo {carta.TypeOfCardId} al jugador {request.UserId}"));
+
             //guardo los cambios 
             await _repository.SaveChangesAsync();
 

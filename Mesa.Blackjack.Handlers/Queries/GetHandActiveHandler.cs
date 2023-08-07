@@ -2,6 +2,7 @@
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
+using Mesa.BlackJack;
 using Mesa_SV;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
@@ -32,12 +33,12 @@ namespace Mesa.Blackjack.Handlers.Queries
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack,
                     nameof(blackjack), GetType(), $"Error!!!, no se encontro registro de este juego.");
 
-            ManoJugadorVo? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
+            ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
 
             if (datosJugador == null || blackjack.ManoJugadores == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
 
-            return datosJugador;
+            return new(datosJugador.IdJugador, datosJugador.Mano, datosJugador.estado);
         }
     }
 }
