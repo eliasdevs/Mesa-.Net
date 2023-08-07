@@ -802,22 +802,22 @@
           "System.Xml.ReaderWriter": "4.0.11"
         }
       },
-      "Mesa SV/1.0.0": {
+      "Mesa.BlackJack/1.0.0": {
+        "dependencies": {
+          "MediatR": "12.0.1",
+          "MesaSV": "1.0.0"
+        },
+        "runtime": {
+          "Mesa.BlackJack.dll": {}
+        }
+      },
+      "MesaSV/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Refit": "7.0.0"
         },
         "runtime": {
-          "Mesa SV.dll": {}
-        }
-      },
-      "Mesa.BlackJack/1.0.0": {
-        "dependencies": {
-          "MediatR": "12.0.1",
-          "Mesa SV": "1.0.0"
-        },
-        "runtime": {
-          "Mesa.BlackJack.dll": {}
+          "MesaSV.dll": {}
         }
       }
     }
@@ -1381,12 +1381,12 @@
       "path": "system.xml.xdocument/4.0.11",
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
-    "Mesa SV/1.0.0": {
+    "Mesa.BlackJack/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
-    "Mesa.BlackJack/1.0.0": {
+    "MesaSV/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

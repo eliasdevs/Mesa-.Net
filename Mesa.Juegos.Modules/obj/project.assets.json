@@ -1450,20 +1450,6 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Mesa SV/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v6.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
-          "Refit": "7.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Mesa SV.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Mesa SV.dll": {}
-        }
-      },
       "Mesa.Juegos.State/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1482,13 +1468,27 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Mesa SV": "1.0.0"
+          "MesaSV": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
         },
         "runtime": {
           "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
+        }
+      },
+      "MesaSV/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MesaSV.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MesaSV.dll": {}
         }
       }
     }
@@ -4707,11 +4707,6 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Mesa SV/1.0.0": {
-      "type": "project",
-      "path": "../Mesa SV/Mesa SV.csproj",
-      "msbuildProject": "../Mesa SV/Mesa SV.csproj"
-    },
     "Mesa.Juegos.State/1.0.0": {
       "type": "project",
       "path": "../Mesa.Juegos.State/Mesa.Juegos.State.csproj",
@@ -4721,6 +4716,11 @@
       "type": "project",
       "path": "../Mesa.Juegos.State.Actions/Mesa.Juegos.State.Actions.csproj",
       "msbuildProject": "../Mesa.Juegos.State.Actions/Mesa.Juegos.State.Actions.csproj"
+    },
+    "MesaSV/1.0.0": {
+      "type": "project",
+      "path": "../MesaSV/MesaSV.csproj",
+      "msbuildProject": "../MesaSV/MesaSV.csproj"
     }
   },
   "projectFileDependencyGroups": {

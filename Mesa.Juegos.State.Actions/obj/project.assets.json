@@ -1286,7 +1286,7 @@
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
       },
-      "Mesa SV/1.0.0": {
+      "MesaSV/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1294,10 +1294,10 @@
           "Refit": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/Mesa SV.dll": {}
+          "bin/placeholder/MesaSV.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Mesa SV.dll": {}
+          "bin/placeholder/MesaSV.dll": {}
         }
       }
     }
@@ -4245,15 +4245,15 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Mesa SV/1.0.0": {
+    "MesaSV/1.0.0": {
       "type": "project",
-      "path": "../Mesa SV/Mesa SV.csproj",
-      "msbuildProject": "../Mesa SV/Mesa SV.csproj"
+      "path": "../MesaSV/MesaSV.csproj",
+      "msbuildProject": "../MesaSV/MesaSV.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "Mesa SV >= 1.0.0"
+      "MesaSV >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -4290,8 +4290,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj": {
-              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa SV\\Mesa SV.csproj"
+            "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\MesaSV.csproj": {
+              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\MesaSV.csproj"
             }
           }
         }

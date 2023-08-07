@@ -1,0 +1,12 @@
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\bin\Debug\net6.0\MesaSV.deps.json
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\bin\Debug\net6.0\MesaSV.dll
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\bin\Debug\net6.0\MesaSV.pdb
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.dll
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\refint\MesaSV.dll
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.pdb
+D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\ref\MesaSV.dll

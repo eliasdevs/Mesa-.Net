@@ -1015,19 +1015,10 @@
           }
         }
       },
-      "Mesa SV/1.0.0": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
-          "Refit": "7.0.0"
-        },
-        "runtime": {
-          "Mesa SV.dll": {}
-        }
-      },
       "Mesa.BlackJack/1.0.0": {
         "dependencies": {
           "MediatR": "12.0.1",
-          "Mesa SV": "1.0.0"
+          "MesaSV": "1.0.0"
         },
         "runtime": {
           "Mesa.BlackJack.dll": {}
@@ -1052,6 +1043,15 @@
         },
         "runtime": {
           "Mesa.BlackJack.Handlers.dll": {}
+        }
+      },
+      "MesaSV/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Refit": "7.0.0"
+        },
+        "runtime": {
+          "MesaSV.dll": {}
         }
       }
     }
@@ -1825,11 +1825,6 @@
       "path": "system.windows.extensions/5.0.0",
       "hashPath": "system.windows.extensions.5.0.0.nupkg.sha512"
     },
-    "Mesa SV/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Mesa.BlackJack/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -1841,6 +1836,11 @@
       "sha512": ""
     },
     "Mesa.BlackJack.Handlers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MesaSV/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

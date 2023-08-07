@@ -1862,7 +1862,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "MediatR": "12.0.1",
-          "Mesa SV": "1.0.0"
+          "MesaSV": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Mesa.BlackJack.dll": {}
@@ -1900,6 +1900,20 @@
         },
         "runtime": {
           "bin/placeholder/Mesa.BlackJack.Handlers.dll": {}
+        }
+      },
+      "MesaSV/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
+          "Refit": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/MesaSV.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/MesaSV.dll": {}
         }
       }
     }
@@ -4967,6 +4981,11 @@
       "type": "project",
       "path": "../Mesa.Blackjack.Handlers/Mesa.BlackJack.Handlers.csproj",
       "msbuildProject": "../Mesa.Blackjack.Handlers/Mesa.BlackJack.Handlers.csproj"
+    },
+    "MesaSV/1.0.0": {
+      "type": "project",
+      "path": "../MesaSV/MesaSV.csproj",
+      "msbuildProject": "../MesaSV/MesaSV.csproj"
     }
   },
   "projectFileDependencyGroups": {
