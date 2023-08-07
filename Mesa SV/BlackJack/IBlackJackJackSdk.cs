@@ -83,5 +83,12 @@ namespace Mesa_SV.BlackJack
         [Get(URLBASE + "{blackjackId}/users/{playerId}/Hand")]
         Task<ManoJugadorVo> GetActiveHand(string blackjackId, string playerId);
 
+        /// <summary>
+        /// permite extraer la solicitud por su Id
+        /// </summary>
+        /// <param name="requestId"></param>
+        /// <returns></returns>
+        [Get(URLBASE + "request/{requestId}")]
+        Task<GameRequestBackJackOutput> GetRequest(string requestId);
     }
 }
