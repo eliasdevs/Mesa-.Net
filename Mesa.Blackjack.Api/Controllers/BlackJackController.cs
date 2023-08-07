@@ -94,6 +94,27 @@ namespace Mesa.Blackjack.Api.Controllers
         }
 
         /// <summary>
+        /// permite extraer una solicitud de juego por su Id
+        /// </summary>
+        /// <param name="requestId"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("request/{requestId}")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        public async Task<ActionResult<GameRequestBackJackOutput>> GetRequest([FromRoute] string requestId)
+        {
+            //proceso para crear una solicitud
+            GetRequestById query = new GetRequestById(requestId);
+
+            var response = await _mediator.Send(query);
+
+            return _mapper.Map<GameRequestBackJackOutput>(response);
+        }
+
+        /// <summary>
         /// crea el una solicitud de blackJack
         /// recibe el id del usuario que hace la solicitud
         /// </summary>
@@ -115,7 +136,6 @@ namespace Mesa.Blackjack.Api.Controllers
             var response = await _mediator.Send(cmd);
 
             return _mapper.Map<GameRequestBackJackOutput>(response);
-
         }
 
         /// <summary>

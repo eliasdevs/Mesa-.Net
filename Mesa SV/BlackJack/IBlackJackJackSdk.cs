@@ -26,7 +26,7 @@ namespace Mesa_SV.BlackJack
         /// <param name="requestId">el id de la solicitud</param>
         /// <returns></returns>
         [Post(URLBASE + "startGame/{requestId}")]
-        Task<GameRequestBackJackOutput> StartBlackJack(string requestId);
+        Task<BlackjackStartOutput> StartBlackJack(string requestId);
 
         /// <summary>
         /// permite crear una solicitud de juego
