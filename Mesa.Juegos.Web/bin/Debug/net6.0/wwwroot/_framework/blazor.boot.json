@@ -223,21 +223,21 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "Mesa.Juegos.Modules.dll": "sha256-feNZKYJIxfatoM0E6Wtr8j10ykYNetGU0DMkQoG7T5A=",
-      "Mesa.Juegos.State.Actions.dll": "sha256-ik4Jubpx5rSiAyRrDiS2uPf1qM\/dbrZyLbigMrZnQps=",
-      "Mesa.Juegos.State.dll": "sha256-N\/69ra\/7++afV8IONwN1IuQmgcPgNYfFcIyK7Brza3c=",
-      "MesaSV.dll": "sha256-X2tDKfUSY6iq3poKuP28cqSLPaGc1fiVfYuQ1Svbve8=",
-      "Mesa.Juegos.Web.dll": "sha256-8jkod1+50EiEmr9LGk8KjXu3g8c2rhSct0Oe3Qz3X3c="
+      "Mesa.Juegos.Modules.dll": "sha256-PJ9xyjMa\/2NztbbpiZAEyl1BfjVRIB5SVg1DZABTHa8=",
+      "Mesa.Juegos.State.Actions.dll": "sha256-aWKfLwuZr5T198q\/aPJcpXRxs0vkqwIL2VWEdlZF+w4=",
+      "Mesa.Juegos.State.dll": "sha256-s9tqNlb6ZXj9gPwhw4IPRCrsBzMctJY9+c71oEBn8CY=",
+      "MesaSV.dll": "sha256-wELwd3vZVWZHsoh5KzRS2QQTEE7C1yrGA8AEhJEd\/SM=",
+      "Mesa.Juegos.Web.dll": "sha256-JUutI\/wBnXU4azIIZ7R+2xVNGB7Vf4VD+q0w\/fEmR5o="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Mesa.Juegos.Modules.pdb": "sha256-MpHvjytV1pwHCfeRY8reCvPZXlOUQ\/raVwmBofmFgo0=",
-      "Mesa.Juegos.State.pdb": "sha256-QX5HiMjdbNPW4haDs7y7gwpN4Ki23c4HbcIP3CAEnz4=",
-      "Mesa.Juegos.State.Actions.pdb": "sha256-QlSk3\/m51cPYLPV00zlnMqidHHIJhshvrLl1gNolvIo=",
-      "MesaSV.pdb": "sha256-P2rovoDhwaUvCA9nDjI7fzMpKFNSRXP6MITVJ6jlMkw=",
-      "Mesa.Juegos.Web.pdb": "sha256-C6q9fR2j7tBEMGdcWgxKwCZavrTWymcrgn95C+F160U="
+      "Mesa.Juegos.Modules.pdb": "sha256-DXWSILXMyadOmzuJ8cAH7iVRHM1dS3K9V18Ycu8c+yw=",
+      "Mesa.Juegos.State.pdb": "sha256-6lCxG218MlSTndywYdian3e4T36ipb4aP0PjfIJb8JE=",
+      "Mesa.Juegos.State.Actions.pdb": "sha256-Pio5VNfB4Ye4AT72PBhvGrRd1VVvqvbxjR4J0ZxdLUA=",
+      "MesaSV.pdb": "sha256-ysn+oISaY5vdSBa8E7CuquNOKKvtW7K9Dw0GUWHVIbU=",
+      "Mesa.Juegos.Web.pdb": "sha256-q0kTkzvlcakzMekuAseceDSuzCpsqUloWf\/NyxEyzik="
     },
     "runtime": {
       "dotnet.6.0.16.2tx21s0ptg.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",

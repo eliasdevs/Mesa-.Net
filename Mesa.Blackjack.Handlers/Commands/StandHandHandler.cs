@@ -4,6 +4,7 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.BlackJack;
 using Mesa_SV;
+using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
@@ -46,7 +47,7 @@ namespace Mesa.Blackjack.Handlers.Commands
              //actualiza los datos
              await _repoBlackJack.SaveChangesAsync();
 
-            return new(datosJugador.IdJugador, datosJugador.Mano, datosJugador.estado);
+            return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano) , datosJugador.estado);
         }
     }
 

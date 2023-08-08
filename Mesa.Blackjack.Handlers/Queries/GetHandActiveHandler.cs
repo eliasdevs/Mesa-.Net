@@ -1,9 +1,11 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
 using Mesa.BlackJack;
 using Mesa_SV;
+using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
@@ -21,9 +23,11 @@ namespace Mesa.Blackjack.Handlers.Queries
     public class GetHandActiveHandler : IRequestHandler<GetHandActive, ManoJugadorVo>
     {
         private readonly IBlackJackRepository _repository;
-        public GetHandActiveHandler(IBlackJackRepository repository)
+        private readonly IMapper _mapper;
+        public GetHandActiveHandler(IBlackJackRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
         public async Task<ManoJugadorVo> Handle(GetHandActive request, CancellationToken cancellationToken)
         {
@@ -38,7 +42,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             if (datosJugador == null || blackjack.ManoJugadores == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
 
-            return new(datosJugador.IdJugador, datosJugador.Mano, datosJugador.estado);
+            return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
         }
     }
 }
