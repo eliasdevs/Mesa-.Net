@@ -32,7 +32,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// cuando se acepta la solicitud
     /// </summary>
     /// <param name="RequestId"></param>
-    public record EndAcceptRequest(GameRequestBackJackOutput RequestId);
+    public record EndAcceptRequest(GameRequestBackJackOutput Request);
 
     /// <summary>
     /// permite iniciar el juego
@@ -43,6 +43,12 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// <summary>
     /// cuando finaliza el proceso de crear BlackJack
     /// </summary>
-    /// <param name="BlackJack"></param>
-    public record EndCreateBlackJack(BlackjackStartOutput BlackJack);
+    /// <param name="BlackJackInfo"></param>
+    public record EndCreateBlackJack(BlackjackStartOutput BlackJackInfo);
+
+    /// <summary>
+    /// manejo de errores
+    /// </summary>
+    public record OnClearOnError();
+
 }

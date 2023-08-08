@@ -13,10 +13,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Mesa.Juegos.State.Actions\Mesa.Juegos.State.Actions.csproj" />
   </ItemGroup>
-	
-  <ItemGroup>
-    <Folder Include="Effects\" />
-    <Folder Include="Reducers\" />
-  </ItemGroup>
 
 </Project>

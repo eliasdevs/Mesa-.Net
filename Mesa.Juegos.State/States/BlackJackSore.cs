@@ -13,10 +13,11 @@ namespace Mesa.Juegos.State.States
     /// store que se encarga de almacenar la mano del jugador
     /// </summary>
     /// <param name="Mano"></param>
+    /// <param name="Request">La solicitud se actualiza en los inicios</param>
     /// <param name="Loader"></param>
-    public record BlackJackSore(ImmutableList<CardOutput>? Mano, BlackJackLoaders Loader);
+    public record BlackJackSore(ImmutableList<CardOutput> Mano, GameRequestBackJackOutput? Request, BlackjackStartOutput? BlackjackInfo, BlackJackLoaders Loader);
 
-    public record BlackJackLoaders(bool CardListIsLoading);
+    public record BlackJackLoaders(bool CardListIsLoading, bool RequestIsLoading, bool BlackJackIsLoading);
 
     [FeatureState]
     public class AgentsFeatureStore : Feature<BlackJackSore>
@@ -25,7 +26,7 @@ namespace Mesa.Juegos.State.States
 
         protected override BlackJackSore GetInitialState()
         {
-            return new BlackJackSore(ImmutableList.Create<CardOutput>(), new BlackJackLoaders(false));
+            return new BlackJackSore(ImmutableList.Create<CardOutput>(), null, null, new BlackJackLoaders(false, false, false));
         }
     }
 }
