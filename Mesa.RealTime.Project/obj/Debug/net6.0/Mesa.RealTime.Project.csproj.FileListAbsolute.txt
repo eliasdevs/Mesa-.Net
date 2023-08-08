@@ -40,3 +40,4 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\System.Text
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\MesaSV.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\MesaSV.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Refit.HttpClientFactory.dll

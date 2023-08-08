@@ -52,7 +52,7 @@ namespace Mesa.RealTime.Project.Hubs
         /// <param name="requestId"></param>
         /// <param name="tipoJuego"></param>
         /// <returns></returns>
-        public async Task CreateRequest(string playerId, string requestId, TypeGame tipoJuego)
+        public async Task AcceptRequest(string playerId, string requestId, TypeGame tipoJuego)
         {
             //crea la solicitud
             GameRequestBackJackOutput request = await _blackJackSdk.AcceptRequest(playerId, requestId,Context.ConnectionId);
