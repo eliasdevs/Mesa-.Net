@@ -128,7 +128,7 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<GameRequestBackJackOutput>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, TypeGame tipoJuego)
+        public async Task<ActionResult<GameRequestBackJackOutput>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, [FromQuery] TypeGame tipoJuego)
         {
             //proceso para crear una solicitud
             CreateRequest cmd = new CreateRequest(playerId, contextId, tipoJuego);

@@ -30,3 +30,13 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\refint\Mesa
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\Mesa.RealTime.Project.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\Mesa.RealTime.Project.genruntimeconfig.cache
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\ref\Mesa.RealTime.Project.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Refit.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\System.Net.Http.Json.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\System.Text.Encodings.Web.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\System.Text.Json.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\MesaSV.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\MesaSV.pdb

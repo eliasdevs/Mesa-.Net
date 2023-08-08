@@ -1,5 +1,8 @@
 using Mesa.RealTime.Project.Hubs;
+using Mesa_SV.BlackJack;
+using Mesa_SV.BlackJack.Config;
 using Microsoft.AspNetCore.ResponseCompression;
+using Refit;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +12,13 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+ConfiguracionBlackJack? configBlackJack = builder.Configuration.GetSection(nameof(ConfiguracionBlackJack)).Get<ConfiguracionBlackJack>();
+
+if (configBlackJack != null)
+    builder.Services.AddRefitClient<IBlackJackJackSdk>()
+    .ConfigureHttpClient(x => x.BaseAddress = new Uri(configBlackJack.UrlBase));
+    //.AddHttpMessageHandler(x => new BearerHttpClientHandler(x.GetService<IHttpContextAccessor>()));
 
 builder.Services.AddResponseCompression(opts =>
 {
@@ -28,7 +38,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-app.MapHub<ChatHub>("/chathub");
+app.MapHub<BlackJackHub>("/BlackJackRealTime");
 
 app.UseHttpsRedirection();
 

@@ -33,7 +33,12 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
                     nameof(solicitud.PlayerId), GetType(), $"Esta solicitud ya fue aceptada antes Id: {solicitud.Id}");
 
-            //validar tambien que l id del retador no sea el del que acepta
+            //debe dejar pasar cuando esta pending
+            if (solicitud.Status != GameRequestStatus.Pending)
+                throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
+                    nameof(solicitud.PlayerId), GetType(), $"Esta solicitud No se puede aceptar.");
+
+            //validar tambien que el id del retador no sea el mismo del que acepta
             if (solicitud.PlayerId == request.UserId)
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation,
                     nameof(solicitud.PlayerId), GetType(), $"No es posible procesar la solicitud. Valor repetido {solicitud.PlayerId}");

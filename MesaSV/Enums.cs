@@ -57,8 +57,19 @@ namespace Mesa_SV
     /// </summary>
     public enum GameRequestStatus
     {
+        /// <summary>
+        /// cuando se crea la solicitud
+        /// </summary>
         Pending = 1,
+
+        /// <summary>
+        /// cuando se acepta la solicitud
+        /// </summary>
         Accepted = 2,
+
+        /// <summary>
+        /// cuando se cancela
+        /// </summary>
         Rejected = 3
     }
 

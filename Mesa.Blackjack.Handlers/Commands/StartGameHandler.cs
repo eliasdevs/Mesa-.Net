@@ -28,10 +28,6 @@ namespace Mesa.Blackjack.Handlers.Commands
 
         public async Task<Blackjack> Handle(StartGame request, CancellationToken cancellationToken)
         {
-            DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
-            
-            var listaCartas = CardHelper.BarajearCartas(baraja);
-
             //extrae la request 
             GameRequestBackJack? solicitud = await _repositoryRequest.GetGameRequestBackJackAsync(request.RequestId);
 
@@ -39,9 +35,17 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw NotFoundException.CreateException(NotFoundExceptionType.Request,
                     nameof(solicitud), GetType(), $"Error!!!, la solicitud no existe.");
 
-            if(string.IsNullOrEmpty(solicitud.PlayerId) || string.IsNullOrEmpty(solicitud.AcceptedPlayerId))
+            if(solicitud.Status != GameRequestStatus.Accepted)
+                throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
+                    nameof(request.RequestId), GetType(), $"No se puede Iniciar la Partida, La solicitud no se ha aceptado");
+
+            if (string.IsNullOrEmpty(solicitud.PlayerId) || string.IsNullOrEmpty(solicitud.AcceptedPlayerId))
                 throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
                     nameof(request.RequestId), GetType(), $"No se puede Iniciar la Partida, Algo salio Mal: {request.RequestId}");
+
+            DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
+            
+            var listaCartas = CardHelper.BarajearCartas(baraja);
 
             //primer history blackjack
             List<HistoryBlackJackVo> listHistory = new List<HistoryBlackJackVo>()
