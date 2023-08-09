@@ -18,19 +18,25 @@ ConfiguracionBlackJack? configBlackJack = builder.Configuration.GetSection(nameo
 if (configBlackJack != null)
     builder.Services.AddRefitClient<IBlackJackJackSdk>()
     .ConfigureHttpClient(x => x.BaseAddress = new Uri(configBlackJack.UrlBase));
-    //.AddHttpMessageHandler(x => new BearerHttpClientHandler(x.GetService<IHttpContextAccessor>()));
+//.AddHttpMessageHandler(x => new BearerHttpClientHandler(x.GetService<IHttpContextAccessor>()));
 
-builder.Services.AddResponseCompression(opts =>
+// habilita las cors
+builder.Services.AddCors(options =>
 {
-    opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
-          new[] { "application/octet-stream" });
+    options.AddDefaultPolicy(builder =>
+    {
+        builder.WithOrigins("https://localhost:7006")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
+    });
 });
+
 
 builder.Services.AddSignalR();
 
 var app = builder.Build();
 
-app.UseResponseCompression();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -38,6 +44,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseCors();
 app.MapHub<BlackJackHub>("/BlackJackRealTime");
 
 app.UseHttpsRedirection();

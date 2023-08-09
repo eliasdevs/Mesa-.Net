@@ -18,7 +18,12 @@ namespace Mesa.RealTime.Project.Hubs
         {
             _blackJackSdk = blackJackSdk;
         }
-       
+
+        public override async Task OnConnectedAsync()
+        {
+            await base.OnConnectedAsync();
+        }
+
         /// <summary>
         /// ejemplo de mensaje global dejar alli por el momento
         /// </summary>
@@ -80,7 +85,7 @@ namespace Mesa.RealTime.Project.Hubs
         /// </summary>
         /// <param name="init"></param>
         /// <returns></returns>
-        public async Task GetAllRequestGame(bool init)
+        public async Task GetAllRequestGame()
         {
             List<GameRequestBackJackOutput> requests = await _blackJackSdk.GetAllRequest();
 

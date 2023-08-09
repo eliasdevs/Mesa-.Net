@@ -52,7 +52,7 @@
           "dependencies": {
             "Refit.HttpClientFactory": {
               "target": "Package",
-              "version": "[6.3.2, )"
+              "version": "[7.0.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

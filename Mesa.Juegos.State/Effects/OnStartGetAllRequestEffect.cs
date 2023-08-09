@@ -17,14 +17,49 @@ namespace Mesa.Juegos.State.Effects
         }
         public override async  Task ExecuteAsync(StartGetAllRequest action, IDispatcher dispatcher)
         {
-            Console.WriteLine($"Hola esta en la accion");
-            //await hubConnection.SendAsync("GetAllRequestGame", true);
+            try
+            {
+                HubConnection hubConnection = _hubConnectionService.GetHubConnection();
+
+                // Manejar el evento OnConnected antes de iniciar la conexión
+                hubConnection.On<string>("OnConnected", (message) =>
+                {
+                    // La conexión está lista para ser activada, iniciarla
+                    StartConnection(hubConnection);
+                });
+
+
+                // Espera hasta que la conexión esté activa
+                await hubConnection.StartAsync();
+
+                // Envía el mensaje al servidor
+                await hubConnection.SendAsync("GetAllRequestGame");
+
+                Console.WriteLine("Se envió una solicitud para obtener la lista de juegos.");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error al enviar la solicitud para obtener la lista de juegos. "+ ex);
+            }
+         
+           
         }
 
         public override Task OnException(ApiException ex, IDispatcher dispatcher)
         {
             dispatcher.Dispatch(new OnClearOnError());
             return Task.CompletedTask;
+        }
+        private async void StartConnection(HubConnection hubConnection)
+        {
+            try
+            {
+                await hubConnection.StartAsync();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error");
+            }
         }
     }
 }

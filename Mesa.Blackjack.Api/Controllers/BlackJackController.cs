@@ -148,7 +148,7 @@ namespace Mesa.Blackjack.Api.Controllers
         {
             //proceso para crear una solicitud
             GetRequests query = new GetRequests();
-
+            
             var response = await _mediator.Send(query);
 
             return _mapper.Map<List<GameRequestBackJackOutput>>(response);
