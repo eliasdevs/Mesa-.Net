@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <Folder Include="BlackJack\Components\" />
-    <Folder Include="BlackJack\Pages\" />
   </ItemGroup>
 
 </Project>

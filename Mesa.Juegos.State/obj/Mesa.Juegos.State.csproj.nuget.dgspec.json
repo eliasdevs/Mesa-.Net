@@ -118,6 +118,10 @@
             "Fluxor.Blazor.Web": {
               "target": "Package",
               "version": "[5.9.0, )"
+            },
+            "Microsoft.AspNetCore.SignalR.Client": {
+              "target": "Package",
+              "version": "[7.0.9, )"
             }
           },
           "imports": [

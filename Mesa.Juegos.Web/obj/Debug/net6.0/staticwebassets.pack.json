@@ -13,6 +13,10 @@
       "PackagePath": "staticwebassets\\Mesa.Juegos.Web.styles.css"
     },
     {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },

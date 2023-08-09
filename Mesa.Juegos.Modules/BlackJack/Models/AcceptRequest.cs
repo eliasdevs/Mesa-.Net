@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mesa.Juegos.Modules.BlackJack.Models
 {
-    internal class AcceptRequest
+    public class AcceptRequest
     {
         /// <summary>
         /// el id que acepta la solicitud

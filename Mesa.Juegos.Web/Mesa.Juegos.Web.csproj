@@ -11,7 +11,9 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.16" PrivateAssets="all" />
 	<PackageReference Include="Fluxor.Blazor.Web" Version="5.9.0" />
 	<PackageReference Include="Fluxor.Blazor.Web.ReduxDevTools" Version="5.9.0" />
-	<PackageReference Include="Radzen.Blazor" Version="4.14.4" />	
+	<PackageReference Include="Radzen.Blazor" Version="4.14.4" />
+    
+
   </ItemGroup>
 
   <ItemGroup>

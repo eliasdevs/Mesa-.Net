@@ -1,6 +1,7 @@
 ﻿using Fluxor;
 using Mesa.Juegos.State.Actions.Blackjacks;
 using Mesa.Juegos.State.States;
+using System.Collections.Immutable;
 
 namespace Mesa.Juegos.State.Reducers
 {
@@ -117,6 +118,37 @@ namespace Mesa.Juegos.State.Reducers
             };
         }
 
+        [ReducerMethod]
+        public static BlackJackSore OnStartGetAllRequest(BlackJackSore state, StartGetAllRequest action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    RequestIsLoading = true,
+                }
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        [ReducerMethod]
+        public static BlackJackSore OnEndGetAllRequest(BlackJackSore state, EndGetAllRequest action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    RequestIsLoading = false,
+                },
+                BlackJackRequests = action.Requests.ToImmutableList()
+            };
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -128,7 +160,7 @@ namespace Mesa.Juegos.State.Reducers
         {
             return state with
             {
-                Loader = new(false, false, false)
+                Loader = new(false, false, false,false)
             };
         }
     }

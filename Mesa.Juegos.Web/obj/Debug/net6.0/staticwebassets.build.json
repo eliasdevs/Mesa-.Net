@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I86S4CBLVxVe9mRDK8sG7co9d1oua9H+PFw/ulpDc34=",
+  "Hash": "uM2oc4xm+5Ik07YYjB+6+MxHDmkDQZU4GSWMXvKk9kU=",
   "Source": "Mesa.Juegos.Web",
   "BasePath": "/",
   "Mode": "Root",
@@ -1158,6 +1158,23 @@
       "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly\\6.0.16\\lib\\net6.0\\Microsoft.AspNetCore.Components.WebAssembly.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Connections.Abstractions.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\7.0.9\\lib\\netstandard2.1\\Microsoft.AspNetCore.Connections.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Hosting.Abstractions.dll",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -1207,6 +1224,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\lib\\netstandard2.0\\Microsoft.AspNetCore.Http.Abstractions.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Client.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Client.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\7.0.9\\lib\\netstandard2.1\\Microsoft.AspNetCore.Http.Connections.Client.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Common.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Common.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\7.0.9\\lib\\netstandard2.0\\Microsoft.AspNetCore.Http.Connections.Common.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.dll",
@@ -1362,6 +1413,74 @@
       "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.routing\\2.2.0\\lib\\netcoreapp2.2\\Microsoft.AspNetCore.Routing.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.Core.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\7.0.9\\lib\\netstandard2.1\\Microsoft.AspNetCore.SignalR.Client.Core.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\7.0.9\\lib\\netstandard2.0\\Microsoft.AspNetCore.SignalR.Client.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Common.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Common.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\7.0.9\\lib\\netstandard2.0\\Microsoft.AspNetCore.SignalR.Common.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\7.0.9\\lib\\netstandard2.0\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.WebUtilities.dll",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -1512,7 +1631,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.dll",
@@ -1529,7 +1648,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.DependencyInjection.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyModel.dll",
@@ -1547,6 +1666,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.dependencymodel\\2.1.0\\lib\\netstandard1.6\\Microsoft.Extensions.DependencyModel.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Features.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Features.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.features\\7.0.9\\lib\\netstandard2.0\\Microsoft.Extensions.Features.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Abstractions.dll",
@@ -1631,7 +1767,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.3\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\7.0.1\\lib\\net6.0\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll",
@@ -1648,7 +1784,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Logging.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.logging\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Logging.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.ObjectPool.dll",
@@ -1682,7 +1818,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\lib\\netstandard2.1\\Microsoft.Extensions.Options.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.options\\7.0.1\\lib\\net6.0\\Microsoft.Extensions.Options.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll",
@@ -1699,7 +1835,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\lib\\net6.0\\Microsoft.Extensions.Primitives.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\lib\\net6.0\\Microsoft.Extensions.Primitives.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.dll",
@@ -2753,7 +2889,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\system.io.pipelines\\6.0.3\\lib\\net6.0\\System.IO.Pipelines.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\system.io.pipelines\\7.0.0\\lib\\net6.0\\System.IO.Pipelines.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipes.AccessControl.dll",
@@ -4215,7 +4351,7 @@
       "AssetTraitValue": "runtime",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\6.0.16\\runtimes\\browser-wasm\\lib\\net6.0\\System.Threading.Channels.dll"
+      "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\system.threading.channels\\7.0.0\\lib\\net6.0\\System.Threading.Channels.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.dll",
@@ -4915,23 +5051,6 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_CJK.dat"
     },
     {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\3+WcJZ+D.gz",
-      "SourceId": "Mesa.Juegos.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
-    },
-    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\3qgRcheh.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -4981,6 +5100,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Numerics.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\57T6fW95.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Protocols.Json.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Protocols.Json.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\5AFYN5Gw.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Connections.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Connections.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Connections.Abstractions.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\5bWSsyB8.gz",
@@ -5100,6 +5253,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.JSInterop.WebAssembly.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\7VswaqgA.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Client.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Client.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Client.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\8G+OuTSE.gz",
@@ -5289,23 +5459,6 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Mesa.Juegos.Modules.pdb"
     },
     {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\AcAQK52T.gz",
-      "SourceId": "Mesa.Juegos.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Options.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
-    },
-    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\aCdoUfkz.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -5357,23 +5510,6 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Web.dll"
     },
     {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\AjxYhSvO.gz",
-      "SourceId": "Mesa.Juegos.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Logging.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll"
-    },
-    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\aKCR22B4.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -5423,6 +5559,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipes.AccessControl.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\ATQ8VNrV.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Primitives.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\auOGHZCe.gz",
@@ -5850,6 +6003,57 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.XPath.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\Dxfyqvni.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Logging.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\DYoYJLn9.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Http.Connections.Common.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Common.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.Connections.Common.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\E4qd0ZpB.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\e6tRPXXS.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -6001,23 +6205,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Private.DataContractSerialization.dll"
-    },
-    {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\f+vxvW1t.gz",
-      "SourceId": "Mesa.Juegos.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\f1bixZnP.gz",
@@ -6394,23 +6581,6 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.Linq.dll"
     },
     {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\HpQPpkEq.gz",
-      "SourceId": "Mesa.Juegos.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.DependencyInjection.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.dll"
-    },
-    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\HRQ0yCdV.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -6581,6 +6751,23 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Radzen.Blazor.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\IYcV3uax.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.DependencyInjection.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\j2s8R+X1.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -6596,23 +6783,6 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.AppContext.dll"
-    },
-    {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\j2vQjeTA.gz",
-      "SourceId": "Mesa.Juegos.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/System.Threading.Channels.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Channels.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Channels.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\j7jOqDUI.gz",
@@ -6700,23 +6870,6 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Diagnostics.DiagnosticSource.dll"
     },
     {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\jQ0glMCG.gz",
-      "SourceId": "Mesa.Juegos.Web",
-      "SourceType": "Computed",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
-      "BasePath": "/",
-      "RelativePath": "_framework/Microsoft.Extensions.Primitives.dll.gz",
-      "AssetKind": "Build",
-      "AssetMode": "All",
-      "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll",
-      "AssetTraitName": "Content-Encoding",
-      "AssetTraitValue": "gzip",
-      "CopyToOutputDirectory": "PreserveNewest",
-      "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Primitives.dll"
-    },
-    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\JVMnwObe.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -6783,6 +6936,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Fluxor.Blazor.Web.ReduxDevTools.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\K4E4ou9c.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Common.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Common.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Common.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\KDLyB+k1.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\KJFCN47n.gz",
@@ -6953,6 +7140,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.Serialization.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\LrWPevs8.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Features.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Features.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Features.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\M4frAlAY.gz",
@@ -7635,6 +7839,23 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Http.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\S4CHWs+X.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.DependencyInjection.Abstractions.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.DependencyInjection.Abstractions.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\saOBlrl4.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -8230,6 +8451,23 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Net.Requests.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\wSc6Nl7e.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.SignalR.Client.Core.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.AspNetCore.SignalR.Client.Core.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\wty+RODY.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -8315,6 +8553,23 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\icudt_no_CJK.dat"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\XaCjqB2M.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.Extensions.Options.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Options.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\xhOzwtYE.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -8366,21 +8621,21 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Physical.dll"
     },
     {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\y+WV+jHY.gz",
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\YAzzfFq0.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
       "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "_framework/System.IO.Pipelines.dll.gz",
+      "RelativePath": "_framework/Microsoft.Extensions.Logging.Abstractions.dll.gz",
       "AssetKind": "Build",
       "AssetMode": "All",
       "AssetRole": "Alternative",
-      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.Pipelines.dll"
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.Logging.Abstractions.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\ybXtPKP9.gz",
@@ -8519,6 +8774,23 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.IO.FileSystem.AccessControl.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\Zd4XdGEd.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Threading.Channels.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Channels.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Threading.Channels.dll"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\zEF+frVw.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -8653,6 +8925,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Web.bundle.scp.css"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\appsettings.json",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "appsettings.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "settings",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\appsettings.json"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\app.css",

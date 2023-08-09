@@ -1,9 +1,9 @@
 ﻿@using System.Reflection;
 @using Mesa.Juegos.Modules;
 <Fluxor.Blazor.Web.StoreInitializer/>
-<Router AppAssembly="@typeof(App).Assembly">
+<Router AppAssembly="@typeof(App).Assembly" AdditionalAssemblies="_extractAssembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" AdditionalAssemblies="_extractAssembly"/>
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)"/>
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>

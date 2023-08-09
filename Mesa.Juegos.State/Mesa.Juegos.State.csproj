@@ -8,6 +8,7 @@
 
   <ItemGroup>
 	<PackageReference Include="Fluxor.Blazor.Web" Version="5.9.0" />
+	  <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.9" />
   </ItemGroup>
 	
   <ItemGroup>

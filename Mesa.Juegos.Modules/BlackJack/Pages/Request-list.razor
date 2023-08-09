@@ -1,0 +1,74 @@
+﻿@page "/requests-list"
+
+@using Fluxor.Blazor.Web.Components
+@using Mesa.Juegos.Modules.BlackJack.Models;
+@using Mesa.Juegos.State.Actions.Blackjacks;
+@using Mesa_SV;
+@using Microsoft.AspNetCore.Components.Forms
+@using Mesa.Juegos.State.States
+@inherits FluxorComponent
+@inject IState<BlackJackSore> _store
+@inject IDispatcher _dispatcher
+@inject NavigationManager _nav
+
+<h3>Lista de Solicitudes</h3>
+
+@if(_store.Value.Loader.RequestIsLoading){
+    <p>Cargado solicitudes</p>
+}
+
+<EditForm Model="@Model" OnValidSubmit="@OnValidSubmit">
+    <InputText @bind-Value="@Model.PlayerId" placeholder="Id del jugador"></InputText>
+    <br />
+    <InputSelect @bind-Value="@Model.TypeGame">
+        @foreach (var value in Enum.GetValues<TypeGame>())
+        {
+                <option value="@value">@value</option>
+        }
+    </InputSelect>    
+    <button type="submit">Mandar</button>
+</EditForm>
+<hr />
+<br />
+
+@if (_store.Value.Loader.RequestIsLoading == false)
+{
+       <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">IdJugador</th>
+              <th scope="col">IdRequest</th>      
+              <th scope="col">Buttons</th>      
+            </tr>
+          </thead>
+          <tbody>
+                @foreach (var solicitud in _store.Value.BlackJackRequests)
+                {
+                    <tr>
+                        <td>@solicitud.PlayerId</td>
+                        <td>@solicitud.Id</td>
+                        <td>Acciones</td>
+                    </tr>               
+                }
+        </tbody>
+       </table>
+}
+@code{
+    public CreateRequestVm Model = new CreateRequestVm();
+
+    protected override void OnParametersSet()
+    {
+        _dispatcher.Dispatch(new StartGetAllRequest());
+
+        base.OnParametersSet();
+    }
+
+    /// <summary>
+    /// este puede tener otro nombre
+    /// </summary>
+    private void OnValidSubmit()
+    {
+        Console.WriteLine("Entra");
+
+    }
+}

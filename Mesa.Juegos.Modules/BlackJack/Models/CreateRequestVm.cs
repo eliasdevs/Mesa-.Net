@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Mesa.Juegos.Modules.BlackJack.Models
 {
-    internal class CreateRequestVm
+    public class CreateRequestVm
     {
         /// <summary>
         /// tipo de juego

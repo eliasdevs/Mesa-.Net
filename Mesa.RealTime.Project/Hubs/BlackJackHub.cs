@@ -74,5 +74,17 @@ namespace Mesa.RealTime.Project.Hubs
             //TODO: mandar mensaje a los dos por el contextId de cada jugador lo va escuchar "StartBlackJack"            
             await Clients.All.SendAsync("StartBlackJack", request);
         }
+
+        /// <summary>
+        /// permite consultar las solicitudes que esperan ser aceptadas
+        /// </summary>
+        /// <param name="init"></param>
+        /// <returns></returns>
+        public async Task GetAllRequestGame(bool init)
+        {
+            List<GameRequestBackJackOutput> requests = await _blackJackSdk.GetAllRequest();
+
+            await Clients.All.SendAsync("GetAllRequests", requests);
+        }
     }
 }

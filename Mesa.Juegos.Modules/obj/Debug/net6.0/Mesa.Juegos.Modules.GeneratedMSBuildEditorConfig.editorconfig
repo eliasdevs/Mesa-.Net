@@ -17,6 +17,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/BlackJack/Pages/Request-list.razor]
+build_metadata.AdditionalFiles.TargetPath = QmxhY2tKYWNrXFBhZ2VzXFJlcXVlc3QtbGlzdC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

@@ -47,6 +47,17 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     public record EndCreateBlackJack(BlackjackStartOutput BlackJackInfo);
 
     /// <summary>
+    /// consulta todas las solicitudes con estado pending
+    /// </summary>
+    public record StartGetAllRequest();
+
+    /// <summary>
+    /// Finaliza proceso de consulta de request
+    /// </summary>
+    /// <param name="Requests"></param>
+    public record EndGetAllRequest(List<GameRequestBackJackOutput> Requests);
+
+    /// <summary>
     /// manejo de errores
     /// </summary>
     public record OnClearOnError();
