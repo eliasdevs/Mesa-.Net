@@ -5,6 +5,8 @@ using Mesa.Juegos.Web;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Radzen;
+using Mesa_SV.BlackJack.Config;
+using Mesa.TimeReal.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -15,6 +17,8 @@ ConfigRealTime? configRealTime = builder.Configuration.GetSection(nameof(ConfigR
 
 if(configRealTime != null)
     builder.Services.AddSingleton(configRealTime);
+
+builder.Services.AddScoped<IHubConnectionService, HubConnectionService>();
 
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 

@@ -15,3 +15,5 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.Sta
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\refint\Mesa.Juegos.State.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\ref\Mesa.Juegos.State.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.pdb

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uM2oc4xm+5Ik07YYjB+6+MxHDmkDQZU4GSWMXvKk9kU=",
+  "Hash": "YNA2FeA87v0hovaGZFihKQi81NrDlo+iD8D+nv/etac=",
   "Source": "Mesa.Juegos.Web",
   "BasePath": "/",
   "Mode": "Root",
@@ -986,6 +986,40 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "obj\\Debug\\net6.0\\Mesa.Juegos.Web.pdb"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Mesa.TimeReal.Services.dll",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Mesa.TimeReal.Services.dll",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.TimeReal.Services\\bin\\Debug\\net6.0\\Mesa.TimeReal.Services.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Mesa.TimeReal.Services.pdb",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Mesa.TimeReal.Services.pdb",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "BlazorWebAssemblyResource",
+      "AssetTraitValue": "symbol",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.TimeReal.Services\\bin\\Debug\\net6.0\\Mesa.TimeReal.Services.pdb"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\MesaSV.dll",
@@ -6003,6 +6037,23 @@
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\System.Xml.XPath.dll"
     },
     {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\dwCyI73T.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Mesa.TimeReal.Services.pdb.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Mesa.TimeReal.Services.pdb",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Mesa.TimeReal.Services.pdb"
+    },
+    {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\Dxfyqvni.gz",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Computed",
@@ -8619,6 +8670,23 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Microsoft.Extensions.FileProviders.Physical.dll"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\Y3FhtQFs.gz",
+      "SourceId": "Mesa.Juegos.Web",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Mesa.TimeReal.Services.dll.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "RelatedAsset": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Mesa.TimeReal.Services.dll",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\Mesa.TimeReal.Services.dll"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\YAzzfFq0.gz",

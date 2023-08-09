@@ -1595,6 +1595,20 @@
           "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
         }
       },
+      "Mesa.TimeReal.Services/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MesaSV": "1.0.0",
+          "Microsoft.AspNetCore.SignalR.Client": "7.0.9"
+        },
+        "compile": {
+          "bin/placeholder/Mesa.TimeReal.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Mesa.TimeReal.Services.dll": {}
+        }
+      },
       "MesaSV/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -4940,6 +4954,11 @@
       "path": "../Mesa.Juegos.State.Actions/Mesa.Juegos.State.Actions.csproj",
       "msbuildProject": "../Mesa.Juegos.State.Actions/Mesa.Juegos.State.Actions.csproj"
     },
+    "Mesa.TimeReal.Services/1.0.0": {
+      "type": "project",
+      "path": "../Mesa.TimeReal.Services/Mesa.TimeReal.Services.csproj",
+      "msbuildProject": "../Mesa.TimeReal.Services/Mesa.TimeReal.Services.csproj"
+    },
     "MesaSV/1.0.0": {
       "type": "project",
       "path": "../MesaSV/MesaSV.csproj",
@@ -4950,6 +4969,7 @@
     "net6.0": [
       "Fluxor.Blazor.Web >= 5.9.0",
       "Mesa.Juegos.State.Actions >= 1.0.0",
+      "Mesa.TimeReal.Services >= 1.0.0",
       "Microsoft.AspNetCore.SignalR.Client >= 7.0.9"
     ]
   },
@@ -4989,6 +5009,9 @@
           "projectReferences": {
             "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.State.Actions\\Mesa.Juegos.State.Actions.csproj": {
               "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.State.Actions\\Mesa.Juegos.State.Actions.csproj"
+            },
+            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.TimeReal.Services\\Mesa.TimeReal.Services.csproj": {
+              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.TimeReal.Services\\Mesa.TimeReal.Services.csproj"
             }
           }
         }

@@ -10,6 +10,7 @@
         "dependencies": {
           "Fluxor.Blazor.Web": "5.9.0",
           "Mesa.Juegos.State.Actions": "1.0.0",
+          "Mesa.TimeReal.Services": "1.0.0",
           "Microsoft.AspNetCore.SignalR.Client": "7.0.9"
         },
         "runtime": {
@@ -999,6 +1000,15 @@
           "Mesa.Juegos.State.Actions.dll": {}
         }
       },
+      "Mesa.TimeReal.Services/1.0.0": {
+        "dependencies": {
+          "MesaSV": "1.0.0",
+          "Microsoft.AspNetCore.SignalR.Client": "7.0.9"
+        },
+        "runtime": {
+          "Mesa.TimeReal.Services.dll": {}
+        }
+      },
       "MesaSV/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
@@ -1668,6 +1678,11 @@
       "hashPath": "system.xml.xdocument.4.0.11.nupkg.sha512"
     },
     "Mesa.Juegos.State.Actions/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Mesa.TimeReal.Services/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

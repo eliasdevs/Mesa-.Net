@@ -1,0 +1,15 @@
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\bin\Debug\net6.0\Mesa.TimeReal.Services.deps.json
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\bin\Debug\net6.0\Mesa.TimeReal.Services.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\bin\Debug\net6.0\Mesa.TimeReal.Services.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\bin\Debug\net6.0\MesaSV.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\bin\Debug\net6.0\MesaSV.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.csproj.AssemblyReference.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.AssemblyInfoInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.AssemblyInfo.cs
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.csproj.CoreCompileInputs.cache
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.csproj.CopyComplete
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\refint\Mesa.TimeReal.Services.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\Mesa.TimeReal.Services.pdb
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.TimeReal.Services\obj\Debug\net6.0\ref\Mesa.TimeReal.Services.dll

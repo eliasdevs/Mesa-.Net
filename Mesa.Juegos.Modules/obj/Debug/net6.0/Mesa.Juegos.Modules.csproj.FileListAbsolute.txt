@@ -28,3 +28,5 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.M
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\refint\Mesa.Juegos.Modules.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\ref\Mesa.Juegos.Modules.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.TimeReal.Services.dll
+D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.TimeReal.Services.pdb

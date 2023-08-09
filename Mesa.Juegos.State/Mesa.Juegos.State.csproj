@@ -13,6 +13,7 @@
 	
   <ItemGroup>
     <ProjectReference Include="..\Mesa.Juegos.State.Actions\Mesa.Juegos.State.Actions.csproj" />
+    <ProjectReference Include="..\Mesa.TimeReal.Services\Mesa.TimeReal.Services.csproj" />
   </ItemGroup>
 
 </Project>

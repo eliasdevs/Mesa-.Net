@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mesa.Juegos.State.Actions
+namespace Mesa_SV.BlackJack.Config
 {
     public class ConfigRealTime
     {
