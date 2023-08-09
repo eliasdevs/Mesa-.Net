@@ -28,7 +28,6 @@ namespace Mesa.Juegos.State.Effects
                     StartConnection(hubConnection);
                 });
 
-
                 // Espera hasta que la conexión esté activa
                 await hubConnection.StartAsync();
 

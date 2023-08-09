@@ -11,7 +11,7 @@ namespace Mesa_SV.BlackJack.Dtos.Output
         /// <summary>
         /// el id de la solicitud
         /// </summary>
-        public Guid Id { get; private set; }
+        public string Id { get; set; }
 
         /// <summary>
         /// el id del usuario que hace la solicitud 
