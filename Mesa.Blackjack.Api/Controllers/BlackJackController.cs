@@ -138,6 +138,23 @@ namespace Mesa.Blackjack.Api.Controllers
             return _mapper.Map<GameRequestBackJackOutput>(response);
         }
 
+        [HttpGet]
+        [Route("request")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        public async Task<ActionResult<List<GameRequestBackJackOutput>>> GetAllRequest()
+        {
+            //proceso para crear una solicitud
+            GetRequests query = new GetRequests();
+
+            var response = await _mediator.Send(query);
+
+            return _mapper.Map<List<GameRequestBackJackOutput>>(response);
+        }
+
+
         /// <summary>
         /// recibe el id de la solicitud y el id del user que acepta la partida
         /// </summary>

@@ -78,7 +78,14 @@ namespace Mesa_SV
     /// </summary>
     public enum GameStatus
     {
+        /// <summary>
+        /// iniciado
+        /// </summary>
         Started = 1,
+
+        /// <summary>
+        /// finalizado
+        /// </summary>
         finalized = 2,
     }
 

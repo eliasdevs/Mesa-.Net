@@ -30,4 +30,10 @@ namespace Mesa.Blackjack.Queries
     /// </summary>
     /// <param name="RequestId"></param>
     public record GetRequestById(string RequestId) : IRequest<GameRequestBackJack>;
+
+    /// <summary>
+    /// permite obtener todas las solicitudes
+    /// </summary>
+    /// <param name="RequestId"></param>
+    public record GetRequests() : IRequest<List<GameRequestBackJack>>;
 }

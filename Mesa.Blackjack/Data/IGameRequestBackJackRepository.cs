@@ -18,7 +18,7 @@ namespace Mesa.Blackjack.Data
         Task<GameRequestBackJack?> GetGameRequestBackJackAsync(string id);
 
         /// <summary>
-        /// metodo para extraer todas las solicitudes
+        /// metodo para extraer todas las solicitudes en estado pending
         /// </summary>
         Task<List<GameRequestBackJack>> GetGameRequestsBackJackAsync();
 

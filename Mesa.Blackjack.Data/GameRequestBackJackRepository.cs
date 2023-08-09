@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Mesa_SV;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace Mesa.Blackjack.Data
 
         public async Task<List<GameRequestBackJack>> GetGameRequestsBackJackAsync()
         {
-            return await _context.GameRequests.ToListAsync();
+            return await _context.GameRequests.Where(x=> x.Status == GameRequestStatus.Pending).ToListAsync();
         }
 
         public async Task SaveChangesAsync()

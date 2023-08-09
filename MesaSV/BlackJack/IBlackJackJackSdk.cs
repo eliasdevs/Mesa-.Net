@@ -47,6 +47,13 @@ namespace Mesa_SV.BlackJack
         /// <returns></returns>
         [Put(URLBASE+ "users/{playerId}/request/{requestId}/accept")]
         Task<GameRequestBackJackOutput> AcceptRequest(string playerId, string requestId, [Query] string contextId);
+        
+        /// <summary>
+        /// permite consultar todas las solicitudes en estado de pending
+        /// </summary>
+        /// <returns></returns>
+        [Get(URLBASE + "request")]
+        Task<List<GameRequestBackJackOutput>> GetAllRequest();
 
         /// <summary>
         /// pedir carta

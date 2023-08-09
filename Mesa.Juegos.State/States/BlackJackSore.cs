@@ -13,11 +13,25 @@ namespace Mesa.Juegos.State.States
     /// store que se encarga de almacenar la mano del jugador
     /// </summary>
     /// <param name="Mano"></param>
-    /// <param name="Request">La solicitud se actualiza en los inicios</param>
-    /// <param name="Loader"></param>
-    public record BlackJackSore(ImmutableList<CardOutput> Mano, GameRequestBackJackOutput? Request, BlackjackStartOutput? BlackjackInfo, BlackJackLoaders Loader);
+    /// <param name="Request">La solicitud que se esta ligado</param>
+    /// <param name="Loader">Se pone en true algunas propiedades cuando el proceso lo requiere</param>
+    /// <param name="SolicitudesJuego">Esta Representa todas Las solicitudes que existen, se debe actualizar cada que se creen, cierren o finalicen</param>
+    public record BlackJackSore(ImmutableList<CardOutput> Mano, 
+        GameRequestBackJackOutput? Request,
+        BlackjackStartOutput? BlackjackInfo,
+        BlackJackLoaders Loader,
+        ImmutableList<GameRequestBackJackOutput> SolicitudesJuego
+        );
 
-    public record BlackJackLoaders(bool CardListIsLoading, bool RequestIsLoading, bool BlackJackIsLoading);
+    /// <summary>
+    /// se pone en true dependiendo si esta en su proceso
+    /// </summary>
+    /// <param name="CardListIsLoading">Cuando esta cargando una carta o mano</param>
+    /// <param name="RequestIsLoading">Cuando esta cargando la request</param>
+    /// <param name="BlackJackIsLoading">Cuando esta cargado el blackJack inicarlo a algo asi</param>
+    /// <param name="BlackJackIsInProgress">Esta es cuando se esta jugando</param>
+    public record BlackJackLoaders(bool CardListIsLoading, bool RequestIsLoading, bool BlackJackIsLoading, bool BlackJackIsInProgress);
+
 
     [FeatureState]
     public class AgentsFeatureStore : Feature<BlackJackSore>
@@ -26,7 +40,10 @@ namespace Mesa.Juegos.State.States
 
         protected override BlackJackSore GetInitialState()
         {
-            return new BlackJackSore(ImmutableList.Create<CardOutput>(), null, null, new BlackJackLoaders(false, false, false));
+            return new BlackJackSore(ImmutableList.Create<CardOutput>()
+                , null, null, 
+                new BlackJackLoaders(false, false, false, false),
+                ImmutableList.Create<GameRequestBackJackOutput>());
         }
     }
 }
