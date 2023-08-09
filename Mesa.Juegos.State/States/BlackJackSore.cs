@@ -15,12 +15,12 @@ namespace Mesa.Juegos.State.States
     /// <param name="Mano"></param>
     /// <param name="Request">La solicitud que se esta ligado</param>
     /// <param name="Loader">Se pone en true algunas propiedades cuando el proceso lo requiere</param>
-    /// <param name="SolicitudesJuego">Esta Representa todas Las solicitudes que existen, se debe actualizar cada que se creen, cierren o finalicen</param>
+    /// <param name="BlackJackRequests">Esta Representa todas Las solicitudes que existen, se debe actualizar cada que se creen, cierren o finalicen</param>
     public record BlackJackSore(ImmutableList<CardOutput> Mano, 
         GameRequestBackJackOutput? Request,
         BlackjackStartOutput? BlackjackInfo,
         BlackJackLoaders Loader,
-        ImmutableList<GameRequestBackJackOutput> SolicitudesJuego
+        ImmutableList<GameRequestBackJackOutput> BlackJackRequests
         );
 
     /// <summary>

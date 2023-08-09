@@ -1,6 +1,9 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@using System.Reflection;
+@using Mesa.Juegos.Modules;
+<Fluxor.Blazor.Web.StoreInitializer/>
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" />
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(MainLayout)" AdditionalAssemblies="_extractAssembly"/>
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
@@ -10,3 +13,9 @@
         </LayoutView>
     </NotFound>
 </Router>
+@code {
+    readonly List<Assembly> _extractAssembly = new()
+    {
+        typeof(DummyMarker).Assembly
+    };
+}
