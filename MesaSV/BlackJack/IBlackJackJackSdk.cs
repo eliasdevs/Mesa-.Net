@@ -62,7 +62,7 @@ namespace Mesa_SV.BlackJack
         /// <param name="blackjackId"></param>
         /// <returns></returns>
         [Get(URLBASE + "{blackjackId}/users/{playerId}/draw_card")]
-        Task<CardOutput> GetCardById( string playerId, string blackjackId);
+        Task<ManoJugadorVo> GetCardById( string playerId, string blackjackId);
 
         /// <summary>
         /// este barajear cartas

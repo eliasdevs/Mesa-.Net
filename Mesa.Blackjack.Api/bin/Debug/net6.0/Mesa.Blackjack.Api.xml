@@ -47,6 +47,12 @@
             <param name="tipoJuego"></param>
             <returns></returns>
         </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.GetAllRequest">
+            <summary>
+            extrae la lista completa de las solicitudes sin aceptar
+            </summary>
+            <returns></returns>
+        </member>
         <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.AcceptRequest(System.String,System.String,System.String)">
             <summary>
             recibe el id de la solicitud y el id del user que acepta la partida

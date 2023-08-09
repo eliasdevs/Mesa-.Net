@@ -1,10 +1,12 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
 using Mesa.BlackJack;
 using Mesa.BlackJack.Handlers.Helper;
 using Mesa_SV;
+using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
@@ -19,14 +21,17 @@ namespace Mesa.Blackjack.Handlers.Queries
     /// <summary>
     /// pedir carta
     /// </summary>
-    public class DrawCardByIdHandler : IRequestHandler<DrawCardById, Card>
+    public class DrawCardByIdHandler : IRequestHandler<DrawCardById, ManoJugadorVo>
     {
         private readonly IBlackJackRepository _repository;
-        public DrawCardByIdHandler(IBlackJackRepository repository)
+        private readonly IMapper _mapper;
+
+        public DrawCardByIdHandler(IBlackJackRepository repository, IMapper mapper)
         {
             _repository = repository;
+            _mapper = mapper;
         }
-        public async Task<Card> Handle(DrawCardById request, CancellationToken cancellationToken)
+        public async Task<ManoJugadorVo> Handle(DrawCardById request, CancellationToken cancellationToken)
         {
             Blackjack? blackjack = await _repository.GetBlackjackByUserId(request.UserId, request.BackJackId);
 
@@ -72,7 +77,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             //guardo los cambios 
             await _repository.SaveChangesAsync();
 
-            return carta;
+            return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
         }
     }
 }

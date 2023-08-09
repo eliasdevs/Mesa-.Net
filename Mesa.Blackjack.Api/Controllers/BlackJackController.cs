@@ -138,6 +138,10 @@ namespace Mesa.Blackjack.Api.Controllers
             return _mapper.Map<GameRequestBackJackOutput>(response);
         }
 
+        /// <summary>
+        /// extrae la lista completa de las solicitudes sin aceptar
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("request")]
         [ProducesResponseType(StatusCodes.Status200OK)]
@@ -187,13 +191,13 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status200OK)]        
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<CardOutput>> GetCardById([FromRoute] string playerId, [FromRoute] string blackjackId)
+        public async Task<ActionResult<ManoJugadorVo>> GetCardById([FromRoute] string playerId, [FromRoute] string blackjackId)
         {
             DrawCardById query = new DrawCardById(playerId, blackjackId);
 
             var response = await _mediator.Send(query);
 
-            return _mapper.Map<CardOutput>(response);
+            return response;
         }
 
         /// <summary>
