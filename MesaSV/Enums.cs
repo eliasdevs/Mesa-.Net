@@ -23,19 +23,24 @@ namespace Mesa_SV
     public enum TypeGame
     {
         /// <summary>
-        /// partida amistosa, solo dejara 5 amistosas entre jugadores y 5 amistosa con el crupier por día
+        /// partida amistosa, solo dejara 5 amistosas entre jugadores es decir 5 request por dia
         /// </summary>
         FRIENDLY=1,
 
         /// <summary>
-        /// CONTRA EL SISTEMA
+        /// CONTRA EL SISTEMA Llleva dinero en juego
         /// </summary>
-        CRUPIER = 2,
+        CRUPIER_REWARDED = 2,
+
+        /// <summary>
+        /// AMISTOSA CONTRA EL CRUPIER
+        /// </summary>
+        CRUPIER_FRIENDLY = 3,
 
         /// <summary>
         /// partida recompensada
         /// </summary>
-        REWARDED= 3
+        REWARDED = 4
     }
 
     /// <summary>

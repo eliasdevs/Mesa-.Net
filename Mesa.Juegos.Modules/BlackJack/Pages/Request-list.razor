@@ -22,16 +22,23 @@
     <p>Cargado solicitudes</p>
 }
 
-<EditForm Model="@Model" OnValidSubmit="@OnValidSubmit">
-    <InputText @bind-Value="@Model.PlayerId" placeholder="Id del jugador"></InputText>
+<EditForm Model="@ModelCreate" OnValidSubmit="@OnValidSubmit">
+    <DataAnnotationsValidator/>     
+    <InputText @bind-Value="@ModelCreate.PlayerId" placeholder="Id del jugador"></InputText>
+    <ValidationMessage For="()=> ModelCreate.PlayerId"></ValidationMessage>
+
     <br />
-    <InputSelect @bind-Value="@Model.TypeGame">
-        @foreach (var value in Enum.GetValues<TypeGame>())
+
+    <InputSelect @bind-Value="@ModelCreate.TypeGame">
+        <option value="" disabled selected>Selecciona Tipo de Juego</option>
+        @foreach (var value in Enum.GetValues(typeof(TypeGame)))
         {
                 <option value="@value">@value</option>
         }
     </InputSelect>    
-    <button type="submit">Mandar</button>
+    <ValidationMessage For="()=> ModelCreate.TypeGame"></ValidationMessage>
+
+    <button type="submit" disabled="@(!IsConnected)">Crear Solicitud</button>
 </EditForm>
 <hr />
 <br />
@@ -59,8 +66,10 @@
        </table>
 }
 @code{
-    public CreateRequestVm Model = new CreateRequestVm();
+    public CreateRequestVm ModelCreate = new CreateRequestVm();
 
+    public bool IsConnected = false;
+    
     protected override void OnParametersSet()
     {
         _dispatcher.Dispatch(new StartGetAllRequest());
@@ -75,6 +84,7 @@
         // Manejar el evento OnConnected antes de iniciar la conexión                
         hubConnection.On<List<GameRequestBackJackOutput>>("GetAllRequests", (requests) =>
         {
+            IsConnected = hubConnection?.State == HubConnectionState.Connected;
             _dispatcher.Dispatch(new EndGetAllRequest(requests));
         });
 
@@ -88,7 +98,6 @@
     /// </summary>
     private void OnValidSubmit()
     {
-        Console.WriteLine("Entra");
-
+        _dispatcher.Dispatch(new StartCreateRequest(ModelCreate.PlayerId, ModelCreate.TypeGame));
     }
 }

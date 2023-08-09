@@ -36,7 +36,7 @@ namespace Mesa.RealTime.Project.Hubs
         }
 
         /// <summary>
-        /// 
+        /// No devuelve nada porque se consulta la lista completa
         /// </summary>
         /// <param name="playerId"></param>
         /// <param name="TipoJuego"></param>
@@ -44,10 +44,8 @@ namespace Mesa.RealTime.Project.Hubs
         public async Task CreateRequest(string playerId, TypeGame tipoJuego)
         {
             //crea la solicitud
-            GameRequestBackJackOutput request =  await _blackJackSdk.CreateRequest(playerId, Context.ConnectionId, tipoJuego);
+            await _blackJackSdk.CreateRequest(playerId, Context.ConnectionId, tipoJuego);
 
-            //se manda a todos porque necesita que se actualize la lista de request in realtime
-            await Clients.All.SendAsync("CreateRequestResult", request);
         }
 
         /// <summary>

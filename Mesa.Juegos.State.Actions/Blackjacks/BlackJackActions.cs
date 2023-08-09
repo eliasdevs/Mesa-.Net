@@ -13,7 +13,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// </summary>
     /// <param name="PlayerId"></param>
     /// <param name="TipoJuego"></param>
-    public record StartCreateRequest(string PlayerId, TypeGame TipoJuego);
+    public record StartCreateRequest(string PlayerId, TypeGame? TipoJuego);
 
     /// <summary>
     /// es cuando se ha creado la Request
