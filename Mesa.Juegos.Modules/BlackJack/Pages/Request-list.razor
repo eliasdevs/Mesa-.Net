@@ -75,11 +75,7 @@
         // Manejar el evento OnConnected antes de iniciar la conexión                
         hubConnection.On<List<GameRequestBackJackOutput>>("GetAllRequests", (requests) =>
         {
-            Console.WriteLine("se recibe  la data del server signal");
-            //TODO: A qui mandar a generar la accion
-            Console.WriteLine(JsonConvert.SerializeObject(requests));
-            //InvokeAsync(StateHasChanged);
-
+            _dispatcher.Dispatch(new EndGetAllRequest(requests));
         });
 
         ///await hubConnection.StartAsync(); 
