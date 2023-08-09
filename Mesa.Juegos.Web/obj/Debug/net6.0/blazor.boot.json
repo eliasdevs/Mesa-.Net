@@ -233,23 +233,23 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "Mesa.Juegos.Modules.dll": "sha256-EzpWUjEh+5lT9ZOFUdgYcd6UH3EQ8xGEEo3EdYsbgqM=",
+      "Mesa.Juegos.Modules.dll": "sha256-BrqRpAx854PLsDzd6zRR\/ef\/hbS7iXU8g+Cnnio8UhU=",
       "Mesa.Juegos.State.Actions.dll": "sha256-e8rMtCafIZ87YOixqHH3s\/Slf+Y50e3yixMT86+5yqI=",
-      "Mesa.Juegos.State.dll": "sha256-JCONH57SRfJGuUYrDZ5AQ\/Cz5Tw3aIJ8A55jP4AMkXw=",
+      "Mesa.Juegos.State.dll": "sha256-9obgPwkX1wc8mpsRqyEVNfd9b9K1N5IsMPVOnCE7at0=",
       "Mesa.TimeReal.Services.dll": "sha256-pX\/5KHAYxNnHMWRs\/HoRSB5XNHLh9TvW6hJ90FB3Jzc=",
       "MesaSV.dll": "sha256-0kbBGu\/oIWFz\/ArN+4PjtkQDVMpHuOo8YeRSyk8C0YI=",
-      "Mesa.Juegos.Web.dll": "sha256-MwWHiAysqyHcsv5e1UVbhmrTDxM94AhFDRDhcjhQU\/o="
+      "Mesa.Juegos.Web.dll": "sha256-JsCuu6m61CoF8AwZvE9e0SGEvjAjmDfjrn8gQkCU6DE="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Mesa.Juegos.Modules.pdb": "sha256-m83VUruLBxK\/hns5Rr\/bePQl0200NGTNZAL8iddVYtY=",
-      "Mesa.Juegos.State.pdb": "sha256-9tsliY9hw+HT5x3+Fbp\/2XhYwhTyL59EzjDQ+d\/pW8Q=",
+      "Mesa.Juegos.Modules.pdb": "sha256-knm\/Q4a3zdMYcMlxS5VYPqmeqc4yJo7mYT6I64GThfs=",
+      "Mesa.Juegos.State.pdb": "sha256-ejKqiizv9+HQxlh7ftKeEGL8wkhR9GXvoARQ0LlnbSk=",
       "Mesa.Juegos.State.Actions.pdb": "sha256-\/15krDR++5RoqvKG8YlYLRCgZjeVNgQ2hZI9UW8pHBc=",
       "Mesa.TimeReal.Services.pdb": "sha256-C1A06NCZK4TxemLHL3ZucXeR2wnICOiX95+nmFteCug=",
       "MesaSV.pdb": "sha256-9kQwsmhhn152R2dujkulgrBhfUI\/MtjN\/2BQa67\/eFU=",
-      "Mesa.Juegos.Web.pdb": "sha256-p1mlNVfBuEwPIqnGBEGtsgVdouOLUBSCLP04tVmCB3w="
+      "Mesa.Juegos.Web.pdb": "sha256-zErrfo7C7MSeRLu18rVg9fdODPuuHGhi9GTgHO6dRTc="
     },
     "runtime": {
       "dotnet.6.0.16.2tx21s0ptg.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",
