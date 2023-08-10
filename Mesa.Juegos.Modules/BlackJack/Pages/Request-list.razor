@@ -70,7 +70,7 @@ else
     public CreateRequestVm ModelCreate = new CreateRequestVm();
 
     public bool IsConnected = false;
-    
+
     protected override void OnParametersSet()
     {
         _dispatcher.Dispatch(new StartGetAllRequest());
@@ -87,6 +87,13 @@ else
         {
             IsConnected = hubConnection?.State == HubConnectionState.Connected;
             _dispatcher.Dispatch(new EndGetAllRequest(requests));
+        
+            GameRequestBackJackOutput? newRequest = requests.FirstOrDefault(x => x.PlayerId == ModelCreate.PlayerId && x.Status == GameRequestStatus.Pending);
+
+            if (newRequest != null)
+            {
+                _dispatcher.Dispatch(new EndCreateRequest(newRequest));
+            }    
         });
 
         ///await hubConnection.StartAsync(); 
