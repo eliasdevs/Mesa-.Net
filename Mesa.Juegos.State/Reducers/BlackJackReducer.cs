@@ -20,7 +20,7 @@ namespace Mesa.Juegos.State.Reducers
             {
                 Loader = state.Loader with
                 {
-                    RequestIsLoading = true,
+                    IsProcessingRequest = true,
                 }
             };
         }
@@ -38,7 +38,7 @@ namespace Mesa.Juegos.State.Reducers
             {
                 Loader = state.Loader with
                 {
-                    RequestIsLoading = false,
+                    IsProcessingRequest = false,
                 },
                 Request = action.Request
             };
@@ -160,7 +160,7 @@ namespace Mesa.Juegos.State.Reducers
         {
             return state with
             {
-                Loader = new(false, false, false,false)
+                Loader = new(false, false, false,false, false)
             };
         }
     }

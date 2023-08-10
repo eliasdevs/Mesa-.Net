@@ -1,41 +1,18 @@
 ﻿@page "/requests-list"
-
-@using Fluxor.Blazor.Web.Components
-@using Mesa.Juegos.Modules.BlackJack.Models;
-@using Mesa.Juegos.State.Actions.Blackjacks;
-@using Mesa.TimeReal.Services;
-@using Mesa_SV;
-@using Mesa_SV.BlackJack.Dtos.Output;
-@using Microsoft.AspNetCore.Components.Forms
-@using Mesa.Juegos.State.States
-@using Microsoft.AspNetCore.SignalR.Client;
 @using Newtonsoft.Json;
+@using Fluxor.Blazor.Web.Components;
 @inherits FluxorComponent
 @inject IState<BlackJackSore> _store
 @inject IDispatcher _dispatcher
 @inject NavigationManager _nav
+@inject DialogService _dialogservice
 @inject IHubConnectionService _hubConnectionService
-
 <h3>Lista de Solicitudes</h3>
 
-<EditForm Model="@ModelCreate" OnValidSubmit="@OnValidSubmit">
-    <DataAnnotationsValidator/>     
-    <InputText @bind-Value="@ModelCreate.PlayerId" placeholder="Id del jugador"></InputText>
-    <ValidationMessage For="()=> ModelCreate.PlayerId"></ValidationMessage>
+<button @onclick="() => OnClickCreateRequest()" disabled="@(!IsConnected)">
+    Crear Solicitud
+</button>
 
-    <br />
-
-    <InputSelect @bind-Value="@ModelCreate.TypeGame">
-        <option value="" disabled selected>Selecciona Tipo de Juego</option>
-        @foreach (var value in Enum.GetValues(typeof(TypeGame)))
-        {
-                <option value="@value">@value</option>
-        }
-    </InputSelect>    
-    <ValidationMessage For="()=> ModelCreate.TypeGame"></ValidationMessage>
-
-    <button type="submit" disabled="@(!IsConnected)">Crear Solicitud</button>
-</EditForm>
 <hr />
 <br />
 @if (_store.Value.Loader.RequestIsLoading)
@@ -67,7 +44,7 @@ else
     </div>
 }
 @code{
-    public CreateRequestVm ModelCreate = new CreateRequestVm();
+
 
     public bool IsConnected = false;
 
@@ -78,6 +55,10 @@ else
         base.OnParametersSet();
     }
 
+    //TODO: Crear efecto de aceptar solicitud 
+    //TODO: eSCUCHAR CUANDO SE Acepta una solicitud y actualizar el request del store
+    //TOD: crear los efectos de crear blackjack que seria stargame
+    //tODO: dESARROLLAR ACCIONES QUE FALTAN CON SUS EFECTOS PARA EL DESARROLLO COMPLETO DEL BACKJACK
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
@@ -87,13 +68,7 @@ else
         {
             IsConnected = hubConnection?.State == HubConnectionState.Connected;
             _dispatcher.Dispatch(new EndGetAllRequest(requests));
-        
-            GameRequestBackJackOutput? newRequest = requests.FirstOrDefault(x => x.PlayerId == ModelCreate.PlayerId && x.Status == GameRequestStatus.Pending);
 
-            if (newRequest != null)
-            {
-                _dispatcher.Dispatch(new EndCreateRequest(newRequest));
-            }    
         });
 
         ///await hubConnection.StartAsync(); 
@@ -101,11 +76,19 @@ else
         base.OnInitialized();
     }
 
-    /// <summary>
-    /// este puede tener otro nombre
-    /// </summary>
-    private void OnValidSubmit()
+    private async Task OnClickCreateRequest()
     {
-        _dispatcher.Dispatch(new StartCreateRequest(ModelCreate.PlayerId, ModelCreate.TypeGame));
+        try
+        {
+            await _dialogservice.OpenAsync<CrearSolicitud>($"Crear Solicitud de BlackJack",
+               new Dictionary<string, object>() { },
+               new DialogOptions() { Width = "700px", Height = "512px", Resizable = true, Draggable = true });
+        }
+        catch (Exception ex)
+        {
+            // Manejar el error, por ejemplo, mostrar un mensaje de error
+            Console.WriteLine($"Error al abrir el cuadro de diálogo: {ex.Message}");
+        }
     }
+
 }

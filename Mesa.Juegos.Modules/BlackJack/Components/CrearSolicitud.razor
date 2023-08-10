@@ -1,0 +1,76 @@
+﻿@inject IDispatcher _dispatcher
+@using Fluxor.Blazor.Web.Components;
+@inherits FluxorComponent
+@inject IState<BlackJackSore> _store
+@inject IActionSubscriber _suscribir
+<h3>CrearSolicitud</h3>
+
+@if (_store.Value.Loader.IsProcessingRequest == false)
+{
+        <EditForm Model="@ModelCreate" OnValidSubmit="@OnValidSubmit">
+        <DataAnnotationsValidator/>     
+        <InputText @bind-Value="@ModelCreate.PlayerId" placeholder="Id del jugador"></InputText>
+        <ValidationMessage For="()=> ModelCreate.PlayerId"></ValidationMessage>
+
+        <br />
+
+        <InputSelect @bind-Value="@ModelCreate.TypeGame">
+            <option value="" disabled selected>Selecciona Tipo de Juego</option>
+            @foreach (var value in Enum.GetValues(typeof(TypeGame)))
+            {
+                                <option value="@value">@value</option>
+            }
+        </InputSelect>    
+        <ValidationMessage For="()=> ModelCreate.TypeGame"></ValidationMessage>
+
+        <button type="submit" >Crear Solicitud</button>
+    </EditForm>
+}
+else
+{
+         <div class="d-flex justify-content-center align-items-center">
+                <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+         </div>
+}
+
+
+@code {
+
+    public CreateRequestVm ModelCreate = new CreateRequestVm();
+
+    /// <summary>
+    /// Delegado para capturar la request que se acaba de crear
+    /// </summary>
+    /// <param name="action"></param>
+    private void OnEndGetAllRequest(EndGetAllRequest action)
+    {
+        GameRequestBackJackOutput? solicitudCreada = action.Requests
+        .FirstOrDefault(x => x.PlayerId == ModelCreate.PlayerId && x.Status == GameRequestStatus.Pending);
+
+        //verifico si existe la solicitud que se mando a crear si existe disparo la accion de Finalizar Creacion
+        if(solicitudCreada != null)
+        {
+            _dispatcher.Dispatch(new EndCreateRequest(solicitudCreada));
+        }
+        StateHasChanged();
+    }
+
+
+    protected override void OnInitialized()
+    {
+        _suscribir.SubscribeToAction<EndGetAllRequest>(this, OnEndGetAllRequest);
+
+        base.OnInitialized();
+    }
+
+    /// <summary>
+    /// este puede tener otro nombre
+    /// </summary>
+    private void OnValidSubmit()
+    {
+        _dispatcher.Dispatch(new StartCreateRequest(ModelCreate.PlayerId, ModelCreate.TypeGame));
+    }
+
+}

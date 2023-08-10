@@ -39,7 +39,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Juegos.State", "..\Mes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.Juegos.State.Actions", "..\Mesa.Juegos.State.Actions\Mesa.Juegos.State.Actions.csproj", "{D1779DEF-8575-4592-8100-D70870491176}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mesa.TimeReal.Services", "..\Mesa.TimeReal.Services\Mesa.TimeReal.Services.csproj", "{F97666B0-BA48-4C76-8774-758DA433E998}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Mesa.TimeReal.Services", "..\Mesa.TimeReal.Services\Mesa.TimeReal.Services.csproj", "{F97666B0-BA48-4C76-8774-758DA433E998}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{61F11C1D-914A-424C-AC5D-0E84D46FC17C}"
 EndProject

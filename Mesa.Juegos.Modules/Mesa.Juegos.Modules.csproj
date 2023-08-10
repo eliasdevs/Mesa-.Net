@@ -20,8 +20,4 @@
     <ProjectReference Include="..\Mesa.Juegos.State\Mesa.Juegos.State.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="BlackJack\Components\" />
-  </ItemGroup>
-
 </Project>
