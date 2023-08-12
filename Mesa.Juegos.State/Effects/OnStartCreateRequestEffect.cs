@@ -25,15 +25,11 @@ namespace Mesa.Juegos.State.Effects
         {
             HubConnection hubConnection = _hubConnectionService.GetHubConnection();
 
-            // Envía el mensaje al servidor
+            // Envía el la data al servidor
             await hubConnection.SendAsync("CreateRequest", action.PlayerId, action.TipoJuego ?? TypeGame.CRUPIER_FRIENDLY);
-
-            Console.WriteLine("Se Mando a crear la solicitud.");
 
             //consulta la lista completa y actualiza a todo mundo
             await hubConnection.SendAsync("GetAllRequestGame");
-
-            Console.WriteLine("Se consultar la lista.");
         }
 
         public override Task OnException(ApiException ex, IDispatcher dispatcher)

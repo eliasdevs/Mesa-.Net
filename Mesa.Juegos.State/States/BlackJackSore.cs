@@ -29,7 +29,7 @@ namespace Mesa.Juegos.State.States
     /// </summary>
     /// <param name="CardListIsLoading">Cuando esta cargando una carta o mano</param>
     /// <param name="RequestIsLoading">Cuando esta cargando la request</param>
-    /// <param name="BlackJackIsLoading">Cuando esta cargado el blackJack inicarlo a algo asi</param>
+    /// <param name="BlackJackIsLoading">Cuando esta cargado el blackJack inicarlo a o Finalizarlo</param>
     /// <param name="BlackJackIsInProgress">Esta es cuando se esta jugando</param>
     /// <param name="IsProcessingRequest">se indica si se esta creando una request</param>
     public record BlackJackLoaders(bool CardListIsLoading,

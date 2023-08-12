@@ -23,20 +23,9 @@ namespace Mesa.RealTime.Project.Hubs
         {
             await base.OnConnectedAsync();
         }
-
+                
         /// <summary>
-        /// ejemplo de mensaje global dejar alli por el momento
-        /// </summary>
-        /// <param name="user"></param>
-        /// <param name="message"></param>
-        /// <returns></returns>
-        public async Task SendMessage(string user, string message)
-        {
-            await Clients.All.SendAsync("ReceiveMessage", user, message);
-        }
-
-        /// <summary>
-        /// No devuelve nada porque se consulta la lista completa
+        /// No devuelve nada porque solo crea la request
         /// </summary>
         /// <param name="playerId"></param>
         /// <param name="TipoJuego"></param>
@@ -49,19 +38,26 @@ namespace Mesa.RealTime.Project.Hubs
         }
 
         /// <summary>
-        /// el id del jugador que acepta
+        /// 
         /// </summary>
-        /// <param name="playerId"></param>
+        /// <param name="playerId">el id del jugador que acepta</param>
         /// <param name="requestId"></param>
         /// <param name="tipoJuego"></param>
         /// <returns></returns>
-        public async Task AcceptRequest(string playerId, string requestId, TypeGame tipoJuego)
+        public async Task AcceptRequest(string playerId, string requestId)
         {
-            //crea la solicitud
-            GameRequestBackJackOutput request = await _blackJackSdk.AcceptRequest(playerId, requestId,Context.ConnectionId);
+            //acepta la solicitud
+            GameRequestBackJackOutput request = await _blackJackSdk.AcceptRequest(playerId, requestId, Context.ConnectionId);
 
-            //TODO: este metodo debe mandar AcceptRequestResult solo al que acepto la solicitud
-            await Clients.All.SendAsync("AcceptRequestResult", request);
+            //preparo para mandar mensaje a los dos jugadores
+            List<string> targetClientIds = new List<string>
+                {
+                    Context.ConnectionId, ///acepta la partida
+                    request.PlayerId //este jugador creo la solicitud
+                };
+
+            //Mnado mensaje a los dos jugadores, debe actualizar el request de ambos
+            await Clients.Clients(targetClientIds).SendAsync("AcceptRequestResult", request);
         }
 
         /// <summary>
@@ -71,11 +67,26 @@ namespace Mesa.RealTime.Project.Hubs
         /// <returns></returns>
         public async Task StartGameBlackJack(string requestId)
         {
-            //crea la solicitud
-            BlackjackStartOutput request = await _blackJackSdk.StartBlackJack(requestId);
 
-            //TODO: mandar mensaje a los dos por el contextId de cada jugador lo va escuchar "StartBlackJack"            
-            await Clients.All.SendAsync("StartBlackJack", request);
+            //consulto la solicitud
+            GameRequestBackJackOutput request = await _blackJackSdk.GetRequest(requestId);
+
+            //verifico que no sean nulos para preparar el clients de signal
+            if (string.IsNullOrEmpty(request.PlayerId) || string.IsNullOrEmpty(request.AcceptedPlayerId))
+                return;
+
+            //crea el blackJack
+            BlackjackStartOutput blackJackOutput = await _blackJackSdk.StartBlackJack(requestId);
+            
+            //preparo para mandar mensaje a los dos jugadores
+            List<string> targetClientIds = new List<string>
+                {
+                    request.AcceptedPlayerId, ///acepta la partida
+                    request.PlayerId //este jugador creo la solicitud
+                };
+
+            //Mnado mensaje a los dos jugadores
+            await Clients.Clients(targetClientIds).SendAsync("StartBlackJackResult", blackJackOutput);
         }
 
         /// <summary>

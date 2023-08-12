@@ -54,16 +54,12 @@ else
 
         base.OnParametersSet();
     }
-
-    //TODO: Crear efecto de aceptar solicitud 
-    //TODO: eSCUCHAR CUANDO SE Acepta una solicitud y actualizar el request del store
-    //TOD: crear los efectos de crear blackjack que seria stargame
-    //tODO: dESARROLLAR ACCIONES QUE FALTAN CON SUS EFECTOS PARA EL DESARROLLO COMPLETO DEL BACKJACK
+    
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
 
-        // Manejar el evento OnConnected antes de iniciar la conexión                
+        // escucho la lista completa de request
         hubConnection.On<List<GameRequestBackJackOutput>>("GetAllRequests", (requests) =>
         {
             IsConnected = hubConnection?.State == HubConnectionState.Connected;
@@ -71,7 +67,26 @@ else
 
         });
 
-        ///await hubConnection.StartAsync(); 
+        // escucho la request cuando ya ha sido aceptada
+        hubConnection.On<GameRequestBackJackOutput>("AcceptRequestResult", (requests) =>
+        {   
+            //actualizo esta propiedad del store
+            _dispatcher.Dispatch(new EndAcceptRequest(requests));
+
+            //mando a crear el blackJack
+            _dispatcher.Dispatch(new StartCreateBlackJack(requests.Id));
+        });
+
+        // escucho la creacion del blackJack
+        hubConnection.On<BlackjackStartOutput>("StartBlackJackResult", (blackJack) =>
+        {
+            //mando a crear el blackJack
+            _dispatcher.Dispatch(new EndCreateBlackJack(blackJack));
+
+            //redirecciona a la pagina donde se va jugar blackJack
+            _nav.NavigateTo("/StartBlackJackPage");
+
+        });
 
         base.OnInitialized();
     }

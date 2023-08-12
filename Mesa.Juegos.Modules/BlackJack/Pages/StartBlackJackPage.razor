@@ -1,0 +1,57 @@
+﻿@page "/StartBlackJackPage"
+@using Newtonsoft.Json;
+@using Fluxor.Blazor.Web.Components;
+@inherits FluxorComponent
+@inject IState<BlackJackSore> _store
+@inject IDispatcher _dispatcher
+@inject NavigationManager _nav
+@inject DialogService _dialogservice
+@inject IHubConnectionService _hubConnectionService
+
+<h3>BlackJackGame</h3>
+
+<button @onclick="() => OnClickCreateRequest()" disabled="@(!IsConnected)">
+    Crear Solicitud
+</button>
+
+<hr />
+<br />
+@if (_store.Value.Loader.BlackJackIsLoading)
+{
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="spinner-border text-primary" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+}
+else
+{
+    <div class="container">
+         <div class="row row-cols-1 row-cols-md-3">
+            Mostrar el tablero del blackjack
+        </div>
+    </div>
+}
+@code{
+    protected override void OnParametersSet()
+    {
+        
+
+        base.OnParametersSet();
+    }
+    
+    protected override void OnInitialized()
+    {
+        HubConnection hubConnection = _hubConnectionService.GetHubConnection();
+
+        
+
+        base.OnInitialized();
+    }
+
+    private async Task OnClickCreateRequest()
+    {
+        
+    }
+
+}
