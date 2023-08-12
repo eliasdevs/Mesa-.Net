@@ -74,7 +74,13 @@ else
             _dispatcher.Dispatch(new EndAcceptRequest(requests));
 
             //mando a crear el blackJack
-            _dispatcher.Dispatch(new StartCreateBlackJack(requests.Id));
+            //TODO: Revisar esta que se ejecute solo 1 vez
+            if (_store.Value.Request?.AcceptedPlayerId == "el id del userque acepta")
+                _dispatcher.Dispatch(new StartCreateBlackJack(requests.Id));
+
+            //redirecciona a la pagina donde se va jugar blackJack
+            _nav.NavigateTo("/StartBlackJackPage");
+
         });
 
         // escucho la creacion del blackJack

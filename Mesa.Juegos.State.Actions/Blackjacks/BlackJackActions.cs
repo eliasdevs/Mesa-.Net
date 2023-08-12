@@ -35,7 +35,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     public record EndAcceptRequest(GameRequestBackJackOutput Request);
 
     /// <summary>
-    /// permite iniciar el juego
+    /// permite iniciar el juego - posiblemente no se ejecute desde blazor sino desde el server signal R
     /// </summary>
     /// <param name="RequestId"></param>
     public record StartCreateBlackJack(string RequestId);

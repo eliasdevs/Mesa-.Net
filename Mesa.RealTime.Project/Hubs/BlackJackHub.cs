@@ -58,6 +58,7 @@ namespace Mesa.RealTime.Project.Hubs
 
             //Mnado mensaje a los dos jugadores, debe actualizar el request de ambos
             await Clients.Clients(targetClientIds).SendAsync("AcceptRequestResult", request);
+
         }
 
         /// <summary>
@@ -87,6 +88,8 @@ namespace Mesa.RealTime.Project.Hubs
 
             //Mnado mensaje a los dos jugadores
             await Clients.Clients(targetClientIds).SendAsync("StartBlackJackResult", blackJackOutput);
+
+
         }
 
         /// <summary>
