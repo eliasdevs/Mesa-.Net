@@ -1,6 +1,7 @@
 ﻿using Mesa_SV;
 using Mesa_SV.BlackJack;
 using Mesa_SV.BlackJack.Dtos.Output;
+using Mesa_SV.VoDeJuegos;
 using Microsoft.AspNetCore.SignalR;
 
 namespace Mesa.RealTime.Project.Hubs
@@ -23,7 +24,7 @@ namespace Mesa.RealTime.Project.Hubs
         {
             await base.OnConnectedAsync();
         }
-
+        #region Request
         /// <summary>
         /// No devuelve nada porque solo crea la request
         /// </summary>
@@ -77,28 +78,10 @@ namespace Mesa.RealTime.Project.Hubs
         public async Task StartGameBlackJack(string requestId)
         {
 
-            //consulto la solicitud
-            GameRequestBackJackOutput request = await _blackJackSdk.GetRequest(requestId);
-
-            //verifico que no sean nulos para preparar el clients de signal
-            if (string.IsNullOrEmpty(request.PlayerId) || string.IsNullOrEmpty(request.AcceptedPlayerId))
-                return;
-
             //crea el blackJack
             BlackjackStartOutput blackJackOutput = await _blackJackSdk.StartBlackJack(requestId);
 
-            //preparo para mandar mensaje a los dos jugadores
-            List<string> targetClientIds = new List<string>();
-
-            //representa el contextId de Hub de los jugadores
-            string? userIdCreateRequest = request.PlayerInfo?.FirstOrDefault(x => x.IdUser == request.PlayerId)?.IdContextWS; //este jugador creo la solicitud
-            string? userIdAcceptRequest = request.PlayerInfo?.FirstOrDefault(x => x.IdUser == request.AcceptedPlayerId)?.IdContextWS; //este jugador creo la solicitud
-
-            if (!string.IsNullOrEmpty(userIdCreateRequest) && !string.IsNullOrEmpty(userIdAcceptRequest))
-            {
-                targetClientIds.Add(userIdCreateRequest);
-                targetClientIds.Add(userIdAcceptRequest);
-            }
+            List<string> targetClientIds = await  GetUserContextId(requestId);
 
             if (targetClientIds.Any() && targetClientIds.Count() == 2)
             {
@@ -118,5 +101,90 @@ namespace Mesa.RealTime.Project.Hubs
 
             await Clients.All.SendAsync("GetAllRequests", requests);
         }
+        #endregion
+
+        /// <summary>
+        /// Permite pedir una carta 
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="blackJackId"></param>
+        /// <param name="requestId"></param>
+        /// <returns></returns>
+        public async Task DrawCard(string playerId, string blackJackId)
+        {   
+            //Pido una carta
+            ManoJugadorVo mano = await _blackJackSdk.GetCardById(playerId, blackJackId);
+
+            //se responde solo al users que pidio la carta
+            await Clients.Client(Context.ConnectionId).SendAsync("DrawCardResult", mano);
+        }
+
+        /// <summary>
+        /// Representa cuando el jugador se planta con su mano
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="blackJackId"></param>
+        /// <param name="requestId"></param>
+        /// <returns></returns>
+        public async Task StandHand(string playerId, string blackJackId, string requestId)
+        {
+            List<string> targetClientIds = await GetUserContextId(requestId);
+
+            ManoJugadorVo mano = await _blackJackSdk.PlantarBlackJack(blackJackId, playerId);
+            
+            //se responde a los dos jugadores involucrados
+            await Clients.Clients(targetClientIds).SendAsync("StandHandResult", mano);
+        }
+
+        /// <summary>
+        /// Normalmente se usara para extraer la mano del jugador rival
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="blackJackId"></param>
+        /// <param name="requestId"></param>
+        /// <returns></returns>
+        public async Task GetActiveHand(string playerId, string blackJackId, string requestId)
+        {
+            List<string> targetClientIds = await GetUserContextId(requestId);
+
+            ManoJugadorVo mano = await _blackJackSdk.PlantarBlackJack(blackJackId, playerId);
+
+            //se responde solo al users que pidio la carta
+            await Clients.Clients(targetClientIds).SendAsync("GetActiveHandResult", mano);
+        }
+
+        #region blackJack
+        
+        /// <summary>
+        /// Este metodo devuelve la lista de los dos jugadores
+        /// </summary>
+        /// <param name="requestId"></param>
+        /// <returns></returns>
+        private async Task<List<string>> GetUserContextId(string requestId)
+        {
+            //preparo para mandar mensaje a los dos jugadores
+            List<string> targetClientIds = new List<string>();
+
+            //consulto la solicitud
+            GameRequestBackJackOutput request = await _blackJackSdk.GetRequest(requestId);
+
+            //verifico que no sean nulos para preparar el clients de signal
+            if (string.IsNullOrEmpty(request.PlayerId) || string.IsNullOrEmpty(request.AcceptedPlayerId))
+                return new List<string>();            
+
+            //representa el contextId de Hub de los jugadores
+            string? userIdCreateRequest = request.PlayerInfo?.FirstOrDefault(x => x.IdUser == request.PlayerId)?.IdContextWS; //este jugador creo la solicitud
+            string? userIdAcceptRequest = request.PlayerInfo?.FirstOrDefault(x => x.IdUser == request.AcceptedPlayerId)?.IdContextWS; //este jugador creo la solicitud
+
+            if (!string.IsNullOrEmpty(userIdCreateRequest) && !string.IsNullOrEmpty(userIdAcceptRequest))
+            {
+                targetClientIds.Add(userIdCreateRequest);
+                targetClientIds.Add(userIdAcceptRequest);
+            }
+
+            return targetClientIds;
+        }
+
+        #endregion
     }
 }

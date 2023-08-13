@@ -39,7 +39,7 @@ namespace Mesa.Juegos.State.States
         bool BlackJackIsLoading, 
         bool BlackJackIsInProgress,
         bool IsProcessingRequest,
-        bool IsChallenger,
+        bool IsChallenger,        
         bool IsDrawCard
         );
 

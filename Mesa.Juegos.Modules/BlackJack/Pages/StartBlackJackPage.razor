@@ -1,4 +1,5 @@
 ﻿@page "/StartBlackJackPage"
+@using Mesa_SV.VoDeJuegos;
 @using Newtonsoft.Json;
 @using Microsoft.JSInterop
 @using Fluxor.Blazor.Web.Components;
@@ -67,7 +68,24 @@ else
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
+         
+        // escucho PedirCarta
+        hubConnection.On<ManoJugadorVo>("DrawCardResult", (mano) =>
+        {
+            _dispatcher.Dispatch(new EndDrawCard(mano));
+        });
 
+        // escucho plantarse de ambos jugadores
+        hubConnection.On<ManoJugadorVo>("StandHandResult", (mano) =>
+        {
+            _dispatcher.Dispatch(new EndStandHand(mano));
+        });
+
+        // escucho La mano activa del jugador rival
+        hubConnection.On<ManoJugadorVo>("GetActiveHandResult", (mano) =>
+        {
+            //_dispatcher.Dispatch(new EndStandHand(mano));
+        });
         
 
         base.OnInitialized();

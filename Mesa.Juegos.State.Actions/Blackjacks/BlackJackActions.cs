@@ -66,7 +66,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// Permite Pedir una carta
     /// </summary>
     /// <param name="PlayerId">El id del jugador que pide una carta</param>
-    /// <param name="BlackJackId">El Id del Juego</param>
+    /// <param name="BlackJackId">El Id del Juego</param>    
     public record StartDrawCard(string PlayerId, string BlackJackId);
 
     /// <summary>
@@ -80,7 +80,8 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// </summary>
     /// <param name="BlackJackId"></param>
     /// <param name="PlayerId"></param>
-    public record StartStandHand(string BlackJackId, string PlayerId);
+    /// <param name="RequestId"></param>
+    public record StartStandHand(string BlackJackId, string PlayerId, string RequestId);
 
     /// <summary>
     /// Finaliza Plantarse
@@ -93,7 +94,8 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// </summary>
     /// <param name="BlackJackId"></param>
     /// <param name="PlayerId"></param>
-    public record StartGetActiveHand(string BlackJackId, string PlayerId);
+    /// <param name="RequestId"></param>
+    public record StartGetActiveHand(string BlackJackId, string PlayerId, string RequestId);
 
     /// <summary>
     /// finaliza Pide la Mano de Un jugador en especifico
