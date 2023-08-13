@@ -1,5 +1,6 @@
 ﻿@page "/StartBlackJackPage"
 @using Newtonsoft.Json;
+@using Microsoft.JSInterop
 @using Fluxor.Blazor.Web.Components;
 @inherits FluxorComponent
 @inject IState<BlackJackSore> _store
@@ -7,6 +8,8 @@
 @inject NavigationManager _nav
 @inject DialogService _dialogservice
 @inject IHubConnectionService _hubConnectionService
+<link rel="stylesheet" href="css/style.css"/>
+@inject IJSRuntime JSRuntime
 
 <h3>BlackJackGame</h3>
 
@@ -23,9 +26,34 @@
 else
 {
     <div class="container">
-         <div class="row row-cols-1 row-cols-md-3">
-            Mostrar el tablero del blackjack
+      <div id="tapete" style="background-image: url('images/tapeteCartas.jpg');">
+        <span id="barajas-pendientes"></span>
+
+        <div id="cartas-crupier" class="grid"></div><br>
+        <div class="contentPuntaje">
+          <div class="circulo">
+            <div class="texto"><div id="puntaje-crupier"></div></div>
+          </div>
+          <div class="positionTapete">
+            Jugador
+          </div>
+
         </div>
+
+        <button class="btn btn-info" id="boton-repartir">Repartir</button>
+        <button class="btn btn-info" id="boton-plantarse">Plantarse</button>
+        <button class="btn btn-info" id="boton-pedir-carta">Pedir carta</button>
+        <div id="cartas-jugador" class="grid"></div>
+        <div class="contentPuntaje">
+          <div class="circulo">
+            <div class="texto"><div id="puntaje-jugador"></div></div>
+          </div>
+          <div class="positionTapete">
+            Jugador
+          </div>
+        </div>
+        <p>Mensaje: <span id="mensaje"></span></p>    
+      </div>
     </div>
 }
 @code{
@@ -45,5 +73,15 @@ else
         base.OnInitialized();
     }
 
+    private async Task LoadAndExecuteScriptAsync(string scriptUrl)
+    {
+        await JSRuntime.InvokeVoidAsync("eval", $"fetch('{scriptUrl}').then(response => response.text()).then(script => eval(script));");
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadAndExecuteScriptAsync("js/cardmjs/elements.cardmeister.min.js");
+        await LoadAndExecuteScriptAsync("js/script.js");
+    }
 
 }

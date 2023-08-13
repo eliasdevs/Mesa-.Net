@@ -65,6 +65,10 @@
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
+    },
+    {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
@@ -73,8 +77,24 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\images\\tapeteCartas.jpg",
+      "PackagePath": "staticwebassets\\images\\tapeteCartas.jpg"
+    },
+    {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\cardmjs\\elements.cardmeister.full.js",
+      "PackagePath": "staticwebassets\\js\\cardmjs\\elements.cardmeister.full.js"
+    },
+    {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\cardmjs\\elements.cardmeister.min.js",
+      "PackagePath": "staticwebassets\\js\\cardmjs\\elements.cardmeister.min.js"
+    },
+    {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\script.js",
+      "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\sample-data\\weather.json",

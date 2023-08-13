@@ -1,5 +1,6 @@
 ﻿using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
+using Mesa_SV.VoDeJuegos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mesa.Juegos.State.Actions.Blackjacks
 {
+    #region Solcitud de Juego
     /// <summary>
     /// permite crear una solicitud de juego
     /// </summary>
@@ -56,6 +58,37 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// </summary>
     /// <param name="Requests"></param>
     public record EndGetAllRequest(List<GameRequestBackJackOutput> Requests);
+
+    #endregion
+
+    #region BlackJack
+    /// <summary>
+    /// Permite Pedir una carta
+    /// </summary>
+    /// <param name="PlayerId">El id del jugador que pide una carta</param>
+    /// <param name="BlackJackId">El Id del Juego</param>
+    public record StartDrawCard(string PlayerId, string BlackJackId);
+
+    /// <summary>
+    /// Finaliza pedir Carta
+    /// </summary>
+    /// <param name="Mano">Representa la mano del jugador</param>
+    public record EndDrawCard(ManoJugadorVo Mano);
+
+    /// <summary>
+    /// permite plantarse con la mano actual
+    /// </summary>
+    /// <param name="BlackJackId"></param>
+    /// <param name="PlayerId"></param>
+    public record StartStandHand(string BlackJackId, string PlayerId);
+
+    /// <summary>
+    /// Finaliza Plantarse
+    /// </summary>
+    /// <param name="Mano">Representa la mano del jugador</param>
+    public record EndStandHand(ManoJugadorVo Mano);
+
+    #endregion
 
     /// <summary>
     /// manejo de errores
