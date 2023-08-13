@@ -32,5 +32,10 @@ namespace Mesa_SV.BlackJack.Dtos.Output
         /// informacion de los jugadores involucrados en el juego
         /// </summary>
         public List<InfoJugador> PlayerInfo { get; set; }
+
+        /// <summary>
+        /// la fecha que se creo
+        /// </summary>
+        public DateTimeOffset FechaCreacion { get; set; }
     }
 }

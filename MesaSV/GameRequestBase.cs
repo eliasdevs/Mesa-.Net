@@ -16,6 +16,7 @@
             AcceptedPlayerId = acceptedPlayerId;
             Status = status;
             TipoJuego = tipoJuego;
+            FechaCreacion = DateTimeOffset.UtcNow;
         }
 
         /// <summary>
@@ -44,5 +45,10 @@
         /// El tipo de juego a jugar
         /// </summary>
         public TypeGame TipoJuego { get; set; }
+
+        /// <summary>
+        /// es la fecha de creacion de la solicitud
+        /// </summary>
+        public DateTimeOffset FechaCreacion { get; set; }
     }
 }
