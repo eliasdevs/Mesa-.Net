@@ -61,7 +61,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
 
     #endregion
 
-    #region BlackJack
+    #region BlackJack Game
     /// <summary>
     /// Permite Pedir una carta
     /// </summary>
@@ -88,6 +88,18 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// <param name="Mano">Representa la mano del jugador</param>
     public record EndStandHand(ManoJugadorVo Mano);
 
+    /// <summary>
+    /// Inicia Pide la Mano de Un jugador en especifico
+    /// </summary>
+    /// <param name="BlackJackId"></param>
+    /// <param name="PlayerId"></param>
+    public record StartGetActiveHand(string BlackJackId, string PlayerId);
+
+    /// <summary>
+    /// finaliza Pide la Mano de Un jugador en especifico
+    /// </summary>
+    /// <param name="Mano">Representa la mano del jugador</param>
+    public record EndGetActiveHand(ManoJugadorVo Mano);
     #endregion
 
     /// <summary>

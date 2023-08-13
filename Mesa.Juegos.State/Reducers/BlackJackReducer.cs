@@ -7,6 +7,7 @@ namespace Mesa.Juegos.State.Reducers
 {
     public class BlackJackReducer
     {
+        #region reducer de Solicitud
         /// <summary>
         /// 
         /// </summary>
@@ -114,6 +115,7 @@ namespace Mesa.Juegos.State.Reducers
                 Loader = state.Loader with
                 {
                     BlackJackIsLoading = false,
+                    BlackJackIsInProgress = true,
                 },
                 BlackjackInfo = action.BlackJackInfo
             };
@@ -149,6 +151,45 @@ namespace Mesa.Juegos.State.Reducers
                 BlackJackRequests = action.Requests.ToImmutableList()
             };
         }
+        #endregion
+        
+        #region BlackJack
+        /// <summary>
+        /// Pedir Carta
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        [ReducerMethod]
+        public static BlackJackSore OnStartDrawCard(BlackJackSore state, StartDrawCard action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsDrawCard = true,
+                }                
+            };
+        }
+
+        /// <summary>
+        /// end pedir carta
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        [ReducerMethod]
+        public static BlackJackSore OnEndDrawCard(BlackJackSore state, EndDrawCard action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsDrawCard = false,
+                },
+                Mano = action.Mano
+            };
+        }
 
         /// <summary>
         /// 
@@ -157,11 +198,69 @@ namespace Mesa.Juegos.State.Reducers
         /// <param name="action"></param>
         /// <returns></returns>
         [ReducerMethod]
+        public static BlackJackSore OnStartStandHand(BlackJackSore state, StartStandHand action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsDrawCard = true,
+                }
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        [ReducerMethod]
+        public static BlackJackSore OnEndStandHand(BlackJackSore state, EndStandHand action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsDrawCard = true,
+                },
+                Mano = action.Mano
+            };
+        }
+
+        [ReducerMethod]
+        public static BlackJackSore OnStartGetActiveHand(BlackJackSore state, StartGetActiveHand action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsDrawCard = true,
+                }
+            };
+        }
+
+        //[ReducerMethod] 
+        //public static BlackJackSore OnEndGetActiveHand(BlackJackSore state, EndGetActiveHand action)
+        //{
+        //    return state with
+        //    {
+        //        Loader = state.Loader with
+        //        {
+        //            IsDrawCard = true,
+        //        }, 
+        //        Mano = action.Mano
+        //    };
+        //}
+
+        #endregion
+
+
         public static BlackJackSore OnClearOnError(BlackJackSore state, OnClearOnError action)
         {
             return state with
             {
-                Loader = new(false, false, false,false, false, false)
+                Loader = new(false, false, false,false, false, false, false)
             };
         }
     }
