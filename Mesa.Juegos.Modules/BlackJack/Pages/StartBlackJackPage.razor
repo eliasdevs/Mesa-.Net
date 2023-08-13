@@ -10,10 +10,6 @@
 
 <h3>BlackJackGame</h3>
 
-<button @onclick="() => OnClickCreateRequest()" disabled="@(!IsConnected)">
-    Crear Solicitud
-</button>
-
 <hr />
 <br />
 @if (_store.Value.Loader.BlackJackIsLoading)
@@ -49,9 +45,5 @@ else
         base.OnInitialized();
     }
 
-    private async Task OnClickCreateRequest()
-    {
-        
-    }
 
 }

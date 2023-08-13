@@ -35,7 +35,9 @@ else
                 <div class="card-body">
                     <h5 class="card-title">@solicitud.PlayerId</h5>
                     <p class="card-text">@solicitud.Id</p>
-                    <a href="#" class="btn btn-primary">Aceptar Solicitud</a>
+                    <button class="btn btn-primary" @onclick="() => OnClickAcceptRequest(solicitud)" disabled="@(!IsConnected)">
+                          Aceptar Solicitud
+                    </button>                    
                 </div>
             </div>
         </div>
@@ -45,7 +47,6 @@ else
 }
 @code{
 
-
     public bool IsConnected = false;
 
     protected override void OnParametersSet()
@@ -54,7 +55,7 @@ else
 
         base.OnParametersSet();
     }
-    
+
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
@@ -73,9 +74,8 @@ else
             //actualizo esta propiedad del store
             _dispatcher.Dispatch(new EndAcceptRequest(requests));
 
-            //mando a crear el blackJack
-            //TODO: Revisar esta que se ejecute solo 1 vez
-            if (_store.Value.Request?.AcceptedPlayerId == "el id del userque acepta")
+            //mando a crear el blackJack, lo ejecuta el jugador que acepta la request            
+            if (_store.Value.Loader.IsChallenger == false)
                 _dispatcher.Dispatch(new StartCreateBlackJack(requests.Id));
 
             //redirecciona a la pagina donde se va jugar blackJack
@@ -97,19 +97,23 @@ else
         base.OnInitialized();
     }
 
+    /// <summary>
+    /// este metodo permite aceptar una solicitud creada por otro usuario
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    private void OnClickAcceptRequest(GameRequestBackJackOutput request)
+    {
+        string userId = "UserIdAccept"; //cuando se defina  de donde saldra se tomara de alli
+
+        _dispatcher.Dispatch(new StartAcceptRequest(userId , request.Id));
+    }
+
     private async Task OnClickCreateRequest()
     {
-        try
-        {
             await _dialogservice.OpenAsync<CrearSolicitud>($"Crear Solicitud de BlackJack",
                new Dictionary<string, object>() { },
-               new DialogOptions() { Width = "700px", Height = "512px", Resizable = true, Draggable = true });
-        }
-        catch (Exception ex)
-        {
-            // Manejar el error, por ejemplo, mostrar un mensaje de error
-            Console.WriteLine($"Error al abrir el cuadro de diálogo: {ex.Message}");
-        }
+               new DialogOptions() { Width = "700px", Height = "512px", Resizable = true, Draggable = true });        
     }
 
 }

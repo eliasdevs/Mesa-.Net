@@ -32,11 +32,13 @@ namespace Mesa.Juegos.State.States
     /// <param name="BlackJackIsLoading">Cuando esta cargado el blackJack inicarlo a o Finalizarlo</param>
     /// <param name="BlackJackIsInProgress">Esta es cuando se esta jugando</param>
     /// <param name="IsProcessingRequest">se indica si se esta creando una request</param>
+    /// <param name="IsChallenger">Indica si el jugador es un retador</param>
     public record BlackJackLoaders(bool CardListIsLoading,
         bool RequestIsLoading, 
         bool BlackJackIsLoading, 
         bool BlackJackIsInProgress,
-        bool IsProcessingRequest
+        bool IsProcessingRequest,
+        bool IsChallenger
         );
 
 
@@ -49,7 +51,7 @@ namespace Mesa.Juegos.State.States
         {
             return new BlackJackSore(null
                 , null, null, 
-                new BlackJackLoaders(false, false, false, false, false),
+                new BlackJackLoaders(false, false, false, false, false, false),
                 ImmutableList.Create<GameRequestBackJackOutput>());
         }
     }
