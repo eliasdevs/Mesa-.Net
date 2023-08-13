@@ -41,10 +41,25 @@ else
 
         </div>
 
-        <button class="btn btn-info" id="boton-repartir">Repartir</button>
-        <button class="btn btn-info" id="boton-plantarse">Plantarse</button>
-        <button class="btn btn-info" id="boton-pedir-carta">Pedir carta</button>
-        <div id="cartas-jugador" class="grid"></div>
+        <button class="btn btn-info" id="boton-repartir">
+                Repartir
+        </button>
+                <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
+                Plantarse
+        </button>
+            <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
+            Pedir carta
+        </button>
+        <div id="cartas-jugador" class="grid">
+                @if (!_store.Value.Loader.IsDrawCard && _store.Value.Mano != null)
+                {
+                    @foreach (var carta in _store.Value.Mano.Mano)
+                    {
+                        <card-t rank="@carta.Representation" suit="@carta.TypeOfCardId" class="card"></card-t>                        
+                    }
+                }
+                
+        </div>
         <div class="contentPuntaje">
           <div class="circulo">
             <div class="texto"><div id="puntaje-jugador"></div></div>
@@ -60,15 +75,15 @@ else
 @code{
     protected override void OnParametersSet()
     {
-        
+
 
         base.OnParametersSet();
     }
-    
+
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
-         
+
         // escucho PedirCarta
         hubConnection.On<ManoJugadorVo>("DrawCardResult", (mano) =>
         {
@@ -78,7 +93,20 @@ else
         // escucho plantarse de ambos jugadores
         hubConnection.On<ManoJugadorVo>("StandHandResult", (mano) =>
         {
-            _dispatcher.Dispatch(new EndStandHand(mano));
+            if (_store.Value.Loader.IsPlayerTurn)
+            {
+                //actualiza la mono en el store del jugador que se planta 
+                _dispatcher.Dispatch(new EndStandHand(mano));
+
+                //le quita el turno al jugador
+                _dispatcher.Dispatch(new StartChangeTurn(false));
+            }
+            else
+            {
+                //le asigna el truno cuando el otro se planta
+                _dispatcher.Dispatch(new StartChangeTurn(true));
+            }
+
         });
 
         // escucho La mano activa del jugador rival
@@ -86,7 +114,7 @@ else
         {
             //_dispatcher.Dispatch(new EndStandHand(mano));
         });
-        
+
 
         base.OnInitialized();
     }
@@ -99,7 +127,48 @@ else
     protected override async Task OnInitializedAsync()
     {
         await LoadAndExecuteScriptAsync("js/cardmjs/elements.cardmeister.min.js");
-        await LoadAndExecuteScriptAsync("js/script.js");
+        //await LoadAndExecuteScriptAsync("js/script.js");
+    }
+
+    private void OnClickPedirCarta()
+    {
+        if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
+        {
+            if (_store.Value.Loader.IsChallenger)
+            {
+                //si es retador seteo los datos con el id del retador
+                _dispatcher.Dispatch(new StartDrawCard(_store.Value.Request.PlayerId, _store.Value.BlackjackInfo.Id));
+
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(_store.Value.Request.AcceptedPlayerId))
+                {
+                    _dispatcher.Dispatch(new StartDrawCard(_store.Value.Request.AcceptedPlayerId, _store.Value.BlackjackInfo.Id));
+                }                
+            }
+        }
+
+    }
+
+    private void OnClickPlantarse()
+    {
+        if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
+        {
+            if (_store.Value.Loader.IsChallenger)
+            {
+                //si es retador seteo los datos con el id del retador
+                _dispatcher.Dispatch(new StartStandHand(_store.Value.BlackjackInfo.Id,_store.Value.Request.PlayerId, _store.Value.BlackjackInfo.IdRequest));
+
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(_store.Value.Request.AcceptedPlayerId))
+                {
+                    _dispatcher.Dispatch(new StartStandHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.AcceptedPlayerId, _store.Value.BlackjackInfo.IdRequest));
+                }
+            }
+        }        
     }
 
 }

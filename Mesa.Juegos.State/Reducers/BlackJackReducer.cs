@@ -97,6 +97,7 @@ namespace Mesa.Juegos.State.Reducers
                 Loader = state.Loader with
                 {
                     BlackJackIsLoading = true,
+                    IsPlayerTurn = true
                 }
             };
         }
@@ -240,6 +241,24 @@ namespace Mesa.Juegos.State.Reducers
             };
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        [ReducerMethod]
+        public static BlackJackSore OnStartChangeTurn(BlackJackSore state, StartChangeTurn action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsPlayerTurn = action.IsTurn,
+                }
+            };
+        }
+        
         //[ReducerMethod] 
         //public static BlackJackSore OnEndGetActiveHand(BlackJackSore state, EndGetActiveHand action)
         //{
@@ -260,7 +279,7 @@ namespace Mesa.Juegos.State.Reducers
         {
             return state with
             {
-                Loader = new(false, false, false,false, false, false, false)
+                Loader = new(false, false, false,false, false, false, false, false)
             };
         }
     }

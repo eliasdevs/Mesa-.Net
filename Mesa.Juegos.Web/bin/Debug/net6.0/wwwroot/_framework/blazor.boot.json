@@ -233,23 +233,23 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "Mesa.Juegos.Modules.dll": "sha256-\/50gpoh5MWlzmUtIh4CfKV1sbgEoG\/GZwiW+L946P6Q=",
-      "Mesa.Juegos.State.Actions.dll": "sha256-2F0Wz2K2D9yxjYwJulYfsXxEW9AlBcWhIlaIyaXcvfg=",
-      "Mesa.Juegos.State.dll": "sha256-a+o0+BtOJx5fI\/3g+7KFpJCKuNsEPih9dFmQqqm+dO0=",
+      "Mesa.Juegos.Modules.dll": "sha256-8QEBZKrpLe45amXDUGqdw9nlMGWVhiaAxi7wRb1kBWQ=",
+      "Mesa.Juegos.State.Actions.dll": "sha256-97p6WIl0c2YrYQZoVwMNuIe84ZZkd2rdHJygzqE18R8=",
+      "Mesa.Juegos.State.dll": "sha256-f5M1Z6O7VKX9OUVjEKa\/p4VywKDEPWVtgmOa3yl6Tac=",
       "Mesa.TimeReal.Services.dll": "sha256-ZQLqwIsbDMFU51BTfX\/t67I4xITPNW9ozvimGpz7iHM=",
       "MesaSV.dll": "sha256-uw8qxSSl7DP9hhlhFUjpn2aWIPAcbisJ1GApNmNoqjQ=",
-      "Mesa.Juegos.Web.dll": "sha256-KGjcioMmWBfQBNGQBk9gzhvOhrLm6HrlOE27jXUYgH4="
+      "Mesa.Juegos.Web.dll": "sha256-15FCiW\/8sJShMsrU2DHz2GiPn9iWAS8KKsKRb5nTDxc="
     },
     "extensions": null,
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Mesa.Juegos.Modules.pdb": "sha256-NBvyd6t9TIx2DLD5opn357issnY7uMOpD6clQcrIaNM=",
-      "Mesa.Juegos.State.pdb": "sha256-BU2xn0xd3PAb5MBSpEibWGhSu0S17sekgUZmDVD2j5I=",
-      "Mesa.Juegos.State.Actions.pdb": "sha256-V5ltcGG+uTQf3vBYzcVj8oKJj0\/Xc\/wHYyfVmZo1d8A=",
+      "Mesa.Juegos.Modules.pdb": "sha256-Us1uDp5qPSUqQVcAM\/p2vAWA0yyucCbj3K\/N5ufWKq8=",
+      "Mesa.Juegos.State.pdb": "sha256-KYdU9lkf8kwEKOEI8l9Xo7fMNoCduhwhRVDI+AxSYNc=",
+      "Mesa.Juegos.State.Actions.pdb": "sha256-gA2FoNCdFhD\/QKfl1qImqEp6Klw137bms1LuaSjMn+E=",
       "Mesa.TimeReal.Services.pdb": "sha256-oXQNmMnC0T1J2XrqN1ZZndR2a1e5HSDa9ORI6GzpxeM=",
       "MesaSV.pdb": "sha256-GvfAQOIFLrW6ojhh4dSBlHf57YCEiuqtidixNh6sxS8=",
-      "Mesa.Juegos.Web.pdb": "sha256-7robfMwkt19MjpWzH2N1YKFPahkTo\/uL6YDWXof4UbY="
+      "Mesa.Juegos.Web.pdb": "sha256-P3vtOZQ6nbjSYiQd6rtAeLlKcpZ+BCmrUGrjSd2Ul+M="
     },
     "runtime": {
       "dotnet.6.0.16.2tx21s0ptg.js": "sha256-GT2gK+GjOisRXJY+9yh6H8s6K\/KDIsaFMFIgWvAnttY=",

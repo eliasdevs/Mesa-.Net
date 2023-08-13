@@ -102,6 +102,12 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// </summary>
     /// <param name="Mano">Representa la mano del jugador</param>
     public record EndGetActiveHand(ManoJugadorVo Mano);
+
+    /// <summary>
+    /// permite controlar si inicia o finaliza un turno de un jugador
+    /// </summary>
+    /// <param name="IsTurn">Indica el valor que se va asignar</param>
+    public record StartChangeTurn(bool IsTurn);
     #endregion
 
     /// <summary>
