@@ -35,8 +35,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             //agrega la info del retador
             solicitud.PlayerInfo = new List<InfoJugador>()
             {
-                new InfoJugador
-                { IdContextWS = request.ContextId, IdUser = request.UserId }
+                new InfoJugador { IdContextWS = request.ContextId, IdUser = request.UserId }
             };
 
             //crea la solicitud del juego

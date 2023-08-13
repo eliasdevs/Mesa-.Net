@@ -19,9 +19,12 @@ namespace Mesa.Juegos.State.Effects
         {
             HubConnection hubConnection = _hubConnectionService.GetHubConnection();
 
-           
-            // Espera hasta que la conexión esté activa
-            await hubConnection.StartAsync();
+
+            if (hubConnection.State == HubConnectionState.Disconnected)
+            {
+                // Inicia la Coneccion
+                await hubConnection.StartAsync();
+            }
 
             // Envía el mensaje al servidor
             await hubConnection.SendAsync("GetAllRequestGame");

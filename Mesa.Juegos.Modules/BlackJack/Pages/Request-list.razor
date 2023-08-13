@@ -76,11 +76,11 @@ else
 
             //mando a crear el blackJack, lo ejecuta el jugador que acepta la request            
             if (_store.Value.Loader.IsChallenger == false)
+            {
+                _dispatcher.Dispatch(new StartGetAllRequest());
                 _dispatcher.Dispatch(new StartCreateBlackJack(requests.Id));
-
-            //redirecciona a la pagina donde se va jugar blackJack
-            _nav.NavigateTo("/StartBlackJackPage");
-
+            }
+                
         });
 
         // escucho la creacion del blackJack
