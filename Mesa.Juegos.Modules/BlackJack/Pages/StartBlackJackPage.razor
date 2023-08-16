@@ -9,7 +9,6 @@
 @inject NavigationManager _nav
 @inject DialogService _dialogservice
 @inject IHubConnectionService _hubConnectionService
-<link rel="stylesheet" href="css/style.css"/>
 @inject IJSRuntime JSRuntime
 
 <h3>BlackJackGame</h3>
@@ -26,8 +25,9 @@
 }
 else
 {
-    <div class="container">
-      <div id="tapete" style="background-image: url('images/tapeteCartas.jpg');">
+        <div class="greencloth">
+            <div class="container">
+      <div id="tapete">
         <span id="barajas-pendientes"></span>
 
         <div id="cartas-crupier" class="grid"></div><br>
@@ -36,7 +36,7 @@ else
             <div class="texto"><div id="puntaje-crupier"></div></div>
           </div>
           <div class="positionTapete">
-            Jugador
+                <card-t rank=1 suit=0  class="card"></card-t>
           </div>
 
         </div>
@@ -47,7 +47,7 @@ else
                 <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
                 Plantarse
         </button>
-            <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
+        <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
             Pedir carta
         </button>
         <div id="cartas-jugador" class="grid">
@@ -55,10 +55,10 @@ else
                 {
                     @foreach (var carta in _store.Value.Mano.Mano)
                     {
-                        <card-t rank="@carta.Representation" suit="@carta.TypeOfCardId" class="card"></card-t>                        
+                        <!-- Debug: OriginalValue = @carta.OriginalValue, TypeOfCardId = @carta.TypeOfCardId -->
+                                                <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
                     }
                 }
-                
         </div>
         <div class="contentPuntaje">
           <div class="circulo">
@@ -71,6 +71,8 @@ else
         <p>Mensaje: <span id="mensaje"></span></p>    
       </div>
     </div>
+        </div>
+    
 }
 @code{
     protected override void OnParametersSet()
@@ -126,7 +128,7 @@ else
 
     protected override async Task OnInitializedAsync()
     {
-        await LoadAndExecuteScriptAsync("js/cardmjs/elements.cardmeister.min.js");
+        //await LoadAndExecuteScriptAsync("js/cardmjs/elements.cardmeister.min.js");
         //await LoadAndExecuteScriptAsync("js/script.js");
     }
 

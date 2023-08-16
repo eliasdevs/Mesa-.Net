@@ -1,15 +1,14 @@
-#tapete{    
+#tapete {
     width: 65%;
     height: 600px;
     margin: auto;
     position: relative;
-    background-image: url('img/tapeteCartas.jpg');
+    /*background-image: url('img/tapeteCartas.jpg');*/
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px;
     color: white;
-  
-  }    
+}    
   
   .grid {
     /* 13 ranks 4 suits */
@@ -32,10 +31,7 @@
     position: relative;
     margin-left: 70%;
 }
-#boton-plantarse{
-    position: absolute;
-    display: none;
-}
+
 #boton-pedir-carta{
     position: absolute;
     margin-left: -60%;
