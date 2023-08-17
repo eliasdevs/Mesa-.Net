@@ -1,4 +1,5 @@
 ﻿@page "/StartBlackJackPage"
+@using Mesa_SV.BlackJack.Helper;
 @using Mesa_SV.VoDeJuegos;
 @using Newtonsoft.Json;
 @using Microsoft.JSInterop
@@ -36,7 +37,6 @@ else
             <div class="texto"><div id="puntaje-crupier"></div></div>
           </div>
           <div class="positionTapete">
-                <card-t rank=1 suit=0  class="card"></card-t>
           </div>
 
         </div>
@@ -44,10 +44,10 @@ else
         <button class="btn btn-info" id="boton-repartir">
                 Repartir
         </button>
-                <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
+                    <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn && _store.Value.Mano != null && _store.Value.Mano.estado == StatusHand.STAND_HAND)">
                 Plantarse
         </button>
-        <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
+                            <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn && _store.Value.Mano != null && _store.Value.Mano.estado == StatusHand.STAND_HAND)">
             Pedir carta
         </button>
         <div id="cartas-jugador" class="grid">
@@ -55,14 +55,20 @@ else
                 {
                     @foreach (var carta in _store.Value.Mano.Mano)
                     {
-                        <!-- Debug: OriginalValue = @carta.OriginalValue, TypeOfCardId = @carta.TypeOfCardId -->
-                                                <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
+                        <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
                     }
                 }
         </div>
         <div class="contentPuntaje">
           <div class="circulo">
-            <div class="texto"><div id="puntaje-jugador"></div></div>
+            <div class="texto">
+                <div id="puntaje-jugador">
+                    @if (_store.Value.Mano != null)
+                    {
+                        @CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano)    
+                    }
+                </div>
+            </div>
           </div>
           <div class="positionTapete">
             Jugador
@@ -75,6 +81,7 @@ else
     
 }
 @code{
+
     protected override void OnParametersSet()
     {
 
@@ -88,8 +95,18 @@ else
 
         // escucho PedirCarta
         hubConnection.On<ManoJugadorVo>("DrawCardResult", (mano) =>
-        {
-            _dispatcher.Dispatch(new EndDrawCard(mano));
+        {   
+            if (_store.Value.Loader.IsPlayerTurn)
+            {
+                //si es mi turno actualizo mi mano
+                _dispatcher.Dispatch(new EndDrawCard(mano));
+
+                if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(false));// me quita el truno
+            }
+            else
+            {   
+                if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(true));// asigna el  truno
+            }            
         });
 
         // escucho plantarse de ambos jugadores
@@ -136,19 +153,22 @@ else
     {
         if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
         {
+            string playerId = "";
             if (_store.Value.Loader.IsChallenger)
             {
                 //si es retador seteo los datos con el id del retador
-                _dispatcher.Dispatch(new StartDrawCard(_store.Value.Request.PlayerId, _store.Value.BlackjackInfo.Id));
-
+                playerId = _store.Value.Request.PlayerId;
             }
             else
             {
                 if (!string.IsNullOrEmpty(_store.Value.Request.AcceptedPlayerId))
                 {
-                    _dispatcher.Dispatch(new StartDrawCard(_store.Value.Request.AcceptedPlayerId, _store.Value.BlackjackInfo.Id));
+                    playerId = _store.Value.Request.AcceptedPlayerId;                    
                 }                
             }
+
+            if (!string.IsNullOrEmpty(playerId))
+                _dispatcher.Dispatch(new StartDrawCard(playerId, _store.Value.BlackjackInfo.Id, _store.Value.BlackjackInfo.IdRequest));
         }
 
     }

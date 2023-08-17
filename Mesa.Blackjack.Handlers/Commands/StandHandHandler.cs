@@ -36,7 +36,10 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.PlayerId}");
 
             if (datosJugador.Mano == null || datosJugador.Mano.Count() == 0)
-                throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador.Mano), GetType(), $"Accion no permitida");
+                throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador.Mano), GetType(), $"No ha sido posible plantar esta mano");
+
+            if (datosJugador.estado == StatusHand.STAND_HAND)
+                return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
 
             //se pone en estado plantado
             datosJugador.estado = StatusHand.STAND_HAND;

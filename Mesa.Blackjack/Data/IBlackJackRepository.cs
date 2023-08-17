@@ -30,11 +30,10 @@ namespace Mesa.Blackjack.Data
 
         /// <summary>
         /// extrae una partida de backjack
-        /// </summary>
-        /// <param name="userId"></param>
+        /// </summary>        
         /// <param name="blackjackId"></param>
         /// <returns></returns>
-        Task<Blackjack?> GetBlackjackByUserId(string userId, string blackjackId);
+        Task<Blackjack?> GetBlackjackByIdWithIncludes(string blackjackId);
 
         /// <summary>
         /// extrae una partida de backjack

@@ -67,7 +67,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// </summary>
     /// <param name="PlayerId">El id del jugador que pide una carta</param>
     /// <param name="BlackJackId">El Id del Juego</param>    
-    public record StartDrawCard(string PlayerId, string BlackJackId);
+    public record StartDrawCard(string PlayerId, string BlackJackId, string RequestId);
 
     /// <summary>
     /// Finaliza pedir Carta
@@ -106,7 +106,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// <summary>
     /// permite controlar si inicia o finaliza un turno de un jugador
     /// </summary>
-    /// <param name="IsTurn">Indica el valor que se va asignar</param>
+    /// <param name="IsTurn">recibe turn si se va asignar turno</param>
     public record StartChangeTurn(bool IsTurn);
     #endregion
 

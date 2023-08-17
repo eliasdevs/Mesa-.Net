@@ -40,7 +40,7 @@ namespace Mesa.Blackjack
         public List<ManoJugador> ManoJugadores { get; set; }
 
         /// <summary>
-        /// este representa el mazo que se les carga a los users en todo el juego
+        /// este representa el mazo que se les carga a los users en todo el juego y estan desordenadas
         /// </summary>
         public List<Card> Mazo { get; set; }
 
@@ -73,6 +73,11 @@ namespace Mesa.Blackjack
                     jugador.Mano = new List<Card>();
                 }
             }
+        }
+
+        public bool ValidarUser(string userId) 
+        {
+            return ManoJugadores.Any(y => y.IdJugador == userId);
         }
     }
 }

@@ -110,13 +110,15 @@ namespace Mesa.RealTime.Project.Hubs
         /// <param name="blackJackId"></param>
         /// <param name="requestId"></param>
         /// <returns></returns>
-        public async Task DrawCard(string playerId, string blackJackId)
-        {   
+        public async Task DrawCard(string playerId, string blackJackId, string requestId)
+        {
+            List<string> targetClientIds = await GetUserContextId(requestId);
+
             //Pido una carta
             ManoJugadorVo mano = await _blackJackSdk.GetCardById(playerId, blackJackId);
 
             //se responde solo al users que pidio la carta
-            await Clients.Client(Context.ConnectionId).SendAsync("DrawCardResult", mano);
+            await Clients.Clients(targetClientIds).SendAsync("DrawCardResult", mano);
         }
 
         /// <summary>

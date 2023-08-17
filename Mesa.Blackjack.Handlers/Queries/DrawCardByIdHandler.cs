@@ -1,20 +1,14 @@
 ﻿using AutoMapper;
 using MediatR;
-using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
 using Mesa.BlackJack;
-using Mesa.BlackJack.Handlers.Helper;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
-using Mesa_SV.Exceptions;
+using Mesa_SV.BlackJack.Helper;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Mesa.Blackjack.Handlers.Queries
 {
@@ -33,38 +27,43 @@ namespace Mesa.Blackjack.Handlers.Queries
         }
         public async Task<ManoJugadorVo> Handle(DrawCardById request, CancellationToken cancellationToken)
         {
-            Blackjack? blackjack = await _repository.GetBlackjackByUserId(request.UserId, request.BackJackId);
+            Blackjack? blackjack = await _repository.GetBlackjackByIdWithIncludes(request.BackJackId);
 
             if (blackjack == null)
-                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(),"No se encontro la partida solicitada");
+                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
 
-            //esta es la nueva carta que se va a mandar a los jugadores
-            if(blackjack.Mazo.Count() == 0)
+            if (!blackjack.ValidarUser(request.UserId))
+                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
+
+            if (blackjack.Mazo.Count() == 0)
                 throw NotFoundException.CreateException(NotFoundExceptionType.Card, nameof(blackjack.Mazo), GetType(), "No se encontraron cartas disponibles");
-                 
-            //se saca la primera carta ya que estan desordenadas
+
+            //se saca la primera carta de la lista
             Card carta = blackjack.Mazo[0];
 
             ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
 
-            if(datosJugador == null || blackjack.ManoJugadores == null)
+            if (datosJugador == null || blackjack.ManoJugadores == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
 
-            //si ya estuvo plantado reinnicia las cartas
-            if(datosJugador.estado == StatusHand.STAND_HAND)
-                throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador), GetType(), $"Usted no puede pedri mas cartas porque esta plantado");
+            //si ya esta plantado mando la mimsma mano
+            if (datosJugador.estado == StatusHand.STAND_HAND)
+                return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
 
             //elimina la carta seleccionada
             blackjack.Mazo.Remove(carta);
 
-            //acualizar el vo de mano             
+            //Agrego la carta a la mano del jugador
             datosJugador.Mano.Add(new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId));
-            datosJugador.estado= StatusHand.ACTIVE;
+            datosJugador.estado = StatusHand.ACTIVE;
+
+            //son las cartas que se mandaran en el output
+            List<CardOutput> cartas = _mapper.Map<List<CardOutput>>(datosJugador.Mano);
 
             //calcula la puntuacion de la mano
-            if (CalculateManoBlackJack.CalcularPuntuacion(datosJugador.Mano) > 21)
+            if (CalculateManoBlackJack.CalcularPuntuacion(cartas) >= 21)
             {
-                //si es mayor a 21 lo pongo plantado para que no pueda pedir mas cartas
+                //si es mayor o igual a 21 lo pongo plantado para que no pueda pedir mas cartas
                 datosJugador.estado = StatusHand.STAND_HAND;
             }
 
@@ -77,7 +76,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             //guardo los cambios 
             await _repository.SaveChangesAsync();
 
-            return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
+            return new(datosJugador.IdJugador, cartas, datosJugador.estado);
         }
     }
 }
