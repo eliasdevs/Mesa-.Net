@@ -203,7 +203,10 @@ namespace Mesa.Juegos.State.Reducers
         {
             return state with
             {
-                Loader = state.Loader 
+                Loader = state.Loader with
+                {
+                    IsDrawCard = true,
+                }
             };
         }
 
@@ -218,7 +221,10 @@ namespace Mesa.Juegos.State.Reducers
         {
             return state with
             {
-                Loader = state.Loader,
+                Loader = state.Loader with
+                {
+                    IsDrawCard = false,
+                },
                 Mano = action.Mano
             };
         }

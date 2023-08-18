@@ -3,11 +3,11 @@
     height: 600px;
     margin: auto;
     position: relative;
-    /*background-image: url('img/tapeteCartas.jpg');*/
+    background-image: url('images/tapeteCartas.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px;
-    color: white;
+    color: forestgreen;
 }    
   
   .grid {
@@ -60,7 +60,7 @@
     text-align: center;
     padding-top: 5px;
     opacity: 0.5;
-    color: white;
+    color: forestgreen;
 }
 
 

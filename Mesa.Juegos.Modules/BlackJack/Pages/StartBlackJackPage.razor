@@ -16,6 +16,16 @@
 
 <hr />
 <br />
+
+@if (_store.Value.Loader.IsPlayerTurn)
+{
+    <p>Es tu turno de Ganar</p>
+}
+else
+{
+    <p>Espera que tu contrincante te seda la baraja</p>
+}
+
 @if (_store.Value.Loader.BlackJackIsLoading)
 {
         <div class="d-flex justify-content-center align-items-center">
@@ -42,12 +52,12 @@ else
         </div>
 
         <button class="btn btn-info" id="boton-repartir">
-                Repartir
+                Reiniciar
         </button>
-                    <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn && _store.Value.Mano != null && _store.Value.Mano.estado == StatusHand.STAND_HAND)">
+        <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
                 Plantarse
         </button>
-                            <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn && _store.Value.Mano != null && _store.Value.Mano.estado == StatusHand.STAND_HAND)">
+        <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
             Pedir carta
         </button>
         <div id="cartas-jugador" class="grid">
@@ -74,38 +84,100 @@ else
             Jugador
           </div>
         </div>
-        <p>Mensaje: <span id="mensaje"></span></p>    
+            <p>Mensaje: <span>@mensaje </span></p>    
       </div>
     </div>
         </div>
     
 }
 @code{
-
+    string mensaje = "";
     protected override void OnParametersSet()
     {
-
-
         base.OnParametersSet();
+    }
+
+    /// <summary>
+    /// este recibe mi mano
+    /// </summary>
+    /// <param name="mano"></param>
+    private void ConsultarMano(ManoJugadorVo mano)
+    {
+        //si la mano viene plantada consultar la mano del jugador rival para declarar ganador
+        if (mano.estado == StatusHand.STAND_HAND && _store.Value.BlackjackInfo != null && _store.Value.Request != null)
+        {
+            string? playerId = (!_store.Value.Loader.IsChallenger) ? _store.Value.Request.PlayerId : _store.Value.Request.AcceptedPlayerId;
+
+            //consulto la mano del jugador rival
+            //ambos jugadores consultan la mano contraria
+            if (playerId != null)
+                _dispatcher.Dispatch(new StartGetActiveHand(_store.Value.BlackjackInfo.Id, playerId));
+
+        }
+
     }
 
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
 
-        // escucho PedirCarta
+        // lo escuchan los dos jugadores
         hubConnection.On<ManoJugadorVo>("DrawCardResult", (mano) =>
         {   
             if (_store.Value.Loader.IsPlayerTurn)
             {
                 //si es mi turno actualizo mi mano
                 _dispatcher.Dispatch(new EndDrawCard(mano));
-
+                mensaje = "Vas muy bien";
                 if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(false));// me quita el truno
             }
             else
             {   
+                //escucho la mano del rival para mi truno
                 if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(true));// asigna el  truno
+                mensaje = "Espera tu turno";                
+            }
+
+            if (mano.estado == StatusHand.STAND_HAND) ConsultarMano(mano);
+
+        });
+
+
+        //escuche la mano del contrincante
+        hubConnection.On<ManoJugadorVo>("GetActiveHandResult", (mano) =>
+        {
+            if (mano != null && mano.Mano.Any() && mano.estado == StatusHand.STAND_HAND)
+            {
+                if (@CalculateManoBlackJack.CalcularPuntuacion(mano.Mano) <= 21)
+                {
+
+                    if ((@CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano) > @CalculateManoBlackJack.CalcularPuntuacion(mano.Mano)) &&
+                        (@CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano)) <= 21)
+                    {
+                        mensaje = "Felcidades, Has ganado esta Jugada";
+                        //le asigna el turno al jugador
+                        _dispatcher.Dispatch(new StartChangeTurn(true));
+                    }
+                    else if ((@CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano) == @CalculateManoBlackJack.CalcularPuntuacion(mano.Mano)) &&
+                    ((@CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano) <= 21) && (@CalculateManoBlackJack.CalcularPuntuacion(mano.Mano) <= 21)))
+                    {
+                        mensaje = "Empate";
+                        //le quita el turno al jugador
+                        _dispatcher.Dispatch(new StartChangeTurn(false));
+                    }
+                    else if (@CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano) > 21 && @CalculateManoBlackJack.CalcularPuntuacion(mano.Mano) > 21)
+                    {
+                        mensaje = "Ninguno Gana";
+                        //le quita el turno al jugador
+                        _dispatcher.Dispatch(new StartChangeTurn(false));
+
+                    }
+                    else
+                    {
+                        _dispatcher.Dispatch(new StartChangeTurn(false));
+                        mensaje = "Ups, has perdido";
+                    }
+                }
             }            
         });
 
@@ -116,22 +188,16 @@ else
             {
                 //actualiza la mono en el store del jugador que se planta 
                 _dispatcher.Dispatch(new EndStandHand(mano));
-
-                //le quita el turno al jugador
                 _dispatcher.Dispatch(new StartChangeTurn(false));
             }
             else
             {
-                //le asigna el truno cuando el otro se planta
+                //le asigna el turno cuando el otro se planta
                 _dispatcher.Dispatch(new StartChangeTurn(true));
             }
 
-        });
+            if (mano.estado == StatusHand.STAND_HAND) ConsultarMano(mano);
 
-        // escucho La mano activa del jugador rival
-        hubConnection.On<ManoJugadorVo>("GetActiveHandResult", (mano) =>
-        {
-            //_dispatcher.Dispatch(new EndStandHand(mano));
         });
 
 

@@ -41,6 +41,10 @@ namespace Mesa.Blackjack.Handlers.Queries
             //se saca la primera carta de la lista
             Card carta = blackjack.Mazo[0];
 
+            //reinicio la mano de los dos jugadores cuando los dos estan plantados
+            blackjack.ReiniciarManoJugadoresPlantados();
+
+
             ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
 
             if (datosJugador == null || blackjack.ManoJugadores == null)

@@ -95,7 +95,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// <param name="BlackJackId"></param>
     /// <param name="PlayerId"></param>
     /// <param name="RequestId"></param>
-    public record StartGetActiveHand(string BlackJackId, string PlayerId, string RequestId);
+    public record StartGetActiveHand(string BlackJackId, string PlayerId);
 
     /// <summary>
     /// finaliza Pide la Mano de Un jugador en especifico

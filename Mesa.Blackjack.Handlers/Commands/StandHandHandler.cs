@@ -44,9 +44,6 @@ namespace Mesa.Blackjack.Handlers.Commands
             //se pone en estado plantado
             datosJugador.estado = StatusHand.STAND_HAND;
 
-            //reinicio la mano de los jugadores porque los dos se plantaron
-            blackjack.ReiniciarManoJugadoresPlantados();
-
              //actualiza los datos
              await _repoBlackJack.SaveChangesAsync();
 

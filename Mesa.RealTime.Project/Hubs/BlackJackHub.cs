@@ -143,16 +143,13 @@ namespace Mesa.RealTime.Project.Hubs
         /// </summary>
         /// <param name="playerId"></param>
         /// <param name="blackJackId"></param>
-        /// <param name="requestId"></param>
         /// <returns></returns>
-        public async Task GetActiveHand(string playerId, string blackJackId, string requestId)
-        {
-            List<string> targetClientIds = await GetUserContextId(requestId);
+        public async Task GetActiveHand(string playerId, string blackJackId)
+        {   
+            ManoJugadorVo mano = await _blackJackSdk.GetActiveHand(blackJackId, playerId);
 
-            ManoJugadorVo mano = await _blackJackSdk.PlantarBlackJack(blackJackId, playerId);
-
-            //se responde solo al users que pidio la carta
-            await Clients.Clients(targetClientIds).SendAsync("GetActiveHandResult", mano);
+            //se responde solo al users que pidio consultar la mano
+            await Clients.Client(Context.ConnectionId).SendAsync("GetActiveHandResult", mano);
         }
 
         #region blackJack

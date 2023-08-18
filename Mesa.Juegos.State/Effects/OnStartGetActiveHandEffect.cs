@@ -26,7 +26,7 @@ namespace Mesa.Juegos.State.Effects
             HubConnection hubConnection = _hubConnectionService.GetHubConnection();
 
             // Envía el la data al servidor
-            await hubConnection.SendAsync("GetActiveHand", action.PlayerId, action.BlackJackId, action.RequestId);
+            await hubConnection.SendAsync("GetActiveHand", action.PlayerId, action.BlackJackId);
         }
 
         public override Task OnException(ApiException ex, IDispatcher dispatcher)
