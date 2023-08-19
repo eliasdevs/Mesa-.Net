@@ -16,15 +16,16 @@ namespace Mesa.BlackJack.Data.Mapping
         {
             builder.ToTable("BlackJack_History");
 
-            builder.HasKey(p => p.BlackJackId);
+            builder.HasKey(p => new { p.Id, p.BlackJackId});
+
+            builder.Property(p => p.Id).HasMaxLength(50);
 
             builder.Property(p => p.BlackJackId).HasMaxLength(50);
 
             builder.OwnsMany(c => c.PlayerHand, p =>
             {
                 p.ToTable("BlackJack_History_Player");
-                p.WithOwner().HasForeignKey("HistoryBlackJackVoId");
-
+                p.HasKey(p => p.Id);
             });
 
             builder.Property(p => p.IdJugador);

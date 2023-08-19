@@ -8,6 +8,7 @@ namespace Mesa.BlackJack.Data.Mapping
     {
         public void Configure(EntityTypeBuilder<CardBlackJack> builder)
         {
+            builder.ToTable("MazoBlackJack");
             builder.HasKey(p => new { p.Id, p.BlackJackId});
 
             builder.Property(p => p.BlackJackId)

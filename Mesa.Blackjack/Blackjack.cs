@@ -33,9 +33,8 @@ namespace Mesa.Blackjack
         /// </summary>
         public string IdRequest { get; set; }
 
-        /// <summary>
-        /// id del user acepta el reto y la mano
-        /// </summary>
+        //TODO: el active hand va tener el id del users
+        //por ende esta propiedad ya no va a existir  y las cartas que tienen el id van a tener un estado de mano StatusHand que definira el estado de la mano del jugador
         public List<ManoJugador> ManoJugadores { get; set; }     
 
         /// <summary>
