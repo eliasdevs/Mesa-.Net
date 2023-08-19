@@ -55,16 +55,11 @@ builder.Services.AddMediatR(cf =>
 //automapper
 builder.Services.AddAutoMapper(typeof(DummyAccesor).Assembly);
 
-
 //repo
 builder.Services.AddScoped<IBlackJackRepository, BlackJackRepsository>();
 builder.Services.AddScoped<IGameRequestBackJackRepository, GameRequestBackJackRepository>();
-builder.Services.AddSignalR();
-
-
 
 var app = builder.Build();
-app.MapHub<MiClaseSignalR>("/signalR");
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

@@ -1,9 +1,9 @@
-﻿namespace Mesa_SV.VoDeJuegos
+﻿namespace Mesa_SV.BlackJack.Model.Barajas
 {
     /// <summary>
     /// clase de cartas
     /// </summary>
-    public record Card
+    public class Card
     {
         public Card(int originalValue, int subValue, string representation, TypeCard typeOfCardId)
         {
@@ -17,6 +17,7 @@
         /// toma el id de la carta
         /// </summary>
         public int Id { get; set; }
+
         /// <summary>
         /// valor original example A:1
         /// </summary>

@@ -2,7 +2,9 @@
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers.Helper;
+using Mesa.BlackJack.Model;
 using Mesa_SV;
+using Mesa_SV.BlackJack;
 using Mesa_SV.Exceptions;
 using Pisto.Exceptions;
 using System.Net;
@@ -25,11 +27,18 @@ namespace Mesa.Blackjack.Handlers.Commands
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
 
+            //consultar mazo
+            List<CardBlackJack> mazo = await _repoBlackJack.GetMazoBlackJackAsync(blackjack.Id);
+
             //el dos es el margen que se da desde que se puede volver a barajear
-            if (blackjack.Mazo.Count <= 2 && blackjack.Status == GameStatus.Started)
+            if (!mazo.Any() && blackjack.Status == GameStatus.Started)
             {
                 DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
-                blackjack.Mazo = CardHelper.BarajearCartas(baraja);
+
+                //mando a generar el nuevo mazo
+                await AddMazoHelper.AgregarCartas(CardHelper.BarajearCartas(baraja, blackjack.Id), _repoBlackJack) ;
+
+
                 blackjack.ContadorMazo = ++blackjack.ContadorMazo;
                 //si han habido cambios los guardamos
                 await _repoBlackJack.SaveChangesAsync();

@@ -24,6 +24,8 @@
 else
 {
     <p>Espera que tu contrincante te seda la baraja</p>
+
+        <p style="color: green">Mensaje: <span>@mensaje </span></p>    
 }
 
 @if (_store.Value.Loader.BlackJackIsLoading)
@@ -65,8 +67,16 @@ else
                 {
                     @foreach (var carta in _store.Value.Mano.Mano)
                     {
-                        <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
+                       <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
                     }
+                }
+                else if (_store.Value.Loader.IsDrawCard)
+                {
+                  <div class="d-flex justify-content-center align-items-center">
+                    <div class="spinner-border text-primary" role="status">
+                        <span class="visually-hidden">Cargando cartas...</span>
+                    </div>
+                  </div>                        
                 }
         </div>
         <div class="contentPuntaje">
@@ -84,7 +94,7 @@ else
             Jugador
           </div>
         </div>
-            <p>Mensaje: <span>@mensaje </span></p>    
+            
       </div>
     </div>
         </div>
@@ -98,7 +108,7 @@ else
     }
 
     /// <summary>
-    /// este recibe mi mano
+    /// este recibe mi mano verifica si esta plantada
     /// </summary>
     /// <param name="mano"></param>
     private void ConsultarMano(ManoJugadorVo mano)
@@ -108,7 +118,6 @@ else
         {
             string? playerId = (!_store.Value.Loader.IsChallenger) ? _store.Value.Request.PlayerId : _store.Value.Request.AcceptedPlayerId;
 
-            //consulto la mano del jugador rival
             //ambos jugadores consultan la mano contraria
             if (playerId != null)
                 _dispatcher.Dispatch(new StartGetActiveHand(_store.Value.BlackjackInfo.Id, playerId));
@@ -126,20 +135,18 @@ else
         {   
             if (_store.Value.Loader.IsPlayerTurn)
             {
-                //si es mi turno actualizo mi mano
+                //si estoy en mi turno actualizo mi mano
                 _dispatcher.Dispatch(new EndDrawCard(mano));
                 mensaje = "Vas muy bien";
-                if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(false));// me quita el truno
+                if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(false));// me quita el truno                
             }
-            else
+            else 
             {   
                 //escucho la mano del rival para mi truno
-                if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(true));// asigna el  truno
+                if (mano.estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(true));// asigna el  truno                
                 mensaje = "Espera tu turno";                
             }
-
-            if (mano.estado == StatusHand.STAND_HAND) ConsultarMano(mano);
-
+            if (_store.Value.Mano != null && _store.Value.Mano.estado == StatusHand.STAND_HAND) ConsultarMano(_store.Value.Mano);
         });
 
 
@@ -195,8 +202,7 @@ else
                 //le asigna el turno cuando el otro se planta
                 _dispatcher.Dispatch(new StartChangeTurn(true));
             }
-
-            if (mano.estado == StatusHand.STAND_HAND) ConsultarMano(mano);
+            if (_store.Value.Mano != null && _store.Value.Mano.estado == StatusHand.STAND_HAND) ConsultarMano(_store.Value.Mano);
 
         });
 

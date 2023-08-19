@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mesa_SV.BlackJack.Model.Barajas;
 
 namespace Mesa.BlackJack
 {

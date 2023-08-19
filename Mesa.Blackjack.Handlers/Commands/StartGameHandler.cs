@@ -4,8 +4,11 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers.Helper;
 using Mesa.BlackJack;
+using Mesa.BlackJack.Model;
 using Mesa_SV;
+using Mesa_SV.BlackJack;
 using Mesa_SV.BlackJack.Dtos.Output;
+using Mesa_SV.BlackJack.Model.Barajas;
 using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
@@ -42,33 +45,31 @@ namespace Mesa.Blackjack.Handlers.Commands
             if (string.IsNullOrEmpty(solicitud.PlayerId) || string.IsNullOrEmpty(solicitud.AcceptedPlayerId))
                 throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
                     nameof(request.RequestId), GetType(), $"No se puede Iniciar la Partida, Algo salio Mal: {request.RequestId}");
-
-            DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
             
-            var listaCartas = CardHelper.BarajearCartas(baraja);
+            
 
-            //primer history blackjack
-            List<HistoryBlackJackVo> listHistory = new List<HistoryBlackJackVo>()
-            {
-                //mazo numero 1
-                new HistoryBlackJackVo(null, null, 1, "Iniciando el Juego")
-            };
 
             //seteo constructor
-            Blackjack backjack = new Blackjack(null, request.RequestId, new List<ManoJugador>()
+            Blackjack blackjack = new Blackjack(null, request.RequestId, new List<ManoJugador>()
                 {
                     new ManoJugador(solicitud.PlayerId, new List<Card>(), StatusHand.INIT),
                     new ManoJugador(solicitud.AcceptedPlayerId, new List<Card>(), StatusHand.INIT)
-                },  
-                listaCartas, 
-                listHistory, 
+                },
                 GameStatus.Started);
 
+            DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
+            
+            //mando a generar el nuevo mazo
+            await AddMazoHelper.AgregarCartas(CardHelper.BarajearCartas(baraja, blackjack.Id), _repoBlackJack);
+
+            
+
             //crea el registro en la BD
-            await _repoBlackJack.CreateBlackJackAsync(backjack);
+            await _repoBlackJack.AddHistoryBlackJackAsync(new HistoryBlackJack(null, null, 1, "Iniciando el Juego", blackjack.Id));
+            await _repoBlackJack.CreateBlackJackAsync(blackjack);
             await _repoBlackJack.SaveChangesAsync();
 
-            return backjack;
+            return blackjack;
         }        
     }
 

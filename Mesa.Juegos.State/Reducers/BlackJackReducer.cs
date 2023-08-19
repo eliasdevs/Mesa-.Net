@@ -232,13 +232,7 @@ namespace Mesa.Juegos.State.Reducers
         [ReducerMethod]
         public static BlackJackSore OnStartGetActiveHand(BlackJackSore state, StartGetActiveHand action)
         {
-            return state with
-            {
-                Loader = state.Loader with
-                {
-                    IsDrawCard = true,
-                }
-            };
+            return state;
         }
 
         /// <summary>

@@ -3,9 +3,11 @@ using MediatR;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
 using Mesa.BlackJack;
+using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.BlackJack.Helper;
+using Mesa_SV.BlackJack.Model.Barajas;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
 using System.Collections.Generic;
@@ -27,7 +29,7 @@ namespace Mesa.Blackjack.Handlers.Queries
         }
         public async Task<ManoJugadorVo> Handle(DrawCardById request, CancellationToken cancellationToken)
         {
-            Blackjack? blackjack = await _repository.GetBlackjackByIdWithIncludes(request.BackJackId);
+            Blackjack? blackjack = await _repository.GetBlackjackById(request.BackJackId);
 
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
@@ -35,27 +37,28 @@ namespace Mesa.Blackjack.Handlers.Queries
             if (!blackjack.ValidarUser(request.UserId))
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
 
-            if (blackjack.Mazo.Count() == 0)
-                throw NotFoundException.CreateException(NotFoundExceptionType.Card, nameof(blackjack.Mazo), GetType(), "No se encontraron cartas disponibles");
+            List<CardBlackJack> mazo = await _repository.GetMazoBlackJackAsync(request.BackJackId);
+
+            if (mazo.Count() == 0)
+                throw NotFoundException.CreateException(NotFoundExceptionType.Card, nameof(mazo), GetType(), "No se encontraron cartas disponibles");
 
             //se saca la primera carta de la lista
-            Card carta = blackjack.Mazo[0];
+            CardBlackJack carta = mazo[0];
 
             //reinicio la mano de los dos jugadores cuando los dos estan plantados
             blackjack.ReiniciarManoJugadoresPlantados();
 
-
             ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
 
             if (datosJugador == null || blackjack.ManoJugadores == null)
-                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
+                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(datosJugador), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
 
             //si ya esta plantado mando la mimsma mano
             if (datosJugador.estado == StatusHand.STAND_HAND)
                 return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
 
             //elimina la carta seleccionada
-            blackjack.Mazo.Remove(carta);
+            mazo.Remove(carta);
 
             //Agrego la carta a la mano del jugador
             datosJugador.Mano.Add(new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId));
@@ -71,11 +74,9 @@ namespace Mesa.Blackjack.Handlers.Queries
                 datosJugador.estado = StatusHand.STAND_HAND;
             }
 
-            //agrega la carta al historial de blackjack
-            blackjack?.History?.Add(
-                new HistoryBlackJackVo(
+            await _repository.AddHistoryBlackJackAsync(new HistoryBlackJack(
                     new List<Card>() { new Card(carta.OriginalValue, carta.SubValue, carta.Representation, carta.TypeOfCardId) }, request.UserId, blackjack.ContadorMazo,
-                    $"Se entrego la carta de Id {carta.Id} con valor {carta.OriginalValue}, sub value {carta.SubValue} y de tipo {carta.TypeOfCardId} al jugador {request.UserId}"));
+                    $"Se entrego la carta de Id {carta.Id} con valor {carta.OriginalValue}, sub value {carta.SubValue} y de tipo {carta.TypeOfCardId} al jugador {request.UserId}", blackjack.Id));
 
             //guardo los cambios 
             await _repository.SaveChangesAsync();

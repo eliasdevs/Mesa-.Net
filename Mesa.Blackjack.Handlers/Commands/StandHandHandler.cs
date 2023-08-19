@@ -33,7 +33,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.PlayerId);
 
             if (datosJugador == null || blackjack.ManoJugadores == null)
-                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.PlayerId}");
+                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.ManoJugadores), GetType(), $"No se encontro registro de este usuario con Id {request.PlayerId}");
 
             if (datosJugador.Mano == null || datosJugador.Mano.Count() == 0)
                 throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador.Mano), GetType(), $"No ha sido posible plantar esta mano");

@@ -93,21 +93,5 @@
             <param name="playerId"></param>
             <returns></returns>
         </member>
-        <member name="M:Mesa.Blackjack.Api.MiClaseSignalR.IniciarConversacion(System.String,System.Int32)">
-            <summary>
-            establece la coneccion
-            </summary>
-            <param name="user"></param>
-            <param name="IdMensaje"></param>
-            <returns></returns>
-        </member>
-        <member name="M:Mesa.Blackjack.Api.MiClaseSignalR.EnviarMensaje2(System.String,System.Int32)">
-            <summary>
-            se usa para mandar el mensaje a alguien en especifico
-            </summary>
-            <param name="user"></param>
-            <param name="IdMensaje"></param>
-            <returns></returns>
-        </member>
     </members>
 </doc>

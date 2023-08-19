@@ -40,7 +40,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
 
             if (datosJugador == null || blackjack.ManoJugadores == null)
-                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.Mazo), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
+                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(datosJugador), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
 
             return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
         }

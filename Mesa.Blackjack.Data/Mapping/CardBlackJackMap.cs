@@ -1,0 +1,29 @@
+﻿using Mesa.BlackJack.Model;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
+namespace Mesa.BlackJack.Data.Mapping
+{
+    public class CardBlackJackMap : IEntityTypeConfiguration<CardBlackJack>
+    {
+        public void Configure(EntityTypeBuilder<CardBlackJack> builder)
+        {
+            builder.HasKey(p => new { p.Id, p.BlackJackId});
+
+            builder.Property(p => p.BlackJackId)
+            .HasMaxLength(50).IsRequired();
+
+            builder.Property(p => p.OriginalValue)
+            .HasMaxLength(50).IsRequired();
+
+            builder.Property(p => p.SubValue)
+            .HasMaxLength(50).IsRequired();
+
+            builder.Property(p => p.Representation)
+            .HasMaxLength(50).IsRequired();
+
+            builder.Property(p => p.TypeOfCardId)
+            .HasMaxLength(50).IsRequired();
+        }
+    }
+}

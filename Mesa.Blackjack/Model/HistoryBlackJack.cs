@@ -1,31 +1,31 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Mesa_SV.BlackJack.Model.Barajas;
 
-namespace Mesa_SV.VoDeJuegos
+namespace Mesa.BlackJack.Model
 {
-    public record HistoryBlackJackVo
+    public class HistoryBlackJack
     {
-        public HistoryBlackJackVo(List<Card>? playerHand, string? iduser, int idMazo, string logger)
+        public HistoryBlackJack(List<Card>? playerHand, string? iduser, int idMazo, string logger, string blackjackId)
         {
             Id = Guid.NewGuid().ToString();
             PlayerHand = playerHand;
             contadorMazo = idMazo;
             Logger = logger;
             IdJugador = iduser;
+            BlackJackId = blackjackId;
         }
-        public HistoryBlackJackVo()
+        public HistoryBlackJack()
         {
             // Constructor sin parámetros requerido por Entity Framework Core
             Id = Guid.NewGuid().ToString();
         }
 
-
-        //como es unVo va tomar id de la Gameplay o de Cualquiera que lo use
+        /// <summary>
+        /// representa el blackjack
+        /// </summary>
+        public string BlackJackId { get; set; }
 
         public string Id { get; set; }
+
         /// <summary>
         /// Representa la mano del Jugador 
         /// </summary>

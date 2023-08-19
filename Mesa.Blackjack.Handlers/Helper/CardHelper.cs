@@ -1,4 +1,7 @@
-﻿using Mesa_SV;
+﻿using Mesa.BlackJack.Model;
+using Mesa_SV;
+using Mesa_SV.BlackJack;
+using Mesa_SV.BlackJack.Model.Barajas;
 using Mesa_SV.VoDeJuegos;
 using System;
 using System.Collections.Generic;
@@ -15,9 +18,9 @@ namespace Mesa.Blackjack.Handlers.Helper
         /// </summary>
         /// <param name="baraja"></param>
         /// <returns></returns>
-        public static List<Card> BarajearCartas(DeckOfCards baraja)
+        public static List<CardBlackJack> BarajearCartas(DeckOfCards baraja, string blackJackId)
         {
-            List<Card> nuevaLista = new List<Card>();
+            List<CardBlackJack> nuevaLista = new List<CardBlackJack>();
 
             //Desordena las barajas de la BD para asignarlas a un mazo
             Random random = new Random();
@@ -35,7 +38,7 @@ namespace Mesa.Blackjack.Handlers.Helper
             foreach (var lista in baraja.Cards)
             {
                 //el id lo asigna ef al momento de gaurdarlo en la Db
-                nuevaLista.Add(new Card(lista.OriginalValue, lista.SubValue, lista.Representation, lista.TypeOfCardId));
+                nuevaLista.Add(new CardBlackJack(lista.OriginalValue, lista.SubValue, lista.Representation, lista.TypeOfCardId, blackJackId));
             }
 
             //retorna la nueva lista
