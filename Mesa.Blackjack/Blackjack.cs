@@ -13,11 +13,10 @@ namespace Mesa.Blackjack
             
         }
 
-        public Blackjack(string? id, string idRequest, List<ManoJugador> manoJugadores, GameStatus status)
+        public Blackjack(string? id, string idRequest, GameStatus status)
         {
             Id = id ?? Guid.NewGuid().ToString();
-            IdRequest = idRequest;
-            ManoJugadores = manoJugadores;            
+            IdRequest = idRequest;            
             ContadorMazo = 1;            
             Status = status;
         }
@@ -33,10 +32,6 @@ namespace Mesa.Blackjack
         /// </summary>
         public string IdRequest { get; set; }
 
-        //TODO: el active hand va tener el id del users
-        //por ende esta propiedad ya no va a existir  y las cartas que tienen el id van a tener un estado de mano StatusHand que definira el estado de la mano del jugador
-        public List<ManoJugador> ManoJugadores { get; set; }     
-
         /// <summary>
         /// este se actualiza cada que se crea un nuevo mazo
         /// es un contador 
@@ -47,27 +42,5 @@ namespace Mesa.Blackjack
         /// indican el estado del juego
         /// </summary>
         public GameStatus Status { get; set; }
-
-
-        /// <summary>
-        /// este metodo se encarga de verificar si ya estan plantados los dos jugadores y de estarlo,
-        /// lo que hara es reiniciar la mano a vacia y poner el estado de la mano del jugador a active        
-        /// </summary>
-        public void ReiniciarManoJugadoresPlantados()
-        {
-            if (ManoJugadores.Count(x => x.estado == StatusHand.STAND_HAND) == 2)
-            {
-                foreach (var jugador in ManoJugadores)
-                {
-                    jugador.estado = StatusHand.ACTIVE;
-                    jugador.Mano = new List<Card>();
-                }
-            }
-        }
-
-        public bool ValidarUser(string userId) 
-        {
-            return ManoJugadores.Any(y => y.IdJugador == userId);
-        }
     }
 }

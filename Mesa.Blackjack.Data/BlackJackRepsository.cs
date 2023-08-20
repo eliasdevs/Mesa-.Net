@@ -25,9 +25,9 @@ namespace Mesa.Blackjack.Data
             throw new NotImplementedException();
         }
 
-        public Task AddHistoryBlackJackAsync(HistoryBlackJack history)
+        public async Task AddHistoryBlackJackAsync(HistoryBlackJack history)
         {
-            throw new NotImplementedException();
+            await _context.HistoryBlackJack.AddAsync(history);
         }
 
         public async Task CreateBlackJackAsync(Blackjack backjack)
@@ -40,26 +40,20 @@ namespace Mesa.Blackjack.Data
             return await _context.Blackjacks.FirstOrDefaultAsync(x => x.Id == blackjackId);
         }
 
-        public async Task<Blackjack?> GetBlackjackByIdWithIncludes(string blackjackId)
-        {
-            return await _context.Blackjacks                
-                .FirstOrDefaultAsync(x => x.Id == blackjackId);
-        }
-
-
         public async Task<DeckOfCards> GetDeckOfCardsAsync()
         {
             return await _context.DeckOfCards.Include(deck => deck.Cards).Where(c => c.Id == 1) .FirstAsync();
         }
 
-        public Task<List<HistoryBlackJack>> GetHistoryBlackJackAsync(string blackJackId)
+        public async Task<List<HistoryBlackJack>> GetHistoryBlackJackAsync(string blackJackId)
         {
-            throw new NotImplementedException();
+            return await _context.HistoryBlackJack.Where(x => x.BlackJackId == blackJackId).ToListAsync();
         }
 
-        public Task<List<CardBlackJack>> GetMazoBlackJackAsync(string blackjackId)
+        public async Task<List<CardBlackJack>> GetMazoBlackJackAsync(string blackjackId)
         {
-            throw new NotImplementedException();
+            return await _context.CardBlackJack.Where(x => x.BlackJackId == blackjackId && x.estado == StatusHand.INIT).Take(10).ToListAsync();
+
         }
 
         public async Task SaveChangesAsync()
@@ -67,9 +61,10 @@ namespace Mesa.Blackjack.Data
             await _context.SaveChangesAsync();
         }
 
-        Task<DeckOfCards> IBlackJackRepository.GetDeckOfCardsAsync()
+        public async Task<List<CardBlackJack>> GetHandActive(string idJugador, string blackJackId)
         {
-            throw new NotImplementedException();
+           return await _context.CardBlackJack.Where(x => x.IdJugador == idJugador  && x.BlackJackId == blackJackId).ToListAsync();
         }
+   
     }
 }

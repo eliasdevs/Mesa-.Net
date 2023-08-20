@@ -22,12 +22,6 @@ namespace Mesa.BlackJack.Data.Mapping
 
             builder.Property(p => p.BlackJackId).HasMaxLength(50);
 
-            builder.OwnsMany(c => c.PlayerHand, p =>
-            {
-                p.ToTable("BlackJack_History_Player");
-                p.HasKey(p => p.Id);
-            });
-
             builder.Property(p => p.IdJugador);
 
             builder.Property(p => p.contadorMazo)
@@ -35,6 +29,9 @@ namespace Mesa.BlackJack.Data.Mapping
 
             builder.Property(p => p.Logger)
             .HasMaxLength(500).IsRequired();
+
+            builder.HasIndex(x => x.BlackJackId).HasDatabaseName("IX_HistoryBlackJack_BlackJackId");
+
         }
     }
 }

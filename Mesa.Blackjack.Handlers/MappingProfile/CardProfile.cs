@@ -1,4 +1,5 @@
 ﻿    using AutoMapper;
+using Mesa.BlackJack.Model;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.BlackJack.Model.Barajas;
 using Mesa_SV.VoDeJuegos;
@@ -24,6 +25,9 @@ namespace Mesa.Blackjack.Handlers.MappingProfile
                     card.TypeOfCardId
                     );
             });
+
+            CreateMap<CardBlackJack, CardOutput>();
+            
         }
 
     }

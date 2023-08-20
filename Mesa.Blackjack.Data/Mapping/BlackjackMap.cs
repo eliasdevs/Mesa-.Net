@@ -8,19 +8,13 @@ namespace Mesa.Blackjack.Data.Mapping
         public void Configure(EntityTypeBuilder<Blackjack> builder)
         {
             builder.HasKey(x => x.Id);
+
+            builder.HasIndex(x => x.Id).HasDatabaseName("IX_BlackJack_Id");                
+
             builder.Property(x => x.Id).HasMaxLength(50);
 
-            builder.OwnsMany(x => x.ManoJugadores, u =>
-            {
-                u.Property(y => y.IdJugador).HasMaxLength(50);
+            builder.Property(x => x.IdRequest).HasMaxLength(50);
 
-                u.WithOwner().HasForeignKey("BlackjackId");
-
-                u.OwnsMany(y => y.Mano, p =>
-                {   
-                    p.ToTable("BlackJack_Active_Hand");
-                });
-            });           
         }
     }
 }

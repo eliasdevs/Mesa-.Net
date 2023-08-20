@@ -12,19 +12,23 @@ namespace Mesa.BlackJack.Data.Mapping
             builder.HasKey(p => new { p.Id, p.BlackJackId});
 
             builder.Property(p => p.BlackJackId)
-            .HasMaxLength(50).IsRequired();
+            .HasMaxLength(50);            
+
+            builder.Property(y => y.IdJugador).HasMaxLength(50);
 
             builder.Property(p => p.OriginalValue)
-            .HasMaxLength(50).IsRequired();
+            .HasMaxLength(50);
 
             builder.Property(p => p.SubValue)
-            .HasMaxLength(50).IsRequired();
+            .HasMaxLength(50);
 
             builder.Property(p => p.Representation)
-            .HasMaxLength(50).IsRequired();
+            .HasMaxLength(50);
 
             builder.Property(p => p.TypeOfCardId)
-            .HasMaxLength(50).IsRequired();
+            .HasMaxLength(50);
+
+            builder.HasIndex(x => x.BlackJackId).HasDatabaseName("IX_CardBlackJack_BlackJackId");
         }
     }
 }

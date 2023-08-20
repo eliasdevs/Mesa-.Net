@@ -4,6 +4,7 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
 using Mesa.BlackJack;
+using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
@@ -18,7 +19,7 @@ using System.Threading.Tasks;
 namespace Mesa.Blackjack.Handlers.Queries
 {
     /// <summary>
-    /// pedir carta
+    /// la mano activa del jugador
     /// </summary>
     public class GetHandActiveHandler : IRequestHandler<GetHandActive, ManoJugadorVo>
     {
@@ -36,13 +37,10 @@ namespace Mesa.Blackjack.Handlers.Queries
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack,
                     nameof(blackjack), GetType(), $"Error!!!, no se encontro registro de este juego.");
+            
+            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.UserId, request.BackJackId);
 
-            ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.UserId);
-
-            if (datosJugador == null || blackjack.ManoJugadores == null)
-                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(datosJugador), GetType(), $"No se encontro registro de este usuario con Id {request.UserId}");
-
-            return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
+            return new(request.BackJackId, _mapper.Map<List<CardOutput>>(manoActiva), StatusHand.STAND_HAND);            
         }
     }
 }

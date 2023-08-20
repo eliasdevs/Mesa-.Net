@@ -19,6 +19,13 @@ namespace Mesa.Blackjack.Queries
     public record DrawCardById(string UserId, string BackJackId) : IRequest<ManoJugadorVo>;
 
     /// <summary>
+    /// Reiniciar Cartas
+    /// </summary>
+    /// <param name="UserId"></param>
+    /// <param name="BackJackId"></param>
+    public record ResetHandByUserId(string UserId, string BackJackId) : IRequest<ManoJugadorVo>;
+
+    /// <summary>
     /// este query permite extraer la mano activa completa del jugador este o no plantado
     /// </summary>
     /// <param name="UserId"></param>

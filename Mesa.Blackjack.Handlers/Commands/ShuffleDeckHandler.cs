@@ -36,10 +36,10 @@ namespace Mesa.Blackjack.Handlers.Commands
                 DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
 
                 //mando a generar el nuevo mazo
-                await AddMazoHelper.AgregarCartas(CardHelper.BarajearCartas(baraja, blackjack.Id), _repoBlackJack) ;
-
+                await AddMazoHelper.AgregarCartas(CardHelper.BarajearCartas(baraja, blackjack.Id), _repoBlackJack);
 
                 blackjack.ContadorMazo = ++blackjack.ContadorMazo;
+
                 //si han habido cambios los guardamos
                 await _repoBlackJack.SaveChangesAsync();
 

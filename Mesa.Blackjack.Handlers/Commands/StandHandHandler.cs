@@ -3,6 +3,7 @@ using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.BlackJack;
+using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.Exceptions;
@@ -30,24 +31,17 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack,
                     nameof(blackjack), GetType(), $"Error!!!, no se encontro registro de este juego.");
 
-            ManoJugador? datosJugador = blackjack.ManoJugadores?.FirstOrDefault(x => x.IdJugador == request.PlayerId);
+            List<CardBlackJack> manoActiva = await _repoBlackJack.GetHandActive(request.PlayerId, request.BlackJackId);
 
-            if (datosJugador == null || blackjack.ManoJugadores == null)
-                throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack.ManoJugadores), GetType(), $"No se encontro registro de este usuario con Id {request.PlayerId}");
+            if (!manoActiva.Any())
+                throw NotFoundException.CreateException(NotFoundExceptionType.Card, nameof(manoActiva), GetType(), $"No ha sido posible plantar esta mano");
 
-            if (datosJugador.Mano == null || datosJugador.Mano.Count() == 0)
-                throw ClientException.CreateException(ClientExceptionType.InvalidOperation, nameof(datosJugador.Mano), GetType(), $"No ha sido posible plantar esta mano");
+            manoActiva.ForEach(carta => carta.estado = StatusHand.STAND_HAND);
 
-            if (datosJugador.estado == StatusHand.STAND_HAND)
-                return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano), datosJugador.estado);
+            //actualiza los datos
+            await _repoBlackJack.SaveChangesAsync();
 
-            //se pone en estado plantado
-            datosJugador.estado = StatusHand.STAND_HAND;
-
-             //actualiza los datos
-             await _repoBlackJack.SaveChangesAsync();
-
-            return new(datosJugador.IdJugador, _mapper.Map<List<CardOutput>>(datosJugador.Mano) , datosJugador.estado);
+            return new(request.BlackJackId, _mapper.Map<List<CardOutput>>(manoActiva) , StatusHand.STAND_HAND);
         }
     }
 

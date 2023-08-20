@@ -50,12 +50,7 @@ namespace Mesa.Blackjack.Handlers.Commands
 
 
             //seteo constructor
-            Blackjack blackjack = new Blackjack(null, request.RequestId, new List<ManoJugador>()
-                {
-                    new ManoJugador(solicitud.PlayerId, new List<Card>(), StatusHand.INIT),
-                    new ManoJugador(solicitud.AcceptedPlayerId, new List<Card>(), StatusHand.INIT)
-                },
-                GameStatus.Started);
+            Blackjack blackjack = new Blackjack(null, request.RequestId, GameStatus.Started);
 
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
             
@@ -65,7 +60,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             
 
             //crea el registro en la BD
-            await _repoBlackJack.AddHistoryBlackJackAsync(new HistoryBlackJack(null, null, 1, "Iniciando el Juego", blackjack.Id));
+            await _repoBlackJack.AddHistoryBlackJackAsync(new HistoryBlackJack(null, 1, "Iniciando el Juego", blackjack.Id));
             await _repoBlackJack.CreateBlackJackAsync(blackjack);
             await _repoBlackJack.SaveChangesAsync();
 

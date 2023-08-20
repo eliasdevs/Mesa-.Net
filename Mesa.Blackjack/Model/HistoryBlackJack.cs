@@ -4,10 +4,9 @@ namespace Mesa.BlackJack.Model
 {
     public class HistoryBlackJack
     {
-        public HistoryBlackJack(List<Card>? playerHand, string? iduser, int idMazo, string logger, string blackjackId)
+        public HistoryBlackJack(string? iduser, int idMazo, string logger, string blackjackId)
         {
-            Id = Guid.NewGuid().ToString();
-            PlayerHand = playerHand;
+            Id = Guid.NewGuid().ToString();            
             contadorMazo = idMazo;
             Logger = logger;
             IdJugador = iduser;
@@ -25,11 +24,6 @@ namespace Mesa.BlackJack.Model
         public string BlackJackId { get; set; }
 
         public string Id { get; set; }
-
-        /// <summary>
-        /// Representa la mano del Jugador 
-        /// </summary>
-        public List<Card>? PlayerHand { get; set; }
 
         /// <summary>
         /// el Id del jugador

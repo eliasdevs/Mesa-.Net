@@ -94,20 +94,23 @@ namespace Mesa_SV
         finalized = 2,
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public enum StatusHand
     {
         /// <summary>
-        /// Este es cuando se ha iniciado el juego crea la lista vacia
+        /// Este es cuando se ha iniciado el juego crea la lista de cartas sin jugador id
         /// </summary>
         INIT = 0,
 
         /// <summary>
-        /// CUANDO presiona plantarse esta es activa
+        /// CUANDO presiona plantarse - Todas las cartas del jugador se deben poner en estado plantado
         /// </summary>
         STAND_HAND = 1,
 
         /// <summary>
-        /// cuando esta llenando la lista
+        /// cuando esta pidiendo cartas
         /// </summary>
         ACTIVE = 2        
     }

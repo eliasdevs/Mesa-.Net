@@ -42,11 +42,19 @@ namespace Mesa.Blackjack.Data
         Task<Blackjack?> GetBlackjackById(string blackjackId);
 
         /// <summary>
-        /// Permite extraer la lista de cartas (mazo del juego)
+        /// Permite extraer la lista de cartas (mazo del juego) solo va consultar los primeros 10 reguistros
         /// </summary>
         /// <param name="blackjackId"></param>
         /// <returns></returns>
         Task<List<CardBlackJack>> GetMazoBlackJackAsync(string blackjackId);
+
+        /// <summary>
+        /// la mano activa del jugador recibe el id del jugador y el blackId
+        /// </summary>
+        /// <param name="idJugador"></param>
+        /// <param name="blackJackId"></param>
+        /// <returns></returns>
+        Task<List<CardBlackJack>> GetHandActive(string idJugador, string blackJackId);
 
         /// <summary>
         /// Permite agregar cartas al mazo
