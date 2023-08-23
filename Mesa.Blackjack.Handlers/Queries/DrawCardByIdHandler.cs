@@ -3,16 +3,14 @@ using MediatR;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers.Helper;
 using Mesa.Blackjack.Queries;
-using Mesa.BlackJack;
 using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.BlackJack.Helper;
-using Mesa_SV.BlackJack.Model.Barajas;
+using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
-using System.Collections.Generic;
 
 namespace Mesa.Blackjack.Handlers.Queries
 {
@@ -32,11 +30,21 @@ namespace Mesa.Blackjack.Handlers.Queries
 
         public async Task<ManoJugadorVo> Handle(DrawCardById request, CancellationToken cancellationToken)
         {
+            //son las cartas que se mandaran en el output
+            List<CardOutput> cartas = new List<CardOutput>();
+
             Blackjack? blackjack = await _repository.GetBlackjackById(request.BackJackId);
 
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
 
+            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
+
+            bool todasEnEstadoHand = manoActiva.All(carta => carta.estado == StatusHand.STAND_HAND);
+
+            //solo si las cartas ya estan plantadas devuelvo la mano
+            if (todasEnEstadoHand)
+                return new(request.UserId, _mapper.Map<List<CardOutput>>(manoActiva), StatusHand.STAND_HAND);
 
             List<CardBlackJack> mazo = await _repository.GetMazoBlackJackAsync(request.BackJackId);
 
@@ -47,8 +55,6 @@ namespace Mesa.Blackjack.Handlers.Queries
 
                 //mando a generar el nuevo mazo
                 await AddMazoHelper.AgregarCartas(CardHelper.BarajearCartas(baraja, blackjack.Id), _repository);
-
-                await _repository.SaveChangesAsync();
 
                 //consulto el mazo
                 mazo = await _repository.GetMazoBlackJackAsync(request.BackJackId);
@@ -66,10 +72,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             await _repository.SaveChangesAsync();
 
             //mano activa del jugador
-            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
-
-            //son las cartas que se mandaran en el output
-            List<CardOutput> cartas = new List<CardOutput>();
+            manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
 
             if (manoActiva.Any())
                 cartas = _mapper.Map<List<CardOutput>>(manoActiva);
@@ -79,7 +82,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             {
                 //si es mayor o igual a 21 lo pongo plantado para que no pueda pedir mas cartas
                 manoActiva.ForEach(carta => carta.estado = StatusHand.STAND_HAND);
-                
+
                 //se guarda los cambios
                 await _repository.SaveChangesAsync();
 

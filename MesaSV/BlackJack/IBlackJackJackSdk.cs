@@ -97,5 +97,14 @@ namespace Mesa_SV.BlackJack
         /// <returns></returns>
         [Get(URLBASE + "request/{requestId}")]
         Task<GameRequestBackJackOutput> GetRequest(string requestId);
+
+        /// <summary>
+        /// Permite reiniciar la mano de un jugador
+        /// </summary>
+        /// <param name="blackjackId"></param>
+        /// <param name="playerId"></param>
+        /// <returns></returns>
+        [Patch(URLBASE + "{blackjackId}/users/{playerId}/reset_hand")]
+        Task<ManoJugadorVo> ResetHand(string blackjackId, string playerId);
     }
 }

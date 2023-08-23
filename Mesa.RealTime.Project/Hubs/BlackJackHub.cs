@@ -152,8 +152,22 @@ namespace Mesa.RealTime.Project.Hubs
             await Clients.Client(Context.ConnectionId).SendAsync("GetActiveHandResult", mano);
         }
 
+        /// <summary>
+        /// Permite reiniciar la mano de un jugadorss
+        /// </summary>
+        /// <param name="playerId"></param>
+        /// <param name="blackJackId"></param>
+        /// <returns></returns>
+        public async Task ResetHand(string playerId, string blackJackId)
+        {
+            ManoJugadorVo mano = await _blackJackSdk.ResetHand(blackJackId, playerId);
+
+            //se responde solo al users Reinicio su mano
+            await Clients.Client(Context.ConnectionId).SendAsync("ResetHandResult", mano);
+        }
+
         #region blackJack
-        
+
         /// <summary>
         /// Este metodo devuelve la lista de los dos jugadores
         /// </summary>

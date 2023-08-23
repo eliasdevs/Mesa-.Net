@@ -257,5 +257,25 @@ namespace Mesa.Blackjack.Api.Controllers
 
             return response;
         }
+
+        /// <summary>
+        /// Permite limpiar la mano plantada de un jugador
+        /// </summary>
+        /// <param name="blackjackId"></param>
+        /// <param name="playerId"></param>
+        /// <returns></returns>
+        [HttpPatch("{blackjackId}/users/{playerId}/reset_hand")]
+        [ProducesResponseType(StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
+        public async Task<ActionResult<ManoJugadorVo>> ResetHand([FromRoute] string blackjackId, [FromRoute] string playerId)
+        {
+            ResetHandByUserId query = new ResetHandByUserId(playerId, blackjackId);
+
+            var response = await _mediator.Send(query);
+
+            return response;
+        }
+        
     }
 }
