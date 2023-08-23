@@ -93,5 +93,13 @@
             <param name="playerId"></param>
             <returns></returns>
         </member>
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.ResetHand(System.String,System.String)">
+            <summary>
+            Permite limpiar la mano plantada de un jugador
+            </summary>
+            <param name="blackjackId"></param>
+            <param name="playerId"></param>
+            <returns></returns>
+        </member>
     </members>
 </doc>

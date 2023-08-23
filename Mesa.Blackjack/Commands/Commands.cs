@@ -40,4 +40,12 @@ namespace Mesa.Blackjack.Commands
     /// <param name="BlackJackId"></param>
     /// <param name="PlayerId"></param>
     public record StandHand(string BlackJackId, string PlayerId) : IRequest<ManoJugadorVo>;
+
+    /// <summary>
+    /// extrae una carta por medio del id del jugador y el id de la partida
+    /// representa el boton pedir carta
+    /// </summary>
+    /// <param name="UserId"></param>
+    /// <param name="RequestId"></param>
+    public record DrawCardById(string UserId, string BackJackId) : IRequest<ManoJugadorVo>;
 }

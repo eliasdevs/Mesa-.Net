@@ -11,14 +11,6 @@ namespace Mesa.Blackjack.Queries
     public record GetCards(): IRequest<List<CardOutput>>;
 
     /// <summary>
-    /// extrae una carta por medio del id del jugador y el id de la partida
-    /// representa el boton pedir carta
-    /// </summary>
-    /// <param name="UserId"></param>
-    /// <param name="RequestId"></param>
-    public record DrawCardById(string UserId, string BackJackId) : IRequest<ManoJugadorVo>;
-
-    /// <summary>
     /// Reiniciar Cartas
     /// </summary>
     /// <param name="UserId"></param>

@@ -1,18 +1,17 @@
 ﻿using AutoMapper;
 using MediatR;
+using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers.Helper;
-using Mesa.Blackjack.Queries;
 using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.BlackJack.Helper;
-using Mesa_SV.Exceptions;
 using Mesa_SV.VoDeJuegos;
 using Pisto.Exceptions;
 
-namespace Mesa.Blackjack.Handlers.Queries
+namespace Mesa.BlackJack.Handlers.Commands
 {
     /// <summary>
     /// pedir carta
@@ -33,7 +32,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             //son las cartas que se mandaran en el output
             List<CardOutput> cartas = new List<CardOutput>();
 
-            Blackjack? blackjack = await _repository.GetBlackjackById(request.BackJackId);
+            Blackjack.Blackjack? blackjack = await _repository.GetBlackjackById(request.BackJackId);
 
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");

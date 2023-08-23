@@ -31,13 +31,14 @@ namespace Mesa.BlackJack.Handlers.Commands
 
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack,
-                    nameof(blackjack), GetType(), $"Error!!!, no se encontro registro de este juego.");
+                    nameof(blackjack), GetType(), $"No se encontro registro de este juego.");
 
             //mano activa del jugador
             List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
 
-            if (manoActiva.Any())
-                cartas = _mapper.Map<List<CardOutput>>(manoActiva);
+            if (!manoActiva.Any())
+                throw NotFoundException.CreateException(NotFoundExceptionType.Card,
+                   nameof(blackjack), GetType(), $"Este jugador no posee mano activa.");
 
             bool todasEnEstadoHand = manoActiva.All(carta => carta.estado == StatusHand.STAND_HAND);
 
