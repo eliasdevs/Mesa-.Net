@@ -112,19 +112,17 @@ namespace Mesa.RealTime.Project.Hubs
         /// <returns></returns>
         public async Task DrawCard(string playerId, string blackJackId, string requestId)
         {
+            List<string> targetClientIds = await GetUserContextId(requestId);
+
             //Pido una carta
             ManoJugadorVo mano = await _blackJackSdk.GetCardById(playerId, blackJackId);
 
             await Clients.Client(Context.ConnectionId).SendAsync("DrawCardResult", mano);
 
             if (mano.Estado == StatusHand.STAND_HAND)
-            {
-                string? connectionId = GetRivalUserContextId(await GetUserContextId(requestId));
-               
-                if (connectionId == null)return;
-
-                //Aviso al rival que me plantee               
-                await Clients.Client(connectionId).SendAsync("InDrawCardStandHand", mano);
+            {  
+                //Aviso a los involucrados que se planto alguien
+                await Clients.Clients(targetClientIds).SendAsync("InDrawCardStandHand", "JugadorPlantado");
             }
         }
 
@@ -160,12 +158,8 @@ namespace Mesa.RealTime.Project.Hubs
 
             if (mano.Estado == StatusHand.STAND_HAND)
             {
-                string? connectionId = GetRivalUserContextId(await GetUserContextId(requestId));
-
-                if (connectionId == null) return;
-
-                //mando la mano activa plantada del contrincate           
-                await Clients.Client(connectionId).SendAsync("GetActiveHandResult", mano);
+                //Aviso a los involucrados que se planto alguien
+                await Clients.Clients(targetClientIds).SendAsync("InDrawCardStandHand", "JugadorPlantado");
             }
         }
 

@@ -30,15 +30,16 @@ namespace Mesa.BlackJack.Handlers.Commands
                     nameof(blackjack), GetType(), $"No se encontro registro de este juego.");
 
             //mano activa del jugador
-            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.UserId, request.BackJackId);
+            List<CardBlackJack> manoActiva = await _repository.GetHandActive("", request.BackJackId);
 
             if (!manoActiva.Any())
-                throw NotFoundException.CreateException(NotFoundExceptionType.Card,
-                   nameof(blackjack), GetType(), $"Este jugador no posee mano activa.");
+                return new(request.UserId, new List<CardOutput>(), StatusHand.ACTIVE);
 
             //verificar si ya estan plantadas
             if (GetMano.AllCardsSatatusSatnd(manoActiva))
                 await _repository.RemoveCardsFromHand(manoActiva);
+            
+            //TODO:Falta el history
 
             //reseteo
             return new(request.UserId, new List<CardOutput>(), StatusHand.ACTIVE);

@@ -23,11 +23,9 @@
 }
 else
 {
-    <p>Espera que tu contrincante te seda la baraja</p>
-
-        <p style="color: green">Mensaje: <span>@mensaje </span></p>    
+    <p>Espera que tu contrincante te seda la baraja</p>    
 }
-
+<p style="color: green">Mensaje: <span>@mensajeResultado  </span></p>    
 @if (_store.Value.Loader.BlackJackIsLoading)
 {
         <div class="d-flex justify-content-center align-items-center">
@@ -46,14 +44,24 @@ else
         <div id="cartas-crupier" class="grid"></div><br>
         <div class="contentPuntaje">
           <div class="circulo">
-            <div class="texto"><div id="puntaje-crupier"></div></div>
+            <div class="texto">
+                <div id="puntaje-crupier">
+                                @if (manoContrincante != null && _store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND)
+                                {
+                                    @foreach (var carta in manoContrincante.Mano)
+                                    {
+                                   <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
+                                    }
+                                }
+                </div>
+            </div>
           </div>
           <div class="positionTapete">
           </div>
 
         </div>
 
-            <button class="btn btn-info" @onclick="() => OnClickReinicarMano()" disabled="@(!_store.Value.Loader.IsPlayerTurn || !ValidButton())">
+            <button class="btn btn-info" @onclick="() => OnClickReinicarMano()" disabled="@(!_store.Value.Loader.IsPlayerTurn && ValidButton())">
                 Reiniciar
         </button>
                 <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
@@ -106,66 +114,76 @@ else
         return (_store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND);
     }
 
-    string mensaje = "";
+    string mensajeResultado = "";
     protected override void OnParametersSet()
     {
         base.OnParametersSet();
     }
 
-    private void calcularGanador(ManoJugadorVo manoRival)
+    ManoJugadorVo? manoContrincante = null;
+
+    private void CalcularGanador(ManoJugadorVo manoRival)
     {
-        if (manoRival.Estado == StatusHand.STAND_HAND)
+        if (manoRival == null || manoRival.Estado != StatusHand.STAND_HAND)
+            return;
+
+        if (_store.Value.Mano == null || _store.Value.Mano.Estado != StatusHand.STAND_HAND)
+            return;
+
+        var miMano = _store.Value.Mano;
+
+        int puntuacionMiMano = CalculateManoBlackJack.CalcularPuntuacion(miMano.Mano);
+        int puntuacionManoRival = CalculateManoBlackJack.CalcularPuntuacion(manoRival.Mano);
+
+        mensajeResultado = "Evaluado resultados"; // Inicializar el mensaje de resultado
+
+        if (puntuacionManoRival <= 21)
         {
-            if (_store.Value.Mano == null)
-                return;
-
-            var miMano = _store.Value.Mano;
-
-            //si mi mano no esta plantada no hago nada
-            if (miMano.Estado == StatusHand.STAND_HAND)
+            if (puntuacionMiMano > puntuacionManoRival && puntuacionMiMano <= 21)
             {
-                //TODO: Calculo para determinar ganador
-                if (manoRival != null && manoRival.Mano.Any() && manoRival.Estado == StatusHand.STAND_HAND)
+                mensajeResultado = "¡Felicitaciones, has ganado esta jugada!";
+                _dispatcher.Dispatch(new StartChangeTurn("", true));
+            }
+            else if (puntuacionMiMano == puntuacionManoRival)
+            {
+                if (puntuacionMiMano <= 21)
                 {
-                    if (@CalculateManoBlackJack.CalcularPuntuacion(manoRival.Mano) <= 21)
-                    {
-
-                        if ((@CalculateManoBlackJack.CalcularPuntuacion(miMano.Mano) > @CalculateManoBlackJack.CalcularPuntuacion(manoRival.Mano)) &&
-                            (@CalculateManoBlackJack.CalcularPuntuacion(miMano.Mano)) <= 21)
-                        {
-                            mensaje = "Felcidades, Has ganado esta Jugada";
-                            //le asigna el turno al jugador
-                            _dispatcher.Dispatch(new StartChangeTurn("", true));
-                        }
-                        else if ((@CalculateManoBlackJack.CalcularPuntuacion(miMano.Mano) == @CalculateManoBlackJack.CalcularPuntuacion(manoRival.Mano)) &&
-                    ((@CalculateManoBlackJack.CalcularPuntuacion(miMano.Mano) <= 21) && (@CalculateManoBlackJack.CalcularPuntuacion(manoRival.Mano) <= 21)))
-                        {
-                            mensaje = "Empate";                        
-                        }
-                        else if (@CalculateManoBlackJack.CalcularPuntuacion(miMano.Mano) > 21 && @CalculateManoBlackJack.CalcularPuntuacion(manoRival.Mano) > 21)
-                        {
-                            mensaje = "Ninguno Gana";
-                        }
-                        else
-                        {
-                            _dispatcher.Dispatch(new StartChangeTurn("", true));
-                            mensaje = "Ups, has perdido";
-                        }
-                    }
-
+                    mensajeResultado = "Empate";
+                }
+                else
+                {
+                    mensajeResultado = "Ninguno Gana";
                 }
             }
+            else if (puntuacionMiMano > 21 && puntuacionManoRival > 21)
+            {
+                mensajeResultado = "Ninguno Gana";
+            }
+            else
+            {
+                _dispatcher.Dispatch(new StartChangeTurn("", true));
+                mensajeResultado = "Ups, has perdido";
+            }
+        }
+        else
+        {
+            mensajeResultado = "¡Felicitaciones, has ganado esta jugada!"; // El rival se pasó de 21
+            _dispatcher.Dispatch(new StartChangeTurn("", true));
         }
     }
+
+
 
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
-
+        
         //escuche la mano del contrincante
         hubConnection.On<ManoJugadorVo>("GetActiveHandResult", (mano) =>
-        {
-            calcularGanador(mano);
+        {   
+            manoContrincante = mano;
+            _dispatcher.Dispatch(new EndGetActiveHand(mano));
+            CalcularGanador(mano);
         });
 
         //recibo cuando es mi turno
@@ -176,9 +194,17 @@ else
         });
 
         //esta es la mano plantada del rival me notifica si se planto
-        hubConnection.On<ManoJugadorVo>("InDrawCardStandHand", (mano) =>
+        hubConnection.On<string>("InDrawCardStandHand", (mnsj) =>
         {
-            calcularGanador(mano);           
+            mensajeResultado = "Escucho que se planto uno";
+            //despachar y escuchar la mano del contrincante
+            if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
+            {
+                if (_store.Value.Loader.IsChallenger && !string.IsNullOrEmpty(_store.Value.Request.AcceptedPlayerId))
+                    _dispatcher.Dispatch(new StartGetActiveHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.AcceptedPlayerId));
+                else
+                    _dispatcher.Dispatch(new StartGetActiveHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.PlayerId));
+            }                
         });
 
         //recibo una mi mano cada que pido carta
@@ -186,9 +212,8 @@ else
         {   
             _dispatcher.Dispatch(new EndDrawCard(mano));
 
-            mensaje = "Vas muy bien";
+            mensajeResultado = "Vas muy bien";
 
-            //TODO: a esta accion crearle efecto para que le actualice el turno al otro jugador y validar solo si el valor va en false se ejecute
             if (mano.Estado == StatusHand.STAND_HAND)
             {
                 if (_store.Value.BlackjackInfo != null)

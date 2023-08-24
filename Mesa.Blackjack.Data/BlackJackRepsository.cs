@@ -63,7 +63,13 @@ namespace Mesa.Blackjack.Data
 
         public async Task<List<CardBlackJack>> GetHandActive(string idJugador, string blackJackId)
         {
-           return await _context.CardBlackJack.Where(x => x.IdJugador == idJugador  && x.BlackJackId == blackJackId).ToListAsync();
+            if(idJugador == "")
+                return await _context.CardBlackJack
+                    .Where(x => !string.IsNullOrEmpty(x.IdJugador) && x.BlackJackId == blackJackId)
+                    .ToListAsync();
+
+
+            return await _context.CardBlackJack.Where(x => x.IdJugador == idJugador  && x.BlackJackId == blackJackId).ToListAsync();
         }
 
         public async Task RemoveCardsFromHand(List<CardBlackJack> cards)
