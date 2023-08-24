@@ -46,23 +46,18 @@ namespace Mesa.Blackjack.Handlers.Commands
                 throw ClientException.CreateException(ClientExceptionType.InvalidFieldValue,
                     nameof(request.RequestId), GetType(), $"No se puede Iniciar la Partida, Algo salio Mal: {request.RequestId}");
             
-            
-
-
             //seteo constructor
             Blackjack blackjack = new Blackjack(null, request.RequestId, GameStatus.Started);
 
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
             
-            //mando a generar el nuevo mazo
-            await AddMazoHelper.AgregarCartas(CardHelper.BarajearCartas(baraja, blackjack.Id), _repoBlackJack);
-
-            
-
             //crea el registro en la BD
             await _repoBlackJack.AddHistoryBlackJackAsync(new HistoryBlackJack(null, 1, "Iniciando el Juego", blackjack.Id));
             await _repoBlackJack.CreateBlackJackAsync(blackjack);
             await _repoBlackJack.SaveChangesAsync();
+
+            //mando a generar el nuevo mazo
+            await AddMazoHelper.AgregarCartas(CardHelper.BarajearCartas(baraja, blackjack.Id), _repoBlackJack);
 
             return blackjack;
         }        

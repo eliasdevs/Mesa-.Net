@@ -20,9 +20,9 @@ namespace Mesa.Blackjack.Data
             _context=context;
         }
 
-        public Task AddCardAsync(CardBlackJack carta)
+        public async Task AddCardAsync(CardBlackJack carta)
         {
-            throw new NotImplementedException();
+            await _context.CardBlackJack.AddAsync(carta);
         }
 
         public async Task AddHistoryBlackJackAsync(HistoryBlackJack history)
