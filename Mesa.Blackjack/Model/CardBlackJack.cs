@@ -17,6 +17,10 @@ namespace Mesa.BlackJack.Model
         {
             BlackJackId = blackJackId;
             Estado = StatusHand.INIT;//estado inicial de todas la cartas del mazo
+            OriginalValue = originalValue;
+            SubValue = subValue;
+            Representation = representation;
+            TypeOfCardId = typeOfCardId;
         }
 
         /// <summary>
