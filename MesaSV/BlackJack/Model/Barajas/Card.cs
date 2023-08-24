@@ -3,7 +3,7 @@
     /// <summary>
     /// clase de cartas
     /// </summary>
-    public class Card
+    public record Card
     {
         public Card(int originalValue, int subValue, string representation, TypeCard typeOfCardId)
         {
