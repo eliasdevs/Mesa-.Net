@@ -24,8 +24,8 @@ namespace Mesa.BlackJack.Data.Migrations
 
             modelBuilder.Entity("Mesa.BlackJack.Model.CardBlackJack", b =>
                 {
-                    b.Property<int>("Id")
-                        .HasColumnType("int");
+                    b.Property<string>("CardId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("BlackJackId")
                         .HasMaxLength(50)
@@ -55,7 +55,7 @@ namespace Mesa.BlackJack.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("int");
 
-                    b.HasKey("Id", "BlackJackId");
+                    b.HasKey("CardId", "BlackJackId");
 
                     b.HasIndex("BlackJackId")
                         .HasDatabaseName("IX_CardBlackJack_BlackJackId");

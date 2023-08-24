@@ -59,7 +59,7 @@ namespace Mesa.BlackJack.Data.Migrations
                 name: "MazoBlackJack",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false),
+                    CardId = table.Column<string>(type: "nvarchar(450)", nullable: false),
                     BlackJackId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     IdJugador = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: true),
                     Estado = table.Column<int>(type: "int", nullable: false),
@@ -70,7 +70,7 @@ namespace Mesa.BlackJack.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MazoBlackJack", x => new { x.Id, x.BlackJackId });
+                    table.PrimaryKey("PK_MazoBlackJack", x => new { x.CardId, x.BlackJackId });
                 });
 
             migrationBuilder.CreateTable(

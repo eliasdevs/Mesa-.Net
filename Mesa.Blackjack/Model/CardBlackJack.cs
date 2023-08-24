@@ -21,12 +21,13 @@ namespace Mesa.BlackJack.Model
             SubValue = subValue;
             Representation = representation;
             TypeOfCardId = typeOfCardId;
+            CardId = Guid.NewGuid().ToString();
         }
 
         /// <summary>
         /// toma el id de la carta
         /// </summary>
-        public int Id { get; set; }
+        public string CardId { get; set; }
 
         /// <summary>
         /// este es el id del blackJack

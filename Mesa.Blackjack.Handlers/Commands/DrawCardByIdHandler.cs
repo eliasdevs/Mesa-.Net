@@ -61,7 +61,7 @@ namespace Mesa.BlackJack.Handlers.Commands
 
             await _repository.AddHistoryBlackJackAsync(new HistoryBlackJack(
                     request.UserId, blackjack.ContadorMazo,
-                    $"Se entrego la carta de Id {carta.Id} con valor {carta.OriginalValue}, sub value {carta.SubValue} y de tipo {carta.TypeOfCardId} al jugador {request.UserId}", blackjack.Id));
+                    $"Se entrego la carta de Id {carta.CardId} con valor {carta.OriginalValue}, sub value {carta.SubValue} y de tipo {carta.TypeOfCardId} al jugador {request.UserId}", blackjack.Id));
 
             //se guarda los cambios
             await _repository.SaveChangesAsync();
