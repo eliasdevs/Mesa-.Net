@@ -41,18 +41,25 @@ else
       <div id="tapete">
         <span id="barajas-pendientes"></span>
 
-        <div id="cartas-crupier" class="grid"></div><br>
+        <div id="cartas-crupier" class="grid">
+                    @if (manoContrincante != null && _store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND)
+                    {
+                        @foreach (var carta in manoContrincante.Mano)
+                        {
+                           <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
+                        }
+                    }
+        </div>
+        <br>
         <div class="contentPuntaje">
           <div class="circulo">
             <div class="texto">
                 <div id="puntaje-crupier">
-                                @if (manoContrincante != null && _store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND)
-                                {
-                                    @foreach (var carta in manoContrincante.Mano)
-                                    {
-                                   <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
-                                    }
-                                }
+                 
+                 @if (manoContrincante != null)
+                 {
+                     @CalculateManoBlackJack.CalcularPuntuacion(manoContrincante.Mano)    
+                 }
                 </div>
             </div>
           </div>
@@ -61,13 +68,13 @@ else
 
         </div>
 
-            <button class="btn btn-info" @onclick="() => OnClickReinicarMano()" disabled="@(!_store.Value.Loader.IsPlayerTurn && ValidButton())">
+        <button class="btn btn-info" @onclick="() => OnClickReinicarMano()" disabled="@(!_store.Value.Loader.IsPlayerTurn && ValidButton())">
                 Reiniciar
         </button>
-                <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
+        <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
                 Plantarse
         </button>
-                        <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
+        <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
             Pedir carta
         </button>
         <div id="cartas-jugador" class="grid">
@@ -177,7 +184,7 @@ else
     protected override void OnInitialized()
     {
         HubConnection hubConnection = _hubConnectionService.GetHubConnection();
-        
+
         //escuche la mano del contrincante
         hubConnection.On<ManoJugadorVo>("GetActiveHandResult", (mano) =>
         {   
@@ -220,7 +227,7 @@ else
                     _dispatcher.Dispatch(new StartChangeTurn(_store.Value.BlackjackInfo.IdRequest, false));// mequito el truno
             }
         });
-        
+
         //reinicio mi mano
         hubConnection.On<ManoJugadorVo>("ResetHandResult", (mano) =>
         {
@@ -231,7 +238,7 @@ else
         hubConnection.On<ManoJugadorVo>("StandHandResult", (mano) =>
         {   
             _dispatcher.Dispatch(new EndStandHand(mano));
-            
+
             if (_store.Value.BlackjackInfo != null)
                 _dispatcher.Dispatch(new StartChangeTurn(_store.Value.BlackjackInfo.IdRequest, false));// mequito el truno
 
@@ -241,7 +248,7 @@ else
         base.OnInitialized();
     }
 
-      private void OnClickPedirCarta()
+    private void OnClickPedirCarta()
     {
         if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
         {
@@ -287,6 +294,7 @@ else
 
     private void OnClickReinicarMano()
     {
+        manoContrincante = null;
         if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
         {
             if (_store.Value.Loader.IsChallenger)
@@ -303,10 +311,4 @@ else
             }
         }
     }
-
-    //TODO: Arreglar la logica del juego ahora solo va escuchar su mano para toda  operacion
-    //Las unicas que van a escuchar los dos jugadores es plantarseResult para que consulte ambas manos
-    //y cambio de turno
-
-
 }
