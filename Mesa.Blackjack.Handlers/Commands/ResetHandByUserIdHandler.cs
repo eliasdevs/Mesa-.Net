@@ -32,12 +32,18 @@ namespace Mesa.BlackJack.Handlers.Commands
             //mano activa del jugador
             List<CardBlackJack> manoActiva = await _repository.GetHandActive("", request.BackJackId);
 
-            if (!manoActiva.Any())
+            if (!manoActiva.Any()) //se responde asy porque ya se reinicio la jugada
                 return new(request.UserId, new List<CardOutput>(), StatusHand.ACTIVE);
 
-            //verificar si ya estan plantadas
+            //todas plantadas
             if (GetMano.AllCardsSatatusSatnd(manoActiva))
-                await _repository.RemoveCardsFromHand(manoActiva);
+            {
+                if(manoActiva.Any(x => x.IdJugador != request.UserId))
+                {
+                    //es porque va a reiniar la partida
+                    await _repository.RemoveCardsFromHand(manoActiva);
+                }
+            }
             
             //TODO:Falta el history
 
