@@ -36,7 +36,7 @@ namespace Mesa.BlackJack.Handlers.Commands
             if (blackjack == null)
                 throw NotFoundException.CreateException(NotFoundExceptionType.BlackJack, nameof(blackjack), GetType(), "No se encontro la partida solicitada");
 
-            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
+            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.UserId, request.BackJackId);
 
             if (GetMano.AllCardsSatatusSatnd(manoActiva))
                 return GetMano.GetHandWithStatus(request.UserId, manoActiva, _mapper);
@@ -67,7 +67,7 @@ namespace Mesa.BlackJack.Handlers.Commands
             await _repository.SaveChangesAsync();
 
             //mano activa del jugador
-            manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
+            manoActiva = await _repository.GetHandActive(request.UserId, request.BackJackId);
 
             //calcula la puntuacion de la mano
             if (CalculateManoBlackJack.CalcularPuntuacion(_mapper.Map<List<CardOutput>>(manoActiva)) >= 21)

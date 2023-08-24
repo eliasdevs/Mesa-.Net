@@ -30,7 +30,7 @@ namespace Mesa.BlackJack.Handlers.Commands
                     nameof(blackjack), GetType(), $"No se encontro registro de este juego.");
 
             //mano activa del jugador
-            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
+            List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.UserId, request.BackJackId);
 
             if (!manoActiva.Any())
                 throw NotFoundException.CreateException(NotFoundExceptionType.Card,

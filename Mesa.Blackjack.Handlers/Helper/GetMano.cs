@@ -44,6 +44,9 @@ namespace Mesa.BlackJack.Handlers.Helper
         /// <returns></returns>
         public static bool AllCardsSatatusSatnd(List<CardBlackJack> mano)
         {
+            if (mano.Count() == 0)
+                return false;
+
             return mano.All(carta => carta.Estado == StatusHand.STAND_HAND);
         }
         

@@ -51,7 +51,7 @@ namespace Mesa.Blackjack.Handlers.Commands
 
             DeckOfCards baraja = await _repoBlackJack.GetDeckOfCardsAsync();
             
-            //crea el registro en la BD
+            //crea el registro en la BD..ñ+}3
             await _repoBlackJack.AddHistoryBlackJackAsync(new HistoryBlackJack(null, 1, "Iniciando el Juego", blackjack.Id));
             await _repoBlackJack.CreateBlackJackAsync(blackjack);
             await _repoBlackJack.SaveChangesAsync();
