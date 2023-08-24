@@ -2,8 +2,7 @@
     width: 65%;
     height: 600px;
     margin: auto;
-    position: relative;
-    background-image: url('images/tapeteCartas.jpg');
+    position: relative;    
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px;
