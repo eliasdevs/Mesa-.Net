@@ -200,10 +200,10 @@ else
                 _dispatcher.Dispatch(new StartChangeTurn("", isMyTurn));// me asigna el turno
         });
 
-        //esta es la mano plantada del rival me notifica si se planto
+        //lo escuchan los dos jugadores
         hubConnection.On<string>("InDrawCardStandHand", (mnsj) =>
         {
-            mensajeResultado = "Escucho que se planto uno";
+            manoContrincante = null;
             //despachar y escuchar la mano del contrincante
             if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
             {
