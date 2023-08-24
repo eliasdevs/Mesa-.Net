@@ -14,17 +14,14 @@ namespace Mesa.BlackJack.Handlers.Commands
     public class ResetHandByUserIdHandler : IRequestHandler<ResetHandByUserId, ManoJugadorVo>
     {
         private readonly IBlackJackRepository _repository;
-        private readonly IMapper _mapper;
-
-        public ResetHandByUserIdHandler(IBlackJackRepository repository, IMapper mapper)
+        
+        public ResetHandByUserIdHandler(IBlackJackRepository repository)
         {
-            _repository = repository;
-            _mapper = mapper;
+            _repository = repository;            
         }
 
         public async Task<ManoJugadorVo> Handle(ResetHandByUserId request, CancellationToken cancellationToken)
         {
-
             //son las cartas que se mandaran en el output
             Blackjack.Blackjack? blackjack = await _repository.GetBlackjackById(request.BackJackId);
 

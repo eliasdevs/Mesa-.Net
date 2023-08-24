@@ -229,6 +229,43 @@ namespace Mesa.Juegos.State.Reducers
             };
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        [ReducerMethod]
+        public static BlackJackSore OnStartResetHand(BlackJackSore state, StartResetHand action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsDrawCard = true,
+                }
+            };
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="state"></param>
+        /// <param name="action"></param>
+        /// <returns></returns>
+        [ReducerMethod]
+        public static BlackJackSore OnEndResetHand(BlackJackSore state, EndResetHand action)
+        {
+            return state with
+            {
+                Loader = state.Loader with
+                {
+                    IsDrawCard = false,
+                },
+                Mano = action.Mano
+            };
+        }
+
         [ReducerMethod]
         public static BlackJackSore OnStartGetActiveHand(BlackJackSore state, StartGetActiveHand action)
         {

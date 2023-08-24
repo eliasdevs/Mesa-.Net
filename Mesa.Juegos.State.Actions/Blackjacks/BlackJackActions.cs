@@ -90,6 +90,20 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     public record EndStandHand(ManoJugadorVo Mano);
 
     /// <summary>
+    /// Permite iniciar el reset de la mano
+    /// </summary>
+    /// <param name="BlackJackId"></param>
+    /// <param name="PlayerId"></param>
+    /// <param name="RequestId"></param>
+    public record StartResetHand(string BlackJackId, string PlayerId);
+
+    /// <summary>
+    /// Permite actualizar la mano reseteada
+    /// </summary>
+    /// <param name="Mano"></param>
+    public record EndResetHand(ManoJugadorVo Mano);
+
+    /// <summary>
     /// Inicia Pide la Mano de Un jugador en especifico
     /// </summary>
     /// <param name="BlackJackId"></param>

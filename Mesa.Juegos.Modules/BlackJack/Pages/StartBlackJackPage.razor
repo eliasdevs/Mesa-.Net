@@ -53,7 +53,7 @@ else
 
         </div>
 
-        <button class="btn btn-info" id="boton-repartir">
+        <button class="btn btn-info">
                 Reiniciar
         </button>
         <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn)">
@@ -132,7 +132,7 @@ else
 
         // lo escuchan los dos jugadores
         hubConnection.On<ManoJugadorVo>("DrawCardResult", (mano) =>
-        {   
+        {
             if (_store.Value.Loader.IsPlayerTurn)
             {
                 //si estoy en mi turno actualizo mi mano
@@ -140,13 +140,20 @@ else
                 mensaje = "Vas muy bien";
                 if (mano.Estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(false));// me quita el truno                
             }
-            else 
-            {   
+            else
+            {
                 //escucho la mano del rival para mi truno
                 if (mano.Estado == StatusHand.STAND_HAND) _dispatcher.Dispatch(new StartChangeTurn(true));// asigna el  truno                
-                mensaje = "Espera tu turno";                
+                mensaje = "Espera tu turno";
             }
             if (_store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND) ConsultarMano(_store.Value.Mano);
+        });
+
+
+        // lo escuchan los dos jugadores
+        hubConnection.On<ManoJugadorVo>("ResetHandResult", (mano) =>
+        {
+            _dispatcher.Dispatch(new EndResetHand(mano));          
         });
 
 
@@ -263,6 +270,25 @@ else
                 }
             }
         }        
+    }
+
+    private void OnClickReinicarMano()
+    {
+        if (_store.Value.BlackjackInfo != null && _store.Value.Request != null)
+        {
+            if (_store.Value.Loader.IsChallenger)
+            {
+                //si es retador seteo los datos con el id del retador
+                _dispatcher.Dispatch(new StartResetHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.PlayerId));
+            }
+            else
+            {
+                if (!string.IsNullOrEmpty(_store.Value.Request.AcceptedPlayerId))
+                {
+                    _dispatcher.Dispatch(new StartResetHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.AcceptedPlayerId));
+                }
+            }
+        }
     }
 
 }
