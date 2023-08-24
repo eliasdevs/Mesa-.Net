@@ -38,9 +38,7 @@ namespace Mesa.BlackJack.Handlers.Commands
 
             //verificar si ya estan plantadas
             if (GetMano.AllCardsSatatusSatnd(manoActiva))
-                manoActiva.Clear(); //Limpio la mano del jugador
-
-            await _repository.SaveChangesAsync();
+                await _repository.RemoveCardsFromHand(manoActiva);
 
             //reseteo
             return new(request.UserId, new List<CardOutput>(), StatusHand.ACTIVE);

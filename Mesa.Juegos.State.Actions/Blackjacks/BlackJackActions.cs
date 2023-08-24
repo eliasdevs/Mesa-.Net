@@ -121,7 +121,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// permite controlar si inicia o finaliza un turno de un jugador
     /// </summary>
     /// <param name="IsTurn">recibe turn si se va asignar turno</param>
-    public record StartChangeTurn(bool IsTurn);
+    public record StartChangeTurn(string requestId, bool IsTurn);
     #endregion
 
     /// <summary>

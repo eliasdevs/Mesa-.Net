@@ -74,5 +74,12 @@ namespace Mesa.Blackjack.Data
         /// <param name="history"></param>
         /// <returns></returns>
         Task AddHistoryBlackJackAsync(HistoryBlackJack history);
+
+        /// <summary>
+        /// Permite eliminar las cartas en el context
+        /// </summary>
+        /// <param name="cards"></param>
+        /// <returns></returns>
+        Task RemoveCardsFromHand(List<CardBlackJack> cards);
     }
 }

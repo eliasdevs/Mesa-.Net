@@ -112,13 +112,35 @@ namespace Mesa.RealTime.Project.Hubs
         /// <returns></returns>
         public async Task DrawCard(string playerId, string blackJackId, string requestId)
         {
-            List<string> targetClientIds = await GetUserContextId(requestId);
-
             //Pido una carta
             ManoJugadorVo mano = await _blackJackSdk.GetCardById(playerId, blackJackId);
 
-            //se responde solo al users que pidio la carta
-            await Clients.Clients(targetClientIds).SendAsync("DrawCardResult", mano);
+            await Clients.Client(Context.ConnectionId).SendAsync("DrawCardResult", mano);
+
+            if (mano.Estado == StatusHand.STAND_HAND)
+            {
+                string? connectionId = GetRivalUserContextId(await GetUserContextId(requestId));
+               
+                if (connectionId == null)return;
+
+                //Aviso al rival que me plantee               
+                await Clients.Client(connectionId).SendAsync("InDrawCardStandHand", mano);
+            }
+        }
+
+        /// <summary>
+        /// permite asignar o quitar el turno a un jugador
+        /// </summary>
+        /// <param name="requestId"></param>
+        /// <param name="isplayerTurn"></param>
+        /// <returns></returns>
+        public async Task PlayerTurn(string requestId, bool isplayerTurn)
+        {
+            string? connectionId = GetRivalUserContextId(await GetUserContextId(requestId));
+
+            if (connectionId == null) return;
+
+            await Clients.Client(connectionId).SendAsync("IsMyTurn", isplayerTurn);
         }
 
         /// <summary>
@@ -134,10 +156,23 @@ namespace Mesa.RealTime.Project.Hubs
 
             ManoJugadorVo mano = await _blackJackSdk.PlantarBlackJack(blackJackId, playerId);
             
-            //se responde a los dos jugadores involucrados
-            await Clients.Clients(targetClientIds).SendAsync("StandHandResult", mano);
+            await Clients.Client(Context.ConnectionId).SendAsync("StandHandResult", mano);
+
+            if (mano.Estado == StatusHand.STAND_HAND)
+            {
+                string? connectionId = GetRivalUserContextId(await GetUserContextId(requestId));
+
+                if (connectionId == null) return;
+
+                //mando la mano activa plantada del contrincate           
+                await Clients.Client(connectionId).SendAsync("GetActiveHandResult", mano);
+            }
         }
 
+        private string? GetRivalUserContextId(List<string> targetClientIds)
+        {   
+            return targetClientIds.FirstOrDefault(x => x != Context.ConnectionId);
+        }
         /// <summary>
         /// Normalmente se usara para extraer la mano del jugador rival
         /// </summary>

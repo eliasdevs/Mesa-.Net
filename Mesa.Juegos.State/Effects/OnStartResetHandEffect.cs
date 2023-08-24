@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace Mesa.Juegos.State.Effects
 {
-    public class OnStartResetHandEffect : EffectBase<StartGetActiveHand>
+    public class OnStartResetHandEffect : EffectBase<StartResetHand>
     {
         private readonly IHubConnectionService _hubConnectionService;
 
@@ -21,7 +21,7 @@ namespace Mesa.Juegos.State.Effects
             _hubConnectionService = hubConnectionService;
         }
 
-        public async override Task ExecuteAsync(StartGetActiveHand action, IDispatcher dispatcher)
+        public async override Task ExecuteAsync(StartResetHand action, IDispatcher dispatcher)
         {
             HubConnection hubConnection = _hubConnectionService.GetHubConnection();
 
