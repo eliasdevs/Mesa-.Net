@@ -2,6 +2,7 @@
 using MediatR;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
+using Mesa.BlackJack.Handlers.Helper;
 using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
@@ -25,8 +26,6 @@ namespace Mesa.BlackJack.Handlers.Commands
         {
 
             //son las cartas que se mandaran en el output
-            List<CardOutput> cartas = new List<CardOutput>();
-
             Blackjack.Blackjack? blackjack = await _repository.GetBlackjackById(request.BackJackId);
 
             if (blackjack == null)
@@ -40,19 +39,14 @@ namespace Mesa.BlackJack.Handlers.Commands
                 throw NotFoundException.CreateException(NotFoundExceptionType.Card,
                    nameof(blackjack), GetType(), $"Este jugador no posee mano activa.");
 
-            bool todasEnEstadoHand = manoActiva.All(carta => carta.estado == StatusHand.STAND_HAND);
-
             //verificar si ya estan plantadas
-            if (todasEnEstadoHand)
-            {
-                //Limpio la mano del jugador
-                manoActiva.Clear();
-                cartas = new List<CardOutput>();
-            }
+            if (GetMano.AllCardsSatatusSatnd(manoActiva))
+                manoActiva.Clear(); //Limpio la mano del jugador
 
             await _repository.SaveChangesAsync();
 
-            return new(request.UserId, cartas, StatusHand.ACTIVE);
+            //reseteo
+            return new(request.UserId, new List<CardOutput>(), StatusHand.ACTIVE);
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Mesa.BlackJack.Model
         public CardBlackJack(int originalValue, int subValue, string representation, TypeCard typeOfCardId, string blackJackId) : base(originalValue, subValue, representation, typeOfCardId)
         {
             BlackJackId = blackJackId;
-            estado = StatusHand.INIT;//estado inicial de todas la cartas del mazo
+            Estado = StatusHand.INIT;//estado inicial de todas la cartas del mazo
         }
 
         /// <summary>
@@ -32,12 +32,12 @@ namespace Mesa.BlackJack.Model
         /// <summary>
         /// Todas las cartas con estado Init son las no asignadas a jugadores
         /// </summary>
-        public StatusHand estado { get; set; }
+        public StatusHand Estado { get; set; }
 
         public void SetearJugador(string idJugador)
         {
             IdJugador = idJugador;
-            estado= StatusHand.ACTIVE;
+            Estado= StatusHand.ACTIVE;
         }
     }
 }

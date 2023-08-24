@@ -3,6 +3,7 @@ using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.BlackJack;
+using Mesa.BlackJack.Handlers.Helper;
 using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
@@ -36,12 +37,12 @@ namespace Mesa.Blackjack.Handlers.Commands
             if (!manoActiva.Any())
                 throw NotFoundException.CreateException(NotFoundExceptionType.Card, nameof(manoActiva), GetType(), $"No ha sido posible plantar esta mano");
 
-            manoActiva.ForEach(carta => carta.estado = StatusHand.STAND_HAND);
+            manoActiva.ForEach(carta => carta.Estado = StatusHand.STAND_HAND);
 
             //actualiza los datos
             await _repoBlackJack.SaveChangesAsync();
 
-            return new(request.BlackJackId, _mapper.Map<List<CardOutput>>(manoActiva) , StatusHand.STAND_HAND);
+            return GetMano.GetHandWithStatus(request.PlayerId, manoActiva, _mapper);
         }
     }
 

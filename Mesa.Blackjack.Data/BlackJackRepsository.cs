@@ -52,7 +52,7 @@ namespace Mesa.Blackjack.Data
 
         public async Task<List<CardBlackJack>> GetMazoBlackJackAsync(string blackjackId)
         {
-            return await _context.CardBlackJack.Where(x => x.BlackJackId == blackjackId && x.estado == StatusHand.INIT).Take(10).ToListAsync();
+            return await _context.CardBlackJack.Where(x => x.BlackJackId == blackjackId && x.Estado == StatusHand.INIT).Take(10).ToListAsync();
 
         }
 

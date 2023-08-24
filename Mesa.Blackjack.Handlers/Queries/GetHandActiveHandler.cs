@@ -4,6 +4,7 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Queries;
 using Mesa.BlackJack;
+using Mesa.BlackJack.Handlers.Helper;
 using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
@@ -40,7 +41,7 @@ namespace Mesa.Blackjack.Handlers.Queries
             
             List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.UserId, request.BackJackId);
 
-            return new(request.BackJackId, _mapper.Map<List<CardOutput>>(manoActiva), StatusHand.STAND_HAND);            
+            return GetMano.GetHandWithStatus(request.UserId, manoActiva, _mapper);
         }
     }
 }

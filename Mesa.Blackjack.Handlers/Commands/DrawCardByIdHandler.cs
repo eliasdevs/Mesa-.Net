@@ -3,6 +3,7 @@ using MediatR;
 using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers.Helper;
+using Mesa.BlackJack.Handlers.Helper;
 using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack;
@@ -29,9 +30,7 @@ namespace Mesa.BlackJack.Handlers.Commands
 
         public async Task<ManoJugadorVo> Handle(DrawCardById request, CancellationToken cancellationToken)
         {
-            //son las cartas que se mandaran en el output
-            List<CardOutput> cartas = new List<CardOutput>();
-
+            //son las cartas que se mandaran en el output            
             Blackjack.Blackjack? blackjack = await _repository.GetBlackjackById(request.BackJackId);
 
             if (blackjack == null)
@@ -39,11 +38,8 @@ namespace Mesa.BlackJack.Handlers.Commands
 
             List<CardBlackJack> manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
 
-            bool todasEnEstadoHand = manoActiva.All(carta => carta.estado == StatusHand.STAND_HAND);
-
-            //solo si las cartas ya estan plantadas devuelvo la mano
-            if (todasEnEstadoHand)
-                return new(request.UserId, _mapper.Map<List<CardOutput>>(manoActiva), StatusHand.STAND_HAND);
+            if (GetMano.AllCardsSatatusSatnd(manoActiva))
+                return GetMano.GetHandWithStatus(request.UserId, manoActiva, _mapper);
 
             List<CardBlackJack> mazo = await _repository.GetMazoBlackJackAsync(request.BackJackId);
 
@@ -73,22 +69,19 @@ namespace Mesa.BlackJack.Handlers.Commands
             //mano activa del jugador
             manoActiva = await _repository.GetHandActive(request.BackJackId, request.BackJackId);
 
-            if (manoActiva.Any())
-                cartas = _mapper.Map<List<CardOutput>>(manoActiva);
-
             //calcula la puntuacion de la mano
-            if (CalculateManoBlackJack.CalcularPuntuacion(cartas) >= 21)
+            if (CalculateManoBlackJack.CalcularPuntuacion(_mapper.Map<List<CardOutput>>(manoActiva)) >= 21)
             {
                 //si es mayor o igual a 21 lo pongo plantado para que no pueda pedir mas cartas
-                manoActiva.ForEach(carta => carta.estado = StatusHand.STAND_HAND);
+                manoActiva.ForEach(carta => carta.Estado = StatusHand.STAND_HAND);
 
                 //se guarda los cambios
                 await _repository.SaveChangesAsync();
 
-                return new(request.UserId, cartas, StatusHand.STAND_HAND);
+                return GetMano.GetHandWithStatus(request.UserId, manoActiva, _mapper);
             }
 
-            return new(request.UserId, cartas, StatusHand.ACTIVE);
+            return GetMano.GetHandWithStatus(request.UserId, manoActiva, _mapper);
         }
     }
 }
