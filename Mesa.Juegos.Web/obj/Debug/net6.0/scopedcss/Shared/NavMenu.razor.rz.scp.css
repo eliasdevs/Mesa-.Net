@@ -1,10 +1,10 @@
 .navbar-toggler[b-rmr9j688qb] {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #2196F3;
 }
 
 .top-row[b-rmr9j688qb] {
     height: 3.5rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #0683e8;
 }
 
 .navbar-brand[b-rmr9j688qb] {
@@ -41,16 +41,16 @@
     }
 
 .nav-item[b-rmr9j688qb]  a.active {
-    background-color: rgba(255,255,255,0.25);
+    background-color: #1d84d7;
     color: white;
 }
 
 .nav-item[b-rmr9j688qb]  a:hover {
-    background-color: rgba(255,255,255,0.1);
+    background-color: #6fbffe;
     color: white;
 }
 
-@media (min-width: 641px) {
+@media (min-width: 1344px) {
     .navbar-toggler[b-rmr9j688qb] {
         display: none;
     }

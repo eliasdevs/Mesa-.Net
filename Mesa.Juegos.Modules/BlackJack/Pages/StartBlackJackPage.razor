@@ -37,11 +37,10 @@ else
 else
 {
         <div class="greencloth">
-            <div class="container">
-      <div id="tapete">
-        <span id="barajas-pendientes"></span>
-
-        <div id="cartas-crupier" class="grid">
+            
+        <div id="tapete" style="background-image: url('images/tapeteCartas.jpg')">
+        
+            <div id="cartas-crupier" class="grid">
                     @if (manoContrincante != null && _store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND)
                     {
                         @foreach (var carta in manoContrincante.Mano)
@@ -49,7 +48,7 @@ else
                            <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
                         }
                     }
-        </div>
+            </div>
         <br>
         <div class="contentPuntaje">
           <div class="circulo">
@@ -111,7 +110,7 @@ else
         </div>
             
       </div>
-    </div>
+    
         </div>
     
 }
