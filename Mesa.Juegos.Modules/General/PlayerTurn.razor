@@ -1,0 +1,16 @@
+﻿@inject IState<BlackJackSore> _store
+<div class="container">
+    @if (_store.Value.Loader.IsPlayerTurn)
+    {
+         <div class="alert alert-primary" role="alert">
+           <p>Es tu turno de Ganar</p>
+        </div>
+
+    }
+    else
+    {
+        <div class="alert alert-warning" role="alert">
+            <p>Espera que tu contrincante te seda la baraja</p>
+        </div>
+    }
+</div>

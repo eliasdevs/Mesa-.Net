@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "AWjBq8AeMnKrXbaI3p18N7kR9uKKhYiklFCHsU0qGzg=",
+  "Hash": "h4/SSJ8FGDNF+x0dKAkgdf9Ou+y1N6yhtdlcsrWpCqA=",
   "Source": "Mesa.Juegos.Web",
   "BasePath": "/",
   "Mode": "Root",
@@ -595,23 +595,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\radzen.blazor\\4.14.4\\staticwebassets\\Radzen.Blazor.js"
-    },
-    {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Modules.bundle.scp.css",
-      "SourceId": "Mesa.Juegos.Modules",
-      "SourceType": "Project",
-      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
-      "BasePath": "_content/Mesa.Juegos.Modules",
-      "RelativePath": "Mesa.Juegos.Modules.bundle.scp.css",
-      "AssetKind": "All",
-      "AssetMode": "Reference",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "ScopedCss",
-      "AssetTraitValue": "ProjectBundle",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Modules.bundle.scp.css"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\wwwroot\\background.png",
