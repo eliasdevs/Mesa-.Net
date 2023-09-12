@@ -1,4 +1,5 @@
 ﻿@page "/StartBlackJackPage"
+@using Mesa.Juegos.Modules.General
 @using Mesa_SV.BlackJack.Helper;
 @using Mesa_SV.VoDeJuegos;
 @using Newtonsoft.Json;
@@ -13,108 +14,94 @@
 @inject IJSRuntime JSRuntime
 
 <h3>BlackJackGame</h3>
-
 <hr />
-<br />
-
 @if (_store.Value.Loader.IsPlayerTurn)
 {
-    <p>Es tu turno de Ganar</p>
+        <p>Es tu turno de Ganar</p>
 }
 else
 {
-    <p>Espera que tu contrincante te seda la baraja</p>    
+        <p>Espera que tu contrincante te seda la baraja</p>    
 }
 <p style="color: green">Mensaje: <span>@mensajeResultado  </span></p>    
 @if (_store.Value.Loader.BlackJackIsLoading)
 {
-        <div class="d-flex justify-content-center align-items-center">
-            <div class="spinner-border text-primary" role="status">
-                <span class="visually-hidden">Loading...</span>
-            </div>
-        </div>
+        <Loader Texto="Cargando..."/>
 }
 else
 {
-        <div class="greencloth">
-            
-        <div id="tapete" style="background-image: url('images/tapeteCartas.jpg')">
-        
-            <div id="cartas-crupier" class="grid">
-                    @if (manoContrincante != null && _store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND)
+       <div class="greencloth">
+
+           <div id="tapete" style="background-image: url('images/tapeteCartas.jpg')">
+
+                <div id="cartas-crupier" class="grid">
+                @if (manoContrincante != null && _store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND)
+                {
+                    @foreach (var carta in manoContrincante.Mano)
                     {
-                        @foreach (var carta in manoContrincante.Mano)
-                        {
-                           <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
-                        }
+                                       <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
                     }
-            </div>
-        <br>
-        <div class="contentPuntaje">
-          <div class="circulo">
-            <div class="texto">
-                <div id="puntaje-crupier">
-                 
-                 @if (manoContrincante != null)
-                 {
-                     @CalculateManoBlackJack.CalcularPuntuacion(manoContrincante.Mano)    
-                 }
+                }
                 </div>
+            <br>
+            <div class="contentPuntaje">
+              <div class="circulo">
+                <div class="texto">
+                    <div id="puntaje-crupier">
+
+                            @if (manoContrincante != null)
+                            {
+                                @CalculateManoBlackJack.CalcularPuntuacion(manoContrincante.Mano)    
+                            }
+                    </div>
+                </div>
+              </div>
+              <div class="positionTapete">
+              </div>
+
             </div>
-          </div>
-          <div class="positionTapete">
-          </div>
 
-        </div>
-
-        <button class="btn btn-info" @onclick="() => OnClickReinicarMano()" disabled="@(!_store.Value.Loader.IsPlayerTurn && ValidButton())">
-                Reiniciar
-        </button>
-        <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
-                Plantarse
-        </button>
-        <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
-            Pedir carta
-        </button>
-        <div id="cartas-jugador" class="grid">
+            <button class="btn btn-info" @onclick="() => OnClickReinicarMano()" disabled="@(!_store.Value.Loader.IsPlayerTurn && ValidButton())">
+                    Reiniciar
+            </button>
+            <button class="btn btn-info" id="boton-plantarse" @onclick="() => OnClickPlantarse()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
+                    Plantarse
+            </button>
+            <button class="btn btn-info" id="boton-pedir-carta" @onclick="() => OnClickPedirCarta()" disabled="@(!_store.Value.Loader.IsPlayerTurn || ValidButton())">
+                Pedir carta
+            </button>
+            <div id="cartas-jugador" class="grid">
                 @if (!_store.Value.Loader.IsDrawCard && _store.Value.Mano != null)
                 {
                     @foreach (var carta in _store.Value.Mano.Mano)
                     {
-                       <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
+                                   <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
                     }
                 }
                 else if (_store.Value.Loader.IsDrawCard)
                 {
-                  <div class="d-flex justify-content-center align-items-center">
-                    <div class="spinner-border text-primary" role="status">
-                        <span class="visually-hidden">Cargando cartas...</span>
-                    </div>
-                  </div>                        
+                            <Loader Texto="Cargando Cartas..."/>             
                 }
-        </div>
-        <div class="contentPuntaje">
-          <div class="circulo">
-            <div class="texto">
-                <div id="puntaje-jugador">
-                    @if (_store.Value.Mano != null)
-                    {
-                        @CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano)    
-                    }
+            </div>
+            <div class="contentPuntaje">
+              <div class="circulo">
+                <div class="texto">
+                    <div id="puntaje-jugador">
+                            @if (_store.Value.Mano != null)
+                            {
+                                @CalculateManoBlackJack.CalcularPuntuacion(_store.Value.Mano.Mano)    
+                            }
+                    </div>
                 </div>
+              </div>
+              <div class="positionTapete">
+                Jugador
+              </div>
             </div>
           </div>
-          <div class="positionTapete">
-            Jugador
-          </div>
-        </div>
-            
       </div>
-    
-        </div>
-    
 }
-@code{
+@code {
     private bool ValidButton()
     {
         return (_store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND);
@@ -186,7 +173,7 @@ else
 
         //escuche la mano del contrincante
         hubConnection.On<ManoJugadorVo>("GetActiveHandResult", (mano) =>
-        {   
+        {
             manoContrincante = mano;
             _dispatcher.Dispatch(new EndGetActiveHand(mano));
             CalcularGanador(mano);
@@ -210,12 +197,12 @@ else
                     _dispatcher.Dispatch(new StartGetActiveHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.AcceptedPlayerId));
                 else
                     _dispatcher.Dispatch(new StartGetActiveHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.PlayerId));
-            }                
+            }
         });
 
         //recibo una mi mano cada que pido carta
         hubConnection.On<ManoJugadorVo>("DrawCardResult", (mano) =>
-        {   
+        {
             _dispatcher.Dispatch(new EndDrawCard(mano));
 
             mensajeResultado = "Vas muy bien";
@@ -230,12 +217,12 @@ else
         //reinicio mi mano
         hubConnection.On<ManoJugadorVo>("ResetHandResult", (mano) =>
         {
-            _dispatcher.Dispatch(new EndResetHand(mano));          
+            _dispatcher.Dispatch(new EndResetHand(mano));
         });
 
         // escucho y recibo mi mano plantada
         hubConnection.On<ManoJugadorVo>("StandHandResult", (mano) =>
-        {   
+        {
             _dispatcher.Dispatch(new EndStandHand(mano));
 
             if (_store.Value.BlackjackInfo != null)
@@ -261,8 +248,8 @@ else
             {
                 if (!string.IsNullOrEmpty(_store.Value.Request.AcceptedPlayerId))
                 {
-                    playerId = _store.Value.Request.AcceptedPlayerId;                    
-                }                
+                    playerId = _store.Value.Request.AcceptedPlayerId;
+                }
             }
 
             if (!string.IsNullOrEmpty(playerId))
@@ -278,7 +265,7 @@ else
             if (_store.Value.Loader.IsChallenger)
             {
                 //si es retador seteo los datos con el id del retador
-                _dispatcher.Dispatch(new StartStandHand(_store.Value.BlackjackInfo.Id,_store.Value.Request.PlayerId, _store.Value.BlackjackInfo.IdRequest));
+                _dispatcher.Dispatch(new StartStandHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.PlayerId, _store.Value.BlackjackInfo.IdRequest));
 
             }
             else
@@ -288,7 +275,7 @@ else
                     _dispatcher.Dispatch(new StartStandHand(_store.Value.BlackjackInfo.Id, _store.Value.Request.AcceptedPlayerId, _store.Value.BlackjackInfo.IdRequest));
                 }
             }
-        }        
+        }
     }
 
     private void OnClickReinicarMano()
