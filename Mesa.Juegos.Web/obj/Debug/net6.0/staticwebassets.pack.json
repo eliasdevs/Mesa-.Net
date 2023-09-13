@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\StartBlackJackPage.css",
+      "PackagePath": "staticwebassets\\css\\StartBlackJackPage.css"
+    },
+    {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
@@ -63,10 +67,6 @@
     {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
-    },
-    {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\style.css",
-      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\favicon.ico",

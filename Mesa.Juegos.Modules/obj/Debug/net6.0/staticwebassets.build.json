@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pWayt3cHqFS5fbLbNiZVgqDYJspg0Mo0zWvzk/KtCCk=",
+  "Hash": "sDu2NdrHFbwaY0soF92UTtF8kBB14XVj7TU2T33rAps=",
   "Source": "Mesa.Juegos.Modules",
   "BasePath": "_content/Mesa.Juegos.Modules",
   "Mode": "Default",
@@ -576,6 +576,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\radzen.blazor\\4.14.4\\staticwebassets\\Radzen.Blazor.js"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Mesa.Juegos.Modules.styles.css",
+      "SourceId": "Mesa.Juegos.Modules",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/Mesa.Juegos.Modules",
+      "RelativePath": "Mesa.Juegos.Modules.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Mesa.Juegos.Modules.styles.css"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Modules.bundle.scp.css",
+      "SourceId": "Mesa.Juegos.Modules",
+      "SourceType": "Computed",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/Mesa.Juegos.Modules",
+      "RelativePath": "Mesa.Juegos.Modules.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Modules.bundle.scp.css"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\wwwroot\\background.png",

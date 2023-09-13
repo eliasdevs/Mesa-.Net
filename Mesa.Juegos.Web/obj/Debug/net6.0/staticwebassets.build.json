@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "h4/SSJ8FGDNF+x0dKAkgdf9Ou+y1N6yhtdlcsrWpCqA=",
+  "Hash": "Trit+ZnloJaXAleWPbuKQOF99UC0+frkpv2RQBRt+xw=",
   "Source": "Mesa.Juegos.Web",
   "BasePath": "/",
   "Mode": "Root",
@@ -595,6 +595,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\elias\\.nuget\\packages\\radzen.blazor\\4.14.4\\staticwebassets\\Radzen.Blazor.js"
+    },
+    {
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Modules.bundle.scp.css",
+      "SourceId": "Mesa.Juegos.Modules",
+      "SourceType": "Project",
+      "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/Mesa.Juegos.Modules",
+      "RelativePath": "Mesa.Juegos.Modules.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Modules.bundle.scp.css"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\wwwroot\\background.png",
@@ -9199,12 +9216,12 @@
       "OriginalItemSpec": "wwwroot\\css\\open-iconic\\README.md"
     },
     {
-      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\style.css",
+      "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\StartBlackJackPage.css",
       "SourceId": "Mesa.Juegos.Web",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\",
       "BasePath": "/",
-      "RelativePath": "css/style.css",
+      "RelativePath": "css/StartBlackJackPage.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -9213,7 +9230,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\style.css"
+      "OriginalItemSpec": "wwwroot\\css\\StartBlackJackPage.css"
     },
     {
       "Identity": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\favicon.ico",

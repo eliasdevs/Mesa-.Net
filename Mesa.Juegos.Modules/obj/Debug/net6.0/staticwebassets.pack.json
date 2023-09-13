@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Mesa.Juegos.Modules.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Mesa.Juegos.Modules.bundle.scp.css"
+    },
+    {
       "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\wwwroot\\background.png",
       "PackagePath": "staticwebassets\\background.png"
     },

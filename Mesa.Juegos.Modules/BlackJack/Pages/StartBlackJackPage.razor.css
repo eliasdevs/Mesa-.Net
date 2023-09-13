@@ -1,8 +1,9 @@
 #tapete {
-    width: 100%;
-    height: 600px;
+    position: relative;
+    width: 1000px;
+    height: 650px;
+    background-image: url('images/tapeteCartas.jpg');
     margin: auto;
-    position: relative;    
     background-repeat: no-repeat;
     background-size: cover;
     padding-top: 20px;
@@ -17,23 +18,18 @@
     grid-gap: 0w;
     margin: 20px;
   }
-  #barajas-pendientes{
+#barajas-pendientes{
     float: right;
   }
-  #cartas-jugador {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 180px;
+#cartas-jugador {    
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 180px;
 }
-#boton-repartir{   
-    position: relative;
-    margin-left: 70%;
-}
-
-#boton-pedir-carta{
-    position: absolute;
-    margin-left: -60%;
+.game-backjack {    
+    padding-top: 40px;
+    padding-bottom: 80px;
 }
 .contentPuntaje{
     width: 202px;
@@ -41,7 +37,7 @@
     font-family: 'Playfair Display', serif;
     font-size: 2em; /* tamaño de la letra */
     font-weight: bold; /* grosor de la letra */
-    margin-top: -18%;;
+    margin-top: -18%;
 }
 .circulo{
   width: 50px;
