@@ -233,7 +233,7 @@
       "mscorlib.dll": "sha256-C3gpWQMELcHYfrHU\/1agQUvWTtSNs9Ul2suMxcKFnIc=",
       "netstandard.dll": "sha256-CgGkoZQx73t3qchcsu85kgBcgrjNEOiudArOwKNb18k=",
       "System.Private.CoreLib.dll": "sha256-6nUSjiT7okMlkN897OnDypwppYuK7JxTahOClXkAuwE=",
-      "Mesa.Juegos.Modules.dll": "sha256-stho+e++UtGUU5qQg3D7xEo5cqH7hKj3aBeL2H+Ibtw=",
+      "Mesa.Juegos.Modules.dll": "sha256-1jZWQOQ\/igd0eUKOzJiegwuWH0DAqdOwDaaPssHSyto=",
       "Mesa.Juegos.State.Actions.dll": "sha256-s8CjG2X\/HjS+IePGRC+u8eSYuZN7Nja1WyEYqo6gF5Q=",
       "Mesa.Juegos.State.dll": "sha256-uwR53AuoWshQRo4qw+sHioZef3cHJqSyzNfvo3nAm8M=",
       "Mesa.TimeReal.Services.dll": "sha256-Wo6uTvhzhOjzBUzKfTtzeFD6CuyLLE5hterVOBeJ0og=",
@@ -244,7 +244,7 @@
     "lazyAssembly": null,
     "libraryInitializers": null,
     "pdb": {
-      "Mesa.Juegos.Modules.pdb": "sha256-sQ0m8f1XxFdSNDKVlisdTXsWa8q74OgT3JGDdzGP\/BQ=",
+      "Mesa.Juegos.Modules.pdb": "sha256-81pC+G+0JeiZR9tRUSqKS3yYpEro5YVoMXysq83txGc=",
       "Mesa.Juegos.State.pdb": "sha256-byhj6etXGdZ+FP5pHaERrUyvmGeSGxl\/aImIryb\/DGM=",
       "Mesa.Juegos.State.Actions.pdb": "sha256-rNnDlkyIk0z4iMgPyL6o9aUoC1hRvBYKK8G27EE6o6g=",
       "Mesa.TimeReal.Services.pdb": "sha256-PYDHIGiBROOeZn7VCkdIJdEHWwwmAMqc1vy0WVmyMZc=",

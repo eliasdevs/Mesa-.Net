@@ -71,7 +71,14 @@ else
             </div>
             
             <div id="cartas-jugador" class="grid">               
-                @(!_store.Value.Loader.IsDrawCard)? <ShowHandPlayer ManoJugador="_store.Value.Mano"/> : <Loader Texto="Cargando Cartas..."/>;                
+                @if (!_store.Value.Loader.IsDrawCard)
+                {
+                   <ShowHandPlayer ManoJugador="_store.Value.Mano"/>
+                }
+                else
+                {
+                   <Loader Texto="Cargando Cartas..."/>    
+                }
             </div>
 
             <div class="contentPuntaje">
