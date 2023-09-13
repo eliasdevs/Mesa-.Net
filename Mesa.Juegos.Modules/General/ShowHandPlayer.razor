@@ -1,0 +1,15 @@
+﻿@using Mesa_SV.ExtensionsHelpers;
+@using Mesa_SV.VoDeJuegos;
+<div>
+    @if (ManoJugador != null)
+    {
+        @foreach (var carta in ManoJugador.Mano)
+        {
+            <card-t rank=@carta.OriginalValue suit="@carta.TypeOfCardId.GetValueInt()" class="card"></card-t>
+        }
+    }
+</div>
+@code {
+    [Parameter]
+    public ManoJugadorVo? ManoJugador { get; set; }
+}

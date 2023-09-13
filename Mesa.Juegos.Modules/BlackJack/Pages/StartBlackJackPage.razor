@@ -31,10 +31,7 @@ else
             <div id="cartas-crupier" class="grid">
                 @if (manoContrincante != null && _store.Value.Mano != null && _store.Value.Mano.Estado == StatusHand.STAND_HAND)
                 {
-                    @foreach (var carta in manoContrincante.Mano)
-                    {
-                        <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
-                    }
+                   <ShowHandPlayer ManoJugador="manoContrincante"/>
                 }
             </div>
             <br>
@@ -69,14 +66,11 @@ else
             </div>
             
             <div id="cartas-jugador" class="grid">
-                @if (!_store.Value.Loader.IsDrawCard && _store.Value.Mano != null)
+                @if (!_store.Value.Loader.IsDrawCard)
                 {
-                    @foreach (var carta in _store.Value.Mano.Mano)
-                    {
-                        <card-t rank=@carta.OriginalValue suit="@(Convert.ToInt32(carta.TypeOfCardId))" class="card"></card-t>
-                    }
+                  <ShowHandPlayer ManoJugador="_store.Value.Mano"/>
                 }
-                else if (_store.Value.Loader.IsDrawCard)
+                else
                 {
                     <Loader Texto="Cargando Cartas..."/>
                 }
