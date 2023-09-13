@@ -1,0 +1,27 @@
+.card[b-x0fhikffg8] {
+height: 180px;
+width: 120px;
+position: absolute;
+z-index: 1;
+transform-origin: bottom left;
+}
+
+.card:nth-last-child(1)[b-x0fhikffg8] {
+transform: rotate(-0deg) translateX(0px) translateY(0px);
+}
+
+.card:nth-last-child(2)[b-x0fhikffg8] {
+transform: rotate(-5deg) translateX(-5px) translateY(5px);
+}
+.card:nth-last-child(3)[b-x0fhikffg8] {
+transform: rotate(-10deg) translateX(-10px) translateY(10px);
+}
+.card:nth-last-child(4)[b-x0fhikffg8] {
+transform: rotate(-15deg) translateX(-15px) translateY(15px);
+}
+.card:nth-last-child(5)[b-x0fhikffg8] {
+transform: rotate(-20deg) translateX(-20px) translateY(20px);
+}
+.card:nth-last-child(6)[b-x0fhikffg8] {
+transform: rotate(-25deg) translateX(-25px) translateY(25px);
+}

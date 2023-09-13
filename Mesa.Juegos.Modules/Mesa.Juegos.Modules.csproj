@@ -5,19 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="BlackJack\Pages\StartBlackJackPage.razor.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Include="BlackJack\Pages\StartBlackJackPage.razor.css">
-      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-    </Content>
-  </ItemGroup>
-
-
+	
   <ItemGroup>
     <SupportedPlatform Include="browser" />
   </ItemGroup>
