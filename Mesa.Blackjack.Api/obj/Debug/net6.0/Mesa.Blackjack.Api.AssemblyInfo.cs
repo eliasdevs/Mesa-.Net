@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mesa.BlackJack.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c85ffa22f9bc9d597fd768f471902e395e6bdd5a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f850e65255fc6fb0782a732760de54440b2ae346")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mesa.BlackJack.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mesa.BlackJack.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

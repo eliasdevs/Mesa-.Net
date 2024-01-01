@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Mesa.BlackJack.Data.Migrations
 {
     [DbContext(typeof(BlackJackContext))]
-    [Migration("20230824020256_Init")]
+    [Migration("20240101232035_Init")]
     partial class Init
     {
         /// <inheritdoc />
@@ -25,7 +25,7 @@ namespace Mesa.BlackJack.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Mesa.BlackJack.Model.CardBlackJack", b =>
+            modelBuilder.Entity("Mesa.BlackJack.CardBlackJack", b =>
                 {
                     b.Property<string>("CardId")
                         .HasColumnType("nvarchar(450)");
@@ -66,7 +66,7 @@ namespace Mesa.BlackJack.Data.Migrations
                     b.ToTable("MazoBlackJack", (string)null);
                 });
 
-            modelBuilder.Entity("Mesa.BlackJack.Model.HistoryBlackJack", b =>
+            modelBuilder.Entity("Mesa.BlackJack.HistoryBlackJack", b =>
                 {
                     b.Property<string>("Id")
                         .HasMaxLength(50)
@@ -76,17 +76,17 @@ namespace Mesa.BlackJack.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("IdJugador")
+                    b.Property<int>("ContadorMazo")
+                        .HasMaxLength(10)
+                        .HasColumnType("int");
+
+                    b.Property<string>("IdPlayer")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Logger")
                         .IsRequired()
                         .HasMaxLength(500)
                         .HasColumnType("nvarchar(500)");
-
-                    b.Property<int>("contadorMazo")
-                        .HasMaxLength(10)
-                        .HasColumnType("int");
 
                     b.HasKey("Id", "BlackJackId");
 
@@ -133,17 +133,17 @@ namespace Mesa.BlackJack.Data.Migrations
                     b.Property<string>("AcceptedPlayerId")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTimeOffset>("FechaCreacion")
+                    b.Property<DateTimeOffset>("CreacionDate")
                         .HasColumnType("datetimeoffset");
+
+                    b.Property<int>("GameMode")
+                        .HasColumnType("int");
 
                     b.Property<string>("PlayerId")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
-                        .HasColumnType("int");
-
-                    b.Property<int>("TipoJuego")
                         .HasColumnType("int");
 
                     b.HasKey("Id");

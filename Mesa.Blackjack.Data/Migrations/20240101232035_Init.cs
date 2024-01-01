@@ -17,8 +17,8 @@ namespace Mesa.BlackJack.Data.Migrations
                 {
                     BlackJackId = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
                     Id = table.Column<string>(type: "nvarchar(50)", maxLength: 50, nullable: false),
-                    IdJugador = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    contadorMazo = table.Column<int>(type: "int", maxLength: 10, nullable: false),
+                    IdPlayer = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ContadorMazo = table.Column<int>(type: "int", maxLength: 10, nullable: false),
                     Logger = table.Column<string>(type: "nvarchar(500)", maxLength: 500, nullable: false)
                 },
                 constraints: table =>
@@ -47,8 +47,8 @@ namespace Mesa.BlackJack.Data.Migrations
                     PlayerId = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     AcceptedPlayerId = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Status = table.Column<int>(type: "int", nullable: false),
-                    TipoJuego = table.Column<int>(type: "int", nullable: false),
-                    FechaCreacion = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false)
+                    GameMode = table.Column<int>(type: "int", nullable: false),
+                    CreacionDate = table.Column<DateTimeOffset>(type: "datetimeoffset", nullable: false)
                 },
                 constraints: table =>
                 {
