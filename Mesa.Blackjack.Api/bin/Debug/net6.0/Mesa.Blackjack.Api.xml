@@ -37,7 +37,7 @@
             <param name="requestId"></param>
             <returns></returns>
         </member>
-        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.CreateRequest(System.String,System.String,Mesa_SV.TypeGame)">
+        <member name="M:Mesa.Blackjack.Api.Controllers.BlackJackController.CreateRequest(System.String,System.String,Mesa_SV.GameMode)">
             <summary>
             crea el una solicitud de blackJack
             recibe el id del usuario que hace la solicitud

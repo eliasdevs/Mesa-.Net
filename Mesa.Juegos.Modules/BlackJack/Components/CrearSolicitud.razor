@@ -14,14 +14,14 @@
 
         <br />
 
-        <InputSelect @bind-Value="@ModelCreate.TypeGame">
+        <InputSelect @bind-Value="@ModelCreate.GameMode">
             <option value="" disabled selected>Selecciona Tipo de Juego</option>
-            @foreach (var value in Enum.GetValues(typeof(TypeGame)))
+            @foreach (var value in Enum.GetValues(typeof(GameMode)))
             {
                                 <option value="@value">@value</option>
             }
         </InputSelect>    
-        <ValidationMessage For="()=> ModelCreate.TypeGame"></ValidationMessage>
+        <ValidationMessage For="()=> ModelCreate.GameMode"></ValidationMessage>
 
         <button type="submit" >Crear Solicitud</button>
     </EditForm>
@@ -70,7 +70,7 @@ else
     /// </summary>
     private void OnValidSubmit()
     {
-        _dispatcher.Dispatch(new StartCreateRequest(ModelCreate.PlayerId, ModelCreate.TypeGame));
+        _dispatcher.Dispatch(new StartCreateRequest(ModelCreate.PlayerId, ModelCreate.GameMode));
     }
 
 }

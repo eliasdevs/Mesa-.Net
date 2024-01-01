@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xNI0fOlsGob0hxlVZpstCbivq/1deRdurGMR89WJWXKQj3p+cbQnnHOAc5n8zWldxP/1hHmyl21DZZb//van8A==",
+  "dgSpecHash": "4vhJWqo4jzifZ94xbeo37LFiBWsOrZBAOFrAdm7TcXYIDHxSwYsxokVHMPe9OHQe6BKKrPJ1kxG58R+jrRuj4A==",
   "success": true,
-  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.State\\Mesa.Juegos.State.csproj",
+  "projectFilePath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.State\\Mesa.Juegos.State.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\fluxor\\5.9.0\\fluxor.5.9.0.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\fluxor.blazor.web\\5.9.0\\fluxor.blazor.web.5.9.0.nupkg.sha512",
@@ -103,7 +103,7 @@
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://sitio2.bitworks.com.sv/BitworksNuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+      "message": "Está ejecutando la operación \"restore\" con un origen \"HTTP\", \"http://sitio2.bitworks.com.sv/BitworksNuget/nuget\". El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a un origen \"HTTPS\"."
     }
   ]
 }

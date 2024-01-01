@@ -14,7 +14,7 @@ namespace Mesa.Juegos.Modules.BlackJack.Models
         /// tipo de juego
         /// </summary>
         [Required(ErrorMessage = "Por Favor Seleccione el tipo de Juego")]        
-        public TypeGame? TypeGame { get; set; }
+        public GameMode? GameMode { get; set; }
 
         /// <summary>
         /// este es el Id del jugador

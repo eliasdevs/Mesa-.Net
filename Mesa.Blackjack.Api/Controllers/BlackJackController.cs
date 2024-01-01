@@ -84,13 +84,13 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<BlackjackStartOutput>> StartBlackJack(string requestId)
+        public async Task<ActionResult<BlackjackOutput>> StartBlackJack(string requestId)
         {
             Mesa.Blackjack.Commands.StartGame cmd = new Commands.StartGame(requestId);
 
             var response = await _mediator.Send(cmd);
 
-            return _mapper.Map<BlackjackStartOutput>(response);
+            return _mapper.Map<BlackjackOutput>(response);
         }
 
         /// <summary>
@@ -128,7 +128,7 @@ namespace Mesa.Blackjack.Api.Controllers
         [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status403Forbidden, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
         [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(Mesa_SV.Filter.ApiExceptionResult))]
-        public async Task<ActionResult<GameRequestBackJackOutput>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, [FromQuery] TypeGame tipoJuego)
+        public async Task<ActionResult<GameRequestBackJackOutput>> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, [FromQuery] GameMode tipoJuego)
         {
             //proceso para crear una solicitud
             CreateRequest cmd = new CreateRequest(playerId, contextId, tipoJuego);

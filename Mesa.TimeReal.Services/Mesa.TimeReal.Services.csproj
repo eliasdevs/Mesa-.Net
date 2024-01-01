@@ -11,6 +11,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <ProjectReference Include="..\MesaSV\MesaSV.csproj" />
+	  <ProjectReference Include="..\MesaSV\Mesa_SV.csproj" />
 	</ItemGroup>
 </Project>

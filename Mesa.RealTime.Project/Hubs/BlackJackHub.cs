@@ -31,7 +31,7 @@ namespace Mesa.RealTime.Project.Hubs
         /// <param name="playerId"></param>
         /// <param name="TipoJuego"></param>
         /// <returns></returns>
-        public async Task CreateRequest(string playerId, TypeGame tipoJuego)
+        public async Task CreateRequest(string playerId, GameMode tipoJuego)
         {
             //crea la solicitud
             await _blackJackSdk.CreateRequest(playerId, Context.ConnectionId, tipoJuego);
@@ -79,7 +79,7 @@ namespace Mesa.RealTime.Project.Hubs
         {
 
             //crea el blackJack
-            BlackjackStartOutput blackJackOutput = await _blackJackSdk.StartBlackJack(requestId);
+            BlackjackOutput blackJackOutput = await _blackJackSdk.StartBlackJack(requestId);
 
             List<string> targetClientIds = await  GetUserContextId(requestId);
 

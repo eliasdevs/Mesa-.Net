@@ -10,3 +10,15 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.d
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\refint\Mesa.Users.Data.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\ref\Mesa.Users.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\bin\Debug\net6.0\Mesa.Users.Data.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\bin\Debug\net6.0\Mesa.Users.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\bin\Debug\net6.0\Mesa.Users.Data.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.AssemblyInfoInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.AssemblyInfo.cs
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.csproj.CoreCompileInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\refint\Mesa.Users.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\Mesa.Users.Data.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Data\obj\Debug\net6.0\ref\Mesa.Users.Data.dll

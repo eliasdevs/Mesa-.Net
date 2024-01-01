@@ -58,3 +58,19 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\refint\Mesa.BlackJack.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\ref\Mesa.BlackJack.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa.BlackJack.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa.BlackJack.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa.BlackJack.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.csproj.AssemblyReference.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.AssemblyInfoInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.AssemblyInfo.cs
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.csproj.CoreCompileInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.csproj.CopyComplete
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\refint\Mesa.BlackJack.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\Mesa.BlackJack.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\obj\Debug\net6.0\ref\Mesa.BlackJack.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa_SV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack\bin\Debug\net6.0\Mesa_SV.pdb

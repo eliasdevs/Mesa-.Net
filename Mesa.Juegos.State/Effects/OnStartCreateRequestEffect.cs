@@ -26,7 +26,7 @@ namespace Mesa.Juegos.State.Effects
             HubConnection hubConnection = _hubConnectionService.GetHubConnection();
 
             // Envía el la data al servidor
-            await hubConnection.SendAsync("CreateRequest", action.PlayerId, action.TipoJuego ?? TypeGame.CRUPIER_FRIENDLY);
+            await hubConnection.SendAsync("CreateRequest", action.PlayerId, action.TipoJuego ?? GameMode.CRUPIER_FRIENDLY);
 
             //consulta la lista completa y actualiza a todo mundo
             await hubConnection.SendAsync("GetAllRequestGame");

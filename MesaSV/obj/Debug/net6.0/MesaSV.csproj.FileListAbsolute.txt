@@ -10,3 +10,16 @@ D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.dll
 D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\refint\MesaSV.dll
 D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.pdb
 D:\local\c# ASP.NET\Mesa-.Net\MesaSV\obj\Debug\net6.0\ref\MesaSV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\bin\Debug\net6.0\MesaSV.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\bin\Debug\net6.0\MesaSV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\bin\Debug\net6.0\MesaSV.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.csproj.AssemblyReference.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.AssemblyInfoInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.AssemblyInfo.cs
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.csproj.CoreCompileInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\refint\MesaSV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\MesaSV.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\MesaSV\obj\Debug\net6.0\ref\MesaSV.dll

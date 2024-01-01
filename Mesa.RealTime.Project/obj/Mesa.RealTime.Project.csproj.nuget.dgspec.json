@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj": {}
+    "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj": {}
   },
   "projects": {
-    "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj": {
+    "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj",
+        "projectUniqueName": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj",
         "projectName": "Mesa.RealTime.Project",
-        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj",
+        "projectPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.RealTime.Project\\Mesa.RealTime.Project.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.RealTime.Project\\obj\\",
+        "outputPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.RealTime.Project\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "http://sitio2.bitworks.com.sv/BitworksNuget/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -34,8 +29,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\MesaSV.csproj": {
-                "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\MesaSV.csproj"
+              "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\MesaSV\\Mesa_SV.csproj": {
+                "projectPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\MesaSV\\Mesa_SV.csproj"
               }
             }
           }
@@ -78,25 +73,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\MesaSV.csproj": {
+    "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\MesaSV\\Mesa_SV.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\MesaSV.csproj",
-        "projectName": "MesaSV",
-        "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\MesaSV.csproj",
+        "projectUniqueName": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\MesaSV\\Mesa_SV.csproj",
+        "projectName": "Mesa_SV",
+        "projectPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\MesaSV\\Mesa_SV.csproj",
         "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-        "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\MesaSV\\obj\\",
+        "outputPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\MesaSV\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -104,7 +95,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "http://sitio2.bitworks.com.sv/BitworksNuget/nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
@@ -149,7 +139,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

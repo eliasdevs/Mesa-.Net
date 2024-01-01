@@ -29,7 +29,7 @@ namespace Mesa.Blackjack.Data
 
         public async Task<List<GameRequestBackJack>> GetGameRequestsBackJackAsync()
         {
-            return await _context.GameRequests.Where(x=> x.Status == GameRequestStatus.Pending).OrderBy(x => x.FechaCreacion).ToListAsync();
+            return await _context.GameRequests.Where(x=> x.Status == GameRequestStatus.Pending).OrderBy(x => x.CreacionDate).ToListAsync();
         }
 
         public async Task SaveChangesAsync()

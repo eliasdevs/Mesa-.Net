@@ -15,7 +15,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// </summary>
     /// <param name="PlayerId"></param>
     /// <param name="TipoJuego"></param>
-    public record StartCreateRequest(string PlayerId, TypeGame? TipoJuego);
+    public record StartCreateRequest(string PlayerId, GameMode? TipoJuego);
 
     /// <summary>
     /// es cuando se ha creado la Request
@@ -46,7 +46,7 @@ namespace Mesa.Juegos.State.Actions.Blackjacks
     /// cuando finaliza el proceso de crear BlackJack
     /// </summary>
     /// <param name="BlackJackInfo"></param>
-    public record EndCreateBlackJack(BlackjackStartOutput BlackJackInfo);
+    public record EndCreateBlackJack(BlackjackOutput BlackJackInfo);
 
     /// <summary>
     /// consulta todas las solicitudes con estado pending

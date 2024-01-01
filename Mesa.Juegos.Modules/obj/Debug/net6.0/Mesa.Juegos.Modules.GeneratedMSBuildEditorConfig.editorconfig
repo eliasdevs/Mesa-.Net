@@ -10,37 +10,39 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows,browser
 build_property.RootNamespace = Mesa.Juegos.Modules
 build_property.RootNamespace = Mesa.Juegos.Modules
-build_property.ProjectDir = D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\
+build_property.ProjectDir = C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules
+build_property.MSBuildProjectDirectory = C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules
 build_property._RazorSourceGeneratorDebug = 
 
-[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/BlackJack/Components/CrearSolicitud.razor]
+[C:/Users/elias/Documents/GitHub/Mesa-.Net/Mesa.Juegos.Modules/BlackJack/Components/CrearSolicitud.razor]
 build_metadata.AdditionalFiles.TargetPath = QmxhY2tKYWNrXENvbXBvbmVudHNcQ3JlYXJTb2xpY2l0dWQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/BlackJack/Pages/Request-list.razor]
+[C:/Users/elias/Documents/GitHub/Mesa-.Net/Mesa.Juegos.Modules/BlackJack/Pages/Request-list.razor]
 build_metadata.AdditionalFiles.TargetPath = QmxhY2tKYWNrXFBhZ2VzXFJlcXVlc3QtbGlzdC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/General/Loader.razor]
+[C:/Users/elias/Documents/GitHub/Mesa-.Net/Mesa.Juegos.Modules/General/Loader.razor]
 build_metadata.AdditionalFiles.TargetPath = R2VuZXJhbFxMb2FkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/General/PlayerTurn.razor]
+[C:/Users/elias/Documents/GitHub/Mesa-.Net/Mesa.Juegos.Modules/General/PlayerTurn.razor]
 build_metadata.AdditionalFiles.TargetPath = R2VuZXJhbFxQbGF5ZXJUdXJuLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/_Imports.razor]
+[C:/Users/elias/Documents/GitHub/Mesa-.Net/Mesa.Juegos.Modules/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/BlackJack/Pages/StartBlackJackPage.razor]
+[C:/Users/elias/Documents/GitHub/Mesa-.Net/Mesa.Juegos.Modules/BlackJack/Pages/StartBlackJackPage.razor]
 build_metadata.AdditionalFiles.TargetPath = QmxhY2tKYWNrXFBhZ2VzXFN0YXJ0QmxhY2tKYWNrUGFnZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-x19fn42yig
 
-[D:/local/c\# ASP.NET/Mesa-.Net/Mesa.Juegos.Modules/General/ShowHandPlayer.razor]
+[C:/Users/elias/Documents/GitHub/Mesa-.Net/Mesa.Juegos.Modules/General/ShowHandPlayer.razor]
 build_metadata.AdditionalFiles.TargetPath = R2VuZXJhbFxTaG93SGFuZFBsYXllci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-x0fhikffg8

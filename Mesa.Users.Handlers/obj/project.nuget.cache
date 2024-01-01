@@ -1,15 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "/go1YhLJM3AFQGplCTNaPMwJ7niKx488K5Fa6UbXpkK78n1wa+2/23/iZLXpAzoNvq6H17g+tZTprb6iYNGs1Q==",
+  "dgSpecHash": "6ObNbDTM4qfIrvB2GhdE2ieq1M/1o0r//v/znkBGqjwlwJNLVEluJdTjCer0/klO0E0NVA6wbZPdG2h/wKINfg==",
   "success": true,
-  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Users.Handlers\\Mesa.Users.Handlers.csproj",
+  "projectFilePath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Users.Handlers\\Mesa.Users.Handlers.csproj",
   "expectedPackageFiles": [],
   "logs": [
     {
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://sitio2.bitworks.com.sv/BitworksNuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+      "message": "Está ejecutando la operación \"restore\" con un origen \"HTTP\", \"http://sitio2.bitworks.com.sv/BitworksNuget/nuget\". El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a un origen \"HTTPS\"."
     }
   ]
 }

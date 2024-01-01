@@ -84,7 +84,7 @@ else
         });
 
         // escucho la creacion del blackJack
-        hubConnection.On<BlackjackStartOutput>("StartBlackJackResult", (blackJack) =>
+        hubConnection.On<BlackjackOutput>("StartBlackJackResult", (blackJack) =>
         {
             //mando a crear el blackJack
             _dispatcher.Dispatch(new EndCreateBlackJack(blackJack));

@@ -30,7 +30,7 @@ namespace Mesa.Blackjack.Handlers.Commands
             //id del jugador que hace la solicitud
             solicitud.PlayerId = request.UserId;
 
-            solicitud.TipoJuego = request.tipoJuego; 
+            solicitud.GameMode = request.GameMode; 
 
             //agrega la info del retador
             solicitud.PlayerInfo = new List<InfoJugador>()

@@ -994,7 +994,7 @@
       },
       "Mesa.Juegos.State.Actions/1.0.0": {
         "dependencies": {
-          "MesaSV": "1.0.0"
+          "Mesa_SV": "1.0.0"
         },
         "runtime": {
           "Mesa.Juegos.State.Actions.dll": {}
@@ -1002,20 +1002,20 @@
       },
       "Mesa.TimeReal.Services/1.0.0": {
         "dependencies": {
-          "MesaSV": "1.0.0",
+          "Mesa_SV": "1.0.0",
           "Microsoft.AspNetCore.SignalR.Client": "7.0.9"
         },
         "runtime": {
           "Mesa.TimeReal.Services.dll": {}
         }
       },
-      "MesaSV/1.0.0": {
+      "Mesa_SV/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Refit": "7.0.0"
         },
         "runtime": {
-          "MesaSV.dll": {}
+          "Mesa_SV.dll": {}
         }
       }
     }
@@ -1687,7 +1687,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "MesaSV/1.0.0": {
+    "Mesa_SV/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -31,3 +31,37 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.TimeReal
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\scopedcss\projectbundle\Mesa.Juegos.Modules.bundle.scp.css
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\scopedcss\BlackJack\Pages\StartBlackJackPage.razor.rz.scp.css
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\scopedcss\General\ShowHandPlayer.razor.rz.scp.css
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.csproj.AssemblyReference.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.AssemblyInfoInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.AssemblyInfo.cs
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.csproj.CoreCompileInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\refint\Mesa.Juegos.Modules.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.Modules.staticwebassets.runtime.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.Modules.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.Modules.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.Modules.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.State.Actions.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.State.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.TimeReal.Services.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.State.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.Juegos.State.Actions.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa.TimeReal.Services.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\staticwebassets\msbuild.Mesa.Juegos.Modules.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\staticwebassets\msbuild.build.Mesa.Juegos.Modules.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Mesa.Juegos.Modules.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Mesa.Juegos.Modules.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\scopedcss\BlackJack\Pages\StartBlackJackPage.razor.rz.scp.css
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\scopedcss\General\ShowHandPlayer.razor.rz.scp.css
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\scopedcss\bundle\Mesa.Juegos.Modules.styles.css
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\scopedcss\projectbundle\Mesa.Juegos.Modules.bundle.scp.css
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\Mesa.Juegos.Modules.csproj.CopyComplete
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\obj\Debug\net6.0\ref\Mesa.Juegos.Modules.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa_SV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.Modules\bin\Debug\net6.0\Mesa_SV.pdb

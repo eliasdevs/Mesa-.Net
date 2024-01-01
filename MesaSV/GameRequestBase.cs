@@ -10,13 +10,13 @@
             Id = Guid.NewGuid().ToString();
         }
 
-        public GameRequestBase(string playerId, TypeGame tipoJuego, string? acceptedPlayerId, GameRequestStatus status)
+        public GameRequestBase(string playerId, GameMode gameMode, string? acceptedPlayerId, GameRequestStatus status)
         {
             PlayerId = playerId;
             AcceptedPlayerId = acceptedPlayerId;
             Status = status;
-            TipoJuego = tipoJuego;
-            FechaCreacion = DateTimeOffset.UtcNow;
+            GameMode = gameMode;
+            CreacionDate = DateTimeOffset.UtcNow;
         }
 
         /// <summary>
@@ -25,14 +25,12 @@
         public string Id { get; private set; }
 
         /// <summary>
-        /// el id del usuario que hace la solicitud 
-        /// se pone solamente el userid xq el OV se pondra en backjack
+        /// el id del usuario que hace la solicitud         
         /// </summary>
         public string PlayerId { get; set; }
 
         /// <summary>
-        /// el id del user que acepta la solicitud
-        /// se pone solamente el userid xq el OV se pondra en backjack        
+        /// el id del user que acepta la solicitud         
         /// </summary>
         public string? AcceptedPlayerId { get; set; }
 
@@ -42,13 +40,13 @@
         public GameRequestStatus Status { get; set; }
 
         /// <summary>
-        /// El tipo de juego a jugar
+        /// El modo de juego a jugar
         /// </summary>
-        public TypeGame TipoJuego { get; set; }
+        public GameMode GameMode { get; set; }
 
         /// <summary>
         /// es la fecha de creacion de la solicitud
         /// </summary>
-        public DateTimeOffset FechaCreacion { get; set; }
+        public DateTimeOffset CreacionDate { get; set; }
     }
 }

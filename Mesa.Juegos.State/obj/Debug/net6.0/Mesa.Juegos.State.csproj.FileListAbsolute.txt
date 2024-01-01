@@ -17,3 +17,23 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.Sta
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\ref\Mesa.Juegos.State.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.Actions.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.Actions.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.csproj.AssemblyReference.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.AssemblyInfoInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.AssemblyInfo.cs
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.csproj.CoreCompileInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.csproj.CopyComplete
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\refint\Mesa.Juegos.State.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\ref\Mesa.Juegos.State.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa_SV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa_SV.pdb

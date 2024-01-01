@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PidvF9aaUsoKUWJYXasTr4dmuhpa9/DVJ2A8PZtLyzHfFvXsY1Mi4Dfnd9jMb6AGDlhIr+BmwyOY5edhInvKXg==",
+  "dgSpecHash": "rm/O+W6QNXqX+nmq62v39kc33z9kbuVQHs4cvOmWmvoiTgjX9Km0t1h9lwxtpPmpadSkMtcKw0mL88K5huxBQg==",
   "success": true,
-  "projectFilePath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.BlackJack.Api.csproj",
+  "projectFilePath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Blackjack.Api\\Mesa.BlackJack.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\elias\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\elias\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
@@ -119,7 +119,7 @@
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://sitio2.bitworks.com.sv/BitworksNuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+      "message": "Está ejecutando la operación \"restore\" con un origen \"HTTP\", \"http://sitio2.bitworks.com.sv/BitworksNuget/nuget\". El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a un origen \"HTTPS\"."
     }
   ]
 }

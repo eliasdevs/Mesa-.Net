@@ -26,7 +26,7 @@ namespace Mesa_SV.BlackJack
         /// <param name="requestId">el id de la solicitud</param>
         /// <returns></returns>
         [Post(URLBASE + "startGame/{requestId}")]
-        Task<BlackjackStartOutput> StartBlackJack(string requestId);
+        Task<BlackjackOutput> StartBlackJack(string requestId);
 
         /// <summary>
         /// permite crear una solicitud de juego
@@ -36,7 +36,7 @@ namespace Mesa_SV.BlackJack
         /// <param name="tipoJuego"></param>
         /// <returns></returns>
         [Post(URLBASE + "users/{playerId}/request")]
-        Task<GameRequestBackJackOutput> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, [FromQuery] TypeGame tipoJuego);
+        Task<GameRequestBackJackOutput> CreateRequest([FromRoute] string playerId, [FromQuery] string contextId, [FromQuery] GameMode tipoJuego);
 
         /// <summary>
         /// permite a un jugador aceptar la request

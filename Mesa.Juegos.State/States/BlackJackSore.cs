@@ -19,7 +19,7 @@ namespace Mesa.Juegos.State.States
     /// <param name="BlackJackRequests">Esta Representa todas Las solicitudes que existen, se debe actualizar cada que se creen, cierren o finalicen</param>
     public record BlackJackSore(ManoJugadorVo? Mano, 
         GameRequestBackJackOutput? Request,
-        BlackjackStartOutput? BlackjackInfo,
+        BlackjackOutput? BlackjackInfo,
         BlackJackLoaders Loader,
         ImmutableList<GameRequestBackJackOutput> BlackJackRequests
         );

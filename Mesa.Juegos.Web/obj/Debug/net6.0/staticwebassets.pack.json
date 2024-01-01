@@ -1,103 +1,103 @@
 {
   "Files": [
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\bin\\Debug\\net6.0\\wwwroot\\_framework\\blazor.webassembly.js",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\build-gz\\U5E0jlfJ.gz",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\compressed\\dc85sry5n6.gz",
       "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Mesa.Juegos.Web.styles.css",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\obj\\Debug\\net6.0\\scopedcss\\bundle\\Mesa.Juegos.Web.styles.css",
       "PackagePath": "staticwebassets\\Mesa.Juegos.Web.styles.css"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\appsettings.json",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\appsettings.json",
       "PackagePath": "staticwebassets\\appsettings.json"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\StartBlackJackPage.css",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\StartBlackJackPage.css",
       "PackagePath": "staticwebassets\\css\\StartBlackJackPage.css"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\app.css",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\app.css",
       "PackagePath": "staticwebassets\\css\\app.css"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
       "PackagePath": "staticwebassets\\css\\open-iconic"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\README.md",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\README.md",
       "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
       "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\icon-192.png",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\icon-192.png",
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\images\\tapeteCartas.jpg",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\images\\tapeteCartas.jpg",
       "PackagePath": "staticwebassets\\images\\tapeteCartas.jpg"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\index.html",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\cardmjs\\elements.cardmeister.full.js",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\cardmjs\\elements.cardmeister.full.js",
       "PackagePath": "staticwebassets\\js\\cardmjs\\elements.cardmeister.full.js"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\cardmjs\\elements.cardmeister.min.js",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\cardmjs\\elements.cardmeister.min.js",
       "PackagePath": "staticwebassets\\js\\cardmjs\\elements.cardmeister.min.js"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\script.js",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\js\\script.js",
       "PackagePath": "staticwebassets\\js\\script.js"
     },
     {
-      "Id": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\sample-data\\weather.json",
+      "Id": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Web\\wwwroot\\sample-data\\weather.json",
       "PackagePath": "staticwebassets\\sample-data\\weather.json"
     },
     {

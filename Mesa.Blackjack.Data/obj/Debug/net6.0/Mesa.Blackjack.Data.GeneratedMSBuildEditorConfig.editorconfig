@@ -9,4 +9,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Mesa.BlackJack.Data
-build_property.ProjectDir = D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\
+build_property.ProjectDir = C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

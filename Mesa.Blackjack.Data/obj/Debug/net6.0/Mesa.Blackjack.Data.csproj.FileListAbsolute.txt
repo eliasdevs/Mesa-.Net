@@ -74,3 +74,23 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\refint\Mesa.B
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.genruntimeconfig.cache
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\ref\Mesa.BlackJack.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.BlackJack.Data.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.BlackJack.Data.runtimeconfig.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.BlackJack.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.BlackJack.Data.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.BlackJack.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa_SV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa.BlackJack.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\bin\Debug\net6.0\Mesa_SV.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.csproj.AssemblyReference.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.AssemblyInfoInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.AssemblyInfo.cs
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.csproj.CoreCompileInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.csproj.CopyComplete
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\refint\Mesa.BlackJack.Data.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\Mesa.BlackJack.Data.genruntimeconfig.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Data\obj\Debug\net6.0\ref\Mesa.BlackJack.Data.dll

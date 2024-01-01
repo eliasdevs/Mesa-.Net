@@ -1005,19 +1005,19 @@
       "Mesa.BlackJack/1.0.0": {
         "dependencies": {
           "MediatR": "12.0.1",
-          "MesaSV": "1.0.0"
+          "Mesa_SV": "1.0.0"
         },
         "runtime": {
           "Mesa.BlackJack.dll": {}
         }
       },
-      "MesaSV/1.0.0": {
+      "Mesa_SV/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Core": "2.2.5",
           "Refit": "7.0.0"
         },
         "runtime": {
-          "MesaSV.dll": {}
+          "Mesa_SV.dll": {}
         }
       }
     }
@@ -1677,7 +1677,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "MesaSV/1.0.0": {
+    "Mesa_SV/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

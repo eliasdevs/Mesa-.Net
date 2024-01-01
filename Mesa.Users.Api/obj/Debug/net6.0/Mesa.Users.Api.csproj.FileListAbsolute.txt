@@ -24,3 +24,29 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\refint\Mesa.Users.
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.genruntimeconfig.cache
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\ref\Mesa.Users.Api.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\bin\Debug\net6.0\appsettings.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\bin\Debug\net6.0\Mesa.Users.Api.exe
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\bin\Debug\net6.0\Mesa.Users.Api.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\bin\Debug\net6.0\Mesa.Users.Api.runtimeconfig.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\bin\Debug\net6.0\Mesa.Users.Api.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\bin\Debug\net6.0\Mesa.Users.Api.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.AssemblyInfoInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.AssemblyInfo.cs
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.csproj.CoreCompileInputs.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\staticwebassets\msbuild.Mesa.Users.Api.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\staticwebassets\msbuild.build.Mesa.Users.Api.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Mesa.Users.Api.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Mesa.Users.Api.props
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\scopedcss\bundle\Mesa.Users.Api.styles.css
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\refint\Mesa.Users.Api.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\Mesa.Users.Api.genruntimeconfig.cache
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Users.Api\obj\Debug\net6.0\ref\Mesa.Users.Api.dll

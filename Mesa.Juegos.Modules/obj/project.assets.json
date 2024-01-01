@@ -1646,7 +1646,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "MesaSV": "1.0.0"
+          "Mesa_SV": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Mesa.Juegos.State.Actions.dll": {}
@@ -1659,7 +1659,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "MesaSV": "1.0.0",
+          "Mesa_SV": "1.0.0",
           "Microsoft.AspNetCore.SignalR.Client": "7.0.9"
         },
         "compile": {
@@ -1669,7 +1669,7 @@
           "bin/placeholder/Mesa.TimeReal.Services.dll": {}
         }
       },
-      "MesaSV/1.0.0": {
+      "Mesa_SV/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
@@ -1677,10 +1677,10 @@
           "Refit": "7.0.0"
         },
         "compile": {
-          "bin/placeholder/MesaSV.dll": {}
+          "bin/placeholder/Mesa_SV.dll": {}
         },
         "runtime": {
-          "bin/placeholder/MesaSV.dll": {}
+          "bin/placeholder/Mesa_SV.dll": {}
         }
       }
     }
@@ -5168,10 +5168,10 @@
       "path": "../Mesa.TimeReal.Services/Mesa.TimeReal.Services.csproj",
       "msbuildProject": "../Mesa.TimeReal.Services/Mesa.TimeReal.Services.csproj"
     },
-    "MesaSV/1.0.0": {
+    "Mesa_SV/1.0.0": {
       "type": "project",
-      "path": "../MesaSV/MesaSV.csproj",
-      "msbuildProject": "../MesaSV/MesaSV.csproj"
+      "path": "../MesaSV/Mesa_SV.csproj",
+      "msbuildProject": "../MesaSV/Mesa_SV.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5182,24 +5182,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\elias\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\elias\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\Mesa.Juegos.Modules.csproj",
+      "projectUniqueName": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Modules\\Mesa.Juegos.Modules.csproj",
       "projectName": "Mesa.Juegos.Modules",
-      "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\Mesa.Juegos.Modules.csproj",
+      "projectPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Modules\\Mesa.Juegos.Modules.csproj",
       "packagesPath": "C:\\Users\\elias\\.nuget\\packages\\",
-      "outputPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\",
+      "outputPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.Modules\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
         "C:\\Users\\elias\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5207,7 +5202,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "http://sitio2.bitworks.com.sv/BitworksNuget/nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
@@ -5215,8 +5209,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.State\\Mesa.Juegos.State.csproj": {
-              "projectPath": "D:\\local\\c# ASP.NET\\Mesa-.Net\\Mesa.Juegos.State\\Mesa.Juegos.State.csproj"
+            "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.State\\Mesa.Juegos.State.csproj": {
+              "projectPath": "C:\\Users\\elias\\Documents\\GitHub\\Mesa-.Net\\Mesa.Juegos.State\\Mesa.Juegos.State.csproj"
             }
           }
         }
@@ -5256,7 +5250,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
       }
     }
   },
@@ -5265,7 +5259,7 @@
       "code": "NU1803",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "You are running the 'restore' operation with an 'HTTP' source, 'http://sitio2.bitworks.com.sv/BitworksNuget/nuget'. Non-HTTPS access will be removed in a future version. Consider migrating to an 'HTTPS' source."
+      "message": "Está ejecutando la operación \"restore\" con un origen \"HTTP\", \"http://sitio2.bitworks.com.sv/BitworksNuget/nuget\". El acceso que no sea HTTPS se quitará en una versión futura. Considere la posibilidad de migrar a un origen \"HTTPS\"."
     }
   ]
 }

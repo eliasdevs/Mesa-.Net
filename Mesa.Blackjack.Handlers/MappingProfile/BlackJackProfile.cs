@@ -8,7 +8,7 @@ namespace Mesa.BlackJack.Handlers.MappingProfile
         public BlackJackProfile()
         {
 
-            CreateMap<Blackjack.Blackjack, BlackjackStartOutput>();
+            CreateMap<Blackjack.Blackjack, BlackjackOutput>();
         }
     }
 }

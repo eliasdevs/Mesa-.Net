@@ -1,31 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Mesa_SV
+﻿namespace Mesa_SV
 {
     /// <summary>
     /// representa el tipo de carta
     /// </summary>
     public enum TypeCard
     {
-        Corazon=0,
-        Diamantes=1,
-        Trebol=2,
-        Picas=3
+        Corazon = 0,
+        Diamantes = 1,
+        Trebol = 2,
+        Picas = 3
     }
 
     /// <summary>
     /// representa el typo de backjack amistoso o recompensada
     /// </summary>
-    public enum TypeGame
+    public enum GameMode
     {
         /// <summary>
         /// partida amistosa, solo dejara 5 amistosas entre jugadores es decir 5 request por dia
         /// </summary>
-        FRIENDLY=1,
+        FRIENDLY = 1,
 
         /// <summary>
         /// CONTRA EL SISTEMA Llleva dinero en juego
@@ -38,7 +32,7 @@ namespace Mesa_SV
         CRUPIER_FRIENDLY = 3,
 
         /// <summary>
-        /// partida recompensada
+        /// partida recompensada, 1 vs 1
         /// </summary>
         REWARDED = 4
     }
@@ -112,6 +106,6 @@ namespace Mesa_SV
         /// <summary>
         /// cuando esta pidiendo cartas
         /// </summary>
-        ACTIVE = 2        
+        ACTIVE = 2
     }
 }
