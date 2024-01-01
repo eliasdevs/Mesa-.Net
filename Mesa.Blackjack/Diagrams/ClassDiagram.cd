@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Mesa.Blackjack.Blackjack" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAEIAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Blackjack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mesa.Blackjack.GameRequestBackJack">
+    <Position X="6.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAABAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameRequestBackJack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mesa.BlackJack.CardBlackJack" Collapsed="true">
+    <Position X="8" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAAAQAAEAAIAAAAAIAAAAEgAAAg=</HashCode>
+      <FileName>CardBlackJack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Mesa.BlackJack.HistoryBlackJack">
+    <Position X="8" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAIAIAAAAAAAAAAAAAAAAAAAAAIAAAgAAAAAA=</HashCode>
+      <FileName>HistoryBlackJack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

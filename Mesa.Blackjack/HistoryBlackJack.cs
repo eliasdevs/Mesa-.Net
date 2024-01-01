@@ -1,15 +1,13 @@
-﻿using Mesa_SV.BlackJack.Model.Barajas;
-
-namespace Mesa.BlackJack.Model
+﻿namespace Mesa.BlackJack
 {
     public class HistoryBlackJack
     {
         public HistoryBlackJack(string? iduser, int idMazo, string logger, string blackjackId)
         {
-            Id = Guid.NewGuid().ToString();            
-            contadorMazo = idMazo;
+            Id = Guid.NewGuid().ToString();
+            ContadorMazo = idMazo;
             Logger = logger;
-            IdJugador = iduser;
+            IdPlayer = iduser;
             BlackJackId = blackjackId;
         }
         public HistoryBlackJack()
@@ -28,14 +26,14 @@ namespace Mesa.BlackJack.Model
         /// <summary>
         /// el Id del jugador
         /// </summary>
-        public string? IdJugador { get; set; }
+        public string? IdPlayer { get; set; }
 
         /// <summary>
         /// representa el numero de mazo al que pertenecen ambas manos
         /// este se da cuando se acaban las cartas se reparte otro mazo ya cuenta como mazo 2
         /// y asi sucesivamente
         /// </summary>
-        public int contadorMazo { get; set; }
+        public int ContadorMazo { get; set; }
 
         /// <summary>
         /// aqui se registra la actividad del juego

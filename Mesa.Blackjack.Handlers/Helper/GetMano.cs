@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using Mesa.Blackjack;
-using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.BlackJack.Helper;

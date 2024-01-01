@@ -1,5 +1,5 @@
 ﻿using Mesa.Blackjack.Data;
-using Mesa.BlackJack.Model;
+using Mesa.BlackJack;
 using Mesa_SV;
 using Mesa_SV.BlackJack;
 using Mesa_SV.BlackJack.Model.Barajas;

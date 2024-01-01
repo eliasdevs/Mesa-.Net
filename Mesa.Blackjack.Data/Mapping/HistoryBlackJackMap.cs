@@ -1,5 +1,4 @@
-﻿using Mesa.BlackJack.Model;
-using Mesa_SV.VoDeJuegos;
+﻿using Mesa_SV.VoDeJuegos;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using System;
@@ -22,9 +21,9 @@ namespace Mesa.BlackJack.Data.Mapping
 
             builder.Property(p => p.BlackJackId).HasMaxLength(50);
 
-            builder.Property(p => p.IdJugador);
+            builder.Property(p => p.IdPlayer);
 
-            builder.Property(p => p.contadorMazo)
+            builder.Property(p => p.ContadorMazo)
             .HasMaxLength(10).IsRequired();
 
             builder.Property(p => p.Logger)

@@ -4,7 +4,6 @@ using Mesa.Blackjack.Commands;
 using Mesa.Blackjack.Data;
 using Mesa.Blackjack.Handlers.Helper;
 using Mesa.BlackJack.Handlers.Helper;
-using Mesa.BlackJack.Model;
 using Mesa_SV;
 using Mesa_SV.BlackJack;
 using Mesa_SV.BlackJack.Dtos.Output;

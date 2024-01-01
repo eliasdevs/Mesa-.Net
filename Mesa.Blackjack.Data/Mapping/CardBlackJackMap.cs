@@ -1,5 +1,4 @@
-﻿using Mesa.BlackJack.Model;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Mesa.BlackJack.Data.Mapping

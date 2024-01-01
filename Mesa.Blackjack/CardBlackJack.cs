@@ -1,12 +1,6 @@
 ﻿using Mesa_SV;
-using Mesa_SV.BlackJack.Model.Barajas;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Mesa.BlackJack.Model
+namespace Mesa.BlackJack
 {
     /// <summary>
     /// Representa el mazo del BlackJack
@@ -67,7 +61,7 @@ namespace Mesa.BlackJack.Model
         public void SetearJugador(string idJugador)
         {
             IdJugador = idJugador;
-            Estado= StatusHand.ACTIVE;
+            Estado = StatusHand.ACTIVE;
         }
     }
 }

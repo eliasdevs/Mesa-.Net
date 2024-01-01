@@ -227,3 +227,8 @@ _temp
 !typings/typings.d.ts
 !wallaby.js
 
+*.pdb
+*.exe
+*.exe
+*.cache
+*.dll

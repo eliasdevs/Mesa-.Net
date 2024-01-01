@@ -1,5 +1,5 @@
-﻿    using AutoMapper;
-using Mesa.BlackJack.Model;
+﻿using AutoMapper;
+using Mesa.BlackJack;
 using Mesa_SV.BlackJack.Dtos.Output;
 using Mesa_SV.BlackJack.Model.Barajas;
 using Mesa_SV.VoDeJuegos;
