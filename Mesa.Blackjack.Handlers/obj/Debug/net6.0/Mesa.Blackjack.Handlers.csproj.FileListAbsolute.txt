@@ -66,21 +66,21 @@ D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.Blac
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\refint\Mesa.BlackJack.Handlers.dll
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.pdb
 D:\local\c# ASP.NET\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\ref\Mesa.BlackJack.Handlers.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.Handlers.deps.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.Handlers.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.Handlers.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa_SV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa_SV.pdb
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.csproj.AssemblyReference.cache
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.AssemblyInfoInputs.cache
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.AssemblyInfo.cs
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.csproj.CoreCompileInputs.cache
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.sourcelink.json
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.csproj.CopyComplete
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.dll
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\refint\Mesa.BlackJack.Handlers.dll
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.pdb
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.Handlers.deps.json
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.Handlers.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.Handlers.pdb
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa.BlackJack.pdb
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\Mesa.BlackJack.Handlers.csproj.CopyComplete
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\obj\Debug\net6.0\ref\Mesa.BlackJack.Handlers.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa_SV.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Blackjack.Handlers\bin\Debug\net6.0\Mesa_SV.pdb

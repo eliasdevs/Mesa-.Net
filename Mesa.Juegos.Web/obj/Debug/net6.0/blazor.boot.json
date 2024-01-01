@@ -1,7 +1,7 @@
 {
   "entryAssembly": "Mesa.Juegos.Web",
   "resources": {
-    "hash": "sha256-8iqbak9qkffmtpKLIrTnoYpMXOcEGnxuE5QUrk//21c=",
+    "hash": "sha256-WZ6ehTBwKUqf63K1YH6XN09A8C13FfhgcGQGlG3wcnU=",
     "runtime": {
       "dotnet.6.0.25.laqh6xqeo5.js": "sha256-1jUGCCSGH9JWhkqbHdQk8JBjBI8K/VC63En5zlypVps=",
       "dotnet.timezones.blat": "sha256-KsGUR9nqtXb3Hy6IrNlnc1HoSS+AFlsXTX9rq4oChtA=",
@@ -235,20 +235,20 @@
       "mscorlib.dll": "sha256-veli+XvWHzkA3s4t4DKI+XiyNMpfHQjiO002+ExANkU=",
       "netstandard.dll": "sha256-O9JhHo5KqxkmwmapuxuhG/iMRV7RHcrCDO9z+yv+8yI=",
       "System.Private.CoreLib.dll": "sha256-6rKu8tPdUGsvbSpesoNMVzbx7bNqPRMPV34eI7vSYaQ=",
-      "Mesa.Juegos.Modules.dll": "sha256-W8TVbyD5YEzZIGMJjD7DDdIpk+9rEIxa5CC8WWc7LzA=",
-      "Mesa.Juegos.State.Actions.dll": "sha256-VjEmzU4sMOlrJYLKoIt/7JRF8qMpQnUSwUM8YMVvWzM=",
-      "Mesa.Juegos.State.dll": "sha256-Hm848PYMBCLaZ32Q0Wxdsz3oOezEV9AYpCXe8kUIMic=",
-      "Mesa.TimeReal.Services.dll": "sha256-q4fC89HSUURgd0GLe6u7IRY8spfTRv2BUzKLLyx0wCw=",
-      "Mesa_SV.dll": "sha256-YHzsV6Ucof5xSS3BnUa+C4rwLUH7hipV3nQfSkCFfh0=",
-      "Mesa.Juegos.Web.dll": "sha256-uilrsaLmVib6E9M8LNNLaJIr7N7Y42Wu6iM6NE8l3uE="
+      "Mesa.Juegos.Modules.dll": "sha256-XdDldU+0WzZmX3pM4CAqZGHnGNaOJF3YfJnk/PmV7J4=",
+      "Mesa.Juegos.State.Actions.dll": "sha256-Fu4F9YYCKLVu1lsyt6MSGXCc0cn9+aqkOBrbolOhOmU=",
+      "Mesa.Juegos.State.dll": "sha256-bx1vagyUL921q7dNHjX/gtFb6Sy8SKI883tmtL24uH4=",
+      "Mesa.TimeReal.Services.dll": "sha256-yOxgo1YVp7Vp560wZmvdGfia8JTqhsQ/ZCtucOyjSaA=",
+      "Mesa_SV.dll": "sha256-d0TFtDjM5XndhRy+3ffcleC06fAzFQHfQiXMXDP7kKI=",
+      "Mesa.Juegos.Web.dll": "sha256-8DFSRzUTmw/Nn52j85crKl2p8TghJ71UQsu+2Iz81hc="
     },
     "pdb": {
-      "Mesa.Juegos.Modules.pdb": "sha256-I+iP8TEuDV1bXbfBCA33e3CUAckztuwWAdpmnK1BcPk=",
-      "Mesa.Juegos.State.pdb": "sha256-IK6R7GjpauxRgN00eYnWEb7cWaK+IPPXmHPkz+347bo=",
-      "Mesa.Juegos.State.Actions.pdb": "sha256-wvmPFfUJ9GcFz/ptliqW2MOictzS1Bd8/Ky1/FffHrI=",
-      "Mesa.TimeReal.Services.pdb": "sha256-UJDDc1LVVEf56JY/UjkXaMQu08oZzD9141xiYBKuCpY=",
-      "Mesa_SV.pdb": "sha256-V3x6dNThtuCqYFpw+PRZAlqB4qWpwqZ3Hwtl169leFA=",
-      "Mesa.Juegos.Web.pdb": "sha256-e7YER6ehDNmsDrmFAomZE1wy/c0eQ1cxUyq7Z1lPpFY="
+      "Mesa.Juegos.Modules.pdb": "sha256-AbG5dUDUSyBLIiRVi651NRecKGd8sheCg6faW69Wjek=",
+      "Mesa.Juegos.State.pdb": "sha256-VnXSnDfzbAVIg+8IYf3vNeZxmbgJzhbE5wL52B0jB5U=",
+      "Mesa.Juegos.State.Actions.pdb": "sha256-sUMQ2PO69TYYBgTa7D2Wshq2kp1y9izvmxVGI9+TbZY=",
+      "Mesa.TimeReal.Services.pdb": "sha256-0EGxiYcggpRwAuVLvwQv+xtZRnBKAALOLcL+pRpR+Vk=",
+      "Mesa_SV.pdb": "sha256-jbof5XivcEgHhrx4rcyKHrAnQ2aZRacRNdxGgOX7owg=",
+      "Mesa.Juegos.Web.pdb": "sha256-KiD/uklHBolqeNeOiDbcTkMH3DYeNM8EApDvKnV6e1c="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

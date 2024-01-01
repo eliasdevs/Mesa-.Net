@@ -75,6 +75,8 @@ C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Mesa_SV.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Mesa_SV.pdb
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\Mesa.RealTime.Project.csproj.AssemblyReference.cache
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\Mesa.RealTime.Project.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\Mesa.RealTime.Project.AssemblyInfoInputs.cache
@@ -97,5 +99,3 @@ C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\Mesa.RealTime.Project.pdb
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\Mesa.RealTime.Project.genruntimeconfig.cache
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\obj\Debug\net6.0\ref\Mesa.RealTime.Project.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Mesa_SV.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.RealTime.Project\bin\Debug\net6.0\Mesa_SV.pdb

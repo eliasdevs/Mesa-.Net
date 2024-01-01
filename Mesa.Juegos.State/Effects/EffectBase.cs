@@ -1,7 +1,8 @@
 ﻿using Fluxor;
+using Mesa.Juegos.State.Shared;
 using Refit;
 
-namespace Mesa.Juegos.State.Shared
+namespace Mesa.Juegos.State.Effects
 {
     public abstract class EffectBase<T> : Effect<T>
     {

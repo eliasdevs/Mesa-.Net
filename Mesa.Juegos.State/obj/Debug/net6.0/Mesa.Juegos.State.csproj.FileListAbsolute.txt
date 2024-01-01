@@ -22,8 +22,10 @@ C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mes
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.pdb
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.Actions.dll
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.dll
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa_SV.dll
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.Juegos.State.Actions.pdb
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa.TimeReal.Services.pdb
+C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa_SV.pdb
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.csproj.AssemblyReference.cache
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.AssemblyInfoInputs.cache
@@ -35,5 +37,3 @@ C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mes
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\refint\Mesa.Juegos.State.dll
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\Mesa.Juegos.State.pdb
 C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\obj\Debug\net6.0\ref\Mesa.Juegos.State.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa_SV.dll
-C:\Users\elias\Documents\GitHub\Mesa-.Net\Mesa.Juegos.State\bin\Debug\net6.0\Mesa_SV.pdb

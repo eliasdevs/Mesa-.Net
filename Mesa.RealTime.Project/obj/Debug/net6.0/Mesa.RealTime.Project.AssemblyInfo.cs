@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mesa.RealTime.Project")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa03592ad7751ffbb8475e76b98cfa3c2f44bfdb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mesa.RealTime.Project")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mesa.RealTime.Project")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
